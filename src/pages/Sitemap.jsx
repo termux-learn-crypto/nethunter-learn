@@ -116,13 +116,6 @@ export default function Sitemap() {
         ))}
       </div>
 
-      <div className="mt-8 glass-card p-4">
-        <h3 className="text-neon-cyan font-heading font-bold mb-2">XML Sitemap</h3>
-        <p className="text-gray-500 text-sm">
-          Search engines ke liye XML sitemap bhi available hai:
-        </p>
-        <code className="text-neon-green text-sm">https://nethunterlearn.in/sitemap.xml</code>
-      </div>
     </div>
   )
 }

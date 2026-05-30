@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://nethunter-learn.com/</loc>
+    <loc>https://nethunter-learn.vercel.app/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/installation</loc>
+    <loc>https://nethunter-learn.vercel.app/installation</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tools</loc>
+    <loc>https://nethunter-learn.vercel.app/tools</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/wifi</loc>
+    <loc>https://nethunter-learn.vercel.app/wifi</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/bluetooth</loc>
+    <loc>https://nethunter-learn.vercel.app/bluetooth</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/payloads</loc>
+    <loc>https://nethunter-learn.vercel.app/payloads</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/about</loc>
+    <loc>https://nethunter-learn.vercel.app/about</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/contact</loc>
+    <loc>https://nethunter-learn.vercel.app/contact</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/sitemap</loc>
+    <loc>https://nethunter-learn.vercel.app/sitemap</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
@@ -58,25 +58,25 @@
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://nethunter-learn.com/disclaimer</loc>
+    <loc>https://nethunter-learn.vercel.app/disclaimer</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/privacy-policy</loc>
+    <loc>https://nethunter-learn.vercel.app/privacy-policy</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/terms</loc>
+    <loc>https://nethunter-learn.vercel.app/terms</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/dmca</loc>
+    <loc>https://nethunter-learn.vercel.app/dmca</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
@@ -84,85 +84,85 @@
 
   <!-- Tool Pages - Reconnaissance -->
   <url>
-    <loc>https://nethunter-learn.com/tool/nmap</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/nmap</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/masscan</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/masscan</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/amass</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/amass</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/subfinder</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/subfinder</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/recon-ng</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/recon-ng</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/theharvester</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/theharvester</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/whois</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/whois</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/dnsenum</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/dnsenum</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/dnsrecon</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/dnsrecon</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/arp-scan</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/arp-scan</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/netdiscover</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/netdiscover</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/shodan</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/shodan</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/censys</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/censys</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/maltego</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/maltego</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -170,97 +170,97 @@
 
   <!-- Tool Pages - Web Application -->
   <url>
-    <loc>https://nethunter-learn.com/tool/nikto</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/nikto</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/burpsuite</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/burpsuite</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/sqlmap</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/sqlmap</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/gobuster</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/gobuster</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/dirb</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/dirb</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/ffuf</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/ffuf</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/wpscan</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/wpscan</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/nuclei</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/nuclei</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/beef-xss</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/beef-xss</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/commix</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/commix</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/sqlninja</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/sqlninja</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/wafw00f</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/wafw00f</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/whatweb</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/whatweb</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/cewl</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/cewl</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/katana</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/katana</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/sslstrip</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/sslstrip</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -268,43 +268,43 @@
 
   <!-- Tool Pages - Password Attacks -->
   <url>
-    <loc>https://nethunter-learn.com/tool/hydra</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/hydra</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/john</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/john</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/hashcat</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/hashcat</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/medusa</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/medusa</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/crunch</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/crunch</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/cewl</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/cewl</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/searchsploit</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/searchsploit</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -312,73 +312,73 @@
 
   <!-- Tool Pages - Exploitation -->
   <url>
-    <loc>https://nethunter-learn.com/tool/metasploit-framework</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/metasploit-framework</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/msfvenom</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/msfvenom</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/setoolkit</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/setoolkit</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/empire</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/empire</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/impacket</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/impacket</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/responder</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/responder</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/evil-winrm</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/evil-winrm</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/crackmapexec</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/crackmapexec</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/mimikatz</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/mimikatz</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/bloodhound</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/bloodhound</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/enum4linux</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/enum4linux</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/weevely</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/weevely</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -386,61 +386,61 @@
 
   <!-- Tool Pages - Wireless -->
   <url>
-    <loc>https://nethunter-learn.com/tool/aircrack-ng</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/aircrack-ng</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/wifite</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/wifite</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/reaver</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/reaver</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/pixiewps</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/pixiewps</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/airgeddon</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/airgeddon</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/kismet</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/kismet</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/hostapd-mana</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/hostapd-mana</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/eaphammer</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/eaphammer</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/hcxdumptool</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/hcxdumptool</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/macchanger</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/macchanger</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -448,55 +448,55 @@
 
   <!-- Tool Pages - Sniffing & Spoofing -->
   <url>
-    <loc>https://nethunter-learn.com/tool/wireshark</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/wireshark</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/bettercap</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/bettercap</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/mitmproxy</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/mitmproxy</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/tcpdump</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/tcpdump</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/netcat</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/netcat</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/socat</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/socat</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/proxychains</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/proxychains</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/hping3</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/hping3</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/arp-spoofing</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/arp-spoofing</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -504,25 +504,25 @@
 
   <!-- Tool Pages - Mobile Security -->
   <url>
-    <loc>https://nethunter-learn.com/tool/apktool</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/apktool</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/drozer</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/drozer</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/objection</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/objection</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/frida</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/frida</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -530,31 +530,31 @@
 
   <!-- Tool Pages - Forensics & Reverse Engineering -->
   <url>
-    <loc>https://nethunter-learn.com/tool/volatility</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/volatility</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/binwalk</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/binwalk</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/radare2</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/radare2</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/strings</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/strings</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/file</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/file</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -562,19 +562,19 @@
 
   <!-- Tool Pages - Vulnerability Scanning -->
   <url>
-    <loc>https://nethunter-learn.com/tool/lynis</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/lynis</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/trivy</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/trivy</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/nikto</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/nikto</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -582,13 +582,13 @@
 
   <!-- Tool Pages - Social Engineering -->
   <url>
-    <loc>https://nethunter-learn.com/tool/setoolkit</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/setoolkit</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/sherlock</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/sherlock</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -596,19 +596,19 @@
 
   <!-- Tool Pages - Post Exploitation -->
   <url>
-    <loc>https://nethunter-learn.com/tool/metasploit-framework</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/metasploit-framework</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/empire</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/empire</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/powershell-empire</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/powershell-empire</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -616,19 +616,19 @@
 
   <!-- Tool Pages - Network -->
   <url>
-    <loc>https://nethunter-learn.com/tool/dnscat2</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/dnscat2</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/chisel</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/chisel</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nethunter-learn.com/tool/yersinia</loc>
+    <loc>https://nethunter-learn.vercel.app/tool/yersinia</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

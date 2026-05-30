@@ -643,13 +643,13 @@ for apk in "$INPUT_DIR"/*.apk; do
       "/tmp/$name/AndroidManifest.xml"
 
     # Recompile
-    apktool b "/tmp/$name" -o "$OUTPUT_DIR/${name}_mod.apk"
+    apktool b "/tmp/$name" -o "$OUTPUT_DIR/\\${name}_mod.apk"
 
     # Sign
     apksigner sign --ks my-key.keystore \\
-      "$OUTPUT_DIR/${name}_mod.apk"
+      "$OUTPUT_DIR/\\${name}_mod.apk"
 
-    echo "[+] Done: ${name}_mod.apk"
+    echo "[+] Done: \\${name}_mod.apk"
     rm -rf "/tmp/$name"
 done`}
       />

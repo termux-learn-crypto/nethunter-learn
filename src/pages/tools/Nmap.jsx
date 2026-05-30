@@ -717,26 +717,26 @@ nmap -sn 192.168.1.0/24 -oN hosts_discovery.txt
 echo "[*] फेज़ 2: पोर्ट स्कैनिंग..."
 for host in $(grep "Up" hosts_discovery.txt | awk '{print $2}'); do
     echo "[+] स्कैनिंग $host..."
-    nmap -sS -T4 -p- $host -oN "ports_${host}.txt"
+    nmap -sS -T4 -p- $host -oN "ports_\\${host}.txt"
 done
 
 # फेज़ 3: सर्विस डिटेक्शन
 echo "[*] फेज़ 3: सर्विस डिटेक्शन..."
 for host in $(grep "Up" hosts_discovery.txt | awk '{print $2}'); do
-    PORTS=$(grep "open" "ports_${host}.txt" | cut -d'/' -f1 | tr '\\n' ',' | sed 's/,$//')
-    nmap -sV -sC -p $PORTS $host -oN "services_${host}.txt"
+    PORTS=$(grep "open" "ports_\\${host}.txt" | cut -d'/' -f1 | tr '\\n' ',' | sed 's/,$//')
+    nmap -sV -sC -p $PORTS $host -oN "services_\\${host}.txt"
 done
 
 # फेज़ 4: OS डिटेक्शन
 echo "[*] फेज़ 4: OS डिटेक्शन..."
 for host in $(grep "Up" hosts_discovery.txt | awk '{print $2}'); do
-    sudo nmap -O --osscan-guess $host -oN "os_${host}.txt"
+    sudo nmap -O --osscan-guess $host -oN "os_\\${host}.txt"
 done
 
 # फेज़ 5: वल्नरेबिलिटी स्कैन
 echo "[*] फेज़ 5: वल्नरेबिलिटी स्कैन..."
 for host in $(grep "Up" hosts_discovery.txt | awk '{print $2}'); do
-    nmap --script vuln $host -oN "vulns_${host}.txt"
+    nmap --script vuln $host -oN "vulns_\\${host}.txt"
 done
 
 echo "[+] सभी स्कैन पूरे हुए!"`}

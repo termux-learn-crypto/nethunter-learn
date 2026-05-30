@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://nethunter-learn.com/sitemap.xml
+Sitemap: https://nethunter-learn.vercel.app/sitemap.xml

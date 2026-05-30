@@ -110,7 +110,7 @@ export default function PrivacyPolicy() {
         </p>
         <ul>
           <li>Contact form: <Link to="/contact" className="text-neon-green underline">Contact Us page</Link></li>
-          <li>Email: privacy@nethunterlearn.in</li>
+          <li>Email: privacy@nethunter-learn.vercel.app</li>
         </ul>
       </div>
     </div>

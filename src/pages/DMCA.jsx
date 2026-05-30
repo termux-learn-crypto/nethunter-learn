@@ -60,7 +60,7 @@ export default function DMCA() {
         <h2>6. Contact for DMCA</h2>
         <p>DMCA notice ya counter-notice file karne ke liye:</p>
         <ul>
-          <li>Email: dmca@nethunterlearn.in</li>
+          <li>Email: dmca@nethunter-learn.vercel.app</li>
           <li>Ya hamare <Link to="/contact" className="text-neon-green underline">Contact page</Link> ke through</li>
         </ul>
         <p>
