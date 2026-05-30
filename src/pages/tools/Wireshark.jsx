@@ -988,7 +988,7 @@ tshark -r incident.pcap -Y "ip.addr == suspicious_ip" -z conv,ip`}
           <li>GeoIP database configure करो — country-level mapping automatically हो जाएगी</li>
           <li>Follow TCP/UDP Stream से complete conversation reconstruct करो ek click में</li>
           <li>Display filter macros बनाओ frequently used complex filters के लिए — time save होगा</li>
-          <li>Export specified packets (File > Export Specified Packets) से filtered subset save करो</li>
+          <li>Export specified packets (File &gt; Export Specified Packets) से filtered subset save करो</li>
         </ul>
       </div>
 

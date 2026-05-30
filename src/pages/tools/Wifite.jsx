@@ -388,7 +388,7 @@ grep "WPA\|WEP\|WPS" /tmp/wifite_results/*.csv
 # स्पेसिफिक टार्गेट्स ऑटोमैटिक अटैक:
 TARGETS=("AA:BB:CC:DD:EE:FF" "11:22:33:44:55:66")
 
-for target in "${TARGETS[@]}"; do
+for target in "\${TARGETS[@]}"; do
     echo "[+] टार्गेट: $target"
     sudo wifite --bssid "$target" --all --kill
 done
@@ -620,7 +620,7 @@ wireshark captured.cap &
         <li><strong className="text-white">Adapter Placement:</strong> Window पर रखो, metal objects से दूर — signal quality improve होती है</li>
         <li><strong className="text-white">USB 3.0 Port:</strong> USB 2.0 bottleneck हो सकता है — USB 3.0 port use करो</li>
         <li><strong className="text-white">Dedicated Adapter:</strong> Separate adapter for monitoring और attacking — dual adapter setup faster है</li>
-        <li><strong className="text-white">Wordlist Optimization:</small> Sorted wordlist faster crack करता है — most common passwords first</li>
+        <li><strong className="text-white">Wordlist Optimization:</strong> Sorted wordlist faster crack करता है — most common passwords first</li>
         <li><strong className="text-white">Target Prioritization:</strong> Strong signal वाले targets पहले — weak signals time waste करते हैं</li>
       </ul>
 

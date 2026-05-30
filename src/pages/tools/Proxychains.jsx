@@ -460,7 +460,7 @@ PROXIES=(
 
 for i in {1..5}; do
   # Random proxy select:
-  PROXY=${PROXIES[$RANDOM % ${#PROXIES[@]}]}
+  PROXY=\${PROXIES[$RANDOM % \${#PROXIES[@]}]}
 
   # Temporary config create:
   cat > /tmp/proxychains_$i.conf << EOF
@@ -626,7 +626,7 @@ PROXIES=(
   "socks5 172.16.0.1 1080"
 )
 
-for proxy in "${PROXIES[@]}"; do
+for proxy in "\${PROXIES[@]}"; do
   # Config create:
   cat > /tmp/test_proxy.conf << EOF
 dynamic_chain

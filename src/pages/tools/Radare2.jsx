@@ -980,7 +980,7 @@ r2 -qc "iEj" binary.elf > exports.json
           <li>रैडारे2 log files भी analyze कर सकता है — r2 -a x86 log_file में hex patterns search करो</li>
           <li>r2pm -ls से available plugins देखो — हर update में नए plugins आते हैं, check करते रहो</li>
           <li>ग्राफ़ view (VV) से control flow visualize होता है — complex functions समझने का सबसे अच्छा तरीका</li>
-          <li>r2 -qc "aaa;aflj" binary > output.json से JSON export करो — automated pipelines में use करो</li>
+          <li>r2 -qc "aaa;aflj" binary &gt; output.json से JSON export करो — automated pipelines में use करो</li>
           <li>Cutter (r2 GUI) install करो अगर CLI uncomfortable — same power, visual interface, built-in decompiler</li>
           <li>Malware triage के लिए strings + imports + sections पहले check करो — deep analysis बाद में करो</li>
           <li>r2frida install करो Android app analysis के लिए — live hooking और memory inspection possible है</li>
@@ -988,7 +988,7 @@ r2 -qc "iEj" binary.elf > exports.json
           <li>r2pipe से multi-binary analysis scripts बनाओ — batch processing possible है</li>
           <li>Binary diffing: rafind2 -S old.bin new.bin — patch analysis और version comparison के लिए</li>
           <li>r2 -qc "ph" binary से hash निकालो — VirusTotal पर search करने के लिए MD5/SHA256</li>
-          <li>ग्राफ़ export: agCd > graph.dot && dot -Tpng graph.dot -o graph.png — reports में include करो</li>
+          <li>ग्राफ़ export: agCd &gt; graph.dot && dot -Tpng graph.dot -o graph.png — reports में include करो</li>
         </ul>
       </div>
 

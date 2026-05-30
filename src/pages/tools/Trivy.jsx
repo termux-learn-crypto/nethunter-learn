@@ -787,7 +787,7 @@ trivy image --severity CRITICAL,HIGH myapp:latest
 
 # Parallel scanning (multiple images):
 for img in app1:latest app2:latest app3:latest; do
-    trivy image $img > "report_${img%:*}.txt" &
+    trivy image $img > "report_\${img%:*}.txt" &amp;
 done
 wait
 

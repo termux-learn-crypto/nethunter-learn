@@ -333,7 +333,7 @@ katana -u http://target.com -jc -silent | grep -i graphql
 katana -u http://target.com -jc -silent | grep -i "\\.js$" | head -20
 
 # Hidden JS files:
-katana -u http://target.com -jc -silent | grep -iE "\\.js$" | grep -iv "jquery\\|bootstrap\\|angular"`
+katana -u http://target.com -jc -silent | grep -iE "\\.js$" | grep -iv "jquery\\|bootstrap\\|angular"
 
 # JS-sourced API keys:
 katana -u http://target.com -jc -silent | grep -iE "key=|token=|apikey="`}

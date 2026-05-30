@@ -864,7 +864,7 @@ jobs:
           nuclei -update-templates
       - name: Run Nuclei
         run: |
-          nuclei -u ${{ secrets.TARGET_URL }} -severity critical,high -json -o results.json
+          nuclei -u \${{ secrets.TARGET_URL }} -severity critical,high -json -o results.json
       - name: Check Results
         run: |
           CRITICAL=$(grep -c '"critical"' results.json || echo 0)

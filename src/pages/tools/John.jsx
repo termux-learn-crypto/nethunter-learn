@@ -823,7 +823,7 @@ cat ~/.john/john.pot | cut -d: -f2 | sort -u > all_passwords.txt
         code={`# क्रैक्ड passwords का analysis:
 
 # Minimum length check:
-john --show hashes.txt | cut -d: -f2 | awk 'length < 8' | wc -l
+john --show hashes.txt | cut -d: -f2 | awk 'length &lt; 8' | wc -l
 
 # Complexity check (uppercase, lowercase, digit, special):
 john --show hashes.txt | cut -d: -f2 | grep -P '[A-Z]' | grep -P '[a-z]' | grep -P '[0-9]' | wc -l
@@ -832,7 +832,7 @@ john --show hashes.txt | cut -d: -f2 | grep -P '[A-Z]' | grep -P '[a-z]' | grep 
 john --show hashes.txt | cut -d: -f2 | grep -Fxf /usr/share/wordlists/rockyou.txt | wc -l
 
 # Repeated characters:
-john --show hashes.txt | cut -d: -f2 | grep -P '(.)\1{2,}' | wc -l
+john --show hashes.txt | cut -d: -f2 | grep -P '(.)\\1{2,}' | wc -l
 
 # Username-based passwords:
 john --single --show hashes.txt | grep -c ":"

@@ -935,12 +935,12 @@ echo "[+] Recon complete! Results in $OUTPUT/"`}
 # GitHub Actions:
 # - name: Port Scan
 #   run: |
-#     docker run projectdiscovery/naabu -host ${{ secrets.TARGET }} -silent > ports.txt
+#     docker run projectdiscovery/naabu -host \${{ secrets.TARGET }} -silent > ports.txt
 #     cat ports.txt
 
 # Jenkins Pipeline:
 # stage('Port Scan') {
-#     sh 'naabu -host ${TARGET} -top-ports 1000 -o ports.txt'
+#     sh 'naabu -host \${TARGET} -top-ports 1000 -o ports.txt'
 #     archiveArtifacts 'ports.txt'
 # }`}
       />

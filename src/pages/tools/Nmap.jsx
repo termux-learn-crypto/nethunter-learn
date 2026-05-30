@@ -464,7 +464,8 @@ echo "[*] वल्नरेबिलिटी स्कैन शुरू..."
 nmap --script vuln $TARGET -oN $OUTPUT_DIR/vulns.txt
 
 echo "[*] ऑडिट पूरा हुआ!"`}
-
+      />
+      <CodeBlock
         title="कंटीन्यूअस मॉनिटरिंग"
         code={`#!/bin/bash
 # नेटवर्क चेंज मॉनिटरिंग — हर घंटे स्कैन करो

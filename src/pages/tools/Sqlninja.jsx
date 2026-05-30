@@ -957,7 +957,7 @@ sqlninja -m cmd -c "whoami" -f config.xml >> evidence.txt
         <strong>💡 Pro Tip 7:</strong> SQL Server 2017+ में xp_cmdshell default disabled है और enable करने के लिए sysadmin role चाहिए। Alternative: OLE Automation (sp_OACreate) use करो — यह different permissions में काम कर सकता है। EXEC sp_configure 'Ole Automation Procedures', 1; RECONFIGURE; फिर sp_OACreate से WScript.Shell object बनाओ।
       </div>
       <div className="info-box mt-6">
-        <strong>💡 Pro Tip 8:</strong> Blind SQL injection में data exfiltration slow होती है — binary search technique use करो speed बढ़ाने के लिए। Character by character extract करने के बाइनरी search: AND ASCII(SUBSTRING((SELECT TOP 1 name FROM sys.databases),1,1)) > 128 — half split करके faster extraction।
+        <strong>💡 Pro Tip 8:</strong> Blind SQL injection में data exfiltration slow होती है — binary search technique use करो speed बढ़ाने के लिए। Character by character extract करने के बाइनरी search: AND ASCII(SUBSTRING((SELECT TOP 1 name FROM sys.databases),1,1)) &gt; 128 — half split करके faster extraction।
       </div>
       <div className="info-box mt-6">
         <strong>💡 Pro Tip 9:</strong> SQL Server का error log useful information देता है — EXEC xp_readerrorlog। Previous login attempts, failed queries, और system events दिखते हैं। Reconnaissance phase में यह data बहुत valuable है। SQL Server Configuration Manager से log location पता करो।

@@ -428,7 +428,7 @@ recon-ng -r /tmp/commands.rc`}
 
 TARGET=$1
 WORKSPACE="scan_$(date +%Y%m%d_%H%M%S)"
-REPORT="/tmp/recon_${TARGET}.html"
+REPORT="/tmp/recon_\${TARGET}.html"
 
 cat > /tmp/recon_commands.rc << EOF
 workspaces create $WORKSPACE

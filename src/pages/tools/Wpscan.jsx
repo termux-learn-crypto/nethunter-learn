@@ -459,7 +459,7 @@ wpscan --url http://target.com --passwords pass.txt --usernames admin --password
           { q: 'Connection refused / timeout आ रहा है', a: 'Target site down है या WAF block कर रहा है। --proxy या --random-user-agent try करो। --request-timeout बढ़ाओ। --connect-timeout भी बढ़ाओ।' },
           { q: 'XML-RPC error आ रहा है', a: 'XML-RPC disabled हो सकता है target site पर। --password-attack wp-login try करो। या site का XML-RPC endpoint manually check करो: curl http://target.com/xmlrpc.php' },
           { q: 'Memory error / crash हो रहा है', a: 'बहुत बड़ी wordlist use कर रहे हो। Smaller wordlist try करो। --max-threads कम करो। Docker से run करो — memory limit set कर सकते हो।' },
-          { q: 'Plugins detect नहीं हो रहे', a '--plugins-detection aggressive use करो। API key add करो (free plan)। Custom plugins WPScan DB में नहीं होंगे — manually check करो। Passive mode limited results देता है।' },
+          { q: 'Plugins detect नहीं हो रहे', a: '--plugins-detection aggressive use करो। API key add करो (free plan)। Custom plugins WPScan DB में नहीं होंगे — manually check करो। Passive mode limited results देता है।' },
           { q: 'Brute force very slow है', a: '--max-threads बढ़ाओ (10+)। XML-RPC multicall use करो (wp-login से faster)। Smaller focused wordlist use करो। --throttle कम करो या हटाओ।' },
           { q: 'WPScan Docker में कैसे run करें?', a: 'docker run -it --rm wpscanteam/wpscan --url http://target.com। Docker memory limit set करो: docker run -m 512m। Network host mode: --network host।' },
           { q: 'WordPress multisite scan कैसे करें?', a: 'WPScan single site scan करता है। Multisite network के लिए har subsite ka URL alag se scan करो। Loop script बनाओ multiple sites के लिए।' },

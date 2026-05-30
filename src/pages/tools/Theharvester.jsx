@@ -537,7 +537,7 @@ echo "[+] रिपोर्ट्स: $OUTPUT_DIR/"`}
           { q: 'Bulk scanning possible है?', a: 'हाँ, Multi-Domain Scanner script use करो। Domain list file pass करो। Rate limiting handle करो — sleep 10 between scans recommended।' },
           { q: 'Output format कौन सा best है?', a: 'HTML clients के लिए best (visual)। JSON automation के लिए (jq parse)। XML enterprise tools के लिए। Screen output quick check के लिए।' },
           { q: 'TheHarvester v4 vs v3 — क्या फ़र्क?', a: 'v4 में Python asyncio — parallel source queries, बहुत fast। v3 sequential था। v4 में new sources add हुए (brave, hunterhow)। v4 recommended है।' },
-          { q: 'Subdomain takeover check कैसे करें?', a '--take-over flag use करो। यह check करता है कि subdomain किसी third-party service (AWS, GitHub, Heroku) पर point कर रहा है जिसे claim किया जा सकता है।' },
+          { q: 'Subdomain takeover check कैसे करें?', a: '--take-over flag use करो। यह check करता है कि subdomain किसी third-party service (AWS, GitHub, Heroku) पर point कर रहा है जिसे claim किया जा सकता है।' },
         ].map((item, i) => (
           <div key={i} className="glass-card p-4">
             <h4 className="text-white font-mono font-semibold mb-2">Q: {item.q}</h4>

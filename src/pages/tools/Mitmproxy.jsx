@@ -757,7 +757,7 @@ def done():
           { q: 'Mobile apps traffic capture नहीं हो रहा', a: 'WireGuard mode try करो: --mode wireGuard। Proxy settings manually set करो phone में। Certificate install करो phone पर। Rooted phone पर transparent proxy use करो।' },
           { q: 'HTTP/2 traffic decode नहीं हो रहा', a: 'HTTP/2 support built-in है। --set http2=false से disable कर सकते हो अगर issues हों। Upstream server HTTP/2 support check करो।' },
           { q: 'Addon script load नहीं हो रहा', a: 'Python path check करो। Script syntax verify करो। mitmdump -s script.py से load करो। Debug mode: mitmdump -s script.py -v' },
-          { q: 'Large file download fail हो रहा है', a '--set stream_large_bodies=1m use करो — large files stream mode में download होंगे। Default behavior में mitmproxy पूरा body memory में load करता है जो large files के लिए problematic है।' },
+          { q: 'Large file download fail हो रहा है', a: '--set stream_large_bodies=1m use करो — large files stream mode में download होंगे। Default behavior में mitmproxy पूरा body memory में load करता है जो large files के लिए problematic है।' },
           { q: 'Proxy authentication error आ रहा है', a: 'Corporate proxy के पीछे हो तो --mode upstream:http://corporate-proxy:port use करो। --set upstream_proxy=protocol://host:port भी try कर सकते हो।' },
           { q: 'DNS resolution fail हो रहा है', a: 'Custom DNS server set करो: --set dns_server=8.8.8.8। /etc/hosts file में custom entries add करो। Network connectivity check करो।' },
         ].map((item, i) => (

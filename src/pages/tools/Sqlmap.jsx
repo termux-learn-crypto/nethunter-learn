@@ -613,7 +613,7 @@ sqlmap -u "URL" --retries=1
 sqlmap -u "URL" --skip-static
 
 # डिफ़ॉल्ट पैरामीटर स्किप करो:
-sqlmap -u "URL" --skip="id,user"`
+sqlmap -u "URL" --skip="id,user"`}
       />
       <CodeBlock
         title="Output Management"

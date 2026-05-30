@@ -632,7 +632,7 @@ while IFS= read -r target; do
   echo "[*] Scanning: $target"
 
   nikto -h "$target" \
-    -output "$OUTPUT_DIR/${target}_${DATE}.html" \
+    -output "$OUTPUT_DIR/\${target}_\${DATE}.html" \
     -Format htm \
     -Tuning x6 \
     -timeout 30
@@ -745,17 +745,17 @@ mkdir -p "$REPORT_DIR"
 echo "[*] Starting Nikto scan: $TARGET"
 
 # Scan run करो
-nikto -h "$TARGET" -output "$REPORT_DIR/nikto_${DATE}.html" -Format htm -Tuning 12457890 -timeout 30 -Display V 2>&1 | tee "$REPORT_DIR/nikto_${DATE}.log"
+nikto -h "$TARGET" -output "$REPORT_DIR/nikto_\${DATE}.html" -Format htm -Tuning 12457890 -timeout 30 -Display V 2>&1 | tee "$REPORT_DIR/nikto_\${DATE}.log"
 
 # Results count
-FINDINGS=$(grep -c "OSVDB" "$REPORT_DIR/nikto_${DATE}.log" 2>/dev/null || echo "0")
+FINDINGS=$(grep -c "OSVDB" "$REPORT_DIR/nikto_\${DATE}.log" 2>/dev/null || echo "0")
 
 echo "[+] Scan complete"
 echo "[+] Findings: $FINDINGS"
-echo "[+] Report: $REPORT_DIR/nikto_${DATE}.html"
+echo "[+] Report: $REPORT_DIR/nikto_\${DATE}.html"
 
 # Email report (optional)
-# mail -s "Nikto Scan: $TARGET" admin@example.com &lt; "$REPORT_DIR/nikto_${DATE}.html"`}
+# mail -s "Nikto Scan: $TARGET" admin@example.com &lt; "$REPORT_DIR/nikto_\${DATE}.html"`}
       />
 
       <h2>Performance Tuning</h2>

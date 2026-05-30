@@ -1003,16 +1003,13 @@ dz> run app.package.attacksurface com.target.app
           <li>Drozer output JSON format में save करो — CI/CD pipeline में integrate कर सकते हो</li>
           <li>WiFi connection से multiple devices simultaneously test कर सकते हो — USB से सिर्फ एक</li>
           <li>DIVA app से practice करो — सभी common Android vulnerabilities cover होती हैं</li>
-          <li>Drozer module index rebuild करो अगर new modules add किए हैं: dz> module index.create</li>
+          <li>Drozer module index rebuild करो अगर new modules add किए हैं: dz&gt; module index.create</li>
         </ul>
       </div>
 
       <div className="warning-box mt-6">
         <strong>⚠️ फाइनल वार्निंग:</strong> Drozer एक शक्तिशाली Android सिक्योरिटी टेस्टिंग फ्रेमवर्क है। इसका इस्तेमाल केवल अधिकृत पेनेट्रेशन टेस्टिंग और शैक्षिक उद्देश्यों के लिए करें। बिना अनुमति के एप्लिकेशन एनालिसिस करना अवैध है। भारत में आईटी एक्ट 2000 की धारा 43 और 66 के तहत अनधिकृत एप मॉडिफिकेशन और डेटा एक्सेस अपराध हो सकता है।
       </div>
-    </TutorialLayout>
-  )
-}
       <h2>Drozer for Automated Security Testing</h2>
       <p>
         Drozer को automated security testing pipelines में integrate करके repetitive manual testing eliminate कर सकते हो। CI/CD pipelines, scheduled scans, और regression testing सब Drozer से automate हो सकते हैं। Automated testing consistent results देता है और human error कम होता है।
@@ -1068,3 +1065,7 @@ echo "Path Traversal Tests Run: $TRAVERSAL_COUNT" >> "$RESULTS_DIR/report.txt"
 
 echo "[+] Audit complete. Results in: $RESULTS_DIR/"`}
       />
+
+    </TutorialLayout>
+  )
+}

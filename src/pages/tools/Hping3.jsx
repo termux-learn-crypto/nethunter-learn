@@ -724,7 +724,7 @@ sudo hping3 -S -c 1 -p 80 target_ip 2>&1 | grep -o "flags=SA"
         <li><strong className="text-white">SYN Cookies:</strong> SYN flood protection — Linux: echo 1 &gt; /proc/sys/net/ipv4/tcp_syncookies। यह stateless SYN handling use करता है जिससे memory exhaustion नहीं होती</li>
         <li><strong className="text-white">Rate Limiting:</strong> iptables से packet rate limit करो: iptables -A INPUT -p tcp --syn -m limit --limit 100/s --limit-burst 200 -j ACCEPT</li>
         <li><strong className="text-white">Stateful Firewall:</strong> Stateful inspection enable करो — fragmented packets और invalid flag combinations block होंगे। iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</li>
-        <li><strong className="text-white">IDS/IPS:</strong> Snort/Suricata से flood patterns detect करो। Snort rule: alert tcp any any -> $HOME_NET any (flags:S; threshold: type both, track by_src, count 50, seconds 10;)</li>
+        <li><strong className="text-white">IDS/IPS:</strong> Snort/Suricata से flood patterns detect करो। Snort rule: alert tcp any any -&gt; $HOME_NET any (flags:S; threshold: type both, track by_src, count 50, seconds 10;)</li>
         <li><strong className="text-white">Connection Tracking:</strong> conntrack से suspicious connections monitor करो: conntrack -E -p tcp। Unusual connection patterns detect करो</li>
         <li><strong className="text-white">Anti-Spoofing:</strong> Reverse path filtering enable करो: net.ipv4.conf.all.rp_filter = 1। Spoofed source IPs automatically reject होंगे</li>
         <li><strong className="text-white">TCP Flags Validation:</strong> Invalid flag combinations block करो: iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP (NULL scan block)</li>

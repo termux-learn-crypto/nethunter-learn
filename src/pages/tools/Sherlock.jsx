@@ -288,11 +288,11 @@ sherlock user1 user2 --json -o results.json
 #!/bin/bash
 TARGET="$1"
 echo "[*] Sherlock scan for: $TARGET"
-sherlock "$TARGET" --print-found -o "${TARGET}_social.txt"
+sherlock "$TARGET" --print-found -o "\${TARGET}_social.txt"
 echo "[*] Found accounts:"
-cat "${TARGET}_social.txt" | grep "\\[+\\]" | wc -l
+cat "\${TARGET}_social.txt" | grep "\\[+\\]" | wc -l
 echo "[*] Total platforms checked:"
-cat "${TARGET}_social.txt" | wc -l`}
+cat "\${TARGET}_social.txt" | wc -l`}
       />
 
       <h2>Custom Site Addition</h2>
@@ -589,13 +589,13 @@ echo "[*] Checking digital footprint for: $MY_USERNAME"
 echo ""
 
 # Search करो:
-sherlock "$MY_USERNAME" --print-found -o "privacy_audit_${MY_USERNAME}.txt"
+sherlock "$MY_USERNAME" --print-found -o "privacy_audit_\${MY_USERNAME}.txt"
 
 # Results analyze:
 echo ""
 echo "=== Privacy Audit Results ==="
-FOUND=$(cat "privacy_audit_${MY_USERNAME}.txt" | grep "\\[+\\]" | wc -l)
-TOTAL=$(cat "privacy_audit_${MY_USERNAME}.txt" | wc -l)
+FOUND=$(cat "privacy_audit_\${MY_USERNAME}.txt" | grep "\\[+\\]" | wc -l)
+TOTAL=$(cat "privacy_audit_\${MY_USERNAME}.txt" | wc -l)
 
 echo "[*] Found on $FOUND out of $TOTAL platforms"
 echo ""

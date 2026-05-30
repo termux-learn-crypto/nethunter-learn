@@ -437,7 +437,7 @@ while IFS= read -r line; do
   IP=$(echo "$line" | awk '{print $1}')
   if [[ $IP =~ ^[0-9] ]]; then
     echo "[*] Nmap स्कैन: $IP"
-    nmap -sV -O "$IP" >> "${OUTPUT}_nmap.txt"
+    nmap -sV -O "$IP" >> "\${OUTPUT}_nmap.txt"
   fi
 done < "$OUTPUT"
 

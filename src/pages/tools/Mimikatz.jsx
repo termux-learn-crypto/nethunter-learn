@@ -880,7 +880,7 @@ $pattern = 'Username\s*:\s*(.+)\\s+Domain\s*:\s*(.+)\\s+NTLM\s*:\s*([a-f0-9]{32}
       </p>
       <ul className="list-disc list-inside text-gray-300 mb-4 space-y-2">
         <li><strong className="text-white">Targeted Dump:</strong> sekurlsa::logonpasswords se pehle specific user select karo — poora LSASS dump slow hota hai</li>
-        <li><strong className="text-white">Output Redirect:</strong> File mein save karo directly — console output slow hota hai: mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" > creds.txt</li>
+        <li><strong className="text-white">Output Redirect:</strong> File mein save karo directly — console output slow hota hai: mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" &gt; creds.txt</li>
         <li><strong className="text-white">Minidump Use:</strong> LSASS ka full dump GB mein ho sakta hai — minidump sufficient hai credential extraction ke liye aur fast transfer hota hai</li>
         <li><strong className="text-white">Batch Processing:</strong> CrackMapExec se network-wide sweep karo — parallel execution fast hai individual machines ke comparison mein</li>
         <li><strong className="text-white">Offline Analysis:</strong> Dump file local machine pe laake offline extract karo — target machine par time kam spend hota hai aur detection risk kam</li>

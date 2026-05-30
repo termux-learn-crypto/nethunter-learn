@@ -485,7 +485,7 @@ echo "[*] WiFi Security Audit Starting..."
 # Monitor mode:
 sudo airmon-ng check kill
 sudo airmon-ng start $INTERFACE
-MONITOR="${INTERFACE}mon"
+MONITOR="\${INTERFACE}mon"
 
 echo "[+] Monitor mode enabled: $MONITOR"
 

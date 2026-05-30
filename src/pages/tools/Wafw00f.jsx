@@ -864,7 +864,6 @@ echo "  - Multiple WAF layers recommended" >> report.txt`}
           { q: 'WAF bypass success rate कैसे track करें?', a: 'हर WAF के लिए tested techniques document करो। JSON output save करो। Python script से batch test करो और results compare करो।' },
           { q: 'Free WAFs detect कर सकते हैं?', a: 'हाँ! Cloudflare free tier, ModSecurity (open source), और Wordfence free version — सब detect होते हैं। Configuration weak हो सकती है even if WAF present है।' },
         ].map((item, i) => (
-        ].map((item, i) => (
           <div key={i} className="glass-card p-4">
             <h4 className="text-white font-mono font-semibold mb-2">Q: {item.q}</h4>
             <p className="text-gray-400 text-sm">A: {item.a}</p>

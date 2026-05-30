@@ -683,7 +683,6 @@ for item in data:
           { q: 'गलत positives कैसे reduce करें?', a: '-s से सिर्फ interesting status codes दिखाओ। -b से unwanted codes hide करो। --no-error से error messages hide करो।' },
           { q: 'Scan resume कैसे करें?', a: 'Gobuster built-in resume support नहीं करता। लेकिन wordlist को split करके partial results achieve कर सकते हो: split -l 1000 wordlist.txt' },
         ].map((item, i) => (
-        ].map((item, i) => (
           <div key={i} className="glass-card p-4">
             <h4 className="text-white font-mono font-semibold mb-2">Q: {item.q}</h4>
             <p className="text-gray-400 text-sm">A: {item.a}</p>
@@ -759,7 +758,7 @@ nikto -h http://target.com
           <li>Development files के लिए -x log,txt,md,readme,changelog try करो</li>
           <li>Recursive scan (-r) carefully use करो — बहुत deep scan हो सकता है, --depth limit लगाओ</li>
           <li>JSON output (--json) से results programmatically parse करो — automation आसान होती है</li>
-          <li>Multiple wordlists combine करो: cat list1.txt list2.txt | sort -u > combined.txt</li>
+          <li>Multiple wordlists combine करो: cat list1.txt list2.txt | sort -u &gt; combined.txt</li>
           <li>Target-specific words add करो: company name, product names, technology names, employee names</li>
           <li>WAF bypass के लिए -a flag (custom user-agent) + -p (proxy) combo use करो</li>
           <li>Production servers पर scanning schedule करो — off-peak hours में scan करो</li>

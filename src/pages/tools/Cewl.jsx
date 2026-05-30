@@ -228,8 +228,8 @@ while read word; do
     echo "$word#2024"
     echo "$word2024"
     echo "$word@2024"
-    echo "${word^}"  # Capitalize first letter
-    echo "${word}!!"
+    echo "\${word^}"  # Capitalize first letter
+    echo "\${word}!!"
 done < base.txt > strong_wordlist.txt
 
 # Step 3: Crunch से variations:
@@ -374,8 +374,8 @@ cat recon_output.txt base_words.txt | sort -u > combined.txt
 # Username generation:
 cat combined.txt | while read name; do
     echo "$name"
-    echo "${name,,}"  # lowercase
-    echo "${name%% *}"  # first name only
+    echo "\${name,,}"  # lowercase
+    echo "\${name%% *}"  # first name only
 done | sort -u > usernames.txt`}
       />
 
@@ -578,7 +578,7 @@ echo ""
 # Word length distribution:
 echo "[*] Word length distribution:"
 for len in 4 6 8 10 12; do
-    count=$(grep -cE "^.{${len},}$" $WORDLIST 2>/dev/null || echo 0)
+    count=$(grep -cE "^.{\${len},}$" $WORDLIST 2>/dev/null || echo 0)
     echo "    >= $len chars: $count"
 done
 echo ""
@@ -608,9 +608,9 @@ while read word; do
     echo "$word123"
     echo "$word!"
     echo "$word@2024"
-    echo "${word^}"  # Capitalize
-done < $WORDLIST | sort -u > "${WORDLIST%.*}_enhanced.txt"
-echo "[+] Enhanced wordlist: $(wc -l < ${WORDLIST%.*}_enhanced.txt) words"`}
+    echo "\${word^}"  # Capitalize
+done < $WORDLIST | sort -u > "\${WORDLIST%.*}_enhanced.txt"
+echo "[+] Enhanced wordlist: $(wc -l < \${WORDLIST%.*}_enhanced.txt) words"`}
       />
       <CodeBlock
         title="CSV Report Generation"

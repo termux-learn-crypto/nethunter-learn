@@ -517,7 +517,7 @@ crunch 8 12 -t @@@@%%%% -o $OUTPUT_DIR/name_year.txt 2>/dev/null
 crunch 8 12 -t ,,,,,%%% -o $OUTPUT_DIR/company.txt 2>/dev/null
 
 # Date-based:
-crunch 8 8 -t %%%%%%%% -s "0101${BIRTH_YEAR}" -e "3112${BIRTH_YEAR}" -o $OUTPUT_DIR/dates.txt 2>/dev/null
+crunch 8 8 -t %%%%%%%% -s "0101\${BIRTH_YEAR}" -e "3112\${BIRTH_YEAR}" -o $OUTPUT_DIR/dates.txt 2>/dev/null
 
 # PIN codes:
 crunch 4 6 0123456789 -o $OUTPUT_DIR/pins.txt 2>/dev/null

