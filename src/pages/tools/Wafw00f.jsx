@@ -627,7 +627,7 @@ SET @a=1; SELECT @a;
 <a href="&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;:alert(1)">click</a>
 
 # 3. Template literals:
-<img src=x onerror="${alert(1)}">
+<img src=x onerror="\${alert(1)}">
 
 # 4. SVG-based:
 <svg><animate onbegin=alert(1) attributeName=x dur=1s>

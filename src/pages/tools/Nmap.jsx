@@ -576,7 +576,7 @@ nm = nmap.PortScanner()
 # होस्ट डिस्कवरी:
 nm.scan(hosts='192.168.1.0/24', arguments='-sn')
 for host in nm.all_hosts():
-    print(f"Active: {host}")
+    print(f"Active: \{host\}")
 
 # पोर्ट स्कैन:
 nm.scan('192.168.1.1', '22,80,443')
@@ -584,7 +584,7 @@ for host in nm.all_hosts():
     for proto in nm[host].all_protocols():
         ports = nm[host][proto].keys()
         for port in ports:
-            print(f"Port {port}: {nm[host][proto][port]['state']}")`}
+            print(f"Port \{port\}: \{nm[host][proto][port]['state']\}")`}
       />
 
       <h2>Nmap vs Other Tools</h2>
