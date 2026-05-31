@@ -1,102 +1,127 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
+import ErrorBoundary from './components/ErrorBoundary'
 import Home from './pages/Home'
-import Installation from './pages/Installation'
-import WifiHacking from './pages/WifiHacking'
-import BluetoothHacking from './pages/BluetoothHacking'
-import Payloads from './pages/Payloads'
-import Tools from './pages/Tools'
-import AircrackNg from './pages/tools/AircrackNg'
-import NmapTool from './pages/tools/Nmap'
-import MetasploitTool from './pages/tools/Metasploit'
-import BettercapTool from './pages/tools/Bettercap'
-import WifiteTool from './pages/tools/Wifite'
-import SqlmapTool from './pages/tools/Sqlmap'
-import HydraTool from './pages/tools/Hydra'
-import JohnTool from './pages/tools/John'
-import HashcatTool from './pages/tools/Hashcat'
-import NiktoTool from './pages/tools/Nikto'
-import BurpsuiteTool from './pages/tools/Burpsuite'
-import WiresharkTool from './pages/tools/Wireshark'
-import SetoolkitTool from './pages/tools/Setoolkit'
-import ResponderTool from './pages/tools/Responder'
-import GobusterTool from './pages/tools/Gobuster'
-import WpscanTool from './pages/tools/Wpscan'
-import SherlockTool from './pages/tools/Sherlock'
-import MitmproxyTool from './pages/tools/Mitmproxy'
-import CrunchTool from './pages/tools/Crunch'
-import MacchangerTool from './pages/tools/Macchanger'
-import Enum4linuxTool from './pages/tools/Enum4linux'
-import DnsenumTool from './pages/tools/Dnsenum'
-import TheharvesterTool from './pages/tools/Theharvester'
-import DirbTool from './pages/tools/Dirb'
-import ArpScanTool from './pages/tools/ArpScan'
-import CewlTool from './pages/tools/Cewl'
-import KismetTool from './pages/tools/Kismet'
-import EaphammerTool from './pages/tools/Eaphammer'
-import SslstripTool from './pages/tools/Sslstrip'
-import ReconNgTool from './pages/tools/ReconNg'
-import WhoisTool from './pages/tools/Whois'
-import DnsreconTool from './pages/tools/Dnsrecon'
-import MimikatzTool from './pages/tools/Mimikatz'
-import BloodhoundTool from './pages/tools/Bloodhound'
-import ApktoolTool from './pages/tools/Apktool'
-import PixiewpsTool from './pages/tools/Pixiewps'
-import HostapdManaTool from './pages/tools/HostapdMana'
-import YersiniaTool from './pages/tools/Yersinia'
-import ImpacketTool from './pages/tools/Impacket'
-import CrackmapexecTool from './pages/tools/Crackmapexec'
-import ReaverTool from './pages/tools/Reaver'
-import NetcatTool from './pages/tools/Netcat'
-import MasscanTool from './pages/tools/Masscan'
-import HcxdumptoolTool from './pages/tools/Hcxdumptool'
-import FridaTool from './pages/tools/Frida'
-import DrozerTool from './pages/tools/Drozer'
-import ObjectionTool from './pages/tools/Objection'
-import MaltegoTool from './pages/tools/Maltego'
-import LynisTool from './pages/tools/Lynis'
-import ChiselTool from './pages/tools/Chisel'
-import EvilWinrmTool from './pages/tools/EvilWinrm'
-import SubfinderTool from './pages/tools/Subfinder'
-import FfufTool from './pages/tools/Ffuf'
-import TrivyTool from './pages/tools/Trivy'
-import NaabuTool from './pages/tools/Naabu'
-import NucleiTool from './pages/tools/Nuclei'
-import KatanaTool from './pages/tools/Katana'
-import TcpdumpTool from './pages/tools/Tcpdump'
-import AmassTool from './pages/tools/Amass'
-import CommixTool from './pages/tools/Commix'
-import SearchsploitTool from './pages/tools/Searchsploit'
-import ProxychainsTool from './pages/tools/Proxychains'
-import BeefXssTool from './pages/tools/BeefXss'
-import Wafw00fTool from './pages/tools/Wafw00f'
-import SocatTool from './pages/tools/Socat'
-import Dnscat2Tool from './pages/tools/Dnscat2'
-import EmpireTool from './pages/tools/Empire'
-import NetdiscoverTool from './pages/tools/Netdiscover'
-import MedusaTool from './pages/tools/Medusa'
-import AirgeddonTool from './pages/tools/Airgeddon'
-import Hping3Tool from './pages/tools/Hping3'
-import BinwalkTool from './pages/tools/Binwalk'
-import VolatilityTool from './pages/tools/Volatility'
-import MsfvenomTool from './pages/tools/Msfvenom'
-import Radare2Tool from './pages/tools/Radare2'
-import SqlninjaTool from './pages/tools/Sqlninja'
-import WeevelyTool from './pages/tools/Weevely'
-import About from './pages/About'
-import PrivacyPolicy from './pages/PrivacyPolicy'
-import Terms from './pages/Terms'
-import Disclaimer from './pages/Disclaimer'
-import DMCA from './pages/DMCA'
-import Contact from './pages/Contact'
-import SitemapPage from './pages/Sitemap'
+
+// Lazy load all tool pages
+const AircrackNg = lazy(() => import('./pages/tools/AircrackNg'))
+const NmapTool = lazy(() => import('./pages/tools/Nmap'))
+const MetasploitTool = lazy(() => import('./pages/tools/Metasploit'))
+const BettercapTool = lazy(() => import('./pages/tools/Bettercap'))
+const WifiteTool = lazy(() => import('./pages/tools/Wifite'))
+const SqlmapTool = lazy(() => import('./pages/tools/Sqlmap'))
+const HydraTool = lazy(() => import('./pages/tools/Hydra'))
+const JohnTool = lazy(() => import('./pages/tools/John'))
+const HashcatTool = lazy(() => import('./pages/tools/Hashcat'))
+const NiktoTool = lazy(() => import('./pages/tools/Nikto'))
+const BurpsuiteTool = lazy(() => import('./pages/tools/Burpsuite'))
+const WiresharkTool = lazy(() => import('./pages/tools/Wireshark'))
+const SetoolkitTool = lazy(() => import('./pages/tools/Setoolkit'))
+const ResponderTool = lazy(() => import('./pages/tools/Responder'))
+const GobusterTool = lazy(() => import('./pages/tools/Gobuster'))
+const WpscanTool = lazy(() => import('./pages/tools/Wpscan'))
+const SherlockTool = lazy(() => import('./pages/tools/Sherlock'))
+const MitmproxyTool = lazy(() => import('./pages/tools/Mitmproxy'))
+const CrunchTool = lazy(() => import('./pages/tools/Crunch'))
+const MacchangerTool = lazy(() => import('./pages/tools/Macchanger'))
+const Enum4linuxTool = lazy(() => import('./pages/tools/Enum4linux'))
+const DnsenumTool = lazy(() => import('./pages/tools/Dnsenum'))
+const TheharvesterTool = lazy(() => import('./pages/tools/Theharvester'))
+const DirbTool = lazy(() => import('./pages/tools/Dirb'))
+const ArpScanTool = lazy(() => import('./pages/tools/ArpScan'))
+const CewlTool = lazy(() => import('./pages/tools/Cewl'))
+const KismetTool = lazy(() => import('./pages/tools/Kismet'))
+const EaphammerTool = lazy(() => import('./pages/tools/Eaphammer'))
+const SslstripTool = lazy(() => import('./pages/tools/Sslstrip'))
+const ReconNgTool = lazy(() => import('./pages/tools/ReconNg'))
+const WhoisTool = lazy(() => import('./pages/tools/Whois'))
+const DnsreconTool = lazy(() => import('./pages/tools/Dnsrecon'))
+const MimikatzTool = lazy(() => import('./pages/tools/Mimikatz'))
+const BloodhoundTool = lazy(() => import('./pages/tools/Bloodhound'))
+const ApktoolTool = lazy(() => import('./pages/tools/Apktool'))
+const PixiewpsTool = lazy(() => import('./pages/tools/Pixiewps'))
+const HostapdManaTool = lazy(() => import('./pages/tools/HostapdMana'))
+const YersiniaTool = lazy(() => import('./pages/tools/Yersinia'))
+const ImpacketTool = lazy(() => import('./pages/tools/Impacket'))
+const CrackmapexecTool = lazy(() => import('./pages/tools/Crackmapexec'))
+const ReaverTool = lazy(() => import('./pages/tools/Reaver'))
+const NetcatTool = lazy(() => import('./pages/tools/Netcat'))
+const MasscanTool = lazy(() => import('./pages/tools/Masscan'))
+const HcxdumptoolTool = lazy(() => import('./pages/tools/Hcxdumptool'))
+const FridaTool = lazy(() => import('./pages/tools/Frida'))
+const DrozerTool = lazy(() => import('./pages/tools/Drozer'))
+const ObjectionTool = lazy(() => import('./pages/tools/Objection'))
+const MaltegoTool = lazy(() => import('./pages/tools/Maltego'))
+const LynisTool = lazy(() => import('./pages/tools/Lynis'))
+const ChiselTool = lazy(() => import('./pages/tools/Chisel'))
+const EvilWinrmTool = lazy(() => import('./pages/tools/EvilWinrm'))
+const SubfinderTool = lazy(() => import('./pages/tools/Subfinder'))
+const FfufTool = lazy(() => import('./pages/tools/Ffuf'))
+const TrivyTool = lazy(() => import('./pages/tools/Trivy'))
+const NaabuTool = lazy(() => import('./pages/tools/Naabu'))
+const NucleiTool = lazy(() => import('./pages/tools/Nuclei'))
+const KatanaTool = lazy(() => import('./pages/tools/Katana'))
+const TcpdumpTool = lazy(() => import('./pages/tools/Tcpdump'))
+const AmassTool = lazy(() => import('./pages/tools/Amass'))
+const CommixTool = lazy(() => import('./pages/tools/Commix'))
+const SearchsploitTool = lazy(() => import('./pages/tools/Searchsploit'))
+const ProxychainsTool = lazy(() => import('./pages/tools/Proxychains'))
+const BeefXssTool = lazy(() => import('./pages/tools/BeefXss'))
+const Wafw00fTool = lazy(() => import('./pages/tools/Wafw00f'))
+const SocatTool = lazy(() => import('./pages/tools/Socat'))
+const Dnscat2Tool = lazy(() => import('./pages/tools/Dnscat2'))
+const EmpireTool = lazy(() => import('./pages/tools/Empire'))
+const NetdiscoverTool = lazy(() => import('./pages/tools/Netdiscover'))
+const MedusaTool = lazy(() => import('./pages/tools/Medusa'))
+const AirgeddonTool = lazy(() => import('./pages/tools/Airgeddon'))
+const Hping3Tool = lazy(() => import('./pages/tools/Hping3'))
+const BinwalkTool = lazy(() => import('./pages/tools/Binwalk'))
+const VolatilityTool = lazy(() => import('./pages/tools/Volatility'))
+const MsfvenomTool = lazy(() => import('./pages/tools/Msfvenom'))
+const Radare2Tool = lazy(() => import('./pages/tools/Radare2'))
+const SqlninjaTool = lazy(() => import('./pages/tools/Sqlninja'))
+const WeevelyTool = lazy(() => import('./pages/tools/Weevely'))
+
+// Lazy load other pages
+const Installation = lazy(() => import('./pages/Installation'))
+const WifiHacking = lazy(() => import('./pages/WifiHacking'))
+const BluetoothHacking = lazy(() => import('./pages/BluetoothHacking'))
+const Payloads = lazy(() => import('./pages/Payloads'))
+const Tools = lazy(() => import('./pages/Tools'))
+const About = lazy(() => import('./pages/About'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
+const Terms = lazy(() => import('./pages/Terms'))
+const Disclaimer = lazy(() => import('./pages/Disclaimer'))
+const DMCA = lazy(() => import('./pages/DMCA'))
+const Contact = lazy(() => import('./pages/Contact'))
+const SitemapPage = lazy(() => import('./pages/Sitemap'))
+const NotFound = lazy(() => import('./pages/NotFound'))
+const Blog = lazy(() => import('./pages/Blog'))
+const BlogPost = lazy(() => import('./pages/BlogPost'))
+const LearningPaths = lazy(() => import('./pages/LearningPaths'))
+const ToolCompare = lazy(() => import('./pages/ToolCompare'))
+
+function PageLoader() {
+  return (
+    <div className="min-h-screen bg-dark-900 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-12 h-12 border-4 border-neon-green/30 border-t-neon-green rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-gray-400">Loading...</p>
+      </div>
+    </div>
+  )
+}
 
 export default function App() {
   return (
     <div className="min-h-screen bg-dark-900 flex flex-col">
       <Navbar />
       <main className="flex-grow">
+        <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/installation" element={<Installation />} />
@@ -187,10 +212,18 @@ export default function App() {
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/dmca" element={<DMCA />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/learning-paths" element={<LearningPaths />} />
+          <Route path="/compare" element={<ToolCompare />} />
           <Route path="/sitemap" element={<SitemapPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
+        </ErrorBoundary>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }

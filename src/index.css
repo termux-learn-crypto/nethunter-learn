@@ -17,6 +17,7 @@
     background-color: #0a0a0a;
     color: #e0e0e0;
     font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
   }
 
   ::-webkit-scrollbar {
@@ -39,6 +40,25 @@
   ::selection {
     background: #00ff41;
     color: #0a0a0a;
+  }
+
+  /* Light Mode */
+  html.light body {
+    background-color: #f8f9fa;
+    color: #1a1a2e;
+  }
+
+  html.light ::-webkit-scrollbar-track {
+    background: #e9ecef;
+  }
+
+  html.light ::-webkit-scrollbar-thumb {
+    background: #00cc33;
+  }
+
+  html.light ::selection {
+    background: #00cc33;
+    color: #ffffff;
   }
 }
 
@@ -134,5 +154,169 @@
 
   .success-box {
     @apply bg-neon-green/10 border border-neon-green/30 rounded-lg p-4 text-green-300;
+  }
+}
+
+/* Light Mode Component Overrides */
+html.light .glass-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 204, 51, 0.2);
+}
+
+html.light .code-block {
+  background-color: #1e1e2e;
+  border-color: rgba(0, 204, 51, 0.3);
+}
+
+html.light .tutorial-content p {
+  color: #4a4a6a;
+}
+
+html.light .tutorial-content ul,
+html.light .tutorial-content ol {
+  color: #4a4a6a;
+}
+
+html.light .warning-box {
+  background-color: rgba(255, 0, 64, 0.08);
+  border-color: rgba(255, 0, 64, 0.2);
+  color: #cc0033;
+}
+
+html.light .info-box {
+  background-color: rgba(0, 240, 255, 0.08);
+  border-color: rgba(0, 240, 255, 0.2);
+  color: #0099aa;
+}
+
+html.light .success-box {
+  background-color: rgba(0, 255, 65, 0.08);
+  border-color: rgba(0, 255, 65, 0.2);
+  color: #009926;
+}
+
+html.light nav {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom-color: rgba(0, 204, 51, 0.15);
+}
+
+html.light nav a,
+html.light nav button {
+  color: #4a4a6a;
+}
+
+html.light nav a:hover,
+html.light nav button:hover {
+  color: #00cc33;
+}
+
+html.light nav .bg-neon-green\/10 {
+  background-color: rgba(0, 204, 51, 0.1);
+  color: #00cc33;
+}
+
+html.light footer {
+  background-color: #1a1a2e;
+}
+
+html.light .bg-dark-900 {
+  background-color: #f8f9fa;
+}
+
+html.light .bg-dark-800 {
+  background-color: #ffffff;
+}
+
+html.light .bg-dark-700 {
+  background-color: #e9ecef;
+}
+
+html.light .bg-dark-700\/50 {
+  background-color: rgba(233, 236, 239, 0.5);
+}
+
+html.light .text-gray-400 {
+  color: #6a6a8a;
+}
+
+html.light .text-gray-500 {
+  color: #8a8aa0;
+}
+
+html.light .text-gray-300 {
+  color: #4a4a6a;
+}
+
+html.light .border-dark-700 {
+  border-color: #dee2e6;
+}
+
+html.light .border-dark-600 {
+  border-color: #ced4da;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  nav, footer, .fixed, button, .btn-primary, .btn-outline {
+    display: none !important;
+  }
+
+  .glass-card {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+  }
+
+  .warning-box {
+    background: #fff3cd !important;
+    border: 1px solid #ffc107 !important;
+    color: #856404 !important;
+  }
+
+  .tutorial-content {
+    color: black !important;
+  }
+
+  .tutorial-content h2,
+  .tutorial-content h3 {
+    color: #1a1a1a !important;
+  }
+
+  .tutorial-content code {
+    background: #f5f5f5 !important;
+    color: #333 !important;
+    border: 1px solid #ddd !important;
+  }
+
+  .tutorial-content pre {
+    background: #f8f8f8 !important;
+    border: 1px solid #ddd !important;
+  }
+
+  .tutorial-content pre code {
+    background: transparent !important;
+  }
+
+  a {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  pre, code {
+    page-break-inside: avoid;
+  }
+
+  .max-w-4xl, .max-w-7xl {
+    max-width: 100% !important;
+    padding: 0 !important;
   }
 }
