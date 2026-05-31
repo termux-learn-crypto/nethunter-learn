@@ -440,19 +440,19 @@ for binary in /tmp/malware/*; do
   echo "[+] एनालाइज़िंग: $binary"
 
   # स्ट्रिंग्स निकालें:
-  r2 -q -c "izz~http" "$binary" > "\\${binary}_strings.txt"
+  r2 -q -c "izz~http" "$binary" > "\\\${binary}_strings.txt"
 
   # इम्पोर्ट्स:
-  r2 -q -c "ii~socket" "$binary" > "\\${binary}_imports.txt"
+  r2 -q -c "ii~socket" "$binary" > "\\\${binary}_imports.txt"
 
   # फंक्शंस:
-  r2 -q -c "afl" "$binary" > "\\${binary}_functions.txt"
+  r2 -q -c "afl" "$binary" > "\\\${binary}_functions.txt"
 
   # एंट्री पॉइंट:
-  r2 -q -c "ie" "$binary" > "\\${binary}_entry.txt"
+  r2 -q -c "ie" "$binary" > "\\\${binary}_entry.txt"
 
   # हेडर:
-  r2 -q -c "iI" "$binary" > "\\${binary}_info.txt"
+  r2 -q -c "iI" "$binary" > "\\\${binary}_info.txt"
 
   echo "[+] डन: $binary"
 done`}

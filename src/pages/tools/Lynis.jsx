@@ -572,8 +572,8 @@ ssh user@target 'sudo lynis audit system --cronjob' > /tmp/remote-audit.log
 SERVERS="server1 server2 server3"
 for server in $SERVERS; do
     echo "[+] Auditing $server..."
-    ssh user@$server 'sudo lynis audit system --cronjob' > "\\${server}_audit.log"
-    SCORE=$(grep "Hardening" \\${server}_audit.log)
+    ssh user@$server 'sudo lynis audit system --cronjob' > "\\\${server}_audit.log"
+    SCORE=$(grep "Hardening" \\\${server}_audit.log)
     echo "$server: $SCORE"
 done
 

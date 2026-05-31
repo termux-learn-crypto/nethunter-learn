@@ -925,9 +925,9 @@ while IFS= read -r target; do
       -ef png,jpg,gif,css,js \\
       -rl 20 \\
       -silent \\
-      > "$OUTPUT_DIR/\\${filename}_urls.txt" 2>/dev/null
+      > "$OUTPUT_DIR/\\\${filename}_urls.txt" 2>/dev/null
 
-    URL_COUNT=$(wc -l < "$OUTPUT_DIR/\\${filename}_urls.txt")
+    URL_COUNT=$(wc -l < "$OUTPUT_DIR/\\\${filename}_urls.txt")
     echo "[+] Found $URL_COUNT URLs for $target"
 
     # Rate limit between targets
@@ -960,9 +960,9 @@ crawl_target() {
       -ef png,jpg,gif,css,js \\
       -rl 10 \\
       -silent \\
-      > "$OUTPUT_DIR/\\${filename}.txt" 2>/dev/null
+      > "$OUTPUT_DIR/\\\${filename}.txt" 2>/dev/null
 
-    echo "[+] $target: $(wc -l < "$OUTPUT_DIR/\\${filename}.txt") URLs"
+    echo "[+] $target: $(wc -l < "$OUTPUT_DIR/\\\${filename}.txt") URLs"
 }
 
 export -f crawl_target

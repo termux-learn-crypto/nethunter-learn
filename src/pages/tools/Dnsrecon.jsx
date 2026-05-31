@@ -793,16 +793,16 @@ while read domain; do
     echo "[+] Scanning: $domain"
 
     # Standard scan:
-    dnsrecon -d $domain -t std --json $OUTPUT_DIR/\\${domain}_std.json 2>/dev/null
+    dnsrecon -d $domain -t std --json $OUTPUT_DIR/\\\${domain}_std.json 2>/dev/null
 
     # Zone transfer test:
-    dnsrecon -d $domain -t axfr --json $OUTPUT_DIR/\\${domain}_axfr.json 2>/dev/null
+    dnsrecon -d $domain -t axfr --json $OUTPUT_DIR/\\\${domain}_axfr.json 2>/dev/null
 
     # Google enumeration:
-    dnsrecon -d $domain -t goo --json $OUTPUT_DIR/\\${domain}_goo.json 2>/dev/null
+    dnsrecon -d $domain -t goo --json $OUTPUT_DIR/\\\${domain}_goo.json 2>/dev/null
 
     # Brute force (small wordlist):
-    dnsrecon -d $domain -t brt -D /usr/share/wordlists/dns/subdomains-top1million-5000.txt --json $OUTPUT_DIR/\\${domain}_brt.json 2>/dev/null
+    dnsrecon -d $domain -t brt -D /usr/share/wordlists/dns/subdomains-top1million-5000.txt --json $OUTPUT_DIR/\\\${domain}_brt.json 2>/dev/null
 
     sleep 2  # Rate limiting
 done <<< "$DOMAINS"

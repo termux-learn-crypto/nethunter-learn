@@ -415,11 +415,11 @@ while read target; do
 
   # ffuf से डायरेक्ट्री स्कैन:
   ffuf -u "http://$target/FUZZ" -w "$WORDLIST" -mc 200,301,302 -ac \
-    -o "$OUTPUT_DIR/\\${target}.json" -of json -s
+    -o "$OUTPUT_DIR/\\\${target}.json" -of json -s
 
   # रिजल्ट्स निकालें:
   echo "[+] मिले endpoints:"
-  cat "$OUTPUT_DIR/\\${target}.json" | jq -r '.results[] | .input.FUZZ + " -> " + (.status|tostring) + " (" + (.length|tostring) + " bytes)"'
+  cat "$OUTPUT_DIR/\\\${target}.json" | jq -r '.results[] | .input.FUZZ + " -> " + (.status|tostring) + " (" + (.length|tostring) + " bytes)"'
 
   echo "[+] डन: $target"
   echo "---"
