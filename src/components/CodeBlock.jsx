@@ -11,9 +11,9 @@ export default function CodeBlock({ code, title, language = 'bash' }) {
 
   return (
     <div className="my-4 rounded-lg overflow-hidden border border-neon-green/30">
-      {title && (
+      {(title || language) && (
         <div className="bg-dark-700 px-4 py-2 flex items-center justify-between border-b border-neon-green/20">
-          <span className="text-neon-cyan text-xs font-mono">{title}</span>
+          <span className="text-neon-cyan text-xs font-mono">{title || ''}</span>
           <div className="flex items-center space-x-2">
             <span className="text-gray-600 text-xs">{language}</span>
             <button

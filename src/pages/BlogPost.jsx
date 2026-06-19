@@ -1,9 +1,12 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import blogPosts from '../data/blogPosts'
 import ReadingProgress from '../components/ReadingProgress'
 import MetaTags from '../components/MetaTags'
+import TableOfContents from '../components/TableOfContents'
 import { useBookmarks } from '../context/BookmarkContext'
+
+const contentImports = import.meta.glob('../content/blog/*.md', { query: '?raw', import: 'default' })
 
 const categoryColors = {
   'रोडमैप': 'bg-neon-green/10 text-neon-green border-neon-green/30',
@@ -21,9 +24,18 @@ export default function BlogPost() {
   const navigate = useNavigate()
   const post = blogPosts.find(p => p.id === slug)
   const { isBookmarked, toggleBookmark } = useBookmarks()
+  const [rawContent, setRawContent] = useState('')
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    if (!slug) return
+    const path = `../content/blog/${slug}.md`
+    if (contentImports[path]) {
+      contentImports[path]().then(mod => {
+        const raw = mod.replace(/---[\s\S]*?---\n*/, '').trim()
+        setRawContent(raw)
+      })
+    }
   }, [slug])
 
   if (!post) {
@@ -46,11 +58,27 @@ export default function BlogPost() {
     .filter(p => p.id !== slug && p.tags.some(t => post.tags.includes(t)))
     .slice(0, 3)
 
+  const headings = useMemo(() => {
+    const h = []
+    for (const line of rawContent.split('\n')) {
+      const m = line.match(/^(##|###)\s+(.+)/)
+      if (m) {
+        const text = m[2].trim()
+        const slug = text.toLowerCase().replace(/[^a-z0-9\u0900-\u097f]+/g, '-').replace(/(^-|-$)/g, '')
+        h.push({ level: m[1].length, text, slug })
+      }
+    }
+    return h
+  }, [rawContent])
+
   const renderContent = (content) => {
+    if (!content) return []
     const lines = content.trim().split('\n')
     const elements = []
     let inList = false
     let listItems = []
+
+    let headingIndex = 0
 
     const flushList = () => {
       if (listItems.length > 0) {
@@ -71,7 +99,10 @@ export default function BlogPost() {
         .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>')
         .replace(/`(.*?)`/g, '<code class="bg-dark-700 px-1.5 py-0.5 rounded text-neon-green text-sm">$1</code>')
         .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="text-neon-cyan hover:underline">$1</a>')
+        .replace(/^[\d]+\.\s+/, '')
     }
+
+    const toSlug = (text) => text.toLowerCase().replace(/[^a-z0-9\u0900-\u097f]+/g, '-').replace(/(^-|-$)/g, '')
 
     lines.forEach((line, i) => {
       const trimmed = line.trim()
@@ -83,16 +114,22 @@ export default function BlogPost() {
 
       if (trimmed.startsWith('## ')) {
         flushList()
+        const title = trimmed.slice(3)
+        const id = headings[headingIndex]?.slug || toSlug(title)
+        headingIndex++
         elements.push(
-          <h2 key={i} className="text-2xl font-heading text-neon-green mt-8 mb-4">
-            {trimmed.slice(3)}
+          <h2 key={i} id={id} className="text-2xl font-heading text-neon-green mt-8 mb-4">
+            {title}
           </h2>
         )
       } else if (trimmed.startsWith('### ')) {
         flushList()
+        const title = trimmed.slice(4)
+        const id = headings[headingIndex]?.slug || toSlug(title)
+        headingIndex++
         elements.push(
-          <h3 key={i} className="text-xl font-semibold text-neon-cyan mt-6 mb-3">
-            {trimmed.slice(4)}
+          <h3 key={i} id={id} className="text-xl font-semibold text-neon-cyan mt-6 mb-3">
+            {title}
           </h3>
         )
       } else if (trimmed.startsWith('- **')) {
@@ -103,21 +140,17 @@ export default function BlogPost() {
         listItems.push(trimmed.slice(2))
       } else if (trimmed.startsWith('| ')) {
         flushList()
-        // Table handling
         if (!elements.some(e => e?.key === `table-${i}`)) {
           const tableLines = lines.filter(l => l.trim().startsWith('| '))
           const headers = tableLines[0]?.split('|').filter(Boolean).map(h => h.trim())
           const rows = tableLines.slice(2).map(r => r.split('|').filter(Boolean).map(c => c.trim()))
-
           elements.push(
             <div key={`table-${i}`} className="overflow-x-auto mb-6">
               <table className="w-full border-collapse">
                 <thead>
                   <tr>
                     {headers?.map((h, hi) => (
-                      <th key={hi} className="border border-dark-600 px-4 py-2 bg-dark-700 text-neon-green text-left">
-                        {h}
-                      </th>
+                      <th key={hi} className="border border-dark-600 px-4 py-2 bg-dark-700 text-neon-green text-left">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -125,9 +158,7 @@ export default function BlogPost() {
                   {rows.map((row, ri) => (
                     <tr key={ri}>
                       {row.map((cell, ci) => (
-                        <td key={ci} className="border border-dark-600 px-4 py-2 text-gray-300">
-                          {cell}
-                        </td>
+                        <td key={ci} className="border border-dark-600 px-4 py-2 text-gray-300">{cell}</td>
                       ))}
                     </tr>
                   ))}
@@ -153,11 +184,24 @@ export default function BlogPost() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nethunter-learn.vercel.app/' },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://nethunter-learn.vercel.app/blog' },
+            { '@type': 'ListItem', position: 3, name: post.title, item: `https://nethunter-learn.vercel.app/blog/${post.id}` },
+          ],
+        })}}
+      />
       <MetaTags
         title={post.title}
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         url={`https://nethunter-learn.vercel.app/blog/${post.id}`}
+        author="Vilas"
       />
       <ReadingProgress />
       {/* Back link */}
@@ -198,8 +242,12 @@ export default function BlogPost() {
         </h1>
 
         <div className="flex items-center gap-4 text-sm text-gray-500">
+          <span>लेखक: Vilas</span>
+          <span className="text-gray-700">•</span>
+          <span>AI Assisted &amp; Verified</span>
+          <span className="text-gray-700">•</span>
           <span>{post.date}</span>
-          <span>|</span>
+          <span className="text-gray-700">|</span>
           <div className="flex flex-wrap gap-2">
             {post.tags.map(tag => (
               <span key={tag} className="bg-dark-700 px-2 py-0.5 rounded text-xs">
@@ -216,9 +264,43 @@ export default function BlogPost() {
       </div>
 
       {/* Content */}
-      <article className="tutorial-content">
-        {renderContent(post.content)}
-      </article>
+      <div className="lg:grid lg:grid-cols-[280px_1fr] lg:gap-8">
+        {headings.length > 0 && (
+          <aside className="hidden lg:block order-first">
+            <TableOfContents headings={headings} />
+          </aside>
+        )}
+        <article className="tutorial-content min-w-0">
+          {headings.length > 0 && (
+            <div className="lg:hidden mb-6">
+              <TableOfContents headings={headings} />
+            </div>
+          )}
+          {renderContent(rawContent)}
+        </article>
+      </div>
+
+      {/* AI Disclosure */}
+      <div className="info-box mt-8 mb-8">
+        <p className="text-sm text-gray-400">
+          <strong className="text-neon-green">AI Assisted Content:</strong> यह लेख AI की मदद से तैयार किया गया है और <strong className="text-white">Vilas</strong> द्वारा वेरिफाई एवं एडिट किया गया है। अधिक जानकारी के लिए <Link to="/about" className="text-neon-cyan underline">About</Link> पेज देखें।
+        </p>
+      </div>
+
+      {/* External References */}
+      <div className="mt-8 mb-8 p-4 bg-dark-800 rounded-lg border border-dark-600">
+        <h3 className="text-sm font-heading text-neon-cyan mb-3">📚 संदर्भ और स्रोत (References)</h3>
+        <div className="grid sm:grid-cols-2 gap-2">
+          <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer"
+             className="text-xs text-gray-400 hover:text-neon-green transition-colors">• OWASP Top 10</a>
+          <a href="https://nvd.nist.gov/" target="_blank" rel="noopener noreferrer"
+             className="text-xs text-gray-400 hover:text-neon-green transition-colors">• NIST National Vulnerability Database</a>
+          <a href="https://cve.mitre.org/" target="_blank" rel="noopener noreferrer"
+             className="text-xs text-gray-400 hover:text-neon-green transition-colors">• CVE - Common Vulnerabilities & Exposures</a>
+          <a href="https://www.kali.org/tools/" target="_blank" rel="noopener noreferrer"
+             className="text-xs text-gray-400 hover:text-neon-green transition-colors">• Kali Linux Tools Documentation</a>
+        </div>
+      </div>
 
       {/* Share & Navigation */}
       <div className="mt-12 pt-8 border-t border-dark-600">
@@ -240,6 +322,22 @@ export default function BlogPost() {
               className="px-4 py-2 bg-blue-600/20 border border-blue-600/40 rounded-lg text-blue-400 hover:bg-blue-600/30 transition-all text-sm"
             >
               Twitter
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-blue-800/20 border border-blue-800/40 rounded-lg text-blue-300 hover:bg-blue-800/30 transition-all text-sm"
+            >
+              Facebook
+            </a>
+            <a
+              href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(post.title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-blue-700/20 border border-blue-700/40 rounded-lg text-blue-300 hover:bg-blue-700/30 transition-all text-sm"
+            >
+              LinkedIn
             </a>
             <button
               onClick={() => {

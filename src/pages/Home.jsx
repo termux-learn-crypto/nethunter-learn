@@ -1,5 +1,6 @@
 import Hero from '../components/Hero'
 import Card from '../components/Card'
+import MetaTags from '../components/MetaTags'
 
 const sections = [
   {
@@ -44,6 +45,55 @@ const sections = [
     to: '/about',
     color: 'cyan',
   },
+  {
+    title: 'ब्लॉग',
+    description: 'साइबर सिक्योरिटी आर्टिकल्स, सीवीई अलर्ट्स, टूल्स तुलना, और करियर गाइड हिंदी में पढ़ें।',
+    icon: '📝',
+    to: '/blog',
+    color: 'green',
+  },
+  {
+    title: 'ग्लॉसरी',
+    description: '60+ साइबर सिक्योरिटी टर्म्स हिंदी और अंग्रेजी में — मीनिंग और एक्सप्लेनेशन के साथ।',
+    icon: '📖',
+    to: '/glossary',
+    color: 'cyan',
+  },
+  {
+    title: 'चीटशीट',
+    description: 'Nmap, Metasploit, SQLMap, Aircrack-ng और 10+ टूल्स के कमांड्स एक जगह — प्रिंट करें और यूज़ करें।',
+    icon: '📋',
+    to: '/cheatsheets',
+    color: 'green',
+  },
+  {
+    title: 'न्यूज़',
+    description: 'लेटेस्ट साइबर सिक्योरिटी न्यूज़, सीवीई अलर्ट्स, डाटा ब्रीच और सिक्योरिटी अपडेट्स।',
+    icon: '📰',
+    to: '/news',
+    color: 'red',
+  },
+  {
+    title: 'कम्युनिटी',
+    description: 'सवाल पूछें, एक्सपीरियंस शेयर करें, और कम्युनिटी से सीखें। खुला फोरम।',
+    icon: '👥',
+    to: '/community',
+    color: 'cyan',
+  },
+  {
+    title: 'लर्निंग पाथ्स',
+    description: 'स्ट्रक्चर्ड लर्निंग पाथवे — कदम-दर-कदम साइबर सिक्योरिटी सीखने के लिए तैयार कोर्स।',
+    icon: '🎯',
+    to: '/learning-paths',
+    color: 'cyan',
+  },
+  {
+    title: 'टूल्स तुलना',
+    description: 'अलग-अलग सिक्योरिटी टूल्स की एक-दूसरे से तुलना करें और सही टूल चुनें।',
+    icon: '⚖️',
+    to: '/compare',
+    color: 'green',
+  },
 ]
 
 const features = [
@@ -55,7 +105,13 @@ const features = [
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <MetaTags
+        title="Nethunter Learn - Kali NetHunter Tutorials in Hindi"
+        description="Kali NetHunter ethical hacking tutorials in Hindi. WiFi hacking, Bluetooth attacks, Metasploit, 77+ tools — mobile penetration testing seekhein."
+        keywords="nethunter, kali nethunter, ethical hacking, hindi tutorials, mobile penetration testing"
+        url="https://nethunter-learn.vercel.app"
+      />
       <Hero />
 
       {/* Features bar */}
@@ -200,6 +256,6 @@ export default function Home() {
           <div className="text-gray-600 mt-2">— काली लिनक्स का आदर्श वाक्य</div>
         </div>
       </section>
-    </div>
+    </>
   )
 }

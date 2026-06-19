@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     <div className="max-w-4xl mx-auto px-4 py-12">
       <Link to="/" className="text-gray-500 hover:text-neon-green text-sm font-mono mb-6 inline-block">← Home</Link>
       <h1 className="text-4xl font-heading font-bold text-white mb-2">Privacy Policy</h1>
-      <p className="text-gray-500 text-sm mb-8">Last Updated: January 2025</p>
+      <p className="text-gray-500 text-sm mb-8">Last Updated: June 2026</p>
 
       <div className="tutorial-content space-y-6 text-gray-300">
 
@@ -66,25 +66,65 @@ export default function PrivacyPolicy() {
           <li>Legal obligations comply karne ke liye</li>
         </ul>
 
-        <h2>5. Third-Party Services</h2>
+        <h2>5. Google AdSense aur Advertising</h2>
+        <p>
+          Hum Google AdSense ka use karte hain website par advertisements dikhane ke liye. Google AdSense cookies aur web beacons ka use karta hai aapki browsing habits ke based par relevant ads dikhane ke liye.
+        </p>
+        <h3>Google AdSense Kya Collect Karta Hai?</h3>
+        <ul>
+          <li>IP address (anonymized)</li>
+          <li>Browser type aur version</li>
+          <li>Device type aur operating system</li>
+          <li>Pages visited aur time spent</li>
+          <li>Ad interactions (clicks, impressions)</li>
+          <li>Cookie data for ad personalization</li>
+        </ul>
+        <h3>Ad Personalization Control</h3>
+        <p>
+          Aap Google AdSense ke ad personalization ko control kar sakte hain:
+        </p>
+        <ul>
+          <li><strong>Opt-out:</strong> Google Ads Settings par jaake ad personalization off karein: adssettings.google.com</li>
+          <li><strong>Cookie Choices:</strong> Jab aap pehli baar website visit karte hain, toh aapko cookie consent banner dikhega jismein aap choose kar sakte hain ki kaunsi cookies accept karni hain</li>
+          <li><strong>Non-Personalized Ads:</strong> Aap non-personalized ads bhi opt kar sakte hain jo browsing history ke based nahi hote</li>
+        </ul>
+        <h3>GDPR aur Data Privacy</h3>
+        <p>
+          European Union ke users ke liye, hum GDPR (General Data Protection Regulation) follow karte hain. Iska matlab:
+        </p>
+        <ul>
+          <li>Aapko clear information di jaati hai ki kaunsa data collect ho raha hai</li>
+          <li>Aapka explicit consent liya jaata hai cookies ke liye</li>
+          <li>Aap apna data delete ya export kara sakte hain</li>
+          <li>Aap kisi bhi time consent wapas le sakte hain</li>
+        </ul>
+        <h3>Google Vendor Disclosure</h3>
+        <p>
+          Google AdSense ke through, third-party vendors (including Google) cookies use karte hain ads dikhane ke liye jo aapki previous visits ke based hain. Google ki DoubleClick cookie use hoti hai ad personalization ke liye. Aap aboutads.info par jaake ad personalization opt-out kar sakte hain.
+        </p>
+
+        <h2>6. Third-Party Services</h2>
         <p>Hum following third-party services use karte hain:</p>
         <ul>
           <li><strong>Google Analytics:</strong> Website traffic analysis ke liye. Google ki privacy policy: policies.google.com/privacy</li>
           <li><strong>Google AdSense:</strong> Advertising ke liye. Google ads personalization settings se manage kar sakte hain.</li>
-          <li><strong>Hosting Provider:</strong> Website files store karne ke liye.</li>
+          <li><strong>Hosting Provider:</strong> Vercel — website files store karne ke liye. Vercel ki privacy policy: vercel.com/legal/privacy</li>
         </ul>
+        <p>
+          In third-party services ki apni alag privacy policies hain. Hum inke data collection practices ke liye responsible nahi hain. Aap inki privacy policies alag se padh sakte hain.
+        </p>
 
-        <h2>6. Data Security</h2>
+        <h2>8. Data Security</h2>
         <p>
           Hum aapke data ko protect karne ke liye reasonable security measures use karte hain, including SSL/TLS encryption, secure servers, aur access controls. Lekin, internet par koi bhi transmission 100% secure nahi hai, aur hum absolute security guarantee nahi kar sakte.
         </p>
 
-        <h2>7. Data Retention</h2>
+        <h2>9. Data Retention</h2>
         <p>
           Hum aapka data sirf tab tak retain karte hain jab tak yeh us purpose ke liye zaroori hai jiske liye collect kiya gaya tha. Contact form submissions ko 1 year tak retain kiya ja sakta hai. Analytics data 26 months tak retain hota hai.
         </p>
 
-        <h2>8. Your Rights</h2>
+        <h2>10. Your Rights</h2>
         <p>Aapko following rights hain:</p>
         <ul>
           <li><strong>Access:</strong> Apna personal data dekhne ka haq</li>
@@ -94,17 +134,17 @@ export default function PrivacyPolicy() {
           <li><strong>Data Portability:</strong> Apna data ek standard format mein receive karne ka haq</li>
         </ul>
 
-        <h2>9. Children's Privacy</h2>
+        <h2>11. Children's Privacy</h2>
         <p>
           Hamari website 13 saal se kam umar ke bachchon ke liye nahi hai. Hum knowingly 13 saal se kam umar ke bachchon se personal information collect nahi karte. Agar hume pata chale ki kisi bachche ne personal information di hai, toh hum usse turant delete kar denge.
         </p>
 
-        <h2>10. Changes to This Policy</h2>
+        <h2>12. Changes to This Policy</h2>
         <p>
           Hum kabhi bhi is Privacy Policy ko update kar sakte hain. Changes is page par post kiye jayenge aur "Last Updated" date update hogi. Significant changes ke liye hum website par notice denge. Aapko regularly is policy check karni chahiye.
         </p>
 
-        <h2>11. Contact Us</h2>
+        <h2>13. Contact Us</h2>
         <p>
           Agar aapke paas is Privacy Policy ke baare mein koi sawaal hai, toh humse contact karein:
         </p>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nethunter Learn - Ethical Hacking Tutorials in Hindi</title>
+    <link>https://nethunter-learn.vercel.app</link>
+    <description>Kali NetHunter ethical hacking tutorials, WiFi hacking, Bluetooth attacks, Metasploit, aur cybersecurity guides — sab Hindi mein.</description>
+    <language>hi</language>
+    <atom:link href="https://nethunter-learn.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Thu, 18 Jun 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>2026 में एथिकल हैकिंग कैसे शुरू करें - कम्प्लीट रोडमैप</title>
+      <link>https://nethunter-learn.vercel.app/blog/ethical-hacking-roadmap-2026</link>
+      <description>अगर आप एथिकल हैकिंग सीखना चाहते हैं तो यह रोडमैप आपके लिए है। बिगिनर से एडवांस्ड तक सब कुछ कवर करेंगे।</description>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/ethical-hacking-roadmap-2026</guid>
+    </item>
+
+    <item>
+      <title>वाईफाई पाइनएप्पल बनाम नेथंटर - कौनसा बेहतर है?</title>
+      <link>https://nethunter-learn.vercel.app/blog/wifi-pineapple-vs-nethunter</link>
+      <description>दोनों टूल्स वाईफाई हैकिंग के लिए पॉपुलर हैं। जानिए कौनसा टूल आपके लिए सही है और क्यों।</description>
+      <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/wifi-pineapple-vs-nethunter</guid>
+    </item>
+
+    <item>
+      <title>लेटेस्ट CVE-2026-1234: पॉपुलर फ्रेमवर्क में क्रिटिकल आरसीई</title>
+      <link>https://nethunter-learn.vercel.app/blog/cve-2026-1234-critical-rce</link>
+      <description>एक क्रिटिकल रिमोट कोड एक्जीक्यूशन वल्नरेबिलिटी मिली है जो बहुत सारे सिस्टम्स को प्रभावित कर रही है। जानिए कैसे बचें।</description>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/cve-2026-1234-critical-rce</guid>
+    </item>
+
+    <item>
+      <title>एंड्रॉयड 14 में नेथंटर इंस्टॉल करना - नया तरीका</title>
+      <link>https://nethunter-learn.vercel.app/blog/android-14-nethunter-install</link>
+      <description>एंड्रॉयड 14 के साथ नेथंटर इंस्टॉल करना अब पहले से अलग है। यह नया तरीका फॉलो करें।</description>
+      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/android-14-nethunter-install</guid>
+    </item>
+
+    <item>
+      <title>बग बाउंटी से पैसे कैसे कमाएं - रियलिस्टिक गाइड</title>
+      <link>https://nethunter-learn.vercel.app/blog/bug-bounty-guide</link>
+      <description>बग बाउंटी प्रोग्राम्स से पैसे कमाना मुश्किल है लेकिन असंभव नहीं। जानिए कैसे शुरू करें और क्या उम्मीद करें।</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/bug-bounty-guide</guid>
+    </item>
+
+    <item>
+      <title>टॉप 10 काली लिनक्स टूल्स जो हर हैकर को आने चाहिए</title>
+      <link>https://nethunter-learn.vercel.app/blog/top-10-kali-tools</link>
+      <description>ये 10 टूल्स हर पेनेट्रेशन टेस्टर के टूलबॉक्स में होने चाहिए। इनके बिना काम अधूरा है।</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/top-10-kali-tools</guid>
+    </item>
+
+    <item>
+      <title>ओडब्ल्यूएएसपी टॉप 10 2026 - क्या बदला है?</title>
+      <link>https://nethunter-learn.vercel.app/blog/owasp-top-10-2026</link>
+      <description>ओडब्ल्यूएएसपी ने नया टॉप 10 जारी किया है। जानिए क्या नया है और कैसे बचाव करें।</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/owasp-top-10-2026</guid>
+    </item>
+
+    <item>
+      <title>सीटीएफ चैलेंजेस कैसे हल करें - टिप्स और ट्रिक्स</title>
+      <link>https://nethunter-learn.vercel.app/blog/ctf-tips-tricks</link>
+      <description>कैप्चर द फ्लैग प्रतियोगिताओं में भाग लेना चाहते हैं? ये टिप्स आपकी मदद करेंगे।</description>
+      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/ctf-tips-tricks</guid>
+    </item>
+
+    <item>
+      <title>Nmap के साथ नेटवर्क स्कैनिंग - बिगिनर्स गाइड</title>
+      <link>https://nethunter-learn.vercel.app/blog/nmap-beginners-guide</link>
+      <description>Nmap सीखना चाहते हैं? यह गाइड आपको nmap के सभी basic commands, scan types, और NSE scripts के बारे में सिखाएगा।</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/nmap-beginners-guide</guid>
+    </item>
+
+    <item>
+      <title>Metasploit Framework Basics - Exploitation Kaise Karein</title>
+      <link>https://nethunter-learn.vercel.app/blog/metasploit-basics</link>
+      <description>Metasploit Framework के साथ exploitation सीखें। Payloads, exploits, auxiliary modules, aur post-exploitation techniques का complete introduction।</description>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/metasploit-basics</guid>
+    </item>
+
+    <item>
+      <title>Wireshark से Packet Analysis सीखें - कम्प्लीट गाइड</title>
+      <link>https://nethunter-learn.vercel.app/blog/wireshark-packet-analysis</link>
+      <description>Wireshark के साथ network traffic analyze karna seekhein। Packet capture, filters, protocol hierarchy, aur network troubleshooting का complete guide।</description>
+      <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/wireshark-packet-analysis</guid>
+    </item>
+
+    <item>
+      <title>सोशल इंजीनियरिंग अटैक - कैसे बचें?</title>
+      <link>https://nethunter-learn.vercel.app/blog/social-engineering-awareness</link>
+      <description>Social engineering attacks insaan ki psychology ko target karte hain. Jaaniye kaise pehchane aur in se kaise bachein.</description>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/social-engineering-awareness</guid>
+    </item>
+
+    <item>
+      <title>Kali Linux बिगिनर्स गाइड - सब कुछ जो आपको जानना चाहिए</title>
+      <link>https://nethunter-learn.vercel.app/blog/kali-linux-beginners</link>
+      <description>Kali Linux ethical hacking ka sabse popular OS hai. Jaaniye Kali Linux ko kaise install, configure aur use karte hain.</description>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/kali-linux-beginners</guid>
+    </item>
+
+    <item>
+      <title>Phishing Attacks se Kaise Bachein - Complete Guide</title>
+      <link>https://nethunter-learn.vercel.app/blog/phishing-prevention</link>
+      <description>Phishing sabse dangerous cyber attacks mein se hai. Seekhein phishing attacks ko pehchanne aur unse bachne ke tarike.</description>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/phishing-prevention</guid>
+    </item>
+
+    <item>
+      <title>VPN Kaise Kaam Karta Hai - पूरी जानकारी हिंदी में</title>
+      <link>https://nethunter-learn.vercel.app/blog/vpn-guide</link>
+      <description>VPN कैसे काम करता है, क्यों ज़रूरी है, और कैसे सही VPN चुनें - पूरी गाइड हिंदी में।</description>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/vpn-guide</guid>
+    </item>
+
+    <item>
+      <title>Android Security Tips - अपने फोन को सुरक्षित रखें</title>
+      <link>https://nethunter-learn.vercel.app/blog/android-security-tips</link>
+      <description>Android phone ko secure rakhne ke 25+ tips. Privacy settings, app permissions, aur advanced security techniques seekhein.</description>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://nethunter-learn.vercel.app/blog/android-security-tips</guid>
+    </item>
+  </channel>
+</rss>

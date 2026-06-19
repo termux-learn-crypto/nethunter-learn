@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import SearchModal from './SearchModal'
 import { useTheme } from '../context/ThemeContext'
@@ -11,6 +11,8 @@ const navItems = [
   { path: '/payloads', label: 'Payloads' },
   { path: '/tools', label: 'Tools' },
   { path: '/blog', label: 'Blog' },
+  { path: '/cheatsheets', label: 'Cheat' },
+  { path: '/news', label: 'News' },
   { path: '/about', label: 'About' },
 ]
 
@@ -53,6 +55,7 @@ export default function Navbar() {
                 <Link
                   key={item.path}
                   to={item.path}
+                  aria-current={location.pathname === item.path ? 'page' : undefined}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     location.pathname === item.path
                       ? 'bg-neon-green/10 text-neon-green'
@@ -62,10 +65,11 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <button
-                onClick={() => setSearchOpen(true)}
-                className="ml-2 px-3 py-2 rounded-lg text-sm text-gray-400 hover:text-neon-green hover:bg-neon-green/5 transition-all flex items-center gap-2 border border-dark-700 hover:border-neon-green/30"
-              >
+                  <button
+                    onClick={() => setSearchOpen(true)}
+                    aria-label="Search tools and articles"
+                    className="ml-2 px-3 py-2 rounded-lg text-sm text-gray-400 hover:text-neon-green hover:bg-neon-green/5 transition-all flex items-center gap-2 border border-dark-700 hover:border-neon-green/30"
+                  >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
@@ -76,6 +80,7 @@ export default function Navbar() {
               </button>
               <button
                 onClick={toggleTheme}
+                aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
                 className="ml-1 p-2 rounded-lg text-gray-400 hover:text-neon-green hover:bg-neon-green/5 transition-all border border-dark-700 hover:border-neon-green/30"
                 title={isDark ? 'Light mode' : 'Dark mode'}
               >
@@ -95,6 +100,7 @@ export default function Navbar() {
             <div className="flex items-center gap-1 md:hidden">
               <button
                 onClick={() => setSearchOpen(true)}
+                aria-label="Search tools and articles"
                 className="text-gray-400 hover:text-neon-green p-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,6 +109,7 @@ export default function Navbar() {
               </button>
               <button
                 onClick={toggleTheme}
+                aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
                 className="text-gray-400 hover:text-neon-green p-2"
               >
                 {isDark ? (
@@ -117,6 +124,7 @@ export default function Navbar() {
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
+                aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 className="text-gray-400 hover:text-neon-green p-2"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,6 +146,7 @@ export default function Navbar() {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
+                  aria-current={location.pathname === item.path ? 'page' : undefined}
                   className={`block px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                     location.pathname === item.path
                       ? 'bg-neon-green/10 text-neon-green'

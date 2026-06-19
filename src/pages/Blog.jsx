@@ -2,8 +2,8 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import blogPosts from '../data/blogPosts'
 import MetaTags from '../components/MetaTags'
-
-const WEB3FORMS_KEY = '6fa7bb07-9977-4698-a6f5-e8dd425afdeb'
+import { WEB3FORMS_KEY } from '../lib/config'
+import Spinner from '../components/Spinner'
 
 const categories = ['सभी', 'रोडमैप', 'ट्यूटोरियल', 'सीवीई अलर्ट', 'तुलना', 'करियर', 'टूल्स', 'सिक्यूरिटी', 'सीटीएफ']
 
@@ -341,9 +341,9 @@ export default function Blog() {
               <button
                 type="submit"
                 disabled={newsletterSending}
-                className="btn-primary px-6 py-3 rounded-lg font-semibold text-dark-900 whitespace-nowrap disabled:opacity-50"
+                className="btn-primary px-6 py-3 rounded-lg font-semibold text-dark-900 whitespace-nowrap disabled:opacity-50 inline-flex items-center justify-center gap-2"
               >
-                {newsletterSending ? 'Sending...' : 'Subscribe'}
+                {newsletterSending && <Spinner />}{newsletterSending ? 'Sending...' : 'Subscribe'}
               </button>
             </div>
             {newsletterMsg && (

@@ -1,6 +1,12 @@
 import { createContext, useContext, useState, useEffect } from 'react'
+import { toolCount } from '../data/tools'
 
-const ProgressContext = createContext()
+const ProgressContext = createContext({
+  progress: {},
+  toggleLearned: () => {},
+  isLearned: () => false,
+  getStats: () => ({ total: 0, percentage: 0 }),
+})
 
 const STORAGE_KEY = 'nethunter_progress'
 
@@ -35,7 +41,7 @@ export function ProgressProvider({ children }) {
 
   const getStats = () => {
     const total = Object.keys(progress).length
-    return { total, percentage: Math.round((total / 77) * 100) }
+    return { total, percentage: Math.round((total / toolCount) * 100) }
   }
 
   return (

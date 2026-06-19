@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="mb-6">
           <span className="inline-block px-4 py-1.5 bg-neon-green/10 border border-neon-green/30 rounded-full text-neon-green text-sm font-mono">
-            काली नेटहंटर v2024 — मुफ्त शैक्षिक मंच
+            काली नेटहंटर — मुफ्त शैक्षिक मंच
           </span>
         </div>
 

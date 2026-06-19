@@ -158,6 +158,45 @@ export default function About() {
         <li><strong>SOC Analyst:</strong> Security Operations Center mein kaam karte hain — alerts monitor karein, incidents investigate karein. Average salary ₹3-10 LPA</li>
       </ul>
 
+      <h2>हमारे बारे में (About the Author)</h2>
+      <div className="glass-card p-6 my-4">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="w-16 h-16 bg-gradient-to-br from-neon-green to-neon-cyan rounded-full flex items-center justify-center text-2xl font-bold text-dark-900">
+            V
+          </div>
+          <div>
+            <h3 className="text-white font-bold text-lg">Vilas</h3>
+            <p className="text-neon-cyan text-sm font-mono">Cybersecurity Educator | Ethical Hacker</p>
+            <div className="flex gap-3 mt-1">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-neon-green text-xs transition-colors">GitHub ↗</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-neon-green text-xs transition-colors">LinkedIn ↗</a>
+            </div>
+          </div>
+        </div>
+        <p className="text-gray-300">
+          Vilas एक साइबरसिक्योरिटी उत्साही और एथिकल हैकिंग लर्नर हैं। उन्होंने NethunterLearn.in को इस उद्देश्य से बनाया है कि हिंदी भाषा में क्वालिटी साइबरसिक्योरिटी एजुकेशन हर किसी तक पहुंचे।
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+          <div className="bg-dark-800 rounded-lg p-3 text-center border border-dark-600">
+            <div className="text-neon-green text-xl font-bold">77+</div>
+            <div className="text-gray-500 text-xs">Tools Documented</div>
+          </div>
+          <div className="bg-dark-800 rounded-lg p-3 text-center border border-dark-600">
+            <div className="text-neon-green text-xl font-bold">8</div>
+            <div className="text-gray-500 text-xs">Blog Articles</div>
+          </div>
+          <div className="bg-dark-800 rounded-lg p-3 text-center border border-dark-600">
+            <div className="text-neon-green text-xl font-bold">100%</div>
+            <div className="text-gray-500 text-xs">Free Content</div>
+          </div>
+        </div>
+        <div className="mt-4 p-4 bg-dark-800 rounded-lg border border-dark-600">
+          <p className="text-gray-400 text-sm">
+            <strong className="text-neon-green">Content Creation Process:</strong> इस वेबसाइट का सारा कंटेंट AI की मदद से तैयार किया जाता है और <strong className="text-white">Vilas</strong> द्वारा मैन्युअली वेरिफाई, एडिट और इम्प्रूव किया जाता है। हर ट्यूटोरियल को पब्लिश करने से पहले प्रैक्टिकल टेस्टिंग की जाती है ताकि जानकारी सटीक और अप-टू-डेट हो।
+          </p>
+        </div>
+      </div>
+
       <div className="success-box mt-8">
         <strong>✅ Shuru Karein!</strong>{' '}
         <Link to="/" className="text-neon-green underline">Home page</Link> par jaayein aur koi topic choose karein seekhne ke liye. Yaad rakhein — practice makes perfect. Roz kuch na kuch naya seekhein aur apne lab par practice karein. Happy Hacking! 🐉

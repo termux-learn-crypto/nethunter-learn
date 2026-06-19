@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { WEB3FORMS_KEY, SITE_EMAIL } from '../lib/config'
+import Spinner from '../components/Spinner'
 
 const MONTHLY_LIMIT = 200
 const COOLDOWN_SEC = 60
-const WEB3FORMS_KEY = '6fa7bb07-9977-4698-a6f5-e8dd425afdeb'
 
 const TRUSTED_DOMAINS = [
   'gmail.com', 'yahoo.com', 'yahoo.co.in', 'yahoo.co.uk', 'outlook.com',
@@ -148,7 +149,7 @@ export default function Contact() {
                 <span className="text-neon-green text-lg">📧</span>
                 <div>
                   <p className="text-white font-semibold">Email</p>
-                  <a href="mailto:contact@nethunter-learn.vercel.app" className="text-neon-green hover:underline">contact@nethunter-learn.vercel.app</a>
+                  <a href={`mailto:${SITE_EMAIL}`} className="text-neon-green hover:underline">{SITE_EMAIL}</a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -233,7 +234,7 @@ export default function Contact() {
                 <textarea name="message" required rows={5} className="w-full px-4 py-2.5 bg-dark-800 border border-neon-green/30 rounded-lg text-white font-mono text-sm focus:outline-none focus:border-neon-green resize-none" placeholder="Apna message likhein..." />
               </div>
               {error && <p className="text-red-400 text-sm">{error}</p>}
-              <button type="submit" disabled={sending} className="btn-primary w-full disabled:opacity-50">{sending ? 'Sending...' : 'Send Message →'}</button>
+              <button type="submit" disabled={sending} className="btn-primary w-full disabled:opacity-50 inline-flex items-center justify-center gap-2">{sending && <Spinner />}{sending ? 'Sending...' : 'Send Message →'}</button>
             </form>
           )}
         </div>

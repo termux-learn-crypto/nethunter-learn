@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import ReadingProgress from './ReadingProgress'
 import MetaTags from './MetaTags'
@@ -7,59 +7,145 @@ import relatedToolsMap from '../data/relatedTools'
 import quizData from '../data/quizData'
 import { useProgress } from '../context/ProgressContext'
 import { useBookmarks } from '../context/BookmarkContext'
+import { getToolByRoute, getPrevNext, toolCount } from '../data/tools'
 
-const toolNames = {
-  '/tool/aircrack-ng': 'aircrack-ng', '/tool/nmap': 'nmap', '/tool/metasploit-framework': 'metasploit',
-  '/tool/bettercap': 'bettercap', '/tool/wifite': 'wifite', '/tool/sqlmap': 'sqlmap',
-  '/tool/hydra': 'hydra', '/tool/john': 'john', '/tool/hashcat': 'hashcat', '/tool/nikto': 'nikto',
-  '/tool/burpsuite': 'burpsuite', '/tool/wireshark': 'wireshark', '/tool/setoolkit': 'setoolkit',
-  '/tool/responder': 'responder', '/tool/gobuster': 'gobuster', '/tool/wpscan': 'wpscan',
-  '/tool/sherlock': 'sherlock', '/tool/mitmproxy': 'mitmproxy', '/tool/crunch': 'crunch',
-  '/tool/macchanger': 'macchanger', '/tool/enum4linux': 'enum4linux', '/tool/dnsenum': 'dnsenum',
-  '/tool/theharvester': 'theharvester', '/tool/dirb': 'dirb', '/tool/arp-scan': 'arp-scan',
-  '/tool/cewl': 'cewl', '/tool/kismet': 'kismet', '/tool/eaphammer': 'eaphammer',
-  '/tool/sslstrip': 'sslstrip', '/tool/recon-ng': 'recon-ng', '/tool/whois': 'whois',
-  '/tool/dnsrecon': 'dnsrecon', '/tool/mimikatz': 'mimikatz', '/tool/bloodhound': 'bloodhound',
-  '/tool/apktool': 'apktool', '/tool/pixiewps': 'pixiewps', '/tool/hostapd-mana': 'hostapd-mana',
-  '/tool/yersinia': 'yersinia', '/tool/impacket': 'impacket', '/tool/crackmapexec': 'crackmapexec',
-  '/tool/reaver': 'reaver', '/tool/netcat': 'netcat', '/tool/masscan': 'masscan',
-  '/tool/hcxdumptool': 'hcxdumptool', '/tool/frida': 'frida', '/tool/drozer': 'drozer',
-  '/tool/objection': 'objection', '/tool/maltego': 'maltego', '/tool/lynis': 'lynis',
-  '/tool/chisel': 'chisel', '/tool/evil-winrm': 'evil-winrm', '/tool/subfinder': 'subfinder',
-  '/tool/ffuf': 'ffuf', '/tool/trivy': 'trivy', '/tool/naabu': 'naabu', '/tool/nuclei': 'nuclei',
-  '/tool/katana': 'katana', '/tool/tcpdump': 'tcpdump', '/tool/amass': 'amass',
-  '/tool/commix': 'commix', '/tool/searchsploit': 'searchsploit', '/tool/proxychains': 'proxychains',
-  '/tool/beef-xss': 'beef-xss', '/tool/wafw00f': 'wafw00f', '/tool/socat': 'socat',
-  '/tool/dnscat2': 'dnscat2', '/tool/empire': 'empire', '/tool/netdiscover': 'netdiscover',
-  '/tool/medusa': 'medusa', '/tool/airgeddon': 'airgeddon', '/tool/hping3': 'hping3',
-  '/tool/binwalk': 'binwalk', '/tool/volatility': 'volatility', '/tool/msfvenom': 'msfvenom',
-  '/tool/radare2': 'radare2', '/tool/sqlninja': 'sqlninja', '/tool/weevely': 'weevely',
-}
-
-export default function TutorialLayout({ title, subtitle, icon, children, prev, next }) {
+export default function TutorialLayout({ title, subtitle, icon, children, prev: prevProp, next: nextProp }) {
   const location = useLocation()
+  const tool = getToolByRoute(location.pathname)
+  const { prev: computedPrev, next: computedNext } = getPrevNext(location.pathname)
   const related = relatedToolsMap[location.pathname] || []
   const { isLearned, toggleLearned, getStats } = useProgress()
   const { isBookmarked, toggleBookmark } = useBookmarks()
   const learned = isLearned(location.pathname)
   const bookmarked = isBookmarked(location.pathname)
 
+  const prev = prevProp || (computedPrev ? { to: computedPrev.route, label: computedPrev.name } : null)
+  const next = nextProp || (computedNext ? { to: computedNext.route, label: computedNext.name } : null)
+
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  }, [location.pathname])
+
+  const category = tool?.category || 'Security'
+  const descTemplates = {
+    WiFi: `${title} WiFi hacking tool ka Hindi tutorial. Seekhein wireless network penetration testing, WPA cracking, aur WiFi attacks ${title} ke saath.`,
+    Recon: `${title} reconnaissance tool ka Hindi tutorial. Seekhein information gathering, subdomain discovery, aur OSINT techniques ${title} ke saath.`,
+    Exploitation: `${title} exploitation framework ka Hindi tutorial. Seekhein vulnerability exploitation, post-exploitation, aur penetration testing ${title} ke saath.`,
+    Web: `${title} web security tool ka Hindi tutorial. Seekhein web vulnerability scanning, SQL injection, XSS aur web application testing ${title} ke saath.`,
+    Passwords: `${title} password cracking tool ka Hindi tutorial. Seekhein brute-force attacks, hash cracking, aur password security testing ${title} ke saath.`,
+    Network: `${title} network security tool ka Hindi tutorial. Seekhein network scanning, packet analysis, MITM attacks, aur network penetration testing ${title} ke saath.`,
+    Mobile: `${title} mobile security tool ka Hindi tutorial. Seekhein Android penetration testing, app reverse engineering, aur mobile device security ${title} ke saath.`,
+    Forensics: `${title} forensics tool ka Hindi tutorial. Seekhein memory forensics, firmware analysis, aur digital investigation techniques ${title} ke saath.`,
+    Tunneling: `${title} tunneling tool ka Hindi tutorial. Seekhein traffic tunneling, port forwarding, aur network pivoting techniques ${title} ke saath.`,
+    Audit: `${title} security auditing tool ka Hindi tutorial. Seekhein system auditing, vulnerability scanning, aur compliance checking ${title} ke saath.`,
+  }
+  const description = descTemplates[category] || `${title} ${category.toLowerCase()} tool ka Hindi tutorial. Learn ethical hacking aur penetration testing ${title} ke saath.`
+
+  const faqQuestions = {
+    WiFi: [
+      { q: `${title} kya hai aur kaise kaam karta hai?`, a: `${title} ek wireless security tool hai jo WiFi network penetration testing ke liye use hota hai. Yeh aapko wireless networks ko scan, monitor, aur test karne mein madad karta hai.` },
+      { q: `Kya ${title} legal hai?`, a: `Haan, ${title} legal hai jab ise authorized security testing, apne network, ya lab environment mein use karein. Bina permission ke kisi aur ke network par use karna illegal hai.` },
+      { q: `${title} kaise install karein?`, a: `${title} Kali NetHunter mein pre-installed aata hai. Aap Kali Linux mein 'apt install ${tool?.id || 'tool'}' command se bhi install kar sakte hain.` },
+      { q: `${title} ke alternatives kya hain?`, a: `${title} ke similar tools mein aircrack-ng, wifite, kismet, aur reaver shamil hain. Har tool ki apni khas features hain.` },
+    ],
+    Recon: [
+      { q: `${title} kya hai aur reconnaissance mein kaise use hota hai?`, a: `${title} ek reconnaissance tool hai jo information gathering ke liye use hota hai. Yeh target ke baare mein data collect karta hai jaise subdomains, IPs, aur DNS records.` },
+      { q: `${title} kaise use karein?`, a: `${title} ko command line se use kiya jaata hai. Basic syntax: specify target aur required flags ke saath. Detailed tutorial hamari website par available hai.` },
+      { q: `Kya ${title} OSINT ke liye useful hai?`, a: `Haan, ${title} OSINT (Open Source Intelligence) ke liye bahut useful hai. Yeh publicly available information ko collect karta hai jo security assessments mein help karta hai.` },
+    ],
+    Exploitation: [
+      { q: `${title} kya hai aur exploitation mein kaise use hota hai?`, a: `${title} ek exploitation framework/tool hai jo vulnerabilities ko identify aur exploit karne ke liye use hota hai. Yeh penetration testing mein important role nibhata hai.` },
+      { q: `Kya ${title} beginners ke liye suitable hai?`, a: `${title} ko use karne ke liye basic networking aur Linux knowledge necessary hai. Pehle fundamentals seekhne ke baad hi use karein.` },
+      { q: `${title} ke key features kya hain?`, a: `${title} mein bahut saare features hain jaise module system, payload generation, post-exploitation modules, aur extensive plugin support.` },
+    ],
+    Web: [
+      { q: `${title} kya hai aur web security mein kaise use hota hai?`, a: `${title} ek web application security tool hai jo websites aur web applications ki vulnerabilities ko detect aur test karta hai.` },
+      { q: `${title} se kaunsi vulnerabilities detect hoti hain?`, a: `${title} SQL injection, XSS, CSRF, directory traversal, aur OWASP Top 10 vulnerabilities ko detect kar sakta hai.` },
+      { q: `Kya ${title} ko bug bounty mein use kar sakte hain?`, a: `Haan, bug bounty programs mein authorized testing ke liye ${title} use kar sakte hain. Hamesha scope aur rules follow karein.` },
+    ],
+    Passwords: [
+      { q: `${title} kya hai aur password cracking mein kaise use hota hai?`, a: `${title} ek password cracking aur recovery tool hai jo hash files aur encrypted passwords ko crack karne ke liye use hota hai.` },
+      { q: `Kya ${title} legal hai?`, a: `Password cracking tools legal hain jab authorized security testing mein ya apne khud ke passwords recover karne mein use karein.` },
+      { q: `${title} kaunsa attack mode support karta hai?`, a: `${title} dictionary attacks, brute-force attacks, hybrid attacks, aur rule-based attacks support karta hai.` },
+    ],
+    Network: [
+      { q: `${title} kya hai aur network security mein kaise use hota hai?`, a: `${title} ek network tool hai jo network traffic analyze, monitor, aur manipulate karne ke liye use hota hai.` },
+      { q: `${title} se network mein kaunsi problems detect kar sakte hain?`, a: `${title} se misconfigurations, open ports, vulnerable services, aur network anomalies detect kar sakte hain.` },
+    ],
+    Mobile: [
+      { q: `${title} kya hai aur mobile security mein kaise use hota hai?`, a: `${title} ek mobile application security tool hai jo Android/iOS apps ki security testing ke liye use hota hai.` },
+      { q: `${title} se kaunsi testing kar sakte hain?`, a: `${title} se reverse engineering, dynamic analysis, network interception, aur vulnerability assessment kar sakte hain.` },
+    ],
+    Forensics: [
+      { q: `${title} kya hai aur forensics mein kaise use hota hai?`, a: `${title} ek digital forensics tool hai jo data recovery, analysis, aur investigation ke liye use hota hai.` },
+      { q: `${title} se konsi files analyze kar sakte hain?`, a: `${title} memory dumps, disk images, firmware, aur binary files analyze kar sakta hai.` },
+    ],
+    Tunneling: [
+      { q: `${title} kya hai aur tunneling mein kaise use hota hai?`, a: `${title} ek network tunneling tool hai jo traffic ko redirect aur encapsulate karne ke liye use hota hai.` },
+      { q: `${title} kab use karein?`, a: `${title} tab use karein jab aapko firewall bypass karna ho, traffic encrypt karna ho, ya remote networks connect karne hoon.` },
+    ],
+    Audit: [
+      { q: `${title} kya hai aur auditing mein kaise use hota hai?`, a: `${title} ek security auditing tool hai jo systems aur networks ki compliance aur security posture check karne ke liye use hota hai.` },
+      { q: `${title} se kaunsi audits kar sakte hain?`, a: `${title} se system hardening audits, vulnerability assessments, aur compliance checks kar sakte hain.` },
+    ],
+  }
+  const questions = faqQuestions[category] || faqQuestions.Recon
+
+  const softwareSchema = useMemo(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: title,
+    applicationCategory: 'SecurityApplication',
+    operatingSystem: 'Android, Linux',
+    description: `${title} - ${tool?.description || category.toLowerCase()} tool for Kali NetHunter.`,
+    author: { '@type': 'Person', name: 'Vilas' },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  }), [])
+
+  const breadcrumbSchema = useMemo(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://nethunter-learn.vercel.app/' },
+      { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://nethunter-learn.vercel.app/tools' },
+      { '@type': 'ListItem', position: 3, name: title, item: `https://nethunter-learn.vercel.app${location.pathname}` },
+    ],
+  }), [])
+
+  const faqSchema = useMemo(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: questions.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  }), [])
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <MetaTags
         title={`${title} Tutorial`}
-        description={`${title} ethical hacking tool ka complete Hindi tutorial. Seekhein kaise use karein ${title} ko security testing ke liye.`}
-        keywords={`${title}, ethical hacking, hindi tutorial, cybersecurity, kali nethunter`}
+        description={description}
+        keywords={`${title}, ${category.toLowerCase()}, ethical hacking, hindi tutorial, cybersecurity, kali nethunter`}
         url={`https://nethunter-learn.vercel.app${location.pathname}`}
+        author="Vilas"
       />
       <ReadingProgress />
-      {/* Header */}
       <div className="mb-12">
-        <Link to="/" className="text-gray-500 hover:text-neon-green text-sm font-mono mb-4 inline-block">
+        <Link to="/" className="text-gray-400 hover:text-neon-green text-sm font-mono mb-4 inline-block">
           ← Back to Home
         </Link>
         <div className="flex items-center space-x-4 mb-4">
@@ -70,9 +156,15 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev, 
           </div>
         </div>
         <div className="h-1 w-20 bg-gradient-to-r from-neon-green to-neon-cyan rounded-full" />
+        <div className="mt-4 flex items-center gap-3 text-sm text-gray-400">
+          <span>लेखक: Vilas</span>
+          <span className="text-gray-700">•</span>
+          <span>AI Assisted &amp; Verified by Author</span>
+          <span className="text-gray-700">•</span>
+          <span>जून 2026</span>
+        </div>
       </div>
 
-      {/* Progress Tracker & Bookmark */}
       <div className="mb-8 flex items-center justify-between flex-wrap gap-3">
         <div className="flex items-center gap-3">
           <button
@@ -82,17 +174,18 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev, 
                 ? 'bg-neon-green/20 text-neon-green border border-neon-green/40'
                 : 'bg-dark-800 text-gray-400 border border-dark-600 hover:border-neon-green/30 hover:text-neon-green'
             }`}
+            aria-label={learned ? 'Marked as learned' : 'Mark as learned'}
           >
             {learned ? (
               <>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 Seekh Liya!
               </>
             ) : (
               <>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
                 Mark as Learned
@@ -107,19 +200,19 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev, 
                 ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/40'
                 : 'bg-dark-800 text-gray-400 border border-dark-600 hover:border-yellow-500/30 hover:text-yellow-400'
             }`}
+            aria-label={bookmarked ? 'Bookmarked' : 'Add bookmark'}
           >
-            <svg className="w-5 h-5" fill={bookmarked ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5" fill={bookmarked ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
             </svg>
             {bookmarked ? 'Bookmarked' : 'Bookmark'}
           </button>
         </div>
-        <span className="text-gray-500 text-sm">
-          {getStats().total}/77 tools learned ({getStats().percentage}%)
+        <span className="text-gray-400 text-sm">
+          {getStats().total}/{toolCount} tools learned ({getStats().percentage}%)
         </span>
       </div>
 
-      {/* Warning */}
       <div className="warning-box mb-8">
         <div className="flex items-start space-x-2">
           <span className="text-xl">⚠️</span>
@@ -132,36 +225,74 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev, 
         </div>
       </div>
 
-      {/* Content */}
       <div className="tutorial-content">
         {children}
       </div>
 
-      {/* Quiz */}
       {quizData[title.toLowerCase()] && (
         <Quiz questions={quizData[title.toLowerCase()]} toolName={title} />
       )}
 
-      {/* Related Tools */}
       {related.length > 0 && (
         <div className="mt-12 pt-8 border-t border-dark-600">
           <h2 className="text-xl font-heading text-neon-cyan mb-4">Related Tools</h2>
           <div className="flex flex-wrap gap-3">
-            {related.map(path => (
-              <Link
-                key={path}
-                to={path}
-                className="px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-sm font-mono"
-              >
-                {toolNames[path] || path.split('/').pop()}
-              </Link>
-            ))}
+            {related.map(path => {
+              const rt = getToolByRoute(path)
+              return (
+                <Link
+                  key={path}
+                  to={path}
+                  className="px-4 py-2 bg-dark-800 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-sm font-mono"
+                >
+                  {rt ? rt.name : path.split('/').pop()}
+                </Link>
+              )
+            })}
           </div>
         </div>
       )}
 
-      {/* Navigation */}
-      <div className="flex justify-between items-center mt-16 pt-8 border-t border-dark-600">
+      <div className="mt-12 pt-8 border-t border-dark-600">
+        <h2 className="text-xl font-heading text-neon-cyan mb-4">📚 संदर्भ और बाहरी स्रोत (References)</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <a href="https://www.kali.org/tools/" target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 px-4 py-3 bg-dark-800 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-sm">
+            <span>🐉</span>
+            <span>Kali Linux Official Tools Documentation</span>
+          </a>
+          <a href="https://www.kali.org/docs/" target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 px-4 py-3 bg-dark-800 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-sm">
+            <span>📖</span>
+            <span>Kali Linux Official Documentation</span>
+          </a>
+          <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 px-4 py-3 bg-dark-800 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-sm">
+            <span>🛡️</span>
+            <span>OWASP Top 10 Security Risks</span>
+          </a>
+          <a href="https://www.exploit-db.com/" target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 px-4 py-3 bg-dark-800 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-sm">
+            <span>📚</span>
+            <span>Exploit-DB by Offensive Security</span>
+          </a>
+          <a href="https://nvd.nist.gov/" target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 px-4 py-3 bg-dark-800 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-sm">
+            <span>🔐</span>
+            <span>NIST National Vulnerability Database</span>
+          </a>
+          <a href="https://cve.mitre.org/" target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 px-4 py-3 bg-dark-800 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-sm">
+            <span>⚠️</span>
+            <span>CVE - Common Vulnerabilities & Exposures</span>
+          </a>
+        </div>
+        <p className="text-gray-600 text-xs mt-3">
+          ये बाहरी स्रोत हमारे कंटेंट को वेरिफाई और रिफरेंस करने के लिए उपयोग किए जाते हैं। कृपया इन्हें देखकर और गहराई से सीखें।
+        </p>
+      </div>
+
+      <div className="flex justify-between items-center mt-12 pt-8 border-t border-dark-600">
         {prev ? (
           <Link to={prev.to} className="group flex items-center space-x-2 text-gray-400 hover:text-neon-green transition-colors">
             <span className="text-2xl group-hover:-translate-x-1 transition-transform">←</span>
