@@ -202,6 +202,9 @@ export default function BlogPost() {
         keywords={post.tags.join(', ')}
         url={`https://nethunter-learn.vercel.app/blog/${post.id}`}
         author="Vilas"
+        type="article"
+        publishedTime={post.date}
+        image={`https://nethunter-learn.vercel.app/og-blog.svg?category=${encodeURIComponent(post.category)}&title=${encodeURIComponent(post.title)}`}
       />
       <ReadingProgress />
       {/* Back link */}

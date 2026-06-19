@@ -40,10 +40,11 @@ function addJsonLd(json) {
   document.head.appendChild(el)
 }
 
-export default function MetaTags({ title, description, keywords, url, type = 'website', publishedTime, author = 'Nethunter Learn' }) {
+export default function MetaTags({ title, description, keywords, url, type = 'website', publishedTime, author = 'Nethunter Learn', image }) {
   const pageUrl = url || siteUrl
   const fullTitle = title ? `${title} | ${siteName}` : `${siteName} - Ethical Hacking Tutorials`
   const desc = description || defaultDesc
+  const pageImage = image || ogImage
 
   useEffect(() => {
     document.title = fullTitle
@@ -56,14 +57,14 @@ export default function MetaTags({ title, description, keywords, url, type = 'we
     upsertMeta('property', 'og:url', pageUrl, true)
     upsertMeta('property', 'og:type', type, true)
     upsertMeta('property', 'og:site_name', siteName, true)
-    upsertMeta('property', 'og:image', ogImage, true)
-    upsertMeta('property', 'og:image:alt', 'Nethunter Learn Logo', true)
+    upsertMeta('property', 'og:image', pageImage, true)
+    upsertMeta('property', 'og:image:alt', `${fullTitle} - Nethunter Learn`, true)
     upsertMeta('property', 'og:locale', 'hi_IN', true)
 
     upsertMeta('name', 'twitter:card', 'summary_large_image')
     upsertMeta('name', 'twitter:title', fullTitle)
     upsertMeta('name', 'twitter:description', desc)
-    upsertMeta('name', 'twitter:image', ogImage)
+    upsertMeta('name', 'twitter:image', pageImage)
 
     upsertLink('canonical', pageUrl)
 
@@ -108,7 +109,7 @@ export default function MetaTags({ title, description, keywords, url, type = 'we
         inLanguage: 'hi',
       })
     }
-  }, [fullTitle, desc, keywords, pageUrl, type, publishedTime, author, title])
+  }, [fullTitle, desc, keywords, pageUrl, type, publishedTime, author, title, pageImage])
 
   return null
 }

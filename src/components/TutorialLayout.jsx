@@ -6,6 +6,7 @@ import Quiz from './Quiz'
 import relatedToolsMap from '../data/relatedTools'
 import quizData from '../data/quizData'
 import { useProgress } from '../context/ProgressContext'
+import { useTheme } from '../context/ThemeContext'
 import { useBookmarks } from '../context/BookmarkContext'
 import { getToolByRoute, getPrevNext, toolCount } from '../data/tools'
 import Breadcrumbs from './Breadcrumbs'
@@ -27,6 +28,7 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
     window.scrollTo(0, 0)
   }, [location.pathname])
 
+  const { isDark } = useTheme()
   const category = tool?.category || 'Security'
   const descTemplates = {
     WiFi: `${title} WiFi hacking tool ka Hindi tutorial. Seekhein wireless network penetration testing, WPA cracking, aur WiFi attacks ${title} ke saath.`,
@@ -143,6 +145,7 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
         keywords={`${title}, ${category.toLowerCase()}, ethical hacking, hindi tutorial, cybersecurity, kali nethunter`}
         url={`https://nethunter-learn.vercel.app${location.pathname}`}
         author="Vilas"
+        image={`https://nethunter-learn.vercel.app/og-tool.svg?category=${category}&name=${encodeURIComponent(title)}`}
       />
       <ReadingProgress />
       <Breadcrumbs

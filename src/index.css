@@ -177,6 +177,16 @@ html.light .tutorial-content ol {
   color: #4a4a6a;
 }
 
+html.light .tutorial-content h2,
+html.light .tutorial-content h3,
+html.light .tutorial-content h4 {
+  color: #1a1a2e;
+}
+
+html.light .tutorial-content strong {
+  color: #008000;
+}
+
 html.light .warning-box {
   background-color: rgba(255, 0, 64, 0.08);
   border-color: rgba(255, 0, 64, 0.2);
@@ -253,6 +263,38 @@ html.light .border-dark-700 {
 
 html.light .border-dark-600 {
   border-color: #ced4da;
+}
+
+/* Additional Light Mode Overrides */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6 {
+  &.text-white { color: #1a1a2e; }
+}
+
+html.light .text-white {
+  color: #1a1a2e;
+}
+
+html.light .section-title {
+  color: #00cc33;
+}
+
+html.light .gradient-text {
+  background-image: linear-gradient(to right, #00cc33, #00bbcc, #00cc33);
+}
+
+html.light .btn-outline {
+  color: #00cc33;
+  border-color: #00cc33;
+}
+
+html.light .btn-outline:hover {
+  background-color: #00cc33;
+  color: #ffffff;
 }
 
 /* Print Styles */

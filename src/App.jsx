@@ -3,9 +3,12 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import BackToTop from './components/BackToTop'
+import ShortcutsHelp from './components/ShortcutsHelp'
 import ErrorBoundary from './components/ErrorBoundary'
 import CookieConsent from './components/CookieConsent'
 import JsonLd, { websiteJsonLd, organizationJsonLd } from './components/JsonLd'
+import useKeyboardShortcuts from './hooks/useKeyboardShortcuts'
 import Home from './pages/Home'
 import tools, { toolRoutes } from './data/tools'
 
@@ -46,9 +49,15 @@ function PageLoader() {
   )
 }
 
+function AppInner() {
+  useKeyboardShortcuts()
+  return null
+}
+
 export default function App() {
   return (
     <div className="min-h-screen bg-dark-900 flex flex-col">
+      <AppInner />
       <JsonLd data={websiteJsonLd()} />
       <JsonLd data={organizationJsonLd()} />
       <ErrorBoundary>
@@ -90,6 +99,8 @@ export default function App() {
         </Suspense>
       </main>
       </ErrorBoundary>
+      <BackToTop />
+      <ShortcutsHelp />
       <Footer />
       <CookieConsent />
       <ScrollToTop />

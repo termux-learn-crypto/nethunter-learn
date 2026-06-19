@@ -1,18 +1,10 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import tools from '../data/tools'
+import blogPosts from '../data/blogPosts'
 
 const toolList = tools.map(t => ({ label: t.name, path: t.route }))
-const blogList = [
-  { label: 'Ethical Hacking Roadmap 2026', path: '/blog/ethical-hacking-roadmap-2026' },
-  { label: 'WiFi Pineapple vs Nethunter', path: '/blog/wifi-pineapple-vs-nethunter' },
-  { label: 'CVE-2026-1234 Critical RCE', path: '/blog/cve-2026-1234-critical-rce' },
-  { label: 'Android 14 Nethunter Install', path: '/blog/android-14-nethunter-install' },
-  { label: 'Bug Bounty Guide', path: '/blog/bug-bounty-guide' },
-  { label: 'Top 10 Kali Tools', path: '/blog/top-10-kali-tools' },
-  { label: 'OWASP Top 10 2026', path: '/blog/owasp-top-10-2026' },
-  { label: 'CTF Tips & Tricks', path: '/blog/ctf-tips-tricks' },
-]
+const blogList = blogPosts.slice(0, 12).map(p => ({ label: p.title, path: `/blog/${p.id}` }))
 
 const popularPages = [
   { path: '/installation', label: 'Installation Guide', icon: '📱' },
