@@ -8,6 +8,7 @@ import quizData from '../data/quizData'
 import { useProgress } from '../context/ProgressContext'
 import { useBookmarks } from '../context/BookmarkContext'
 import { getToolByRoute, getPrevNext, toolCount } from '../data/tools'
+import Breadcrumbs from './Breadcrumbs'
 
 export default function TutorialLayout({ title, subtitle, icon, children, prev: prevProp, next: nextProp }) {
   const location = useLocation()
@@ -144,10 +145,14 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
         author="Vilas"
       />
       <ReadingProgress />
+      <Breadcrumbs
+        items={[
+          { to: '/', label: 'Home' },
+          { to: '/tools', label: 'Tools' },
+          { label: title },
+        ]}
+      />
       <div className="mb-12">
-        <Link to="/" className="text-gray-400 hover:text-neon-green text-sm font-mono mb-4 inline-block">
-          ← Back to Home
-        </Link>
         <div className="flex items-center space-x-4 mb-4">
           <span className="text-5xl">{icon}</span>
           <div>
@@ -206,6 +211,16 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
             </svg>
             {bookmarked ? 'Bookmarked' : 'Bookmark'}
+          </button>
+          <button
+            onClick={() => window.print()}
+            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all bg-dark-800 text-gray-400 border border-dark-600 hover:border-neon-green/30 hover:text-neon-green"
+            aria-label="Print this page"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Print
           </button>
         </div>
         <span className="text-gray-400 text-sm">

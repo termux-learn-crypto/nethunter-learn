@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import SearchModal from './SearchModal'
 import { useTheme } from '../context/ThemeContext'
+import { useLanguage } from '../context/LanguageContext'
 
 const navItems = [
   { path: '/', label: 'Home' },
@@ -21,6 +22,7 @@ export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false)
   const location = useLocation()
   const { isDark, toggleTheme } = useTheme()
+  const { lang, setLang } = useLanguage()
 
   useEffect(() => {
     setIsOpen(false)
@@ -94,6 +96,14 @@ export default function Navbar() {
                   </svg>
                 )}
               </button>
+              <button
+                onClick={() => setLang(lang === 'hi' ? 'en' : 'hi')}
+                aria-label="Toggle language"
+                className="ml-1 p-2 rounded-lg text-gray-400 hover:text-neon-green hover:bg-neon-green/5 transition-all border border-dark-700 hover:border-neon-green/30 font-mono text-xs font-bold"
+                title={lang === 'hi' ? 'Switch to English' : 'हिंदी में बदलें'}
+              >
+                {lang === 'hi' ? 'EN' : 'HI'}
+              </button>
             </div>
 
             {/* Mobile menu button */}
@@ -121,6 +131,13 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                   </svg>
                 )}
+              </button>
+              <button
+                onClick={() => setLang(lang === 'hi' ? 'en' : 'hi')}
+                aria-label="Toggle language"
+                className="text-gray-400 hover:text-neon-green p-2 font-mono text-xs font-bold"
+              >
+                {lang === 'hi' ? 'EN' : 'HI'}
               </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}

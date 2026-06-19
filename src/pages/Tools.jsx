@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import TutorialLayout from '../components/TutorialLayout'
 import CodeBlock from '../components/CodeBlock'
@@ -1258,18 +1258,29 @@ const tools = [
 
 
 
+const TOOLS_PER_PAGE = 30
 const categories = ['All', ...new Set(tools.map(t => t.category))]
 
 export default function Tools() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchTerm, setSearchTerm] = useState('')
+  const [currentPage, setCurrentPage] = useState(1)
 
   const filteredTools = tools.filter(tool => {
     const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory
     const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          tool.description.toLowerCase().includes(searchTerm.toLowerCase())
+                          (tool.description || '').toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch
   })
+
+  const totalPages = Math.ceil(filteredTools.length / TOOLS_PER_PAGE)
+  const safePage = Math.min(currentPage, totalPages || 1)
+  const paginatedTools = filteredTools.slice((safePage - 1) * TOOLS_PER_PAGE, safePage * TOOLS_PER_PAGE)
+
+  // Reset page when filters change
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [searchTerm, selectedCategory])
 
   return (
     <TutorialLayout
@@ -1317,7 +1328,7 @@ export default function Tools() {
 
       {/* Tools Grid */}
       <div className="space-y-6">
-        {filteredTools.map(tool => (
+        {paginatedTools.map(tool => (
           <div key={tool.name} className="glass-card p-6">
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-xl font-mono font-bold text-neon-green">{tool.name}</h3>
@@ -1346,6 +1357,46 @@ export default function Tools() {
         <div className="text-center py-12 text-gray-500">
           <span className="text-4xl">🔍</span>
           <p className="mt-4">"{searchTerm}" se koi tool nahi mila</p>
+        </div>
+      )}
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-center gap-2 mt-8">
+          <button
+            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+            disabled={safePage === 1}
+            className="px-3 py-2 bg-dark-800 border border-dark-600 rounded-lg text-gray-400 hover:text-neon-green hover:border-neon-green/30 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+          >
+            ← Previous
+          </button>
+          <div className="flex gap-1">
+            {Array.from({ length: Math.min(totalPages, 10) }, (_, i) => {
+              const start = Math.max(0, Math.min(safePage - 5, totalPages - 10))
+              const pageNum = start + i + 1
+              if (pageNum > totalPages) return null
+              return (
+                <button
+                  key={pageNum}
+                  onClick={() => setCurrentPage(pageNum)}
+                  className={`w-9 h-9 rounded-lg text-sm font-mono transition-all ${
+                    safePage === pageNum
+                      ? 'bg-neon-green text-dark-900 font-bold'
+                      : 'bg-dark-800 border border-dark-600 text-gray-400 hover:text-neon-green hover:border-neon-green/30'
+                  }`}
+                >
+                  {pageNum}
+                </button>
+              )
+            })}
+          </div>
+          <button
+            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+            disabled={safePage === totalPages}
+            className="px-3 py-2 bg-dark-800 border border-dark-600 rounded-lg text-gray-400 hover:text-neon-green hover:border-neon-green/30 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+          >
+            Next →
+          </button>
         </div>
       )}
 

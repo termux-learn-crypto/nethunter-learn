@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import ErrorBoundary from './components/ErrorBoundary'
 import CookieConsent from './components/CookieConsent'
+import JsonLd, { websiteJsonLd, organizationJsonLd } from './components/JsonLd'
 import Home from './pages/Home'
 import tools, { toolRoutes } from './data/tools'
 
@@ -48,6 +49,8 @@ function PageLoader() {
 export default function App() {
   return (
     <div className="min-h-screen bg-dark-900 flex flex-col">
+      <JsonLd data={websiteJsonLd()} />
+      <JsonLd data={organizationJsonLd()} />
       <ErrorBoundary>
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-neon-green focus:text-dark-900 focus:rounded-lg focus:font-semibold">
         Skip to main content

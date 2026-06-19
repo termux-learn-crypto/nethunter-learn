@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import tools from '../data/tools'
+import blogPosts from '../data/blogPosts'
 
 const pages = [
   { title: 'Home', path: '/', category: 'Page', desc: 'Nethunter Learn - Seekho Ethical Hacking' },
@@ -28,7 +29,14 @@ const toolItems = tools.map(t => ({
   desc: t.description || `${t.name} - ${t.category} tool in Kali Linux`,
 }))
 
-const searchData = [...pages, ...toolItems]
+const blogItems = blogPosts.map(p => ({
+  title: p.title,
+  path: `/blog/${p.id}`,
+  category: p.category,
+  desc: p.excerpt,
+}))
+
+const searchData = [...pages, ...toolItems, ...blogItems]
 
 const categoryColors = {
   Page: 'text-neon-cyan',
@@ -44,6 +52,26 @@ const categoryColors = {
   Tunneling: 'text-cyan-400',
   Audit: 'text-lime-400',
   Forensics: 'text-amber-400',
+  'रोडमैप': 'text-neon-green',
+  'ट्यूटोरियल': 'text-neon-cyan',
+  'सीवीई अलर्ट': 'text-neon-red',
+  'तुलना': 'text-purple-400',
+  'करियर': 'text-yellow-400',
+  'टूल्स': 'text-blue-400',
+  'सिक्यूरिटी': 'text-orange-400',
+  'सीटीएफ': 'text-pink-400',
+  'वाईफाई': 'text-yellow-400',
+  'नेटवर्क': 'text-blue-400',
+  'वेब सिक्यूरिटी': 'text-orange-400',
+  'एंड्रॉयड': 'text-emerald-400',
+  'पासवर्ड': 'text-red-400',
+  'एक्सप्लॉइटेशन': 'text-pink-400',
+  'सोशल इंजीनियरिंग': 'text-cyan-400',
+  'फोरेंसिक': 'text-amber-400',
+  'क्लाउड': 'text-sky-400',
+  'रिवर्स इंजीनियरिंग': 'text-indigo-400',
+  'ब्लूटूथ': 'text-blue-500',
+  'बग बाउंटी': 'text-lime-400',
 }
 
 export default function SearchModal({ isOpen, onClose }) {

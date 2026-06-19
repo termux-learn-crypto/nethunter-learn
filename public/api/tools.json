@@ -1,0 +1,1458 @@
+[
+  {
+    "id": "aircrack-ng",
+    "name": "Aircrack ng",
+    "route": "/tool/aircrack-ng",
+    "category": "WiFi",
+    "icon": "📶"
+  },
+  {
+    "id": "airgeddon",
+    "name": "Airgeddon",
+    "route": "/tool/airgeddon",
+    "category": "WiFi",
+    "icon": "🎯"
+  },
+  {
+    "id": "amass",
+    "name": "Amass",
+    "route": "/tool/amass",
+    "category": "Recon",
+    "icon": "🔍"
+  },
+  {
+    "id": "apktool",
+    "name": "Apktool",
+    "route": "/tool/apktool",
+    "category": "Mobile",
+    "icon": "📱"
+  },
+  {
+    "id": "arp-scan",
+    "name": "Arp scan",
+    "route": "/tool/arp-scan",
+    "category": "Recon",
+    "icon": "🔌"
+  },
+  {
+    "id": "beef-xss",
+    "name": "Beef xss",
+    "route": "/tool/beef-xss",
+    "category": "Exploitation",
+    "icon": "🐂"
+  },
+  {
+    "id": "bettercap",
+    "name": "Bettercap",
+    "route": "/tool/bettercap",
+    "category": "Network",
+    "icon": "🛡️"
+  },
+  {
+    "id": "binwalk",
+    "name": "Binwalk",
+    "route": "/tool/binwalk",
+    "category": "Forensics",
+    "icon": "🔬"
+  },
+  {
+    "id": "bloodhound",
+    "name": "Bloodhound",
+    "route": "/tool/bloodhound",
+    "category": "Recon",
+    "icon": "🐕"
+  },
+  {
+    "id": "burpsuite",
+    "name": "Burpsuite",
+    "route": "/tool/burpsuite",
+    "category": "Web",
+    "icon": "🕷️"
+  },
+  {
+    "id": "cewl",
+    "name": "Cewl",
+    "route": "/tool/cewl",
+    "category": "Passwords",
+    "icon": "📝"
+  },
+  {
+    "id": "chisel",
+    "name": "Chisel",
+    "route": "/tool/chisel",
+    "category": "Tunneling",
+    "icon": "🔧"
+  },
+  {
+    "id": "commix",
+    "name": "Commix",
+    "route": "/tool/commix",
+    "category": "Exploitation",
+    "icon": "💉"
+  },
+  {
+    "id": "crackmapexec",
+    "name": "Crackmapexec",
+    "route": "/tool/crackmapexec",
+    "category": "Exploitation",
+    "icon": "⚡"
+  },
+  {
+    "id": "crunch",
+    "name": "Crunch",
+    "route": "/tool/crunch",
+    "category": "Passwords",
+    "icon": "🔤"
+  },
+  {
+    "id": "dirb",
+    "name": "Dirb",
+    "route": "/tool/dirb",
+    "category": "Web",
+    "icon": "📂"
+  },
+  {
+    "id": "dnscat2",
+    "name": "Dnscat2",
+    "route": "/tool/dnscat2",
+    "category": "Tunneling",
+    "icon": "🐱"
+  },
+  {
+    "id": "dnsenum",
+    "name": "Dnsenum",
+    "route": "/tool/dnsenum",
+    "category": "Recon",
+    "icon": "📋"
+  },
+  {
+    "id": "dnsrecon",
+    "name": "Dnsrecon",
+    "route": "/tool/dnsrecon",
+    "category": "Recon",
+    "icon": "🔄"
+  },
+  {
+    "id": "drozer",
+    "name": "Drozer",
+    "route": "/tool/drozer",
+    "category": "Mobile",
+    "icon": "🤖"
+  },
+  {
+    "id": "eaphammer",
+    "name": "Eaphammer",
+    "route": "/tool/eaphammer",
+    "category": "WiFi",
+    "icon": "🔨"
+  },
+  {
+    "id": "empire",
+    "name": "Empire",
+    "route": "/tool/empire",
+    "category": "Exploitation",
+    "icon": "👑"
+  },
+  {
+    "id": "enum4linux",
+    "name": "Enum4linux",
+    "route": "/tool/enum4linux",
+    "category": "Recon",
+    "icon": "🐧"
+  },
+  {
+    "id": "evil-winrm",
+    "name": "Evil winrm",
+    "route": "/tool/evil-winrm",
+    "category": "Exploitation",
+    "icon": "👿"
+  },
+  {
+    "id": "ffuf",
+    "name": "Ffuf",
+    "route": "/tool/ffuf",
+    "category": "Web",
+    "icon": "🚀"
+  },
+  {
+    "id": "frida",
+    "name": "Frida",
+    "route": "/tool/frida",
+    "category": "Mobile",
+    "icon": "🪡"
+  },
+  {
+    "id": "gobuster",
+    "name": "Gobuster",
+    "route": "/tool/gobuster",
+    "category": "Web",
+    "icon": "💥"
+  },
+  {
+    "id": "hashcat",
+    "name": "Hashcat",
+    "route": "/tool/hashcat",
+    "category": "Passwords",
+    "icon": "💎"
+  },
+  {
+    "id": "hcxdumptool",
+    "name": "Hcxdumptool",
+    "route": "/tool/hcxdumptool",
+    "category": "WiFi",
+    "icon": "🔓"
+  },
+  {
+    "id": "hostapd-mana",
+    "name": "Hostapd mana",
+    "route": "/tool/hostapd-mana",
+    "category": "WiFi",
+    "icon": "📡"
+  },
+  {
+    "id": "hping3",
+    "name": "Hping3",
+    "route": "/tool/hping3",
+    "category": "Network",
+    "icon": "📨"
+  },
+  {
+    "id": "hydra",
+    "name": "Hydra",
+    "route": "/tool/hydra",
+    "category": "Passwords",
+    "icon": "🐍"
+  },
+  {
+    "id": "impacket",
+    "name": "Impacket",
+    "route": "/tool/impacket",
+    "category": "Exploitation",
+    "icon": "📦"
+  },
+  {
+    "id": "john",
+    "name": "John",
+    "route": "/tool/john",
+    "category": "Passwords",
+    "icon": "👤"
+  },
+  {
+    "id": "katana",
+    "name": "Katana",
+    "route": "/tool/katana",
+    "category": "Web",
+    "icon": "🗡️"
+  },
+  {
+    "id": "kismet",
+    "name": "Kismet",
+    "route": "/tool/kismet",
+    "category": "WiFi",
+    "icon": "📡"
+  },
+  {
+    "id": "lynis",
+    "name": "Lynis",
+    "route": "/tool/lynis",
+    "category": "Audit",
+    "icon": "✅"
+  },
+  {
+    "id": "macchanger",
+    "name": "Macchanger",
+    "route": "/tool/macchanger",
+    "category": "WiFi",
+    "icon": "🔢"
+  },
+  {
+    "id": "maltego",
+    "name": "Maltego",
+    "route": "/tool/maltego",
+    "category": "Recon",
+    "icon": "🕸️"
+  },
+  {
+    "id": "masscan",
+    "name": "Masscan",
+    "route": "/tool/masscan",
+    "category": "Recon",
+    "icon": "⚡"
+  },
+  {
+    "id": "medusa",
+    "name": "Medusa",
+    "route": "/tool/medusa",
+    "category": "Passwords",
+    "icon": "🐍"
+  },
+  {
+    "id": "metasploit-framework",
+    "name": "Metasploit framework",
+    "route": "/tool/metasploit-framework",
+    "category": "Exploitation",
+    "icon": "💣"
+  },
+  {
+    "id": "mimikatz",
+    "name": "Mimikatz",
+    "route": "/tool/mimikatz",
+    "category": "Exploitation",
+    "icon": "🔑"
+  },
+  {
+    "id": "mitmproxy",
+    "name": "Mitmproxy",
+    "route": "/tool/mitmproxy",
+    "category": "Network",
+    "icon": "🔄"
+  },
+  {
+    "id": "msfvenom",
+    "name": "Msfvenom",
+    "route": "/tool/msfvenom",
+    "category": "Exploitation",
+    "icon": "💉"
+  },
+  {
+    "id": "naabu",
+    "name": "Naabu",
+    "route": "/tool/naabu",
+    "category": "Recon",
+    "icon": "📡"
+  },
+  {
+    "id": "netcat",
+    "name": "Netcat",
+    "route": "/tool/netcat",
+    "category": "Network",
+    "icon": "🔌"
+  },
+  {
+    "id": "netdiscover",
+    "name": "Netdiscover",
+    "route": "/tool/netdiscover",
+    "category": "Recon",
+    "icon": "🔍"
+  },
+  {
+    "id": "nikto",
+    "name": "Nikto",
+    "route": "/tool/nikto",
+    "category": "Web",
+    "icon": "🌐"
+  },
+  {
+    "id": "nmap",
+    "name": "Nmap",
+    "route": "/tool/nmap",
+    "category": "Recon",
+    "icon": "🗺️"
+  },
+  {
+    "id": "nuclei",
+    "name": "Nuclei",
+    "route": "/tool/nuclei",
+    "category": "Web",
+    "icon": "☢️"
+  },
+  {
+    "id": "objection",
+    "name": "Objection",
+    "route": "/tool/objection",
+    "category": "Mobile",
+    "icon": "📱"
+  },
+  {
+    "id": "pixiewps",
+    "name": "Pixiewps",
+    "route": "/tool/pixiewps",
+    "category": "WiFi",
+    "icon": "🔢"
+  },
+  {
+    "id": "proxychains",
+    "name": "Proxychains",
+    "route": "/tool/proxychains",
+    "category": "Tunneling",
+    "icon": "⛓️"
+  },
+  {
+    "id": "radare2",
+    "name": "Radare2",
+    "route": "/tool/radare2",
+    "category": "Forensics",
+    "icon": "🔧"
+  },
+  {
+    "id": "reaver",
+    "name": "Reaver",
+    "route": "/tool/reaver",
+    "category": "WiFi",
+    "icon": "🔨"
+  },
+  {
+    "id": "recon-ng",
+    "name": "Recon ng",
+    "route": "/tool/recon-ng",
+    "category": "Recon",
+    "icon": "🕵️"
+  },
+  {
+    "id": "responder",
+    "name": "Responder",
+    "route": "/tool/responder",
+    "category": "Network",
+    "icon": "🔄"
+  },
+  {
+    "id": "searchsploit",
+    "name": "Searchsploit",
+    "route": "/tool/searchsploit",
+    "category": "Exploitation",
+    "icon": "📚"
+  },
+  {
+    "id": "setoolkit",
+    "name": "Setoolkit",
+    "route": "/tool/setoolkit",
+    "category": "Exploitation",
+    "icon": "🎭"
+  },
+  {
+    "id": "sherlock",
+    "name": "Sherlock",
+    "route": "/tool/sherlock",
+    "category": "Recon",
+    "icon": "🔎"
+  },
+  {
+    "id": "socat",
+    "name": "Socat",
+    "route": "/tool/socat",
+    "category": "Tunneling",
+    "icon": "🔗"
+  },
+  {
+    "id": "sqlmap",
+    "name": "Sqlmap",
+    "route": "/tool/sqlmap",
+    "category": "Web",
+    "icon": "💾"
+  },
+  {
+    "id": "sqlninja",
+    "name": "Sqlninja",
+    "route": "/tool/sqlninja",
+    "category": "Web",
+    "icon": "🐱"
+  },
+  {
+    "id": "sslstrip",
+    "name": "Sslstrip",
+    "route": "/tool/sslstrip",
+    "category": "WiFi",
+    "icon": "🔓"
+  },
+  {
+    "id": "subfinder",
+    "name": "Subfinder",
+    "route": "/tool/subfinder",
+    "category": "Recon",
+    "icon": "🔎"
+  },
+  {
+    "id": "tcpdump",
+    "name": "Tcpdump",
+    "route": "/tool/tcpdump",
+    "category": "Network",
+    "icon": "📥"
+  },
+  {
+    "id": "theharvester",
+    "name": "Theharvester",
+    "route": "/tool/theharvester",
+    "category": "Recon",
+    "icon": "🌾"
+  },
+  {
+    "id": "trivy",
+    "name": "Trivy",
+    "route": "/tool/trivy",
+    "category": "Audit",
+    "icon": "🔍"
+  },
+  {
+    "id": "volatility",
+    "name": "Volatility",
+    "route": "/tool/volatility",
+    "category": "Forensics",
+    "icon": "🧠"
+  },
+  {
+    "id": "wafw00f",
+    "name": "Wafw00f",
+    "route": "/tool/wafw00f",
+    "category": "Web",
+    "icon": "🛡️"
+  },
+  {
+    "id": "weevely",
+    "name": "Weevely",
+    "route": "/tool/weevely",
+    "category": "Exploitation",
+    "icon": "🐚"
+  },
+  {
+    "id": "whois",
+    "name": "Whois",
+    "route": "/tool/whois",
+    "category": "Recon",
+    "icon": "🔍"
+  },
+  {
+    "id": "wifite",
+    "name": "Wifite",
+    "route": "/tool/wifite",
+    "category": "WiFi",
+    "icon": "📶"
+  },
+  {
+    "id": "wireshark",
+    "name": "Wireshark",
+    "route": "/tool/wireshark",
+    "category": "Network",
+    "icon": "🦈"
+  },
+  {
+    "id": "wpscan",
+    "name": "Wpscan",
+    "route": "/tool/wpscan",
+    "category": "Web",
+    "icon": "🔐"
+  },
+  {
+    "id": "yersinia",
+    "name": "Yersinia",
+    "route": "/tool/yersinia",
+    "category": "Network",
+    "icon": "🦎"
+  },
+  {
+    "id": "dmitry",
+    "name": "DMitry",
+    "route": "/tool/dmitry",
+    "category": "Recon",
+    "icon": "🔍"
+  },
+  {
+    "id": "ike-scan",
+    "name": "IKE-Scan",
+    "route": "/tool/ike-scan",
+    "category": "Recon",
+    "icon": "🔐"
+  },
+  {
+    "id": "lbd",
+    "name": "LBD",
+    "route": "/tool/lbd",
+    "category": "Recon",
+    "icon": "⚖️"
+  },
+  {
+    "id": "nbtscan",
+    "name": "NBTScan",
+    "route": "/tool/nbtscan",
+    "category": "Recon",
+    "icon": "🖥️"
+  },
+  {
+    "id": "nishang",
+    "name": "Nishang",
+    "route": "/tool/nishang",
+    "category": "Exploitation",
+    "icon": "💻"
+  },
+  {
+    "id": "p0f",
+    "name": "P0f",
+    "route": "/tool/p0f",
+    "category": "Recon",
+    "icon": "🖧"
+  },
+  {
+    "id": "pcredz",
+    "name": "PCredz",
+    "route": "/tool/pcredz",
+    "category": "Forensics",
+    "icon": "🔑"
+  },
+  {
+    "id": "pdf-parser",
+    "name": "PDF-Parser",
+    "route": "/tool/pdf-parser",
+    "category": "Forensics",
+    "icon": "📄"
+  },
+  {
+    "id": "smbmap",
+    "name": "SMBMap",
+    "route": "/tool/smbmap",
+    "category": "Recon",
+    "icon": "📁"
+  },
+  {
+    "id": "snmp-check",
+    "name": "SNMP-Check",
+    "route": "/tool/snmp-check",
+    "category": "Recon",
+    "icon": "📡"
+  },
+  {
+    "id": "sparta",
+    "name": "Sparta",
+    "route": "/tool/sparta",
+    "category": "Recon",
+    "icon": "🛡️"
+  },
+  {
+    "id": "sslscan",
+    "name": "SSLScan",
+    "route": "/tool/sslscan",
+    "category": "Recon",
+    "icon": "🔒"
+  },
+  {
+    "id": "sslyze",
+    "name": "SSLyze",
+    "route": "/tool/sslyze",
+    "category": "Recon",
+    "icon": "🔐"
+  },
+  {
+    "id": "unicornscan",
+    "name": "Unicornscan",
+    "route": "/tool/unicornscan",
+    "category": "Recon",
+    "icon": "🦄"
+  },
+  {
+    "id": "urlcrazy",
+    "name": "URLCrazy",
+    "route": "/tool/urlcrazy",
+    "category": "Recon",
+    "icon": "🔗"
+  },
+  {
+    "id": "xplico",
+    "name": "Xplico",
+    "route": "/tool/xplico",
+    "category": "Forensics",
+    "icon": "📊"
+  },
+  {
+    "id": "dns2tcp",
+    "name": "Dns2tcp",
+    "route": "/tool/dns2tcp",
+    "category": "Tunneling",
+    "icon": "🔗"
+  },
+  {
+    "id": "dnschef",
+    "name": "DNSchef",
+    "route": "/tool/dnschef",
+    "category": "Recon",
+    "icon": "🔄"
+  },
+  {
+    "id": "metagoofil",
+    "name": "Metagoofil",
+    "route": "/tool/metagoofil",
+    "category": "Recon",
+    "icon": "📑"
+  },
+  {
+    "id": "fierce",
+    "name": "Fierce",
+    "route": "/tool/fierce",
+    "category": "Recon",
+    "icon": "🔥"
+  },
+  {
+    "id": "dnsmap",
+    "name": "Dnsmap",
+    "route": "/tool/dnsmap",
+    "category": "Recon",
+    "icon": "📋"
+  },
+  {
+    "id": "httrack",
+    "name": "HTTrack",
+    "route": "/tool/httrack",
+    "category": "Web",
+    "icon": "🌐"
+  },
+  {
+    "id": "rpcbind",
+    "name": "RPCBind",
+    "route": "/tool/rpcbind",
+    "category": "Recon",
+    "icon": "🔌"
+  },
+  {
+    "id": "smbclient",
+    "name": "SMBClient",
+    "route": "/tool/smbclient",
+    "category": "Recon",
+    "icon": "📂"
+  },
+  {
+    "id": "finger",
+    "name": "Finger",
+    "route": "/tool/finger",
+    "category": "Recon",
+    "icon": "🔍"
+  },
+  {
+    "id": "showmount",
+    "name": "Showmount",
+    "route": "/tool/showmount",
+    "category": "Recon",
+    "icon": "📦"
+  },
+  {
+    "id": "bind9",
+    "name": "BIND9",
+    "route": "/tool/bind9",
+    "category": "Recon",
+    "icon": "🌐"
+  },
+  {
+    "id": "armitage",
+    "name": "Armitage",
+    "route": "/tool/armitage",
+    "category": "Exploitation",
+    "icon": "🎯"
+  },
+  {
+    "id": "backdoor-factory",
+    "name": "Backdoor Factory",
+    "route": "/tool/backdoor-factory",
+    "category": "Exploitation",
+    "icon": "🚪"
+  },
+  {
+    "id": "shellter",
+    "name": "Shellter",
+    "route": "/tool/shellter",
+    "category": "Exploitation",
+    "icon": "🐚"
+  },
+  {
+    "id": "veil",
+    "name": "Veil",
+    "route": "/tool/veil",
+    "category": "Exploitation",
+    "icon": "🎭"
+  },
+  {
+    "id": "websploit",
+    "name": "WebSploit",
+    "route": "/tool/websploit",
+    "category": "Web",
+    "icon": "🕸️"
+  },
+  {
+    "id": "exe2hex",
+    "name": "Exe2Hex",
+    "route": "/tool/exe2hex",
+    "category": "Exploitation",
+    "icon": "🔄"
+  },
+  {
+    "id": "fluxion",
+    "name": "Fluxion",
+    "route": "/tool/fluxion",
+    "category": "WiFi",
+    "icon": "📶"
+  },
+  {
+    "id": "mana-toolkit",
+    "name": "Mana Toolkit",
+    "route": "/tool/mana-toolkit",
+    "category": "WiFi",
+    "icon": "🕸️"
+  },
+  {
+    "id": "thc-ipv6",
+    "name": "THC-IPv6",
+    "route": "/tool/thc-ipv6",
+    "category": "Exploitation",
+    "icon": "🌐"
+  },
+  {
+    "id": "sidguess",
+    "name": "SidGuess",
+    "route": "/tool/sidguess",
+    "category": "Web",
+    "icon": "🎯"
+  },
+  {
+    "id": "msfpayload",
+    "name": "MSFPayload",
+    "route": "/tool/msfpayload",
+    "category": "Exploitation",
+    "icon": "💣"
+  },
+  {
+    "id": "shellnoob",
+    "name": "ShellNoob",
+    "route": "/tool/shellnoob",
+    "category": "Exploitation",
+    "icon": "🐚"
+  },
+  {
+    "id": "pwntools",
+    "name": "Pwntools",
+    "route": "/tool/pwntools",
+    "category": "Exploitation",
+    "icon": "🔧"
+  },
+  {
+    "id": "ropper",
+    "name": "Ropper",
+    "route": "/tool/ropper",
+    "category": "Exploitation",
+    "icon": "🛠️"
+  },
+  {
+    "id": "checksec",
+    "name": "Checksec",
+    "route": "/tool/checksec",
+    "category": "Exploitation",
+    "icon": "✅"
+  },
+  {
+    "id": "one_gadget",
+    "name": "One Gadget",
+    "route": "/tool/one_gadget",
+    "category": "Exploitation",
+    "icon": "💊"
+  },
+  {
+    "id": "whatweb",
+    "name": "WhatWeb",
+    "route": "/tool/whatweb",
+    "category": "Web",
+    "icon": "🌍"
+  },
+  {
+    "id": "skipfish",
+    "name": "Skipfish",
+    "route": "/tool/skipfish",
+    "category": "Web",
+    "icon": "🐟"
+  },
+  {
+    "id": "wapiti",
+    "name": "Wapiti",
+    "route": "/tool/wapiti",
+    "category": "Web",
+    "icon": "🐐"
+  },
+  {
+    "id": "wfuzz",
+    "name": "WFuzz",
+    "route": "/tool/wfuzz",
+    "category": "Web",
+    "icon": "⚡"
+  },
+  {
+    "id": "dirbuster",
+    "name": "DirBuster",
+    "route": "/tool/dirbuster",
+    "category": "Web",
+    "icon": "🔍"
+  },
+  {
+    "id": "cadaver",
+    "name": "Cadaver",
+    "route": "/tool/cadaver",
+    "category": "Web",
+    "icon": "📂"
+  },
+  {
+    "id": "davtest",
+    "name": "DavTest",
+    "route": "/tool/davtest",
+    "category": "Web",
+    "icon": "🧪"
+  },
+  {
+    "id": "fimap",
+    "name": "Fimap",
+    "route": "/tool/fimap",
+    "category": "Web",
+    "icon": "📁"
+  },
+  {
+    "id": "joomscan",
+    "name": "JoomScan",
+    "route": "/tool/joomscan",
+    "category": "Web",
+    "icon": "📰"
+  },
+  {
+    "id": "cmsmap",
+    "name": "CMSMap",
+    "route": "/tool/cmsmap",
+    "category": "Web",
+    "icon": "🗺️"
+  },
+  {
+    "id": "http-enum",
+    "name": "HTTP-Enum",
+    "route": "/tool/http-enum",
+    "category": "Web",
+    "icon": "🔌"
+  },
+  {
+    "id": "jsql",
+    "name": "jSQL Injection",
+    "route": "/tool/jsql",
+    "category": "Web",
+    "icon": "💉"
+  },
+  {
+    "id": "sqlsus",
+    "name": "SQLSus",
+    "route": "/tool/sqlsus",
+    "category": "Web",
+    "icon": "💾"
+  },
+  {
+    "id": "ace-voip",
+    "name": "ACE-VoIP",
+    "route": "/tool/ace-voip",
+    "category": "Passwords",
+    "icon": "📞"
+  },
+  {
+    "id": "cmospwd",
+    "name": "CmosPwd",
+    "route": "/tool/cmospwd",
+    "category": "Passwords",
+    "icon": "🔑"
+  },
+  {
+    "id": "creddump",
+    "name": "CredDump",
+    "route": "/tool/creddump",
+    "category": "Passwords",
+    "icon": "🗝️"
+  },
+  {
+    "id": "findmyhash",
+    "name": "FindMyHash",
+    "route": "/tool/findmyhash",
+    "category": "Passwords",
+    "icon": "🔍"
+  },
+  {
+    "id": "maskprocessor",
+    "name": "Maskprocessor",
+    "route": "/tool/maskprocessor",
+    "category": "Passwords",
+    "icon": "🎭"
+  },
+  {
+    "id": "onesixtyone",
+    "name": "Onesixtyone",
+    "route": "/tool/onesixtyone",
+    "category": "Passwords",
+    "icon": "🔢"
+  },
+  {
+    "id": "pack",
+    "name": "PACK",
+    "route": "/tool/pack",
+    "category": "Passwords",
+    "icon": "📦"
+  },
+  {
+    "id": "pdfcrack",
+    "name": "PDFCrack",
+    "route": "/tool/pdfcrack",
+    "category": "Passwords",
+    "icon": "📄"
+  },
+  {
+    "id": "pyrit",
+    "name": "Pyrit",
+    "route": "/tool/pyrit",
+    "category": "Passwords",
+    "icon": "⚡"
+  },
+  {
+    "id": "rainbowcrack",
+    "name": "RainbowCrack",
+    "route": "/tool/rainbowcrack",
+    "category": "Passwords",
+    "icon": "🌈"
+  },
+  {
+    "id": "samdump2",
+    "name": "SamDump2",
+    "route": "/tool/samdump2",
+    "category": "Passwords",
+    "icon": "💾"
+  },
+  {
+    "id": "sipcrack",
+    "name": "SipCrack",
+    "route": "/tool/sipcrack",
+    "category": "Passwords",
+    "icon": "📞"
+  },
+  {
+    "id": "sucrack",
+    "name": "Sucrack",
+    "route": "/tool/sucrack",
+    "category": "Passwords",
+    "icon": "🔄"
+  },
+  {
+    "id": "twofi",
+    "name": "Twofi",
+    "route": "/tool/twofi",
+    "category": "Passwords",
+    "icon": "🐦"
+  },
+  {
+    "id": "wordlists",
+    "name": "Wordlists",
+    "route": "/tool/wordlists",
+    "category": "Passwords",
+    "icon": "📚"
+  },
+  {
+    "id": "fern-wifi",
+    "name": "Fern WiFi Cracker",
+    "route": "/tool/fern-wifi",
+    "category": "WiFi",
+    "icon": "📶"
+  },
+  {
+    "id": "bully",
+    "name": "Bully",
+    "route": "/tool/bully",
+    "category": "WiFi",
+    "icon": "💪"
+  },
+  {
+    "id": "cowpatty",
+    "name": "Cowpatty",
+    "route": "/tool/cowpatty",
+    "category": "WiFi",
+    "icon": "🐄"
+  },
+  {
+    "id": "mdk3",
+    "name": "MDK3",
+    "route": "/tool/mdk3",
+    "category": "WiFi",
+    "icon": "💥"
+  },
+  {
+    "id": "mdk4",
+    "name": "MDK4",
+    "route": "/tool/mdk4",
+    "category": "WiFi",
+    "icon": "💥"
+  },
+  {
+    "id": "wash",
+    "name": "Wash",
+    "route": "/tool/wash",
+    "category": "WiFi",
+    "icon": "🧹"
+  },
+  {
+    "id": "ettercap",
+    "name": "Ettercap",
+    "route": "/tool/ettercap",
+    "category": "Network",
+    "icon": "🕸️"
+  },
+  {
+    "id": "netsniff-ng",
+    "name": "Netsniff-ng",
+    "route": "/tool/netsniff-ng",
+    "category": "Network",
+    "icon": "📡"
+  },
+  {
+    "id": "tcpflow",
+    "name": "TCPFlow",
+    "route": "/tool/tcpflow",
+    "category": "Network",
+    "icon": "💧"
+  },
+  {
+    "id": "hexinject",
+    "name": "HexInject",
+    "route": "/tool/hexinject",
+    "category": "Network",
+    "icon": "💉"
+  },
+  {
+    "id": "rebind",
+    "name": "Rebind",
+    "route": "/tool/rebind",
+    "category": "Network",
+    "icon": "🔄"
+  },
+  {
+    "id": "ferret",
+    "name": "Ferret",
+    "route": "/tool/ferret",
+    "category": "Network",
+    "icon": "🦦"
+  },
+  {
+    "id": "hamster",
+    "name": "Hamster",
+    "route": "/tool/hamster",
+    "category": "Network",
+    "icon": "🐹"
+  },
+  {
+    "id": "sniffjoke",
+    "name": "SniffJoke",
+    "route": "/tool/sniffjoke",
+    "category": "Network",
+    "icon": "🎭"
+  },
+  {
+    "id": "autopsy",
+    "name": "Autopsy",
+    "route": "/tool/autopsy",
+    "category": "Forensics",
+    "icon": "🔬"
+  },
+  {
+    "id": "sleuthkit",
+    "name": "Sleuth Kit",
+    "route": "/tool/sleuthkit",
+    "category": "Forensics",
+    "icon": "🛠️"
+  },
+  {
+    "id": "foremost",
+    "name": "Foremost",
+    "route": "/tool/foremost",
+    "category": "Forensics",
+    "icon": "🔍"
+  },
+  {
+    "id": "scalpel",
+    "name": "Scalpel",
+    "route": "/tool/scalpel",
+    "category": "Forensics",
+    "icon": "🔪"
+  },
+  {
+    "id": "guymager",
+    "name": "Guymager",
+    "route": "/tool/guymager",
+    "category": "Forensics",
+    "icon": "💿"
+  },
+  {
+    "id": "dc3dd",
+    "name": "DC3DD",
+    "route": "/tool/dc3dd",
+    "category": "Forensics",
+    "icon": "💽"
+  },
+  {
+    "id": "testdisk",
+    "name": "TestDisk",
+    "route": "/tool/testdisk",
+    "category": "Forensics",
+    "icon": "💾"
+  },
+  {
+    "id": "photorec",
+    "name": "PhotoRec",
+    "route": "/tool/photorec",
+    "category": "Forensics",
+    "icon": "📷"
+  },
+  {
+    "id": "ghidra",
+    "name": "Ghidra",
+    "route": "/tool/ghidra",
+    "category": "Forensics",
+    "icon": "🐉"
+  },
+  {
+    "id": "edb-debugger",
+    "name": "EDB Debugger",
+    "route": "/tool/edb-debugger",
+    "category": "Forensics",
+    "icon": "🐛"
+  },
+  {
+    "id": "dex2jar",
+    "name": "Dex2Jar",
+    "route": "/tool/dex2jar",
+    "category": "Forensics",
+    "icon": "☕"
+  },
+  {
+    "id": "jd-gui",
+    "name": "JD-GUI",
+    "route": "/tool/jd-gui",
+    "category": "Forensics",
+    "icon": "📖"
+  },
+  {
+    "id": "smali",
+    "name": "Smali/Baksmali",
+    "route": "/tool/smali",
+    "category": "Forensics",
+    "icon": "🔧"
+  },
+  {
+    "id": "capstone",
+    "name": "Capstone",
+    "route": "/tool/capstone",
+    "category": "Forensics",
+    "icon": "🏛️"
+  },
+  {
+    "id": "keystone",
+    "name": "Keystone",
+    "route": "/tool/keystone",
+    "category": "Forensics",
+    "icon": "🔑"
+  },
+  {
+    "id": "iaito",
+    "name": "Iaito",
+    "route": "/tool/iaito",
+    "category": "Forensics",
+    "icon": "🖥️"
+  },
+  {
+    "id": "adb",
+    "name": "ADB",
+    "route": "/tool/adb",
+    "category": "Mobile",
+    "icon": "📱"
+  },
+  {
+    "id": "scrcpy",
+    "name": "Scrcpy",
+    "route": "/tool/scrcpy",
+    "category": "Mobile",
+    "icon": "🖥️"
+  },
+  {
+    "id": "fastboot",
+    "name": "Fastboot",
+    "route": "/tool/fastboot",
+    "category": "Mobile",
+    "icon": "⚡"
+  },
+  {
+    "id": "dex2smali",
+    "name": "Dex2Smali",
+    "route": "/tool/dex2smali",
+    "category": "Mobile",
+    "icon": "🔄"
+  },
+  {
+    "id": "signapk",
+    "name": "SignApk",
+    "route": "/tool/signapk",
+    "category": "Mobile",
+    "icon": "✍️"
+  },
+  {
+    "id": "android-framework",
+    "name": "Android Framework Tools",
+    "route": "/tool/android-framework",
+    "category": "Mobile",
+    "icon": "📱"
+  },
+  {
+    "id": "firmware-mod",
+    "name": "Firmware Mod Kit",
+    "route": "/tool/firmware-mod",
+    "category": "Mobile",
+    "icon": "🔧"
+  },
+  {
+    "id": "mkbootimg",
+    "name": "Mkbootimg",
+    "route": "/tool/mkbootimg",
+    "category": "Mobile",
+    "icon": "📦"
+  },
+  {
+    "id": "dhcpig",
+    "name": "DHCPig",
+    "route": "/tool/dhcpig",
+    "category": "Network",
+    "icon": "🐷"
+  },
+  {
+    "id": "slowloris",
+    "name": "Slowloris",
+    "route": "/tool/slowloris",
+    "category": "Web",
+    "icon": "🐢"
+  },
+  {
+    "id": "t50",
+    "name": "T50",
+    "route": "/tool/t50",
+    "category": "Network",
+    "icon": "💥"
+  },
+  {
+    "id": "thc-ssl-dos",
+    "name": "THC-SSL-DoS",
+    "route": "/tool/thc-ssl-dos",
+    "category": "Web",
+    "icon": "🔒"
+  },
+  {
+    "id": "inviteflood",
+    "name": "InviteFlood",
+    "route": "/tool/inviteflood",
+    "category": "Network",
+    "icon": "📞"
+  },
+  {
+    "id": "powersploit",
+    "name": "PowerSploit",
+    "route": "/tool/powersploit",
+    "category": "Exploitation",
+    "icon": "💻"
+  },
+  {
+    "id": "pupy",
+    "name": "Pupy",
+    "route": "/tool/pupy",
+    "category": "Exploitation",
+    "icon": "🐍"
+  },
+  {
+    "id": "pwnat",
+    "name": "Pwnat",
+    "route": "/tool/pwnat",
+    "category": "Tunneling",
+    "icon": "🌐"
+  },
+  {
+    "id": "trevorc2",
+    "name": "TrevorC2",
+    "route": "/tool/trevorc2",
+    "category": "Exploitation",
+    "icon": "📡"
+  },
+  {
+    "id": "silenttrinity",
+    "name": "SilentTrinity",
+    "route": "/tool/silenttrinity",
+    "category": "Exploitation",
+    "icon": "🔇"
+  },
+  {
+    "id": "merlin",
+    "name": "Merlin",
+    "route": "/tool/merlin",
+    "category": "Exploitation",
+    "icon": "🧙"
+  },
+  {
+    "id": "koadic",
+    "name": "Koadic",
+    "route": "/tool/koadic",
+    "category": "Exploitation",
+    "icon": "🔩"
+  },
+  {
+    "id": "dradis",
+    "name": "Dradis",
+    "route": "/tool/dradis",
+    "category": "Recon",
+    "icon": "📊"
+  },
+  {
+    "id": "faraday",
+    "name": "Faraday",
+    "route": "/tool/faraday",
+    "category": "Recon",
+    "icon": "⚡"
+  },
+  {
+    "id": "keepnote",
+    "name": "KeepNote",
+    "route": "/tool/keepnote",
+    "category": "Recon",
+    "icon": "📝"
+  },
+  {
+    "id": "cutycapt",
+    "name": "CutyCapt",
+    "route": "/tool/cutycapt",
+    "category": "Recon",
+    "icon": "📸"
+  },
+  {
+    "id": "pipal",
+    "name": "Pipal",
+    "route": "/tool/pipal",
+    "category": "Passwords",
+    "icon": "📊"
+  },
+  {
+    "id": "bluelog",
+    "name": "Bluelog",
+    "route": "/tool/bluelog",
+    "category": "Recon",
+    "icon": "🔵"
+  },
+  {
+    "id": "bluesnarfer",
+    "name": "BlueSnarfer",
+    "route": "/tool/bluesnarfer",
+    "category": "Recon",
+    "icon": "📱"
+  },
+  {
+    "id": "spooftooph",
+    "name": "Spooftooph",
+    "route": "/tool/spooftooph",
+    "category": "Recon",
+    "icon": "🎭"
+  },
+  {
+    "id": "stunnel",
+    "name": "Stunnel",
+    "route": "/tool/stunnel",
+    "category": "Tunneling",
+    "icon": "🔒"
+  },
+  {
+    "id": "httptunnel",
+    "name": "HTTPTunnel",
+    "route": "/tool/httptunnel",
+    "category": "Tunneling",
+    "icon": "🚇"
+  }
+]

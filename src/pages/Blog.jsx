@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import blogPosts from '../data/blogPosts'
 import MetaTags from '../components/MetaTags'
@@ -24,12 +24,15 @@ const sortOptions = [
   { value: 'readtime', label: 'पढ़ने का समय' },
 ]
 
+const POSTS_PER_PAGE = 20
+
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('सभी')
   const [searchQuery, setSearchQuery] = useState('')
   const [debouncedQuery, setDebouncedQuery] = useState('')
   const [sortBy, setSortBy] = useState('newest')
   const [selectedTag, setSelectedTag] = useState(null)
+  const [currentPage, setCurrentPage] = useState(1)
   const [newsletterEmail, setNewsletterEmail] = useState('')
   const [newsletterStatus, setNewsletterStatus] = useState(null) // 'success' | 'error' | null
   const [newsletterMsg, setNewsletterMsg] = useState('')
@@ -87,6 +90,15 @@ export default function Blog() {
     return [...tags]
   }, [])
 
+  const prevFilters = useRef({ debouncedQuery, selectedCategory, selectedTag })
+  useEffect(() => {
+    const { debouncedQuery: dq, selectedCategory: sc, selectedTag: st } = prevFilters.current
+    if (dq !== debouncedQuery || sc !== selectedCategory || st !== selectedTag) {
+      setCurrentPage(1)
+      prevFilters.current = { debouncedQuery, selectedCategory, selectedTag }
+    }
+  }, [debouncedQuery, selectedCategory, selectedTag])
+
   const filteredPosts = useMemo(() => {
     let result = blogPosts.filter(post => {
       const matchesCategory = selectedCategory === 'सभी' || post.category === selectedCategory
@@ -116,6 +128,12 @@ export default function Blog() {
 
   const featuredPosts = filteredPosts.filter(p => p.featured)
   const regularPosts = filteredPosts.filter(p => !p.featured)
+
+  // Paginate regular posts
+  const totalPages = Math.ceil(regularPosts.length / POSTS_PER_PAGE)
+  const safePage = Math.min(currentPage, totalPages || 1)
+  const paginatedPosts = regularPosts.slice((safePage - 1) * POSTS_PER_PAGE, safePage * POSTS_PER_PAGE)
+
   const hasActiveFilters = debouncedQuery || selectedCategory !== 'सभी' || selectedTag
 
   const clearFilters = () => {
@@ -123,6 +141,7 @@ export default function Blog() {
     setSelectedCategory('सभी')
     setSelectedTag(null)
     setSortBy('newest')
+    setCurrentPage(1)
   }
 
   return (
@@ -273,7 +292,7 @@ export default function Blog() {
           </div>
         ) : (
           <div className="space-y-4">
-            {regularPosts.map(post => (
+            {paginatedPosts.map(post => (
               <Link
                 key={post.id}
                 to={`/blog/${post.id}`}
@@ -315,6 +334,46 @@ export default function Blog() {
           </div>
         )}
       </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-center gap-2 mt-8">
+          <button
+            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+            disabled={safePage === 1}
+            className="px-3 py-2 bg-dark-800 border border-dark-600 rounded-lg text-gray-400 hover:text-neon-green hover:border-neon-green/30 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+          >
+            ← पिछला
+          </button>
+          <div className="flex gap-1">
+            {Array.from({ length: Math.min(totalPages, 10) }, (_, i) => {
+              const start = Math.max(0, Math.min(safePage - 5, totalPages - 10))
+              const pageNum = start + i + 1
+              if (pageNum > totalPages) return null
+              return (
+                <button
+                  key={pageNum}
+                  onClick={() => setCurrentPage(pageNum)}
+                  className={`w-9 h-9 rounded-lg text-sm font-mono transition-all ${
+                    safePage === pageNum
+                      ? 'bg-neon-green text-dark-900 font-bold'
+                      : 'bg-dark-800 border border-dark-600 text-gray-400 hover:text-neon-green hover:border-neon-green/30'
+                  }`}
+                >
+                  {pageNum}
+                </button>
+              )
+            })}
+          </div>
+          <button
+            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+            disabled={safePage === totalPages}
+            className="px-3 py-2 bg-dark-800 border border-dark-600 rounded-lg text-gray-400 hover:text-neon-green hover:border-neon-green/30 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+          >
+            अगला →
+          </button>
+        </div>
+      )}
 
       {/* Newsletter */}
       <div className="mt-16 glass-card p-8 text-center">
