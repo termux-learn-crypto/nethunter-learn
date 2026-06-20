@@ -2,9 +2,9 @@ import { describe, it, expect } from 'vitest'
 import tools, { getToolByRoute, getPrevNext, toolCount, toolRoutes } from '../data/tools'
 
 describe('tools data', () => {
-  it('should have 77 tools', () => {
-    expect(toolCount).toBe(77)
-    expect(tools).toHaveLength(77)
+  it('should have 208 tools', () => {
+    expect(toolCount).toBe(208)
+    expect(tools).toHaveLength(208)
   })
 
   it('should have unique IDs', () => {
@@ -42,7 +42,7 @@ describe('getToolByRoute', () => {
   })
 
   it('should return null for invalid route', () => {
-    expect(getToolByRoute('/tool/nonexistent')).toBeNull()
+    expect(getToolByRoute('/tool/nonexistent')).toBeUndefined()
   })
 })
 
@@ -51,8 +51,8 @@ describe('getPrevNext', () => {
     const { prev, next } = getPrevNext('/tool/nmap')
     expect(prev).toBeTruthy()
     expect(next).toBeTruthy()
-    expect(prev.id).toBe('aircrack-ng')
-    expect(next.id).toBe('metasploit-framework')
+    expect(prev.to).toBe('/tool/nikto')
+    expect(next.to).toBe('/tool/nuclei')
   })
 
   it('should return null prev for first tool', () => {
@@ -62,7 +62,7 @@ describe('getPrevNext', () => {
   })
 
   it('should return null next for last tool', () => {
-    const { prev, next } = getPrevNext('/tool/weevely')
+    const { prev, next } = getPrevNext('/tool/httptunnel')
     expect(prev).toBeTruthy()
     expect(next).toBeNull()
   })

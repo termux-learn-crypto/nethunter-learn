@@ -1,6 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-neon-green: #00ff41;
+  --color-neon-cyan: #00f0ff;
+  --color-neon-red: #ff0040;
+  --color-dark-900: #0a0a0a;
+  --color-dark-800: #111111;
+  --color-dark-700: #1a1a1a;
+  --color-dark-600: #222222;
+  --color-dark-500: #2a2a2a;
+  --font-mono: "Fira Code", "JetBrains Mono", monospace;
+  --font-heading: "Orbitron", sans-serif;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-typing: typing 3.5s steps(40, end);
+  --animate-blink: blink .75s step-end infinite;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41; }
+  100% { text-shadow: 0 0 20px #00ff41, 0 0 30px #00ff41, 0 0 40px #00ff41; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #00ff41; }
+}
 
 @layer base {
   * {
