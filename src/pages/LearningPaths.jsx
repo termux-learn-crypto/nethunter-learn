@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import AdUnit from '../components/AdUnit'
+import MetaTags from '../components/MetaTags'
 
 const paths = [
   {
@@ -174,6 +175,12 @@ export default function LearningPaths() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
+      <MetaTags
+        title="Learning Paths"
+        description="Structured learning paths for ethical hacking in Hindi. Beginner se advanced tak step-by-step roadmap."
+        keywords="ethical hacking roadmap, learning path, cybersecurity career, kali nethunter course"
+        url="https://nethunter-learn.vercel.app/learning-paths"
+      />
       <div className="text-center mb-12">
         <h1 className="section-title">Learning Paths</h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">

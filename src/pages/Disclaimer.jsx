@@ -1,11 +1,17 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import MetaTags from '../components/MetaTags'
 
 export default function Disclaimer() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <MetaTags
+        title="Disclaimer"
+        description="Nethunter Learn disclaimer — educational purposes only. Always get written permission before testing."
+        url="https://nethunter-learn.vercel.app/disclaimer"
+      />
       <Link to="/" className="text-gray-500 hover:text-neon-green text-sm font-mono mb-6 inline-block">← Home</Link>
       <h1 className="text-4xl font-heading font-bold text-white mb-2">Disclaimer</h1>
       <p className="text-gray-500 text-sm mb-8">Last Updated: June 2026</p>

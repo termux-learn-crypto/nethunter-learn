@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { WEB3FORMS_KEY, SITE_EMAIL } from '../lib/config'
 import Spinner from '../components/Spinner'
+import MetaTags from '../components/MetaTags'
 
 const MONTHLY_LIMIT = 200
 const COOLDOWN_SEC = 60
@@ -135,6 +136,11 @@ export default function Contact() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <MetaTags
+        title="Contact Us"
+        description="Nethunter Learn se contact karein. Sawaal, feedback, ya collaboration ke liye humein email karein."
+        url="https://nethunter-learn.vercel.app/contact"
+      />
       <Link to="/" className="text-gray-500 hover:text-neon-green text-sm font-mono mb-6 inline-block">← Home</Link>
       <h1 className="text-4xl font-heading font-bold text-white mb-2">Contact Us</h1>
       <p className="text-gray-500 text-sm mb-8">Humse baat karein — hum 24-48 hours mein jawab dete hain</p>

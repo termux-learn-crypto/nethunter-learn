@@ -1,11 +1,17 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import MetaTags from '../components/MetaTags'
 
 export default function Terms() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <MetaTags
+        title="Terms of Service"
+        description="Nethunter Learn terms of service — rules and guidelines for using our platform."
+        url="https://nethunter-learn.vercel.app/terms"
+      />
       <Link to="/" className="text-gray-500 hover:text-neon-green text-sm font-mono mb-6 inline-block">← Home</Link>
       <h1 className="text-4xl font-heading font-bold text-white mb-2">Terms of Service</h1>
       <p className="text-gray-500 text-sm mb-8">Last Updated: January 2025</p>

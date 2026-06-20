@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import MetaTags from '../components/MetaTags'
 import tools from '../data/tools'
 import blogPosts from '../data/blogPosts'
 
@@ -37,6 +38,11 @@ export default function NotFound() {
 
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4">
+      <MetaTags
+        title="404 - Page Not Found"
+        description="Page exist nahi karta. Galat URL ya hata diya gaya. Home page ya search use karein."
+        url="https://nethunter-learn.vercel.app/404"
+      />
       <div className="text-center max-w-2xl">
         <div className="text-[150px] md:text-[200px] font-orbitron font-bold text-neon-green/20 leading-none select-none">
           404

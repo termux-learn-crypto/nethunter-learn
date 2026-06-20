@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import AdUnit from '../components/AdUnit'
+import MetaTags from '../components/MetaTags'
 
 const toolsData = {
   'nmap': {
@@ -255,6 +256,12 @@ export default function ToolCompare() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
+      <MetaTags
+        title="Tool Comparison"
+        description="Compare ethical hacking tools side-by-side. Features, pros-cons, use cases aur difficulty levels."
+        keywords="tool comparison, nmap vs masscan, hydra vs medusa, hacking tools compare"
+        url="https://nethunter-learn.vercel.app/compare"
+      />
       <div className="text-center mb-12">
         <h1 className="section-title">Tool Comparison</h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">

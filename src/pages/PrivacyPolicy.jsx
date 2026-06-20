@@ -1,11 +1,17 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import MetaTags from '../components/MetaTags'
 
 export default function PrivacyPolicy() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <MetaTags
+        title="Privacy Policy"
+        description="Nethunter Learn privacy policy — how we collect, use, and protect your data."
+        url="https://nethunter-learn.vercel.app/privacy-policy"
+      />
       <Link to="/" className="text-gray-500 hover:text-neon-green text-sm font-mono mb-6 inline-block">← Home</Link>
       <h1 className="text-4xl font-heading font-bold text-white mb-2">Privacy Policy</h1>
       <p className="text-gray-500 text-sm mb-8">Last Updated: June 2026</p>

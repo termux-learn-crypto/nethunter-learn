@@ -1,11 +1,17 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import MetaTags from '../components/MetaTags'
 
 export default function DMCA() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <MetaTags
+        title="DMCA Policy"
+        description="Nethunter Learn DMCA policy — copyright infringement notices and takedown procedures."
+        url="https://nethunter-learn.vercel.app/dmca"
+      />
       <Link to="/" className="text-gray-500 hover:text-neon-green text-sm font-mono mb-6 inline-block">← Home</Link>
       <h1 className="text-4xl font-heading font-bold text-white mb-2">DMCA Policy</h1>
       <p className="text-gray-500 text-sm mb-8">Last Updated: January 2025</p>
