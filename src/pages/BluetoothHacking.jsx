@@ -1,5 +1,6 @@
 import TutorialLayout from '../components/TutorialLayout'
 import CodeBlock from '../components/CodeBlock'
+import AdUnit from '../components/AdUnit'
 
 export default function BluetoothHacking() {
   return (
@@ -320,6 +321,7 @@ sudo bettercap -eval "ble.recon on; events.stream off"
           </tbody>
         </table>
       </div>
+      <AdUnit slot="7546303747" />
     </TutorialLayout>
   )
 }

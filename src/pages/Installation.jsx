@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import TutorialLayout from '../components/TutorialLayout'
 import CodeBlock from '../components/CodeBlock'
+import AdUnit from '../components/AdUnit'
 
 export default function Installation() {
   return (
@@ -348,6 +349,7 @@ sudo airmon-ng start wlan0
         <Link to="/wifi" className="text-neon-green underline">वाईफाई हैकिंग</Link> सेक्शन में जाएं
         और वायरलेस पेनिट्रेशन टेस्टिंग सीखना शुरू करें!
       </div>
+      <AdUnit slot="7546303747" />
     </TutorialLayout>
   )
 }

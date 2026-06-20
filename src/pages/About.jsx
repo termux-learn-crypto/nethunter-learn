@@ -201,6 +201,6 @@ export default function About() {
         <strong>✅ Shuru Karein!</strong>{' '}
         <Link to="/" className="text-neon-green underline">Home page</Link> par jaayein aur koi topic choose karein seekhne ke liye. Yaad rakhein — practice makes perfect. Roz kuch na kuch naya seekhein aur apne lab par practice karein. Happy Hacking! 🐉
       </div>
-    </TutorialLayout>
+     </TutorialLayout>
   )
 }

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import TutorialLayout from '../components/TutorialLayout'
 import CodeBlock from '../components/CodeBlock'
+import AdUnit from '../components/AdUnit'
 
 export default function WifiHacking() {
   return (
@@ -361,6 +362,7 @@ sudo wifite --wps 0
         <Link to="/bluetooth" className="text-neon-green underline">Bluetooth Hacking</Link> section mein jaayein
         aur Bluetooth security testing seekhein!
       </div>
+      <AdUnit slot="7546303747" />
     </TutorialLayout>
   )
 }

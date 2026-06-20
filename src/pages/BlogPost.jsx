@@ -267,6 +267,8 @@ export default function BlogPost() {
         <strong>कानूनी चेतावनी:</strong> यह लेख केवल शैक्षिक उद्देश्यों के लिए है। बिना अनुमति के किसी भी सिस्टम पर हमला करना गैरकानूनी है।
       </div>
 
+      <AdUnit slot="7452190580" format="fluid" layout="in-article" />
+
       {/* Content */}
       <div className="lg:grid lg:grid-cols-[280px_1fr] lg:gap-8">
         {headings.length > 0 && (
@@ -284,7 +286,13 @@ export default function BlogPost() {
         </article>
       </div>
 
-      <AdUnit slot="1234567890" className="mb-8" />
+      <AdUnit slot="4893054395" format="fluid" layout="in-article" />
+
+      <AdUnit slot="2402622422" format="fluid" layout="in-article" />
+
+      <AdUnit slot="4483246462" className="mb-8" />
+
+      <AdUnit slot="2315258447" className="mb-8" />
 
       {/* AI Disclosure */}
       <div className="info-box mt-8 mb-8">

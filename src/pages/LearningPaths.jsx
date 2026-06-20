@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import AdUnit from '../components/AdUnit'
 
 const paths = [
   {
@@ -288,6 +289,7 @@ export default function LearningPaths() {
           </p>
         </div>
       </div>
+      <AdUnit slot="7546303747" />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import MetaTags from '../components/MetaTags'
 import { Link } from 'react-router-dom'
+import AdUnit from '../components/AdUnit'
 
 const terms = [
   { term: 'असिमेट्रिक एन्क्रिप्शन', en: 'Asymmetric Encryption', category: 'क्रिप्टोग्राफी', desc: 'Do alag keys use hoti hain — ek public, ek private. Public se encrypt, private se decrypt. Jaise RSA, ECC.' },
@@ -154,6 +155,7 @@ export default function Glossary() {
           <p className="text-gray-500">Koi term nahi mila "{search}" ke liye</p>
         </div>
       )}
+      <AdUnit slot="7546303747" />
     </div>
   )
 }

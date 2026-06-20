@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import MetaTags from '../components/MetaTags'
 import { WEB3FORMS_KEY, SITE_EMAIL } from '../lib/config'
 import Spinner from '../components/Spinner'
+import AdUnit from '../components/AdUnit'
 
 const categories = [
   { title: 'Query', desc: 'Koi sawal hai? Poochhiye.', icon: '❓' },
@@ -141,6 +142,7 @@ export default function Community() {
         </div>
         <p className="text-xs text-gray-500">Community moderators Vilas hain. Koi issue ho toh contact@nethunter-learn.vercel.app pe email karein.</p>
       </div>
+      <AdUnit slot="7546303747" />
     </div>
   )
 }

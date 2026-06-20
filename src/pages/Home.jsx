@@ -1,6 +1,7 @@
 import Hero from '../components/Hero'
 import Card from '../components/Card'
 import MetaTags from '../components/MetaTags'
+import AdUnit from '../components/AdUnit'
 
 const sections = [
   {
@@ -256,6 +257,7 @@ export default function Home() {
           <div className="text-gray-600 mt-2">— काली लिनक्स का आदर्श वाक्य</div>
         </div>
       </section>
+      <AdUnit slot="7546303747" />
     </>
   )
 }

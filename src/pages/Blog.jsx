@@ -376,7 +376,7 @@ export default function Blog() {
         </div>
       )}
 
-      <AdUnit slot="1234567890" className="mb-8" />
+      <AdUnit slot="7546303747" className="mb-8" />
 
       {/* RSS Feed */}
       <div className="mt-8 text-center">

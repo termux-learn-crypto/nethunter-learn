@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import MetaTags from '../components/MetaTags'
 import { Link } from 'react-router-dom'
+import AdUnit from '../components/AdUnit'
 
 const cheatsheets = [
   {
@@ -227,6 +228,7 @@ export default function Cheatsheets() {
           <Link to="/learning-paths" className="btn-primary px-4 py-2 rounded-lg text-dark-900 text-sm">Learning Path Shuru Karein</Link>
         </div>
       </div>
+      <AdUnit slot="7546303747" />
     </div>
   )
 }

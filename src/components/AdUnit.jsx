@@ -1,27 +1,22 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 
-export default function AdUnit({ slot, format = 'auto', className = '' }) {
-  const adRef = useRef(null)
-  const initialized = useRef(false)
-
+export default function AdUnit({ slot, format = 'auto', layout, className = '' }) {
   useEffect(() => {
-    if (initialized.current) return
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({})
-      initialized.current = true
     } catch {}
   }, [])
 
   return (
-    <div className={`my-6 ${className}`}>
+    <div className={`my-8 ${className}`}>
       <ins
-        ref={adRef}
         className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client="ca-pub-3924988565581765"
+        style={{ display: 'block', textAlign: 'center' }}
+        data-ad-client="ca-pub-6124052333813612"
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive="true"
+        {...(layout ? { 'data-ad-layout': layout } : {})}
       />
     </div>
   )

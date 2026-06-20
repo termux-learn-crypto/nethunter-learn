@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MetaTags from '../components/MetaTags'
+import AdUnit from '../components/AdUnit'
 
 const newsItems = [
   {
@@ -144,6 +145,7 @@ export default function News() {
         <p className="text-gray-400 text-sm mb-4">Latest CVE alerts aur security news directly email par.</p>
         <Link to="/blog" className="btn-primary px-6 py-2 rounded-lg text-dark-900 font-semibold text-sm">Blog Padhein</Link>
       </div>
+      <AdUnit slot="7546303747" />
     </div>
   )
 }

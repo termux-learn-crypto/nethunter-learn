@@ -244,11 +244,17 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
         </div>
       </div>
 
+      <AdUnit slot="7452190580" format="fluid" layout="in-article" />
+
       <div className="tutorial-content">
         {children}
       </div>
 
-      <AdUnit slot="1234567890" className="mb-8" />
+      <AdUnit slot="4893054395" format="fluid" layout="in-article" />
+
+      <AdUnit slot="4483246462" className="mb-8" />
+
+      <AdUnit slot="2315258447" className="mb-8" />
 
       {quizData[title.toLowerCase()] && (
         <Quiz questions={quizData[title.toLowerCase()]} toolName={title} />

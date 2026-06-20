@@ -1,5 +1,6 @@
 import TutorialLayout from '../components/TutorialLayout'
 import CodeBlock from '../components/CodeBlock'
+import AdUnit from '../components/AdUnit'
 
 export default function Payloads() {
   return (
@@ -369,6 +370,7 @@ cat /data/misc/wifi/WifiConfigStore.xml`}
       <div className="warning-box mt-8">
         <strong>⚠️ Yaad Rakhein:</strong> Yeh sab techniques sirf authorized penetration testing ke liye hain. Bina permission ke inka use karna illegal hai aur serious legal consequences ho sakte hain. Hamesha written permission lein testing se pehle. Responsible disclosure follow karein — agar koi vulnerability mile toh company ko inform karein public karne se pehle.
       </div>
+      <AdUnit slot="7546303747" />
     </TutorialLayout>
   )
 }

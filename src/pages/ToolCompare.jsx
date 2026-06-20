@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import AdUnit from '../components/AdUnit'
 
 const toolsData = {
   'nmap': {
@@ -34,17 +35,6 @@ const toolsData = {
     cons: ['Can be overwhelming', 'Large capture files', 'Requires root/admin', 'Not for active attacks'],
     useCase: 'Jab aapko network traffic deeply analyze karna ho ya packets ka content dekhna ho.',
     difficulty: 'Intermediate',
-  },
-  'bettercap': {
-    name: 'Bettercap',
-    category: 'Network',
-    path: '/tool/bettercap',
-    desc: 'Network attack and monitoring framework',
-    features: ['MITM attacks', 'ARP spoofing', 'DNS spoofing', 'WiFi deauth', 'Packet injection'],
-    pros: ['All-in-one tool', 'Modern interface', 'Scriptable', 'Active development'],
-    cons: ['Complex setup', 'Can be unstable', 'Requires good hardware'],
-    useCase: 'Jab aapko network pe active attacks karne ho - MITM, spoofing, packet manipulation.',
-    difficulty: 'Advanced',
   },
   'sqlmap': {
     name: 'SQLMap',
@@ -467,6 +457,7 @@ export default function ToolCompare() {
           </Link>
         </div>
       </div>
+      <AdUnit slot="7546303747" />
     </div>
   )
 }
