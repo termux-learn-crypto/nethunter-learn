@@ -16,11 +16,14 @@ function upsertMeta(attr, name, content, isProperty = false) {
   el.setAttribute('content', content)
 }
 
-function upsertLink(rel, href) {
-  let el = document.querySelector(`link[rel="${rel}"]`)
+function upsertLink(rel, href, type) {
+  let selector = `link[rel="${rel}"][href="${href}"]`
+  if (type) selector = `link[rel="${rel}"][type="${type}"]`
+  let el = document.querySelector(selector)
   if (!el) {
     el = document.createElement('link')
     el.setAttribute('rel', rel)
+    if (type) el.setAttribute('type', type)
     document.head.appendChild(el)
   }
   el.setAttribute('href', href)
@@ -67,6 +70,7 @@ export default function MetaTags({ title, description, keywords, url, type = 'we
     upsertMeta('name', 'twitter:image', pageImage)
 
     upsertLink('canonical', pageUrl)
+    upsertLink('alternate', `${siteUrl}/rss.xml`, 'application/rss+xml')
 
     if (type === 'article' && publishedTime) {
       addJsonLd({

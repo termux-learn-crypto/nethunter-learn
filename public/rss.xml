@@ -1,0 +1,1304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nethunter Learn - Blog</title>
+    <link>https://nethunter-learn.vercel.app/blog</link>
+    <description>Ethical hacking, cybersecurity tutorials aur CVE alerts Hindi mein. Kali Nethunter seekhein asaan bhasha mein.</description>
+    <language>hi</language>
+    <lastBuildDate>Sat, 20 Jun 2026 01:17:09 GMT</lastBuildDate>
+    <atom:link href="https://nethunter-learn.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://nethunter-learn.vercel.app/og-image.svg</url>
+      <title>Nethunter Learn</title>
+      <link>https://nethunter-learn.vercel.app</link>
+    </image>
+  <item>
+    <title>2026 में एथिकल हैकिंग कैसे शुरू करें - कम्प्लीट रोडमैप</title>
+    <link>https://nethunter-learn.vercel.app/blog/ethical-hacking-roadmap-2026</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ethical-hacking-roadmap-2026</guid>
+    <description>अगर आप एथिकल हैकिंग सीखना चाहते हैं तो यह रोडमैप आपके लिए है। बिगिनर से एडवांस्ड तक सब कुछ कवर करेंगे।</description>
+    <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+    <category>रोडमैप</category>
+  </item>
+  <item>
+    <title>वाईफाई पाइनएप्पल बनाम नेथंटर - कौनसा बेहतर है?</title>
+    <link>https://nethunter-learn.vercel.app/blog/wifi-pineapple-vs-nethunter</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wifi-pineapple-vs-nethunter</guid>
+    <description>दोनों टूल्स वाईफाई हैकिंग के लिए पॉपुलर हैं। जानिए कौनसा टूल आपके लिए सही है और क्यों।</description>
+    <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>लेटेस्ट CVE-2026-1234: पॉपुलर फ्रेमवर्क में क्रिटिकल आरसीई</title>
+    <link>https://nethunter-learn.vercel.app/blog/cve-2026-1234-critical-rce</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cve-2026-1234-critical-rce</guid>
+    <description>एक क्रिटिकल रिमोट कोड एक्जीक्यूशन वल्नरेबिलिटी मिली है जो बहुत सारे सिस्टम्स को प्रभावित कर रही है।</description>
+    <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+    <category>सीवीई अलर्ट</category>
+  </item>
+  <item>
+    <title>एंड्रॉयड 14 में नेथंटर इंस्टॉल करना - नया तरीका</title>
+    <link>https://nethunter-learn.vercel.app/blog/android-14-nethunter-install</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/android-14-nethunter-install</guid>
+    <description>एंड्रॉयड 14 के साथ नेथंटर इंस्टॉल करना अब पहले से अलग है। यह नया तरीका फॉलो करें।</description>
+    <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>बग बाउंटी से पैसे कैसे कमाएं - रियलिस्टिक गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/bug-bounty-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/bug-bounty-guide</guid>
+    <description>बग बाउंटी प्रोग्राम्स से पैसे कमाना मुश्किल है लेकिन असंभव नहीं।</description>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>टॉप 10 काली लिनक्स टूल्स जो हर हैकर को आने चाहिए</title>
+    <link>https://nethunter-learn.vercel.app/blog/top-10-kali-tools</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/top-10-kali-tools</guid>
+    <description>ये 10 टूल्स हर पेनेट्रेशन टेस्टर के टूलबॉक्स में होने चाहिए।</description>
+    <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+    <category>टूल्स</category>
+  </item>
+  <item>
+    <title>ओडब्ल्यूएएसपी टॉप 10 2026 - क्या बदला है?</title>
+    <link>https://nethunter-learn.vercel.app/blog/owasp-top-10-2026</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/owasp-top-10-2026</guid>
+    <description>ओडब्ल्यूएएसपी ने नया टॉप 10 जारी किया है। जानिए क्या नया है और कैसे बचाव करें।</description>
+    <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+    <category>सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>सीटीएफ चैलेंजेस कैसे हल करें - टिप्स और ट्रिक्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/ctf-tips-tricks</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ctf-tips-tricks</guid>
+    <description>कैप्चर द फ्लैग प्रतियोगिताओं में भाग लेना चाहते हैं? ये टिप्स आपकी मदद करेंगे।</description>
+    <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+    <category>सीटीएफ</category>
+  </item>
+  <item>
+    <title>Nmap के साथ नेटवर्क स्कैनिंग - बिगिनर्स गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/nmap-beginners-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/nmap-beginners-guide</guid>
+    <description>Nmap सीखना चाहते हैं? यह गाइड आपको nmap के सभी basic commands, scan types, और NSE scripts के बारे में सिखाएगा।</description>
+    <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>Metasploit Framework Basics - Exploitation Kaise Karein</title>
+    <link>https://nethunter-learn.vercel.app/blog/metasploit-basics</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/metasploit-basics</guid>
+    <description>Metasploit Framework के साथ exploitation सीखें। Payloads, exploits, auxiliary modules, aur post-exploitation techniques का complete introduction।</description>
+    <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>Wireshark से Packet Analysis सीखें - कम्प्लीट गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/wireshark-packet-analysis</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wireshark-packet-analysis</guid>
+    <description>Wireshark के साथ network traffic analyze karna seekhein। Packet capture, filters, protocol hierarchy, aur network troubleshooting।</description>
+    <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>सोशल इंजीनियरिंग अटैक - कैसे बचें?</title>
+    <link>https://nethunter-learn.vercel.app/blog/social-engineering-awareness</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/social-engineering-awareness</guid>
+    <description>Social engineering attacks insaan ki psychology ko target karte hain। Jaaniye kaise pehchane aur in se kaise bachein।</description>
+    <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+    <category>सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>Kali Linux बिगिनर्स गाइड - सब कुछ जो आपको जानना चाहिए</title>
+    <link>https://nethunter-learn.vercel.app/blog/kali-linux-beginners</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/kali-linux-beginners</guid>
+    <description>Kali Linux ethical hacking ka sabse popular OS hai। Jaaniye Kali Linux ko kaise install, configure aur use karte hain।</description>
+    <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>Phishing Attacks se Kaise Bachein - Complete Guide</title>
+    <link>https://nethunter-learn.vercel.app/blog/phishing-prevention</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/phishing-prevention</guid>
+    <description>Phishing sabse dangerous cyber attacks mein se hai। Seekhein phishing attacks ko pehchanne aur unse bachne ke tarike।</description>
+    <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+    <category>सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>VPN Kaise Kaam Karta Hai - पूरी जानकारी हिंदी में</title>
+    <link>https://nethunter-learn.vercel.app/blog/vpn-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/vpn-guide</guid>
+    <description>VPN कैसे काम करता है, क्यों ज़रूरी है, और कैसे सही VPN चुनें - पूरी गाइड हिंदी में।</description>
+    <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>Android Security Tips - अपने फोन को सुरक्षित रखें</title>
+    <link>https://nethunter-learn.vercel.app/blog/android-security-tips</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/android-security-tips</guid>
+    <description>Android phone ko secure rakhne ke 25+ tips. Privacy settings, app permissions, aur advanced security techniques seekhein।</description>
+    <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+    <category>सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>Bug Bounty Platforms 2026 - Kaise Shuru Karein aur Paisa Kamayein</title>
+    <link>https://nethunter-learn.vercel.app/blog/bug-bounty-platforms</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/bug-bounty-platforms</guid>
+    <description>Top bug bounty platforms, registration process, aur real earning tips.</description>
+    <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>CTF Writeup - HackTheBox Starting Point टियर 0</title>
+    <link>https://nethunter-learn.vercel.app/blog/ctf-writeup-2026</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ctf-writeup-2026</guid>
+    <description>HackTheBox Starting Point ke Tier 0 machines ka detailed CTF writeup। Hindi mein step-by-step walkthrough।</description>
+    <pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate>
+    <category>सीटीएफ</category>
+  </item>
+  <item>
+    <title>Cybersecurity Career 2026 - Kaise Banayein Successful Career</title>
+    <link>https://nethunter-learn.vercel.app/blog/cybersecurity-career-2026</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cybersecurity-career-2026</guid>
+    <description>Cybersecurity mein career kaise banayein? Jobs, certifications, skills aur salary।</description>
+    <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>Aircrack-ng vs Wifite - कौनसा WiFi hacking tool बेहतर है?</title>
+    <link>https://nethunter-learn.vercel.app/blog/aircrack-vs-wifite</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/aircrack-vs-wifite</guid>
+    <description>Aircrack-ng aur Wifite dono WiFi hacking tools hain। Jaaniye inki comparison।</description>
+    <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>Network Basics for Hackers - नेटवर्किंग की पूरी जानकारी</title>
+    <link>https://nethunter-learn.vercel.app/blog/network-basics-hindi</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/network-basics-hindi</guid>
+    <description>Networking fundamentals jo har hacker ko aani chahiye। TCP/IP, ports, protocols, aur subnetting।</description>
+    <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>वाईफाई हैकिंग 2026 - पूरी गाइड हिंदी में</title>
+    <link>https://nethunter-learn.vercel.app/blog/wifi-hacking-2026-complete</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wifi-hacking-2026-complete</guid>
+    <description>वाईफाई हैकिंग 2026 - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वाईफाई</category>
+  </item>
+  <item>
+    <title>WPA3 सिक्यूरिटी एनालिसिस - क्या WPA3 हैक हो सकता है?</title>
+    <link>https://nethunter-learn.vercel.app/blog/wpa3-security-analysis</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wpa3-security-analysis</guid>
+    <description>WPA3 सिक्यूरिटी एनालिसिस - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वाईफाई</category>
+  </item>
+  <item>
+    <title>डीऑथेंटिकेशन अटैक कैसे काम करता है - पूरी जानकारी</title>
+    <link>https://nethunter-learn.vercel.app/blog/deauthentication-attack-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/deauthentication-attack-guide</guid>
+    <description>डीऑथेंटिकेशन अटैक कैसे काम करता है - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वाईफाई</category>
+  </item>
+  <item>
+    <title>एविल ट्विन अटैक सेटअप कैसे करें</title>
+    <link>https://nethunter-learn.vercel.app/blog/evil-twin-attack-setup</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/evil-twin-attack-setup</guid>
+    <description>एविल ट्विन अटैक सेटअप कैसे करें - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वाईफाई</category>
+  </item>
+  <item>
+    <title>वाईफाई पैकेट कैप्चर और एनालिसिस - वायरशार्क के साथ</title>
+    <link>https://nethunter-learn.vercel.app/blog/wifi-packet-capture-analysis</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wifi-packet-capture-analysis</guid>
+    <description>वाईफाई पैकेट कैप्चर और एनालिसिस - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वाईफाई</category>
+  </item>
+  <item>
+    <title>2.4GHz vs 5GHz वाईफाई - हैकिंग के लिए कौनसा बेहतर?</title>
+    <link>https://nethunter-learn.vercel.app/blog/2ghz-vs-5ghz-hacking</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/2ghz-vs-5ghz-hacking</guid>
+    <description>2.4GHz vs 5GHz वाईफाई - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>किस्मेट वारड्राइविंग - पूरी गाइड हिंदी में</title>
+    <link>https://nethunter-learn.vercel.app/blog/kismet-wardriving-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/kismet-wardriving-guide</guid>
+    <description>किस्मेट वारड्राइविंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>पब्लिक वाईफाई हॉटस्पॉट सिक्यूरिटी - कैसे सुरक्षित रहें</title>
+    <link>https://nethunter-learn.vercel.app/blog/hotsport-wifi-security</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/hotsport-wifi-security</guid>
+    <description>पब्लिक वाईफाई हॉटस्पॉट सिक्यूरिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+    <category>सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>डीऑथ अटैक को कैसे डिटेक्ट करें और बचें</title>
+    <link>https://nethunter-learn.vercel.app/blog/wifi-deauth-detection</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wifi-deauth-detection</guid>
+    <description>डीऑथ अटैक को कैसे डिटेक्ट करें और बचें - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+    <category>सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>TCP/IP प्रोटोकॉल सूट - कम्प्लीट गाइड हिंदी में</title>
+    <link>https://nethunter-learn.vercel.app/blog/tcp-ip-fundamentals-hindi</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/tcp-ip-fundamentals-hindi</guid>
+    <description>TCP/IP प्रोटोकॉल सूट - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+    <category>नेटवर्क</category>
+  </item>
+  <item>
+    <title>DNS अटैक्स के प्रकार और बचाव के तरीके</title>
+    <link>https://nethunter-learn.vercel.app/blog/dns-attacks-types</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/dns-attacks-types</guid>
+    <description>DNS अटैक्स के प्रकार और बचाव के तरीके - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+    <category>नेटवर्क</category>
+  </item>
+  <item>
+    <title>ARP स्पूफिंग अटैक - कैसे काम करता है और कैसे बचें</title>
+    <link>https://nethunter-learn.vercel.app/blog/arp-spoofing-detection</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/arp-spoofing-detection</guid>
+    <description>ARP स्पूफिंग अटैक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+    <category>नेटवर्क</category>
+  </item>
+  <item>
+    <title>सबनेटिंग फॉर हैकर्स - सबनेट कैलकुलेशन आसान भाषा में</title>
+    <link>https://nethunter-learn.vercel.app/blog/subnetting-for-hackers</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/subnetting-for-hackers</guid>
+    <description>सबनेटिंग फॉर हैकर्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+    <category>नेटवर्क</category>
+  </item>
+  <item>
+    <title>वीएलएएन हॉपिंग अटैक्स - एक्सप्लॉइट और बचाव</title>
+    <link>https://nethunter-learn.vercel.app/blog/vlan-hopping-attacks</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/vlan-hopping-attacks</guid>
+    <description>वीएलएएन हॉपिंग अटैक्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+    <category>नेटवर्क</category>
+  </item>
+  <item>
+    <title>स्निफिंग और स्पूफिंग में क्या अंतर है?</title>
+    <link>https://nethunter-learn.vercel.app/blog/sniffing-vs-spoofing</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/sniffing-vs-spoofing</guid>
+    <description>स्निफिंग और स्पूफिंग में क्या अंतर है? - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>फायरवॉल एवेजन तकनीक - पेनिट्रेशन टेस्टिंग के लिए</title>
+    <link>https://nethunter-learn.vercel.app/blog/firewall-evasion-techniques</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/firewall-evasion-techniques</guid>
+    <description>फायरवॉल एवेजन तकनीक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>एसक्यूएल इंजेक्शन - बिगिनर से एडवांस्ड कम्प्लीट गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/sql-injection-complete-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/sql-injection-complete-guide</guid>
+    <description>एसक्यूएल इंजेक्शन - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>एक्सएसएस अटैक्स के प्रकार - रिफ्लेक्टेड, स्टोर्ड, डीओएम</title>
+    <link>https://nethunter-learn.vercel.app/blog/xss-attacks-types</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/xss-attacks-types</guid>
+    <description>एक्सएसएस अटैक्स के प्रकार - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>सीएसआरएफ अटैक - कैसे काम करता है और बचाव के तरीके</title>
+    <link>https://nethunter-learn.vercel.app/blog/csrf-attack-prevention</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/csrf-attack-prevention</guid>
+    <description>सीएसआरएफ अटैक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>फाइल अपलोड वल्नरेबिलिटीज - एक्सप्लॉइट और सिक्योर कोडिंग</title>
+    <link>https://nethunter-learn.vercel.app/blog/file-upload-vulnerabilities</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/file-upload-vulnerabilities</guid>
+    <description>फाइल अपलोड वल्नरेबिलिटीज - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>एपीआई सिक्यूरिटी टेस्टिंग - कम्प्लीट गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/api-security-testing</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/api-security-testing</guid>
+    <description>एपीआई सिक्यूरिटी टेस्टिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>JWT टोकन सिक्यूरिटी - बेस्ट प्रैक्टिसेज और वल्नरेबिलिटीज</title>
+    <link>https://nethunter-learn.vercel.app/blog/jwt-security-best-practices</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/jwt-security-best-practices</guid>
+    <description>JWT टोकन सिक्यूरिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>एसएसआरएफ अटैक - सर्वर साइड रिक्वेस्ट फोर्जरी गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/ssrf-attacks-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ssrf-attacks-guide</guid>
+    <description>एसएसआरएफ अटैक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>आईडीओआर वल्नरेबिलिटी - टेस्टिंग और बचाव</title>
+    <link>https://nethunter-learn.vercel.app/blog/idor-vulnerability-testing</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/idor-vulnerability-testing</guid>
+    <description>आईडीओआर वल्नरेबिलिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>HTTP रिक्वेस्ट स्मगलिंग - एडवांस्ड वेब अटैक</title>
+    <link>https://nethunter-learn.vercel.app/blog/http-request-smuggling</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/http-request-smuggling</guid>
+    <description>HTTP रिक्वेस्ट स्मगलिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 25 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>वेब कैश पॉइज़निंग - कैश को हैक करना</title>
+    <link>https://nethunter-learn.vercel.app/blog/web-cache-poisoning</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/web-cache-poisoning</guid>
+    <description>वेब कैश पॉइज़निंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>OAuth 2.0 सिक्यूरिटी - इंप्लीमेंटेशन गाइड और वल्नरेबिलिटीज</title>
+    <link>https://nethunter-learn.vercel.app/blog/oauth-2-0-security</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/oauth-2-0-security</guid>
+    <description>OAuth 2.0 सिक्यूरिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>एंड्रॉयड ऐप रिवर्स इंजीनियरिंग - एपीके डीकंपाइल और एनालिसिस</title>
+    <link>https://nethunter-learn.vercel.app/blog/android-app-reversing</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/android-app-reversing</guid>
+    <description>एंड्रॉयड ऐप रिवर्स इंजीनियरिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+    <category>एंड्रॉयड</category>
+  </item>
+  <item>
+    <title>नेथंटर क्रूट एनवायरनमेंट - एडवांस्ड सेटअप गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/nethunter-chroot-setup</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/nethunter-chroot-setup</guid>
+    <description>नेथंटर क्रूट एनवायरनमेंट - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+    <category>एंड्रॉयड</category>
+  </item>
+  <item>
+    <title>एंड्रॉयड रूटिंग गाइड 2026 - नए तरीके और टूल्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/android-rooting-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/android-rooting-guide</guid>
+    <description>एंड्रॉयड रूटिंग गाइड 2026 - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+    <category>एंड्रॉयड</category>
+  </item>
+  <item>
+    <title>एंड्रॉयड मैलवेयर एनालिसिस - संदिग्ध ऐप्स की जांच कैसे करें</title>
+    <link>https://nethunter-learn.vercel.app/blog/android-malware-analysis</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/android-malware-analysis</guid>
+    <description>एंड्रॉयड मैलवेयर एनालिसिस - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+    <category>एंड्रॉयड</category>
+  </item>
+  <item>
+    <title>Frida के साथ एंड्रॉयड हुकिंग - एडवांस्ड टेक्नीक्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/frida-android-hooking</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/frida-android-hooking</guid>
+    <description>Frida के साथ एंड्रॉयड हुकिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एंड्रॉयड</category>
+  </item>
+  <item>
+    <title>मोबाइल पेनिट्रेशन टेस्टिंग लैब सेटअप कैसे करें</title>
+    <link>https://nethunter-learn.vercel.app/blog/mobile-pentesting-lab-setup</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/mobile-pentesting-lab-setup</guid>
+    <description>मोबाइल पेनिट्रेशन टेस्टिंग लैब सेटअप कैसे करें - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एंड्रॉयड</category>
+  </item>
+  <item>
+    <title>एंड्रॉयड परमिशन रिवर्स इंजीनियरिंग</title>
+    <link>https://nethunter-learn.vercel.app/blog/android-permissions-reverse</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/android-permissions-reverse</guid>
+    <description>एंड्रॉयड परमिशन रिवर्स इंजीनियरिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एंड्रॉयड</category>
+  </item>
+  <item>
+    <title>iOS सिक्यूरिटी टेस्टिंग - बिगिनर गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/ios-security-testing</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ios-security-testing</guid>
+    <description>iOS सिक्यूरिटी टेस्टिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एंड्रॉयड</category>
+  </item>
+  <item>
+    <title>Frida vs Objection - मोबाइल टेस्टिंग के लिए कौनसा बेहतर?</title>
+    <link>https://nethunter-learn.vercel.app/blog/frida-vs-objection</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/frida-vs-objection</guid>
+    <description>Frida vs Objection - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>हैशकैट बिगिनर्स गाइड - पासवर्ड क्रैकिंग सीखें</title>
+    <link>https://nethunter-learn.vercel.app/blog/hashcat-beginners-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/hashcat-beginners-guide</guid>
+    <description>हैशकैट बिगिनर्स गाइड - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+    <category>पासवर्ड</category>
+  </item>
+  <item>
+    <title>जॉन द रिपर एडवांस्ड - रूल्स और मास्क अटैक्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/john-the-ripper-advanced</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/john-the-ripper-advanced</guid>
+    <description>जॉन द रिपर एडवांस्ड - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+    <category>पासवर्ड</category>
+  </item>
+  <item>
+    <title>रेनबो टेबल्स - पासवर्ड क्रैकिंग का सबसे तेज़ तरीका</title>
+    <link>https://nethunter-learn.vercel.app/blog/rainbow-tables-explained</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/rainbow-tables-explained</guid>
+    <description>रेनबो टेबल्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 08 Aug 2026 00:00:00 GMT</pubDate>
+    <category>पासवर्ड</category>
+  </item>
+  <item>
+    <title>वर्डलिस्ट कैसे बनाएं - Crunch और CeWL की मदद से</title>
+    <link>https://nethunter-learn.vercel.app/blog/wordlist-creation-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wordlist-creation-guide</guid>
+    <description>वर्डलिस्ट कैसे बनाएं - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+    <category>पासवर्ड</category>
+  </item>
+  <item>
+    <title>पासवर्ड सिक्यूरिटी टिप्स 2026 - मजबूत पासवर्ड कैसे बनाएं</title>
+    <link>https://nethunter-learn.vercel.app/blog/password-security-tips-2026</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/password-security-tips-2026</guid>
+    <description>पासवर्ड सिक्यूरिटी टिप्स 2026 - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+    <category>पासवर्ड</category>
+  </item>
+  <item>
+    <title>विंडोज पासवर्ड हैश एक्सट्रैक्शन - सैम डंप और मिमिकैट्ज़</title>
+    <link>https://nethunter-learn.vercel.app/blog/windows-password-hash-extraction</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/windows-password-hash-extraction</guid>
+    <description>विंडोज पासवर्ड हैश एक्सट्रैक्शन - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+    <category>पासवर्ड</category>
+  </item>
+  <item>
+    <title>कर्बेरोस अटैक्स - गोल्डन टिकट, सिल्वर टिकट और मोर</title>
+    <link>https://nethunter-learn.vercel.app/blog/kerberos-attacks-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/kerberos-attacks-guide</guid>
+    <description>कर्बेरोस अटैक्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>मेटास्प्लॉइट मॉड्यूल डेवलपमेंट - अपना एक्सप्लॉइट बनाएं</title>
+    <link>https://nethunter-learn.vercel.app/blog/metasploit-module-development</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/metasploit-module-development</guid>
+    <description>मेटास्प्लॉइट मॉड्यूल डेवलपमेंट - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>बफर ओवरफ्लो एक्सप्लॉइटेशन - x86 और x64 आर्किटेक्चर</title>
+    <link>https://nethunter-learn.vercel.app/blog/buffer-overflow-exploitation</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/buffer-overflow-exploitation</guid>
+    <description>बफर ओवरफ्लो एक्सप्लॉइटेशन - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>विंडोज प्रिविलेज एस्केलेशन - पूरी गाइड हिंदी में</title>
+    <link>https://nethunter-learn.vercel.app/blog/windows-privilege-escalation</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/windows-privilege-escalation</guid>
+    <description>विंडोज प्रिविलेज एस्केलेशन - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>लिनक्स प्रिविलेज एस्केलेशन - बिगिनर से एडवांस्ड तक</title>
+    <link>https://nethunter-learn.vercel.app/blog/linux-privilege-escalation</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/linux-privilege-escalation</guid>
+    <description>लिनक्स प्रिविलेज एस्केलेशन - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>शेलकोड डेवलपमेंट 101 - असेंबली से शेलकोड तक</title>
+    <link>https://nethunter-learn.vercel.app/blog/shellcode-development-101</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/shellcode-development-101</guid>
+    <description>शेलकोड डेवलपमेंट 101 - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>पोस्ट-एक्सप्लॉइटेशन तकनीक - लूट कैसे करें</title>
+    <link>https://nethunter-learn.vercel.app/blog/post-exploitation-techniques</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/post-exploitation-techniques</guid>
+    <description>पोस्ट-एक्सप्लॉइटेशन तकनीक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>MSFVenom पेलोड जनरेशन - हर सिचुएशन के लिए पेलोड</title>
+    <link>https://nethunter-learn.vercel.app/blog/payload-generation-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/payload-generation-guide</guid>
+    <description>MSFVenom पेलोड जनरेशन - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>SET (सोशल इंजीनियरिंग टूलकिट) - कम्प्लीट सेटअप गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/social-engineering-toolkit-setup</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/social-engineering-toolkit-setup</guid>
+    <description>SET (सोशल इंजीनियरिंग टूलकिट) - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+    <category>सोशल इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>फिशिंग पेज कैसे बनाएं - शुरुआत से एडवांस्ड तक</title>
+    <link>https://nethunter-learn.vercel.app/blog/phishing-page-creation</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/phishing-page-creation</guid>
+    <description>फिशिंग पेज कैसे बनाएं - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+    <category>सोशल इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>BeEF फ्रेमवर्क हुकिंग - ब्राउज़र एक्सप्लॉइटेशन</title>
+    <link>https://nethunter-learn.vercel.app/blog/beef-framework-hooking</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/beef-framework-hooking</guid>
+    <description>BeEF फ्रेमवर्क हुकिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+    <category>सोशल इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>विशिंग अटैक - वॉइस फिशिंग कैसे काम करता है?</title>
+    <link>https://nethunter-learn.vercel.app/blog/vishing-attack-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/vishing-attack-guide</guid>
+    <description>विशिंग अटैक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+    <category>सोशल इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>स्मिशिंग अटैक - SMS के ज़रिए फिशिंग से बचाव</title>
+    <link>https://nethunter-learn.vercel.app/blog/smishing-prevention</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/smishing-prevention</guid>
+    <description>स्मिशिंग अटैक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+    <category>सोशल इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>ह्यूमन साइकोलॉजी हैकिंग - सोशल इंजीनियरिंग की मनोविज्ञान</title>
+    <link>https://nethunter-learn.vercel.app/blog/human-psychology-hacking</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/human-psychology-hacking</guid>
+    <description>ह्यूमन साइकोलॉजी हैकिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+    <category>सोशल इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>डिजिटल फोरेंसिक बेसिक्स - इन्वेस्टिगेशन कैसे करें</title>
+    <link>https://nethunter-learn.vercel.app/blog/digital-forensics-basics-hindi</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/digital-forensics-basics-hindi</guid>
+    <description>डिजिटल फोरेंसिक बेसिक्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+    <category>फोरेंसिक</category>
+  </item>
+  <item>
+    <title>मेमोरी फोरेंसिक - वोलैटिलिटी फ्रेमवर्क गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/memory-forensics-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/memory-forensics-guide</guid>
+    <description>मेमोरी फोरेंसिक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 27 Aug 2026 00:00:00 GMT</pubDate>
+    <category>फोरेंसिक</category>
+  </item>
+  <item>
+    <title>डिस्क फोरेंसिक - ऑटोप्सी टूल से डेटा रिकवरी</title>
+    <link>https://nethunter-learn.vercel.app/blog/disk-forensics-autopsy</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/disk-forensics-autopsy</guid>
+    <description>डिस्क फोरेंसिक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 28 Aug 2026 00:00:00 GMT</pubDate>
+    <category>फोरेंसिक</category>
+  </item>
+  <item>
+    <title>नेटवर्क फोरेंसिक - pcap फाइल्स एनालिसिस गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/network-forensics-tcpdump</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/network-forensics-tcpdump</guid>
+    <description>नेटवर्क फोरेंसिक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
+    <category>फोरेंसिक</category>
+  </item>
+  <item>
+    <title>मोबाइल फोरेंसिक - स्मार्टफोन फॉरेंसिक इन्वेस्टिगेशन</title>
+    <link>https://nethunter-learn.vercel.app/blog/mobile-forensics-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/mobile-forensics-guide</guid>
+    <description>मोबाइल फोरेंसिक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 30 Aug 2026 00:00:00 GMT</pubDate>
+    <category>फोरेंसिक</category>
+  </item>
+  <item>
+    <title>स्टेग्नोग्राफी - डेटा छुपाने की तकनीकें और डिटेक्शन</title>
+    <link>https://nethunter-learn.vercel.app/blog/steganography-techniques</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/steganography-techniques</guid>
+    <description>स्टेग्नोग्राफी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+    <category>फोरेंसिक</category>
+  </item>
+  <item>
+    <title>लॉग एनालिसिस और इंसिडेंट रिस्पॉन्स - हैंड्स-ऑन गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/log-analysis-incident-response</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/log-analysis-incident-response</guid>
+    <description>लॉग एनालिसिस और इंसिडेंट रिस्पॉन्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+    <category>फोरेंसिक</category>
+  </item>
+  <item>
+    <title>2026 के बेस्ट हैकिंग टूल्स - टॉप रेटेड सिक्यूरिटी टूल्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/best-hacking-tools-2026</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/best-hacking-tools-2026</guid>
+    <description>2026 के बेस्ट हैकिंग टूल्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+    <category>टूल्स</category>
+  </item>
+  <item>
+    <title>Burpsuite vs OWASP ZAP - वेब पेन्टेस्टिंग के लिए कौनसा बेहतर?</title>
+    <link>https://nethunter-learn.vercel.app/blog/burpsuite-vs-zap</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/burpsuite-vs-zap</guid>
+    <description>Burpsuite vs OWASP ZAP - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>Nmap vs Masscan - स्पीड और फीचर्स कंपेरिजन</title>
+    <link>https://nethunter-learn.vercel.app/blog/nmap-vs-masscan</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/nmap-vs-masscan</guid>
+    <description>Nmap vs Masscan - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>Wireshark vs Tcpdump - कब कौनसा इस्तेमाल करें</title>
+    <link>https://nethunter-learn.vercel.app/blog/wireshark-vs-tcpdump</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wireshark-vs-tcpdump</guid>
+    <description>Wireshark vs Tcpdump - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>Hydra vs Medusa - ब्रूटफोर्स टूल्स कंपेरिजन</title>
+    <link>https://nethunter-learn.vercel.app/blog/hydra-vs-medusa</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/hydra-vs-medusa</guid>
+    <description>Hydra vs Medusa - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>डॉकर सिक्यूरिटी - बेस्ट प्रैक्टिसेज और कमजोरियां</title>
+    <link>https://nethunter-learn.vercel.app/blog/docker-security-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/docker-security-guide</guid>
+    <description>डॉकर सिक्यूरिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
+    <category>क्लाउड</category>
+  </item>
+  <item>
+    <title>Kubernetes सिक्यूरिटी बेसिक्स - पॉड्स और क्लस्टर सुरक्षा</title>
+    <link>https://nethunter-learn.vercel.app/blog/kubernetes-security-basics</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/kubernetes-security-basics</guid>
+    <description>Kubernetes सिक्यूरिटी बेसिक्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+    <category>क्लाउड</category>
+  </item>
+  <item>
+    <title>AWS पेनिट्रेशन टेस्टिंग - क्लाउड सिक्यूरिटी गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/aws-pentesting-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/aws-pentesting-guide</guid>
+    <description>AWS पेनिट्रेशन टेस्टिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+    <category>क्लाउड</category>
+  </item>
+  <item>
+    <title>CEH vs OSCP - कौनसा सर्टिफिकेशन लेना चाहिए?</title>
+    <link>https://nethunter-learn.vercel.app/blog/ceh-vs-oscp-comparison</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ceh-vs-oscp-comparison</guid>
+    <description>CEH vs OSCP - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>पेनटेस्टर जॉब इंटरव्यू - टॉप 50 सवाल और जवाब</title>
+    <link>https://nethunter-learn.vercel.app/blog/pentesting-job-interview-qa</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/pentesting-job-interview-qa</guid>
+    <description>पेनटेस्टर जॉब इंटरव्यू - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>फ्रीलांस हैकिंग करियर - पैसे कैसे कमाएं?</title>
+    <link>https://nethunter-learn.vercel.app/blog/freelance-hacking-career</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/freelance-hacking-career</guid>
+    <description>फ्रीलांस हैकिंग करियर - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 12 Sep 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>साइबर सिक्यूरिटी रिज्यूमे कैसे बनाएं - टिप्स और टेम्पलेट्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/cybersecurity-resume-tips</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cybersecurity-resume-tips</guid>
+    <description>साइबर सिक्यूरिटी रिज्यूमे कैसे बनाएं - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>घर पर हैकिंग लैब कैसे बनाएं - सस्ता और इफेक्टिव सेटअप</title>
+    <link>https://nethunter-learn.vercel.app/blog/hacking-lab-home-setup</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/hacking-lab-home-setup</guid>
+    <description>घर पर हैकिंग लैब कैसे बनाएं - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>VirtualBox vs VMWare - हैकिंग लैब के लिए कौनसा बेहतर?</title>
+    <link>https://nethunter-learn.vercel.app/blog/virtualbox-vs-vmware-hacking</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/virtualbox-vs-vmware-hacking</guid>
+    <description>VirtualBox vs VMWare - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>Parrot OS vs Kali Linux - कौनसा पेन्टेस्टिंग OS बेहतर?</title>
+    <link>https://nethunter-learn.vercel.app/blog/parrot-vs-kali-comparison</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/parrot-vs-kali-comparison</guid>
+    <description>Parrot OS vs Kali Linux - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>HackTheBox Meow - शुरुआत से कम्प्लीट वॉकथ्रू</title>
+    <link>https://nethunter-learn.vercel.app/blog/htb-machine-walkthrough-meow</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/htb-machine-walkthrough-meow</guid>
+    <description>HackTheBox Meow - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+    <category>सीटीएफ</category>
+  </item>
+  <item>
+    <title>HackTheBox Fawn - एफ़टीपी वल्नरेबिलिटी वॉकथ्रू</title>
+    <link>https://nethunter-learn.vercel.app/blog/htb-machine-walkthrough-fawn</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/htb-machine-walkthrough-fawn</guid>
+    <description>HackTheBox Fawn - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+    <category>सीटीएफ</category>
+  </item>
+  <item>
+    <title>रिवर्स इंजीनियरिंग बेसिक्स - बाइनरी एनालिसिस कैसे करें</title>
+    <link>https://nethunter-learn.vercel.app/blog/reverse-engineering-basics</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/reverse-engineering-basics</guid>
+    <description>रिवर्स इंजीनियरिंग बेसिक्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
+    <category>रिवर्स इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>घिड्रा बिगिनर्स गाइड - आईडीए प्रो का फ्री ऑल्टरनेटिव</title>
+    <link>https://nethunter-learn.vercel.app/blog/ghidra-beginners-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ghidra-beginners-guide</guid>
+    <description>घिड्रा बिगिनर्स गाइड - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+    <category>रिवर्स इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>OllyDbg vs x64dbg - विंडोज डीबगिंग टूल्स कंपेरिजन</title>
+    <link>https://nethunter-learn.vercel.app/blog/ollydbg-vs-x64dbg</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ollydbg-vs-x64dbg</guid>
+    <description>OllyDbg vs x64dbg - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+    <category>रिवर्स इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>मैलवेयर एनालिसिस सैंडबॉक्स - सुरक्षित रिवर्स इंजीनियरिंग</title>
+    <link>https://nethunter-learn.vercel.app/blog/malware-analysis-sandbox</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/malware-analysis-sandbox</guid>
+    <description>मैलवेयर एनालिसिस सैंडबॉक्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+    <category>रिवर्स इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>क्रैकमी सॉल्विंग - रिवर्स इंजीनियरिंग प्रैक्टिस गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/crackme-solving-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/crackme-solving-guide</guid>
+    <description>क्रैकमी सॉल्विंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
+    <category>रिवर्स इंजीनियरिंग</category>
+  </item>
+  <item>
+    <title>ब्लूटूथ हैकिंग बेसिक्स - ब्लूज़िंपल, ब्लूस्नार्फर गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/bluetooth-hacking-basics</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/bluetooth-hacking-basics</guid>
+    <description>ब्लूटूथ हैकिंग बेसिक्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+    <category>ब्लूटूथ</category>
+  </item>
+  <item>
+    <title>बीएलई (ब्लूटूथ लो एनर्जी) डिवाइस सिक्यूरिटी - गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/ble-device-security</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ble-device-security</guid>
+    <description>बीएलई (ब्लूटूथ लो एनर्जी) डिवाइस सिक्यूरिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+    <category>ब्लूटूथ</category>
+  </item>
+  <item>
+    <title>ब्लूटूथ स्निफिंग - बेटरकैप और यूब्लूज़ के साथ</title>
+    <link>https://nethunter-learn.vercel.app/blog/bluetooth-sniffing-bettercap</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/bluetooth-sniffing-bettercap</guid>
+    <description>ब्लूटूथ स्निफिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 26 Sep 2026 00:00:00 GMT</pubDate>
+    <category>ब्लूटूथ</category>
+  </item>
+  <item>
+    <title>CVE-2026-5678: Log4J जैसी नई RCE वल्नरेबिलिटी - अलर्ट</title>
+    <link>https://nethunter-learn.vercel.app/blog/cve-2026-5678-log4j-reminder</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cve-2026-5678-log4j-reminder</guid>
+    <description>CVE-2026-5678: Log4J जैसी नई RCE वल्नरेबिलिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+    <category>सीवीई अलर्ट</category>
+  </item>
+  <item>
+    <title>CVE-2026-4321: लिनक्स कर्नेल में क्रिटिकल बग - प्रभावित सिस्टम</title>
+    <link>https://nethunter-learn.vercel.app/blog/cve-2026-4321-kernel-bug</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cve-2026-4321-kernel-bug</guid>
+    <description>CVE-2026-4321: लिनक्स कर्नेल में क्रिटिकल बग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+    <category>सीवीई अलर्ट</category>
+  </item>
+  <item>
+    <title>CVE-2026-9876: क्रोम ब्राउज़र में क्रिटिकल RCE - अपडेट करें</title>
+    <link>https://nethunter-learn.vercel.app/blog/cve-2026-9876-chrome-rce</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cve-2026-9876-chrome-rce</guid>
+    <description>CVE-2026-9876: क्रोम ब्राउज़र में क्रिटिकल RCE - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+    <category>सीवीई अलर्ट</category>
+  </item>
+  <item>
+    <title>CVE-2026-2468: विंडोज 11 0-डे - एक्सप्लॉइट जारी</title>
+    <link>https://nethunter-learn.vercel.app/blog/cve-2026-2468-windows-0day</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cve-2026-2468-windows-0day</guid>
+    <description>CVE-2026-2468: विंडोज 11 0-डे - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+    <category>सीवीई अलर्ट</category>
+  </item>
+  <item>
+    <title>CVE-2026-1111: एक SSH वल्नरेबिलिटी जो पूरे नेटवर्क को खतरे में डाल सकती है</title>
+    <link>https://nethunter-learn.vercel.app/blog/cve-2026-1111-ssh-vuln</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cve-2026-1111-ssh-vuln</guid>
+    <description>CVE-2026-1111: एक SSH वल्नरेबिलिटी जो पूरे नेटवर्क को खतरे में डाल सकती है - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+    <category>सीवीई अलर्ट</category>
+  </item>
+  <item>
+    <title>CVE-2026-5555: एंड्रॉयड स्टेजफ़्राइट जैसी नई वल्नरेबिलिटी</title>
+    <link>https://nethunter-learn.vercel.app/blog/cve-2026-5555-android</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cve-2026-5555-android</guid>
+    <description>CVE-2026-5555: एंड्रॉयड स्टेजफ़्राइट जैसी नई वल्नरेबिलिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+    <category>सीवीई अलर्ट</category>
+  </item>
+  <item>
+    <title>पैच ट्यूज़डे एनालिसिस - माइक्रोसॉफ्ट के जून 2026 अपडेट्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/patch-tuesday-analysis</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/patch-tuesday-analysis</guid>
+    <description>पैच ट्यूज़डे एनालिसिस - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+    <category>सीवीई अलर्ट</category>
+  </item>
+  <item>
+    <title>टोर ब्राउज़र - एनॉनिमिटी और डार्क वेब गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/tor-anonymity-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/tor-anonymity-guide</guid>
+    <description>टोर ब्राउज़र - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 04 Oct 2026 00:00:00 GMT</pubDate>
+    <category>सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>VPN vs प्रॉक्सी vs Tor - कब कौनसा इस्तेमाल करें?</title>
+    <link>https://nethunter-learn.vercel.app/blog/vpn-vs-proxy-vs-tor</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/vpn-vs-proxy-vs-tor</guid>
+    <description>VPN vs प्रॉक्सी vs Tor - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>लिनक्स कमांड लाइन मास्टरी - हैकर्स के लिए ज़रूरी कमांड्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/linux-command-line-mastery</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/linux-command-line-mastery</guid>
+    <description>लिनक्स कमांड लाइन मास्टरी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>Bash स्क्रिप्टिंग फॉर हैकर्स - ऑटोमेशन गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/bash-scripting-for-hackers</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/bash-scripting-for-hackers</guid>
+    <description>Bash स्क्रिप्टिंग फॉर हैकर्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>पायथन फॉर हैकर्स - सिक्यूरिटी टूल्स प्रोग्रामिंग</title>
+    <link>https://nethunter-learn.vercel.app/blog/python-for-hackers</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/python-for-hackers</guid>
+    <description>पायथन फॉर हैकर्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>Raspberry Pi हैकिंग लैब - पोर्टेबल पेन्टेस्टिंग सेटअप</title>
+    <link>https://nethunter-learn.vercel.app/blog/raspberry-pi-hacking-lab</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/raspberry-pi-hacking-lab</guid>
+    <description>Raspberry Pi हैकिंग लैब - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>क्रिप्टोग्राफी बेसिक्स हिंदी में - एन्क्रिप्शन समझें</title>
+    <link>https://nethunter-learn.vercel.app/blog/cryptography-basics-hindi</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cryptography-basics-hindi</guid>
+    <description>क्रिप्टोग्राफी बेसिक्स हिंदी में - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+    <category>सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>OSINT तकनीक - ओपन सोर्स इंटेलिजेंस गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/osint-techniques-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/osint-techniques-guide</guid>
+    <description>OSINT तकनीक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>गूगल डॉर्किंग - सर्च इंजन से डेटा कैसे ढूंढें</title>
+    <link>https://nethunter-learn.vercel.app/blog/google-dorking-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/google-dorking-guide</guid>
+    <description>गूगल डॉर्किंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>Shodan के साथ इंटरनेट ऑफ थिंग्स हैकिंग</title>
+    <link>https://nethunter-learn.vercel.app/blog/shodan-search-engine-hacking</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/shodan-search-engine-hacking</guid>
+    <description>Shodan के साथ इंटरनेट ऑफ थिंग्स हैकिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>WireGuard vs OpenVPN - कौनसा सुरक्षित और तेज़ है?</title>
+    <link>https://nethunter-learn.vercel.app/blog/wireguard-vs-openvpn</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wireguard-vs-openvpn</guid>
+    <description>WireGuard vs OpenVPN - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+    <category>तुलना</category>
+  </item>
+  <item>
+    <title>ProxyChains गाइड - टूल्स को एनॉनिमस कैसे करें</title>
+    <link>https://nethunter-learn.vercel.app/blog/proxychains-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/proxychains-guide</guid>
+    <description>ProxyChains गाइड - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>भारत में एथिकल हैकिंग - कानून और लाइसेंस गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/ethical-hacking-laws-india</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ethical-hacking-laws-india</guid>
+    <description>भारत में एथिकल हैकिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>बग बाउंटी डेटाबेस - बेस्ट वल्नरेबिलिटी डेटाबेस और रिपॉजिटरीज़</title>
+    <link>https://nethunter-learn.vercel.app/blog/bug-bounty-bug-database</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/bug-bounty-bug-database</guid>
+    <description>बग बाउंटी डेटाबेस - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
+    <category>बग बाउंटी</category>
+  </item>
+  <item>
+    <title>HackerOne vs Bugcrowd vs Intigriti - कौनसा प्लेटफॉर्म बेस्ट?</title>
+    <link>https://nethunter-learn.vercel.app/blog/hackerone-vs-bugcrowd</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/hackerone-vs-bugcrowd</guid>
+    <description>HackerOne vs Bugcrowd vs Intigriti - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+    <category>बग बाउंटी</category>
+  </item>
+  <item>
+    <title>CSRF और XSS में क्या अंतर है - एक्सप्लेन विद एग्ज़ाम्पल</title>
+    <link>https://nethunter-learn.vercel.app/blog/csrf-vs-xss-difference</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/csrf-vs-xss-difference</guid>
+    <description>CSRF और XSS में क्या अंतर है - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>हर हैकर को ये पोर्ट्स ज़रूर पता होने चाहिए - 20+ पोर्ट्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/common-ports-must-know</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/common-ports-must-know</guid>
+    <description>हर हैकर को ये पोर्ट्स ज़रूर पता होने चाहिए - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+    <category>नेटवर्क</category>
+  </item>
+  <item>
+    <title>एक्टिव रिकॉनिसेंस तकनीक - नेटवर्क स्कैनिंग गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/active-reconnaissance-techniques</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/active-reconnaissance-techniques</guid>
+    <description>एक्टिव रिकॉनिसेंस तकनीक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>पैसिव रिकॉनिसेंस - बिना टच किए टार्गेट की जानकारी</title>
+    <link>https://nethunter-learn.vercel.app/blog/passive-reconnaissance-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/passive-reconnaissance-guide</guid>
+    <description>पैसिव रिकॉनिसेंस - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+    <category>ट्यूटोरियल</category>
+  </item>
+  <item>
+    <title>C2 सर्वर्स कैसे काम करते हैं - कमांड एंड कंट्रोल गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/command-and-control-servers</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/command-and-control-servers</guid>
+    <description>C2 सर्वर्स कैसे काम करते हैं - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>Nikto वेब सर्वर स्कैनर - कम्प्लीट गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/vulnerability-scanning-nikto</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/vulnerability-scanning-nikto</guid>
+    <description>Nikto वेब सर्वर स्कैनर - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 GMT</pubDate>
+    <category>टूल्स</category>
+  </item>
+  <item>
+    <title>SSH टनलिंग और पोर्ट फ़ॉर्वर्डिंग - कम्प्लीट गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/ssh-tunneling-port-forwarding</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ssh-tunneling-port-forwarding</guid>
+    <description>SSH टनलिंग और पोर्ट फ़ॉर्वर्डिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 25 Oct 2026 00:00:00 GMT</pubDate>
+    <category>नेटवर्क</category>
+  </item>
+  <item>
+    <title>लैटरल मूवमेंट तकनीकें - नेटवर्क में फैलना</title>
+    <link>https://nethunter-learn.vercel.app/blog/lateral-movement-techniques</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/lateral-movement-techniques</guid>
+    <description>लैटरल मूवमेंट तकनीकें - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>विंडोज पर पर्सिस्टेंस - सिस्टम में बने रहने की तकनीकें</title>
+    <link>https://nethunter-learn.vercel.app/blog/persistence-techniques-windows</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/persistence-techniques-windows</guid>
+    <description>विंडोज पर पर्सिस्टेंस - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>एक्टिव डायरेक्ट्री सिक्यूरिटी - एडी अटैक्स और बचाव</title>
+    <link>https://nethunter-learn.vercel.app/blog/active-directory-security</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/active-directory-security</guid>
+    <description>एक्टिव डायरेक्ट्री सिक्यूरिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>ब्लडहाउंड के साथ एक्टिव डायरेक्ट्री एनालिसिस</title>
+    <link>https://nethunter-learn.vercel.app/blog/bloodhound-active-directory</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/bloodhound-active-directory</guid>
+    <description>ब्लडहाउंड के साथ एक्टिव डायरेक्ट्री एनालिसिस - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
+    <category>टूल्स</category>
+  </item>
+  <item>
+    <title>रिस्पॉन्डर - LLMNR और NBT-NS पॉइजनिंग गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/responder-llmnr-poisoning</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/responder-llmnr-poisoning</guid>
+    <description>रिस्पॉन्डर - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+    <category>एक्सप्लॉइटेशन</category>
+  </item>
+  <item>
+    <title>पासवर्ड क्रैकिंग मेथडोलॉजी - सिस्टमेटिक अप्रोच</title>
+    <link>https://nethunter-learn.vercel.app/blog/password-cracking-methodology</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/password-cracking-methodology</guid>
+    <description>पासवर्ड क्रैकिंग मेथडोलॉजी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 GMT</pubDate>
+    <category>पासवर्ड</category>
+  </item>
+  <item>
+    <title>PMKID अटैक - WPA2 पासवर्ड क्रैकिंग का नया तरीका</title>
+    <link>https://nethunter-learn.vercel.app/blog/wi-fi-pmkid-attack</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wi-fi-pmkid-attack</guid>
+    <description>PMKID अटैक - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
+    <category>वाईफाई</category>
+  </item>
+  <item>
+    <title>वाईफाईफिशर - ऑटोमेटेड वाईफाई फिशिंग अटैक गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/wifiphisher-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/wifiphisher-guide</guid>
+    <description>वाईफाईफिशर - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
+    <category>वाईफाई</category>
+  </item>
+  <item>
+    <title>नेथंटर क्या है - पूरी जानकारी हिंदी में</title>
+    <link>https://nethunter-learn.vercel.app/blog/nethunter-overview</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/nethunter-overview</guid>
+    <description>नेथंटर क्या है - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+    <category>एंड्रॉयड</category>
+  </item>
+  <item>
+    <title>BackTrack vs Kali Linux - काली लिनक्स का इतिहास</title>
+    <link>https://nethunter-learn.vercel.app/blog/bt5-vs-kali-2026</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/bt5-vs-kali-2026</guid>
+    <description>BackTrack vs Kali Linux - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>साइबर सिक्यूरिटी के 10 मिथक और सच - आम गलतफहमियां</title>
+    <link>https://nethunter-learn.vercel.app/blog/cybersecurity-myths-facts</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/cybersecurity-myths-facts</guid>
+    <description>साइबर सिक्यूरिटी के 10 मिथक और सच - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+    <category>सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>CTF हल करने के लिए बेस्ट रिसोर्सेज़ और टूल्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/capture-the-flag-resources</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/capture-the-flag-resources</guid>
+    <description>CTF हल करने के लिए बेस्ट रिसोर्सेज़ और टूल्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+    <category>सीटीएफ</category>
+  </item>
+  <item>
+    <title>PicoCTF 2026 चैलेंजेस का कम्प्लीट वॉकथ्रू</title>
+    <link>https://nethunter-learn.vercel.app/blog/picoctf-walkthrough-2026</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/picoctf-walkthrough-2026</guid>
+    <description>PicoCTF 2026 चैलेंजेस का कम्प्लीट वॉकथ्रू - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 GMT</pubDate>
+    <category>सीटीएफ</category>
+  </item>
+  <item>
+    <title>TryHackMe बिगिनर्स पाथ - पूरा रोडमैप और रिव्यू</title>
+    <link>https://nethunter-learn.vercel.app/blog/tryhackme-beginners-path</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/tryhackme-beginners-path</guid>
+    <description>TryHackMe बिगिनर्स पाथ - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+    <category>रोडमैप</category>
+  </item>
+  <item>
+    <title>HackTheBox Pro Labs - पैसे वाले लैब्स का रिव्यू</title>
+    <link>https://nethunter-learn.vercel.app/blog/hackthebox-pro-labs-review</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/hackthebox-pro-labs-review</guid>
+    <description>HackTheBox Pro Labs - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+    <category>सीटीएफ</category>
+  </item>
+  <item>
+    <title>OSCP/PWK एग्जाम तैयारी - मेरा अनुभव और टिप्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/pwk-oscp-exam-prep</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/pwk-oscp-exam-prep</guid>
+    <description>OSCP/PWK एग्जाम तैयारी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+    <category>करियर</category>
+  </item>
+  <item>
+    <title>वेब एप्लिकेशन पेन्टेस्टिंग कम्प्लीट गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/web-application-pentesting-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/web-application-pentesting-guide</guid>
+    <description>वेब एप्लिकेशन पेन्टेस्टिंग कम्प्लीट गाइड - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>सेशन हाईजैकिंग - कुकी स्टीलिंग और सेशन फिक्सेशन</title>
+    <link>https://nethunter-learn.vercel.app/blog/session-hijacking-guide</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/session-hijacking-guide</guid>
+    <description>सेशन हाईजैकिंग - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>क्लिकजैकिंग अटैक और डिफेंस - एक्स-फ्रेम-ऑप्शन्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/clickjacking-attack-defense</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/clickjacking-attack-defense</guid>
+    <description>क्लिकजैकिंग अटैक और डिफेंस - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>NoSQL इंजेक्शन - MongoDB अटैक्स और बचाव</title>
+    <link>https://nethunter-learn.vercel.app/blog/nosql-injection-mongodb</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/nosql-injection-mongodb</guid>
+    <description>NoSQL इंजेक्शन - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>रेस कंडीशन वल्नरेबिलिटी - एक्सप्लॉइट और मिटिगेशन</title>
+    <link>https://nethunter-learn.vercel.app/blog/race-condition-vulnerability</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/race-condition-vulnerability</guid>
+    <description>रेस कंडीशन वल्नरेबिलिटी - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>JWT अटैक्स - एल्गोरिदम कन्फ्यूज़न और अन्य एक्सप्लॉइट्स</title>
+    <link>https://nethunter-learn.vercel.app/blog/jwt-attacks-complete</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/jwt-attacks-complete</guid>
+    <description>JWT अटैक्स - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  <item>
+    <title>SSTI (सर्वर साइड टेम्पलेट इंजेक्शन) - पूरी गाइड</title>
+    <link>https://nethunter-learn.vercel.app/blog/ssti-server-side-template</link>
+    <guid isPermaLink="true">https://nethunter-learn.vercel.app/blog/ssti-server-side-template</guid>
+    <description>SSTI (सर्वर साइड टेम्पलेट इंजेक्शन) - पूरी जानकारी हिंदी में।</description>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+    <category>वेब सिक्यूरिटी</category>
+  </item>
+  </channel>
+</rss>

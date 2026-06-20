@@ -5,6 +5,7 @@ import ReadingProgress from '../components/ReadingProgress'
 import MetaTags from '../components/MetaTags'
 import TableOfContents from '../components/TableOfContents'
 import { useBookmarks } from '../context/BookmarkContext'
+import AdUnit from '../components/AdUnit'
 
 const contentImports = import.meta.glob('../content/blog/*.md', { query: '?raw', import: 'default' })
 
@@ -282,6 +283,8 @@ export default function BlogPost() {
           {renderContent(rawContent)}
         </article>
       </div>
+
+      <AdUnit slot="1234567890" className="mb-8" />
 
       {/* AI Disclosure */}
       <div className="info-box mt-8 mb-8">

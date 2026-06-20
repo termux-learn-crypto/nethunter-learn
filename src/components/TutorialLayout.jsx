@@ -10,6 +10,7 @@ import { useTheme } from '../context/ThemeContext'
 import { useBookmarks } from '../context/BookmarkContext'
 import { getToolByRoute, getPrevNext, toolCount } from '../data/tools'
 import Breadcrumbs from './Breadcrumbs'
+import AdUnit from './AdUnit'
 
 export default function TutorialLayout({ title, subtitle, icon, children, prev: prevProp, next: nextProp }) {
   const location = useLocation()
@@ -246,6 +247,8 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
       <div className="tutorial-content">
         {children}
       </div>
+
+      <AdUnit slot="1234567890" className="mb-8" />
 
       {quizData[title.toLowerCase()] && (
         <Quiz questions={quizData[title.toLowerCase()]} toolName={title} />

@@ -4,6 +4,7 @@ import blogPosts from '../data/blogPosts'
 import MetaTags from '../components/MetaTags'
 import { WEB3FORMS_KEY } from '../lib/config'
 import Spinner from '../components/Spinner'
+import AdUnit from '../components/AdUnit'
 
 const categories = ['सभी', 'रोडमैप', 'ट्यूटोरियल', 'सीवीई अलर्ट', 'तुलना', 'करियर', 'टूल्स', 'सिक्यूरिटी', 'सीटीएफ']
 
@@ -375,8 +376,25 @@ export default function Blog() {
         </div>
       )}
 
+      <AdUnit slot="1234567890" className="mb-8" />
+
+      {/* RSS Feed */}
+      <div className="mt-8 text-center">
+        <a
+          href="/rss.xml"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-gray-400 hover:text-orange-400 transition-colors text-sm"
+        >
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.18 15.64a2.18 2.18 0 010 4.36 2.18 2.18 0 010-4.36M4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44m0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93v-2.83z"/>
+          </svg>
+          RSS Feed Subscribe Karein
+        </a>
+      </div>
+
       {/* Newsletter */}
-      <div className="mt-16 glass-card p-8 text-center">
+      <div className="mt-8 glass-card p-8 text-center">
         <h2 className="text-2xl font-heading text-neon-green mb-4">Newsletter Subscribe Karein</h2>
         <p className="text-gray-400 mb-6 max-w-lg mx-auto">
           Naye articles, CVE alerts aur tutorials seedha email par. Spam nahi karenge, promise!
