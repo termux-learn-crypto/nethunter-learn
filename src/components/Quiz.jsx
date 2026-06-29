@@ -11,15 +11,15 @@ export default function Quiz({ questions, toolName }) {
   const q = questions[current]
 
   const handleSelect = (idx) => {
-    if (showResult) return
+    if (showResult) {return}
     setSelected(idx)
   }
 
   const handleSubmit = () => {
-    if (selected === null) return
+    if (selected === null) {return}
     setShowResult(true)
     const correct = selected === q.correct
-    if (correct) setScore(s => s + 1)
+    if (correct) {setScore(s => s + 1)}
     setAnswers(a => [...a, { question: q.question, selected, correct: q.correct, isCorrect: correct }])
   }
 

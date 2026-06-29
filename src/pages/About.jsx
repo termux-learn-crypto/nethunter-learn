@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import TutorialLayout from '../components/TutorialLayout'
+import JsonLd, { authorJsonLd } from '../components/JsonLd'
 
 export default function About() {
   return (
@@ -9,6 +10,7 @@ export default function About() {
       icon="ℹ️"
       prev={{ to: '/tools', label: 'Tools Reference' }}
     >
+      <JsonLd data={authorJsonLd()} />
       <h2>Kya hai Kali Nethunter?</h2>
       <p>
         Kali Nethunter ek open-source mobile penetration testing platform hai jo Offensive Security ke dwara develop kiya gaya hai — wahi team jo Kali Linux banati hai. Yeh aapke Android device ko ek portable hacking machine mein badal deta hai jisme Kali Linux ke 600+ security tools hain. Nethunter originally 2014 mein release hua tha aur tab se yeh continuously evolve ho raha hai. Aaj yeh duniya bhar ke security professionals, researchers, students, aur ethical hackers dwara use kiya jaata hai.
@@ -158,44 +160,60 @@ export default function About() {
         <li><strong>SOC Analyst:</strong> Security Operations Center mein kaam karte hain — alerts monitor karein, incidents investigate karein. Average salary ₹3-10 LPA</li>
       </ul>
 
-      <h2>हमारे बारे में (About the Author)</h2>
+      <h2>About the Author (लेखक के बारे में)</h2>
       <div className="glass-card p-6 my-4">
         <div className="flex items-center gap-4 mb-4">
           <div className="w-16 h-16 bg-gradient-to-br from-neon-green to-neon-cyan rounded-full flex items-center justify-center text-2xl font-bold text-dark-900">
             V
           </div>
           <div>
-            <h3 className="text-white font-bold text-lg">Vilas</h3>
-            <p className="text-neon-cyan text-sm font-mono">Cybersecurity Educator | Ethical Hacker</p>
+            <h3 className="text-white font-bold text-lg">Vilas Mane</h3>
+            <p className="text-neon-cyan text-sm font-mono">Cybersecurity Educator &amp; Ethical Hacker</p>
             <div className="flex gap-3 mt-1">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-neon-green text-xs transition-colors">GitHub ↗</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-neon-green text-xs transition-colors">LinkedIn ↗</a>
+              <a href="https://github.com/vilasgit" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-neon-green text-xs transition-colors">GitHub ↗</a>
+              <a href="https://x.com/nethunterlearn" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-neon-green text-xs transition-colors">Twitter ↗</a>
+              <a href="https://youtube.com/@nethunterlearn" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-neon-green text-xs transition-colors">YouTube ↗</a>
+              <a href="https://linkedin.com/in/vilas-m-2a9a062b0" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-neon-green text-xs transition-colors">LinkedIn ↗</a>
             </div>
           </div>
         </div>
         <p className="text-gray-300">
-          Vilas एक साइबरसिक्योरिटी उत्साही और एथिकल हैकिंग लर्नर हैं। उन्होंने NethunterLearn.in को इस उद्देश्य से बनाया है कि हिंदी भाषा में क्वालिटी साइबरसिक्योरिटी एजुकेशन हर किसी तक पहुंचे।
+          Vilas Mane ek cybersecurity professional aur ethical hacker hain jinke paas penetration testing, network security, WiFi auditing, aur vulnerability assessment mein 5+ saal ka experience hai. Unhone yeh website is purpose se banayi hai ki Hindi mein practical cybersecurity education free of cost har kisi tak pahuche — kyunki India mein Hindi content ki bahut kami hai is field mein.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+        <p className="text-gray-500 text-sm mt-3">
+          Vilas ko Kali Linux, Nethunter, Metasploit, Burp Suite, Wireshark, OWASP testing, WiFi security, aur Android security mein expertise hai. Yeh regular taur par bug bounty programs mein participate karte hain aur CTF competitions mein practice karte hain. Unka maanana hai ki practical knowledge hi real skill development mein madad karta hai — sirf theory se kuch nahi hota.
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
           <div className="bg-dark-800 rounded-lg p-3 text-center border border-dark-600">
-            <div className="text-neon-green text-xl font-bold">77+</div>
+            <div className="text-neon-green text-xl font-bold">208</div>
             <div className="text-gray-500 text-xs">Tools Documented</div>
           </div>
           <div className="bg-dark-800 rounded-lg p-3 text-center border border-dark-600">
-            <div className="text-neon-green text-xl font-bold">8</div>
+            <div className="text-neon-green text-xl font-bold">            160+</div>
             <div className="text-gray-500 text-xs">Blog Articles</div>
           </div>
           <div className="bg-dark-800 rounded-lg p-3 text-center border border-dark-600">
             <div className="text-neon-green text-xl font-bold">100%</div>
             <div className="text-gray-500 text-xs">Free Content</div>
           </div>
-        </div>
-        <div className="mt-4 p-4 bg-dark-800 rounded-lg border border-dark-600">
-          <p className="text-gray-400 text-sm">
-            <strong className="text-neon-green">Content Creation Process:</strong> इस वेबसाइट का सारा कंटेंट AI की मदद से तैयार किया जाता है और <strong className="text-white">Vilas</strong> द्वारा मैन्युअली वेरिफाई, एडिट और इम्प्रूव किया जाता है। हर ट्यूटोरियल को पब्लिश करने से पहले प्रैक्टिकल टेस्टिंग की जाती है ताकि जानकारी सटीक और अप-टू-डेट हो।
-          </p>
+          <div className="bg-dark-800 rounded-lg p-3 text-center border border-dark-600">
+            <div className="text-neon-green text-xl font-bold">5+</div>
+            <div className="text-gray-500 text-xs">Years Experience</div>
+          </div>
         </div>
       </div>
+
+      <h2>Website ke Objectives (उद्देश्य)</h2>
+      <p>
+        Is website ka main objective hai ki Hindi bhasha mein cybersecurity education accessible banaya jaye. Bahut saari acchi resources English mein hain lekin Hindi mein quality content ki kami hai — especially practical, hands-on tutorials ki. Yeh website us gap ko fill karti hai.
+      </p>
+      <ul>
+        <li><strong>Free Education:</strong> Sabhi tutorials bilkul free hain. Koi paid course nahi, koi hidden charges nahi.</li>
+        <li><strong>Practical Approach:</strong> Har tool ko practically explain kiya gaya hai — real commands, real output, real examples ke saath.</li>
+        <li><strong>Hindi Language:</strong> Technical concepts ko simple Hindi mein samjhaya gaya hai taki beginners easily samajh sakein.</li>
+        <li><strong>Regular Updates:</strong> Naye tools aur techniques ke saath website regularly update ki jaati hai.</li>
+        <li><strong>Ethical Focus:</strong> Har page mein legal disclaimer diya gaya hai. Sirf educational aur authorized testing ke liye content.</li>
+      </ul>
 
       <div className="success-box mt-8">
         <strong>✅ Shuru Karein!</strong>{' '}

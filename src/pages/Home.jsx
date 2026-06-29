@@ -231,6 +231,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Trust Us */}
+      <section className="max-w-4xl mx-auto px-4 py-12">
+        <h2 className="section-title text-center">
+          <span className="text-neon-green">&gt;</span> हम पर भरोसा क्यों करें?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="glass-card p-5">
+            <h4 className="text-neon-green font-bold mb-2">🔐 5+ Saal Ka Anubhav</h4>
+            <p className="text-gray-400 text-sm">
+              Vilas Mane ke paas penetration testing, network security aur vulnerability assessment mein 5+ saal ka practical experience hai. Regular CTF competitions aur bug bounty programs mein participate karte hain.
+            </p>
+          </div>
+          <div className="glass-card p-5">
+            <h4 className="text-neon-cyan font-bold mb-2">🎯 208+ Tools Verified</h4>
+            <p className="text-gray-400 text-sm">
+              Har tool ko practically test kiya gaya hai, har command verify ki gayi hai. Aap blindly follow kar sakte hain — har tutorial real-world testing par based hai.
+            </p>
+          </div>
+          <div className="glass-card p-5">
+            <h4 className="text-neon-green font-bold mb-2">📖 160+ Blog Articles</h4>
+            <p className="text-gray-400 text-sm">
+              Saare articles expert research aur personal experience se likhe gaye hain. References aur sources diye gaye hain taki aap verify kar sakein.
+            </p>
+          </div>
+          <div className="glass-card p-5">
+            <h4 className="text-neon-cyan font-bold mb-2">⚖️ Sirf Educational Content</h4>
+            <p className="text-gray-400 text-sm">
+              Hum ethical hacking ko promote karte hain. Har page par legal disclaimer hai. Koi bhi illegal activity ka support nahi karte. Aapki security journey safe rahe — yeh hamari priority hai.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Important Disclaimer */}
       <section className="max-w-4xl mx-auto px-4 py-12">
         <div className="warning-box">

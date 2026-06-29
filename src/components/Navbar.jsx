@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import SearchModal from './SearchModal'
 import { useTheme } from '../context/ThemeContext'
@@ -12,6 +12,7 @@ const navItems = [
   { path: '/payloads', label: 'Payloads' },
   { path: '/tools', label: 'Tools' },
   { path: '/blog', label: 'Blog' },
+  { path: '/learning-paths', label: 'Path' },
   { path: '/cheatsheets', label: 'Cheat' },
   { path: '/news', label: 'News' },
   { path: '/about', label: 'About' },
@@ -26,7 +27,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setIsOpen(false)
-  }, [location])
+  }, [location.pathname])
 
   useEffect(() => {
     const handleKeyDown = (e) => {

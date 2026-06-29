@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useEffect, useState, useMemo } from 'react'
 import blogPosts from '../data/blogPosts'
 import ReadingProgress from '../components/ReadingProgress'
@@ -22,14 +22,13 @@ const categoryColors = {
 
 export default function BlogPost() {
   const { slug } = useParams()
-  const navigate = useNavigate()
   const post = blogPosts.find(p => p.id === slug)
   const { isBookmarked, toggleBookmark } = useBookmarks()
   const [rawContent, setRawContent] = useState('')
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    if (!slug) return
+    if (!slug) {return}
     const path = `../content/blog/${slug}.md`
     if (contentImports[path]) {
       contentImports[path]().then(mod => {
@@ -39,25 +38,15 @@ export default function BlogPost() {
     }
   }, [slug])
 
-  if (!post) {
-    return (
-      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-3xl font-heading text-white mb-4">लेख नहीं मिला</h1>
-        <p className="text-gray-400 mb-8">यह लेख मौजूद नहीं है या हटा दिया गया है।</p>
-        <Link to="/blog" className="btn-primary px-6 py-3 rounded-lg text-dark-900">
-          ब्लॉग पर जाएं
-        </Link>
-      </div>
-    )
-  }
-
   const currentIndex = blogPosts.findIndex(p => p.id === slug)
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null
 
-  const relatedPosts = blogPosts
-    .filter(p => p.id !== slug && p.tags.some(t => post.tags.includes(t)))
-    .slice(0, 3)
+  const relatedPosts = post
+    ? blogPosts
+        .filter(p => p.id !== slug && p.tags.some(t => post.tags.includes(t)))
+        .slice(0, 3)
+    : []
 
   const headings = useMemo(() => {
     const h = []
@@ -72,11 +61,22 @@ export default function BlogPost() {
     return h
   }, [rawContent])
 
+  if (!post) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+        <h1 className="text-3xl font-heading text-white mb-4">लेख नहीं मिला</h1>
+        <p className="text-gray-400 mb-8">यह लेख मौजूद नहीं है या हटा दिया गया है।</p>
+        <Link to="/blog" className="btn-primary px-6 py-3 rounded-lg text-dark-900">
+          ब्लॉग पर जाएं
+        </Link>
+      </div>
+    )
+  }
+
   const renderContent = (content) => {
-    if (!content) return []
+    if (!content) {return []}
     const lines = content.trim().split('\n')
     const elements = []
-    let inList = false
     let listItems = []
 
     let headingIndex = 0
@@ -92,7 +92,6 @@ export default function BlogPost() {
         )
         listItems = []
       }
-      inList = false
     }
 
     const formatInline = (text) => {
@@ -134,10 +133,10 @@ export default function BlogPost() {
           </h3>
         )
       } else if (trimmed.startsWith('- **')) {
-        inList = true
+
         listItems.push(trimmed.slice(2))
       } else if (trimmed.startsWith('- ')) {
-        inList = true
+
         listItems.push(trimmed.slice(2))
       } else if (trimmed.startsWith('| ')) {
         flushList()
@@ -168,8 +167,16 @@ export default function BlogPost() {
             </div>
           )
         }
+      } else if (trimmed.startsWith('![')) {
+        flushList()
+        const match = trimmed.match(/!\[(.*?)\]\((.*?)\)/)
+        if (match) {
+          elements.push(
+            <img key={i} src={match[2]} alt={match[1]} className="max-w-full h-auto rounded-lg my-4" loading="lazy" />
+          )
+        }
       } else if (trimmed.startsWith('1. ') || trimmed.startsWith('2. ') || trimmed.startsWith('3. ')) {
-        inList = true
+
         listItems.push(trimmed.replace(/^\d+\.\s*/, ''))
       } else {
         flushList()
@@ -185,6 +192,37 @@ export default function BlogPost() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: post.title,
+          description: post.excerpt,
+          author: {
+            '@type': 'Person',
+            name: 'Vilas Mane',
+            url: 'https://nethunter-learn.vercel.app/about',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Nethunter Learn',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://nethunter-learn.vercel.app/og-image.svg',
+            },
+          },
+          datePublished: post.date,
+          dateModified: post.date,
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://nethunter-learn.vercel.app/blog/${post.id}`,
+          },
+          image: `https://nethunter-learn.vercel.app/og-blog.svg?category=${encodeURIComponent(post.category)}&title=${encodeURIComponent(post.title)}`,
+          keywords: post.tags.join(', '),
+          inLanguage: 'hi',
+        })}}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -248,7 +286,7 @@ export default function BlogPost() {
         <div className="flex items-center gap-4 text-sm text-gray-500">
           <span>लेखक: Vilas</span>
           <span className="text-gray-700">•</span>
-          <span>AI Assisted &amp; Verified</span>
+          <span>Vilas Mane dwara likhit</span>
           <span className="text-gray-700">•</span>
           <span>{post.date}</span>
           <span className="text-gray-700">|</span>
@@ -294,10 +332,10 @@ export default function BlogPost() {
 
       <AdUnit slot="2315258447" className="mb-8" />
 
-      {/* AI Disclosure */}
+      {/* About Author */}
       <div className="info-box mt-8 mb-8">
         <p className="text-sm text-gray-400">
-          <strong className="text-neon-green">AI Assisted Content:</strong> यह लेख AI की मदद से तैयार किया गया है और <strong className="text-white">Vilas</strong> द्वारा वेरिफाई एवं एडिट किया गया है। अधिक जानकारी के लिए <Link to="/about" className="text-neon-cyan underline">About</Link> पेज देखें।
+          <strong className="text-neon-green">✍️ Lekhak ke baare mein:</strong> Yeh article <strong className="text-white">Vilas Mane</strong> dwara likha gaya hai — cybersecurity educator aur ethical hacker jinke paas penetration testing aur network security mein 5+ saal ka tajurba hai. Adhik jankari ke liye <Link to="/about" className="text-neon-cyan underline">About</Link> page dekhein.
         </p>
       </div>
 
@@ -318,14 +356,14 @@ export default function BlogPost() {
 
       {/* Share & Navigation */}
       <div className="mt-12 pt-8 border-t border-dark-600">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div className="flex flex-col items-center gap-4 mb-8">
           <p className="text-gray-400">लेख अच्छा लगा? शेयर करें:</p>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap justify-center gap-2">
             <a
               href={`https://wa.me/?text=${encodeURIComponent(post.title + ' - ' + window.location.href)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-green-600/20 border border-green-600/40 rounded-lg text-green-400 hover:bg-green-600/30 transition-all text-sm"
+              className="px-3 py-1.5 md:px-4 md:py-2 bg-green-600/20 border border-green-600/40 rounded-lg text-green-400 hover:bg-green-600/30 transition-all text-xs md:text-sm"
             >
               WhatsApp
             </a>
@@ -333,7 +371,7 @@ export default function BlogPost() {
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(window.location.href)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600/20 border border-blue-600/40 rounded-lg text-blue-400 hover:bg-blue-600/30 transition-all text-sm"
+              className="px-3 py-1.5 md:px-4 md:py-2 bg-blue-600/20 border border-blue-600/40 rounded-lg text-blue-400 hover:bg-blue-600/30 transition-all text-xs md:text-sm"
             >
               Twitter
             </a>
@@ -341,7 +379,7 @@ export default function BlogPost() {
               href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-800/20 border border-blue-800/40 rounded-lg text-blue-300 hover:bg-blue-800/30 transition-all text-sm"
+              className="px-3 py-1.5 md:px-4 md:py-2 bg-blue-800/20 border border-blue-800/40 rounded-lg text-blue-300 hover:bg-blue-800/30 transition-all text-xs md:text-sm"
             >
               Facebook
             </a>
@@ -349,7 +387,7 @@ export default function BlogPost() {
               href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(post.title)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-700/20 border border-blue-700/40 rounded-lg text-blue-300 hover:bg-blue-700/30 transition-all text-sm"
+              className="px-3 py-1.5 md:px-4 md:py-2 bg-blue-700/20 border border-blue-700/40 rounded-lg text-blue-300 hover:bg-blue-700/30 transition-all text-xs md:text-sm"
             >
               LinkedIn
             </a>
@@ -358,7 +396,7 @@ export default function BlogPost() {
                 navigator.clipboard.writeText(window.location.href)
                 alert('लिंक कॉपी हो गया!')
               }}
-              className="px-4 py-2 bg-dark-700 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-sm"
+              className="px-3 py-1.5 md:px-4 md:py-2 bg-dark-700 border border-dark-600 rounded-lg text-gray-300 hover:text-neon-green hover:border-neon-green/30 transition-all text-xs md:text-sm"
             >
               लिंक कॉपी करें
             </button>

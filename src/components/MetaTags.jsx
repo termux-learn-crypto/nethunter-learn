@@ -18,12 +18,12 @@ function upsertMeta(attr, name, content, isProperty = false) {
 
 function upsertLink(rel, href, type) {
   let selector = `link[rel="${rel}"][href="${href}"]`
-  if (type) selector = `link[rel="${rel}"][type="${type}"]`
+  if (type) {selector = `link[rel="${rel}"][type="${type}"]`}
   let el = document.querySelector(selector)
   if (!el) {
     el = document.createElement('link')
     el.setAttribute('rel', rel)
-    if (type) el.setAttribute('type', type)
+    if (type) {el.setAttribute('type', type)}
     document.head.appendChild(el)
   }
   el.setAttribute('href', href)
@@ -31,7 +31,7 @@ function upsertLink(rel, href, type) {
 
 function removeJsonLd() {
   const el = document.querySelector('#json-ld')
-  if (el) el.remove()
+  if (el) {el.remove()}
 }
 
 function addJsonLd(json) {
@@ -53,7 +53,7 @@ export default function MetaTags({ title, description, keywords, url, type = 'we
     document.title = fullTitle
 
     upsertMeta('name', 'description', desc)
-    if (keywords) upsertMeta('name', 'keywords', keywords)
+    if (keywords) {upsertMeta('name', 'keywords', keywords)}
 
     upsertMeta('property', 'og:title', fullTitle, true)
     upsertMeta('property', 'og:description', desc, true)

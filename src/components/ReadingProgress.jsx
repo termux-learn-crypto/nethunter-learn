@@ -16,7 +16,7 @@ export default function ReadingProgress() {
     return () => window.removeEventListener('scroll', updateProgress)
   }, [])
 
-  if (progress < 1) return null
+  if (progress < 1) {return null}
 
   return (
     <div className="fixed top-0 left-0 right-0 z-[60] h-1 bg-dark-800">

@@ -6,7 +6,6 @@ import Quiz from './Quiz'
 import relatedToolsMap from '../data/relatedTools'
 import quizData from '../data/quizData'
 import { useProgress } from '../context/ProgressContext'
-import { useTheme } from '../context/ThemeContext'
 import { useBookmarks } from '../context/BookmarkContext'
 import { getToolByRoute, getPrevNext, toolCount } from '../data/tools'
 import Breadcrumbs from './Breadcrumbs'
@@ -29,7 +28,6 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
     window.scrollTo(0, 0)
   }, [location.pathname])
 
-  const { isDark } = useTheme()
   const category = tool?.category || 'Security'
   const descTemplates = {
     WiFi: `${title} WiFi hacking tool ka Hindi tutorial. Seekhein wireless network penetration testing, WPA cracking, aur WiFi attacks ${title} ke saath.`,
@@ -104,7 +102,7 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
     description: `${title} - ${tool?.description || category.toLowerCase()} tool for Kali NetHunter.`,
     author: { '@type': 'Person', name: 'Vilas' },
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  }), [])
+  }), [category, title, tool?.description])
 
   const breadcrumbSchema = useMemo(() => ({
     '@context': 'https://schema.org',
@@ -114,7 +112,7 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
       { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://nethunter-learn.vercel.app/tools' },
       { '@type': 'ListItem', position: 3, name: title, item: `https://nethunter-learn.vercel.app${location.pathname}` },
     ],
-  }), [])
+  }), [location.pathname, title])
 
   const faqSchema = useMemo(() => ({
     '@context': 'https://schema.org',
@@ -124,7 +122,7 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
       name: item.q,
       acceptedAnswer: { '@type': 'Answer', text: item.a },
     })),
-  }), [])
+  }), [questions])
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -168,7 +166,7 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
         <div className="mt-4 flex items-center gap-3 text-sm text-gray-400">
           <span>लेखक: Vilas</span>
           <span className="text-gray-700">•</span>
-          <span>AI Assisted &amp; Verified by Author</span>
+          <span>Vilas Mane</span>
           <span className="text-gray-700">•</span>
           <span>जून 2026</span>
         </div>
@@ -316,6 +314,22 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
         </div>
         <p className="text-gray-600 text-xs mt-3">
           ये बाहरी स्रोत हमारे कंटेंट को वेरिफाई और रिफरेंस करने के लिए उपयोग किए जाते हैं। कृपया इन्हें देखकर और गहराई से सीखें।
+        </p>
+      </div>
+
+      {/* Author Bio */}
+      <div className="glass-card p-5 mt-12">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-10 h-10 bg-gradient-to-br from-neon-green to-neon-cyan rounded-full flex items-center justify-center text-sm font-bold text-dark-900">
+            VM
+          </div>
+          <div>
+            <p className="text-white font-semibold text-sm">Vilas Mane — Lekhak aur Cybersecurity Expert</p>
+            <p className="text-gray-500 text-xs">5+ saal ka penetration testing experience</p>
+          </div>
+        </div>
+        <p className="text-gray-400 text-sm leading-relaxed">
+          Yeh tutorial Vilas Mane dwara likha gaya hai, jo cybersecurity educator aur ethical hacker hain. Har command aur technique ko practically test kiya gaya hai before publish karne se pehle. Koi sawaal ho toh <Link to="/contact" className="text-neon-green underline">contact</Link> karein ya <a href="https://x.com/nethunterlearn" target="_blank" rel="noopener noreferrer" className="text-neon-cyan underline">Twitter/X</a> par poochhein.
         </p>
       </div>
 

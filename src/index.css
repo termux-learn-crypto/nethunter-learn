@@ -47,6 +47,11 @@
     color: #e0e0e0;
     font-family: 'Inter', sans-serif;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+  }
+
+  #root {
+    overflow-x: hidden;
   }
 
   ::-webkit-scrollbar {

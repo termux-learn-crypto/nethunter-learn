@@ -1582,7 +1582,7 @@ export default function Tools() {
             {Array.from({ length: Math.min(totalPages, 10) }, (_, i) => {
               const start = Math.max(0, Math.min(safePage - 5, totalPages - 10))
               const pageNum = start + i + 1
-              if (pageNum > totalPages) return null
+              if (pageNum > totalPages) {return null}
               return (
                 <button
                   key={pageNum}

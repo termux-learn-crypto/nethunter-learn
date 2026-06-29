@@ -12,7 +12,7 @@ export default class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('ErrorBoundary caught:', error, errorInfo)
+    console.error('ErrorBoundary caught:', error, errorInfo) // eslint-disable-line no-console
   }
 
   handleReload = () => {

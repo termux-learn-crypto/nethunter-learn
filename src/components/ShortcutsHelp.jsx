@@ -23,7 +23,7 @@ export default function ShortcutsHelp() {
     return () => window.removeEventListener('toggle-shortcuts-help', handler)
   }, [])
 
-  if (!open) return null
+  if (!open) {return null}
 
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">

@@ -1,28 +1,5 @@
 import { Link } from 'react-router-dom'
 
-const labels = {
-  '/': 'Home',
-  '/installation': 'Installation',
-  '/wifi': 'WiFi Hacking',
-  '/bluetooth': 'Bluetooth Hacking',
-  '/payloads': 'Payloads',
-  '/tools': 'Tools',
-  '/about': 'About',
-  '/contact': 'Contact',
-  '/privacy-policy': 'Privacy Policy',
-  '/terms': 'Terms',
-  '/disclaimer': 'Disclaimer',
-  '/dmca': 'DMCA',
-  '/blog': 'Blog',
-  '/sitemap': 'Sitemap',
-  '/learning-paths': 'Learning Paths',
-  '/compare': 'Compare Tools',
-  '/glossary': 'Glossary',
-  '/cheatsheets': 'Cheatsheets',
-  '/news': 'News',
-  '/community': 'Community',
-}
-
 export default function Breadcrumbs({ items, className = '' }) {
   if (items && items.length > 0) {
     return (

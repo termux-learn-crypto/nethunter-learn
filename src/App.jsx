@@ -1,9 +1,8 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, createElement } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
-import BackToTop from './components/BackToTop'
 import ShortcutsHelp from './components/ShortcutsHelp'
 import ErrorBoundary from './components/ErrorBoundary'
 import CookieConsent from './components/CookieConsent'
@@ -11,32 +10,6 @@ import JsonLd, { websiteJsonLd, organizationJsonLd } from './components/JsonLd'
 import useKeyboardShortcuts from './hooks/useKeyboardShortcuts'
 import Home from './pages/Home'
 import tools, { toolRoutes } from './data/tools'
-
-const toolPages = Object.fromEntries(
-  tools.map(t => [t.id, lazy(() => import(`./pages/tools/${t.file}.jsx`))])
-)
-
-const Installation = lazy(() => import('./pages/Installation'))
-const WifiHacking = lazy(() => import('./pages/WifiHacking'))
-const BluetoothHacking = lazy(() => import('./pages/BluetoothHacking'))
-const Payloads = lazy(() => import('./pages/Payloads'))
-const Tools = lazy(() => import('./pages/Tools'))
-const About = lazy(() => import('./pages/About'))
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
-const Terms = lazy(() => import('./pages/Terms'))
-const Disclaimer = lazy(() => import('./pages/Disclaimer'))
-const DMCA = lazy(() => import('./pages/DMCA'))
-const Contact = lazy(() => import('./pages/Contact'))
-const SitemapPage = lazy(() => import('./pages/Sitemap'))
-const NotFound = lazy(() => import('./pages/NotFound'))
-const Blog = lazy(() => import('./pages/Blog'))
-const BlogPost = lazy(() => import('./pages/BlogPost'))
-const LearningPaths = lazy(() => import('./pages/LearningPaths'))
-const ToolCompare = lazy(() => import('./pages/ToolCompare'))
-const Glossary = lazy(() => import('./pages/Glossary'))
-const Cheatsheets = lazy(() => import('./pages/Cheatsheets'))
-const News = lazy(() => import('./pages/News'))
-const Community = lazy(() => import('./pages/Community'))
 
 function PageLoader() {
   return (
@@ -54,7 +27,7 @@ function AppInner() {
   return null
 }
 
-export default function App() {
+export default function App({ eagerPages, eagerToolPages }) {
   return (
     <div className="min-h-screen bg-dark-900 flex flex-col">
       <AppInner />
@@ -69,37 +42,36 @@ export default function App() {
         <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/installation" element={<Installation />} />
-          <Route path="/wifi" element={<WifiHacking />} />
-          <Route path="/bluetooth" element={<BluetoothHacking />} />
-          <Route path="/payloads" element={<Payloads />} />
-          <Route path="/tools" element={<Tools />} />
+          <Route path="/installation" element={createElement(eagerPages?.Installation || lazy(() => import('./pages/Installation')))} />
+          <Route path="/wifi" element={createElement(eagerPages?.WifiHacking || lazy(() => import('./pages/WifiHacking')))} />
+          <Route path="/bluetooth" element={createElement(eagerPages?.BluetoothHacking || lazy(() => import('./pages/BluetoothHacking')))} />
+          <Route path="/payloads" element={createElement(eagerPages?.Payloads || lazy(() => import('./pages/Payloads')))} />
+          <Route path="/tools" element={createElement(eagerPages?.Tools || lazy(() => import('./pages/Tools')))} />
           {toolRoutes.map(route => {
             const tool = tools.find(t => t.route === route)
-            const Page = toolPages[tool.id]
-            return <Route key={route} path={route} element={<Page />} />
+            const Page = eagerToolPages?.[tool.id] || lazy(() => import(`./pages/tools/${tool.file}.jsx`))
+            return <Route key={route} path={route} element={createElement(Page)} />
           })}
-          <Route path="/about" element={<About />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-          <Route path="/dmca" element={<DMCA />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/learning-paths" element={<LearningPaths />} />
-          <Route path="/compare" element={<ToolCompare />} />
-          <Route path="/glossary" element={<Glossary />} />
-          <Route path="/cheatsheets" element={<Cheatsheets />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/sitemap" element={<SitemapPage />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/about" element={createElement(eagerPages?.About || lazy(() => import('./pages/About')))} />
+          <Route path="/privacy-policy" element={createElement(eagerPages?.PrivacyPolicy || lazy(() => import('./pages/PrivacyPolicy')))} />
+          <Route path="/terms" element={createElement(eagerPages?.Terms || lazy(() => import('./pages/Terms')))} />
+          <Route path="/disclaimer" element={createElement(eagerPages?.Disclaimer || lazy(() => import('./pages/Disclaimer')))} />
+          <Route path="/dmca" element={createElement(eagerPages?.DMCA || lazy(() => import('./pages/DMCA')))} />
+          <Route path="/contact" element={createElement(eagerPages?.Contact || lazy(() => import('./pages/Contact')))} />
+          <Route path="/blog" element={createElement(eagerPages?.Blog || lazy(() => import('./pages/Blog')))} />
+          <Route path="/blog/:slug" element={createElement(eagerPages?.BlogPost || lazy(() => import('./pages/BlogPost')))} />
+          <Route path="/learning-paths" element={createElement(eagerPages?.LearningPaths || lazy(() => import('./pages/LearningPaths')))} />
+          <Route path="/compare" element={createElement(eagerPages?.ToolCompare || lazy(() => import('./pages/ToolCompare')))} />
+          <Route path="/glossary" element={createElement(eagerPages?.Glossary || lazy(() => import('./pages/Glossary')))} />
+          <Route path="/cheatsheets" element={createElement(eagerPages?.Cheatsheets || lazy(() => import('./pages/Cheatsheets')))} />
+          <Route path="/news" element={createElement(eagerPages?.News || lazy(() => import('./pages/News')))} />
+          <Route path="/community" element={createElement(eagerPages?.Community || lazy(() => import('./pages/Community')))} />
+          <Route path="/sitemap" element={createElement(eagerPages?.SitemapPage || lazy(() => import('./pages/Sitemap')))} />
+          <Route path="*" element={createElement(eagerPages?.NotFound || lazy(() => import('./pages/NotFound')))} />
         </Routes>
         </Suspense>
       </main>
       </ErrorBoundary>
-      <BackToTop />
       <ShortcutsHelp />
       <Footer />
       <CookieConsent />

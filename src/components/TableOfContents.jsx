@@ -16,7 +16,7 @@ export default function TableOfContents({ headings }) {
     )
     for (const { slug } of headings) {
       const el = document.getElementById(slug)
-      if (el) observer.observe(el)
+      if (el) {observer.observe(el)}
     }
     return () => observer.disconnect()
   }, [headings])

@@ -1,0 +1,10 @@
+diff --git a/node_modules/@vitejs/plugin-react/dist/refresh-runtime.js b/node_modules/@vitejs/plugin-react/dist/refresh-runtime.js
+index e798d00..fedb05c 100644
+--- a/node_modules/@vitejs/plugin-react/dist/refresh-runtime.js
++++ b/node_modules/@vitejs/plugin-react/dist/refresh-runtime.js
+@@ -660,4 +660,4 @@ function predicateOnExport(ignoredExports, moduleExports, predicate) {
+ export const __hmr_import = (module) => import(/* @vite-ignore */ module)
+ 
+ // For backwards compatibility with @vitejs/plugin-react.
+-export default { injectIntoGlobalHook }
++export default { injectIntoGlobalHook, register, registerExportsForReactRefresh }

@@ -5,9 +5,10 @@ export default function Wordlists() {
   return (
     <TutorialLayout title="Wordlists" subtitle="Wordlists - पासवर्ड सुरक्षा परीक्षण टूल" icon="📚">
       <h2>Wordlists क्या है?</h2>
-      <p>Wordlists एक शक्तिशाली पासवर्ड सुरक्षा परीक्षण टूल है जो काली लिनक्स में पहले से उपलब्ध है। यह टूल सुरक्षा पेशेवरों, पेनिट्रेशन टेस्टर्स और एथिकल हैकर्स द्वारा पासवर्ड कमजोरियों की पहचान और विश्लेषण के लिए उपयोग किया जाता है। Wordlists का मॉड्यूलर आर्किटेक्चर और व्यापक फीचर सेट इसे शुरुआती से लेकर विशेषज्ञों तक सभी के लिए उपयुक्त बनाता है।</p>
-      <p>Wordlists का मुख्य उद्देश्य पासवर्ड डोमेन में सुरक्षा कमजोरियों की पहचान करना और उनका गहन विश्लेषण करना है। यह टूल न केवल कमजोरियों की पहचान करता है बल्कि उन्हें ठीक करने के लिए विस्तृत मार्गदर्शन भी प्रदान करता है। नियमित अपडेट और सक्रिय सामुदायिक समर्थन के साथ Wordlists नवीनतम साइबर खतरों से निपटने में प्रभावी है।</p>
-      <p>Wordlists सिर्फ एक स्कैनिंग टूल नहीं है, बल्कि यह एक संपूर्ण सुरक्षा मूल्यांकन समाधान है। इसका उपयोग करके आप अपने डिजिटल बुनियादी ढांचे की सुरक्षा स्थिति का समग्र दृष्टिकोण प्राप्त कर सकते हैं। Wordlists आपको संभावित खतरों की पहचान करने, उनकी गंभीरता का आकलन करने और उन्हें कम करने के लिए प्रभावी कदम उठाने में मदद करता है।</p>
+      <p>Wordlists Hash analysis aur password recovery ke liye ek powerful multi-algorithm tool. Yeh tool password cracking, hash analysis, aur credential security testing ke liye design kiya gaya hai. Wordlists Kali NetHunter aur Kali Linux mein pre-installed aata hai aur professional security assessments mein widely use hota hai.</p>
+      <p>Password strength assess karte waqt ya hash recovery ke liye, Wordlists best choice hai. forensic investigators, penetration testers aur system administrators ise daily use karte hain. Wordlists ki 10+ options aur 15+ practical commands ise powerful aur versatile banate hain.</p>
+      <p>Real-world scenario mein, jab kisi captured hash file ko crack karke original password recover karna ho, Wordlists effective solution hai. Regular updates aur active community support ise latest security challenges ke liye relevant rakhte hain. Yeh Hindi tutorial Wordlists ke basic concepts, practical commands, aur advanced techniques ko cover karta hai.</p>
+      <p>Wordlists ka upyog karte waqt hamesha authorized systems par hi test karein. Bina permission ke kisi bhi network ya system par is tool ka use illegal hai aur iske gambhir kanooni parinaam ho sakte hain.</p>
 
       <div className="warning-box">
         ⚠️ <strong>कानूनी चेतावनी:</strong> Wordlists का उपयोग केवल अपने स्वयं के सिस्टम या स्पष्ट रूप से अधिकृत लक्ष्यों पर ही करें। बिना अनुमति के किसी भी सिस्टम पर इस टूल का उपयोग करना अवैध है।

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import MetaTags from '../components/MetaTags'
-import { Link } from 'react-router-dom'
 import AdUnit from '../components/AdUnit'
 
 const terms = [

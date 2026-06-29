@@ -17,7 +17,7 @@ const TRUSTED_DOMAINS = [
 
 function isValidEmail(email) {
   const parts = email.split('@')
-  if (parts.length !== 2) return false
+  if (parts.length !== 2) {return false}
   const domain = parts[1].toLowerCase()
   return TRUSTED_DOMAINS.some(d => domain === d || domain.endsWith('.' + d))
 }
@@ -59,7 +59,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (limitReached) return
+    if (limitReached) {return}
 
     // Cooldown check
     const elapsed = (Date.now() - getLastSubmit()) / 1000

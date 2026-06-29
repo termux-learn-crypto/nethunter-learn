@@ -92,7 +92,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
             <div className="flex items-center space-x-4">
               <p className="text-gray-600 text-xs font-mono">
-                © {currentYear} NethunterLearn.in — All Rights Reserved
+                © {currentYear} nethunter-learn.vercel.app — All Rights Reserved
               </p>
             </div>
             <div className="flex items-center space-x-4 text-xs text-gray-600">

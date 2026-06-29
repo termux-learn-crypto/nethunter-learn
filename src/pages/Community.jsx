@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import MetaTags from '../components/MetaTags'
-import { WEB3FORMS_KEY, SITE_EMAIL } from '../lib/config'
+import { WEB3FORMS_KEY } from '../lib/config'
 import Spinner from '../components/Spinner'
 import AdUnit from '../components/AdUnit'
 

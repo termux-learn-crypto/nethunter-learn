@@ -24,7 +24,7 @@ export default function useKeyboardShortcuts() {
 
   useEffect(() => {
     const handler = (e) => {
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) {return}
 
       if (e.key === '?' && !e.ctrlKey && !e.metaKey) {
         e.preventDefault()

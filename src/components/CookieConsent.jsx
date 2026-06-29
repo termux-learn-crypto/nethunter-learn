@@ -5,7 +5,7 @@ export default function CookieConsent() {
 
   useEffect(() => {
     const accepted = localStorage.getItem('cookie_consent')
-    if (!accepted) setVisible(true)
+    if (!accepted) {setVisible(true)}
   }, [])
 
   const accept = () => {
@@ -13,7 +13,12 @@ export default function CookieConsent() {
     setVisible(false)
   }
 
-  if (!visible) return null
+  const reject = () => {
+    localStorage.setItem('cookie_consent', 'rejected')
+    setVisible(false)
+  }
+
+  if (!visible) {return null}
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[100] p-4">
@@ -31,6 +36,12 @@ export default function CookieConsent() {
             className="btn-primary px-5 py-2 text-sm rounded-lg font-semibold whitespace-nowrap"
           >
             Accept Cookies
+          </button>
+          <button
+            onClick={reject}
+            className="px-5 py-2 text-sm rounded-lg border border-red-500/40 text-red-400 hover:text-white hover:bg-red-500/20 hover:border-red-500 transition-all whitespace-nowrap"
+          >
+            Cancel
           </button>
           <a
             href="/privacy-policy"

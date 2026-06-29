@@ -109,12 +109,12 @@ export default function SearchModal({ isOpen, onClose }) {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (!isOpen) return
+      if (!isOpen) {return}
       if (e.key === 'Escape') {
         onClose()
         return
       }
-      if (results.length === 0) return
+      if (results.length === 0) {return}
       if (e.key === 'ArrowDown') {
         e.preventDefault()
         setActiveIdx(i => (i + 1) % results.length)
@@ -143,7 +143,7 @@ export default function SearchModal({ isOpen, onClose }) {
   }, [activeIdx])
 
   useEffect(() => {
-    if (!isOpen) return
+    if (!isOpen) {return}
     const handleTab = (e) => {
       if (e.key === 'Tab') {
         e.preventDefault()
@@ -153,7 +153,7 @@ export default function SearchModal({ isOpen, onClose }) {
     return () => window.removeEventListener('keydown', handleTab)
   }, [isOpen])
 
-  if (!isOpen) return null
+  if (!isOpen) {return null}
 
   return (
     <div

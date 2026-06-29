@@ -22,7 +22,7 @@ export default function NotFound() {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    if (!query.trim()) return
+    if (!query.trim()) {return}
     const q = query.toLowerCase().trim()
     const all = [...toolList, ...blogList]
     const match = all.find(item =>

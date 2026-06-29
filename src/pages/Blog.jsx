@@ -115,8 +115,8 @@ export default function Blog() {
 
     // Sort
     result.sort((a, b) => {
-      if (sortBy === 'newest') return new Date(b.date) - new Date(a.date)
-      if (sortBy === 'oldest') return new Date(a.date) - new Date(b.date)
+      if (sortBy === 'newest') {return new Date(b.date) - new Date(a.date)}
+      if (sortBy === 'oldest') {return new Date(a.date) - new Date(b.date)}
       if (sortBy === 'readtime') {
         const getMin = (t) => parseInt(t) || 0
         return getMin(a.readTime) - getMin(b.readTime)
@@ -350,7 +350,7 @@ export default function Blog() {
             {Array.from({ length: Math.min(totalPages, 10) }, (_, i) => {
               const start = Math.max(0, Math.min(safePage - 5, totalPages - 10))
               const pageNum = start + i + 1
-              if (pageNum > totalPages) return null
+              if (pageNum > totalPages) {return null}
               return (
                 <button
                   key={pageNum}
