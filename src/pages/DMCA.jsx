@@ -14,7 +14,7 @@ export default function DMCA() {
       />
       <Link to="/" className="text-gray-500 hover:text-neon-green text-sm font-mono mb-6 inline-block">← Home</Link>
       <h1 className="text-4xl font-heading font-bold text-white mb-2">DMCA Policy</h1>
-      <p className="text-gray-500 text-sm mb-8">Last Updated: January 2025</p>
+      <p className="text-gray-500 text-sm mb-8">Last Updated: June 2026</p>
 
       <div className="tutorial-content space-y-6 text-gray-300">
 

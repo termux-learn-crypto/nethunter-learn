@@ -120,17 +120,17 @@ export default function PrivacyPolicy() {
           In third-party services ki apni alag privacy policies hain. Hum inke data collection practices ke liye responsible nahi hain. Aap inki privacy policies alag se padh sakte hain.
         </p>
 
-        <h2>8. Data Security</h2>
+        <h2>7. Data Security</h2>
         <p>
           Hum aapke data ko protect karne ke liye reasonable security measures use karte hain, including SSL/TLS encryption, secure servers, aur access controls. Lekin, internet par koi bhi transmission 100% secure nahi hai, aur hum absolute security guarantee nahi kar sakte.
         </p>
 
-        <h2>9. Data Retention</h2>
+        <h2>8. Data Retention</h2>
         <p>
           Hum aapka data sirf tab tak retain karte hain jab tak yeh us purpose ke liye zaroori hai jiske liye collect kiya gaya tha. Contact form submissions ko 1 year tak retain kiya ja sakta hai. Analytics data 26 months tak retain hota hai.
         </p>
 
-        <h2>10. Your Rights</h2>
+        <h2>9. Your Rights</h2>
         <p>Aapko following rights hain:</p>
         <ul>
           <li><strong>Access:</strong> Apna personal data dekhne ka haq</li>
@@ -140,23 +140,23 @@ export default function PrivacyPolicy() {
           <li><strong>Data Portability:</strong> Apna data ek standard format mein receive karne ka haq</li>
         </ul>
 
-        <h2>11. Children's Privacy</h2>
+        <h2>10. Children's Privacy</h2>
         <p>
           Hamari website 13 saal se kam umar ke bachchon ke liye nahi hai. Hum knowingly 13 saal se kam umar ke bachchon se personal information collect nahi karte. Agar hume pata chale ki kisi bachche ne personal information di hai, toh hum usse turant delete kar denge.
         </p>
 
-        <h2>12. Changes to This Policy</h2>
+        <h2>11. Changes to This Policy</h2>
         <p>
           Hum kabhi bhi is Privacy Policy ko update kar sakte hain. Changes is page par post kiye jayenge aur "Last Updated" date update hogi. Significant changes ke liye hum website par notice denge. Aapko regularly is policy check karni chahiye.
         </p>
 
-        <h2>13. Contact Us</h2>
+        <h2>12. Contact Us</h2>
         <p>
           Agar aapke paas is Privacy Policy ke baare mein koi sawaal hai, toh humse contact karein:
         </p>
         <ul>
           <li>Contact form: <Link to="/contact" className="text-neon-green underline">Contact Us page</Link></li>
-          <li>Email: privacy@nethunter-learn.vercel.app</li>
+          <li>Email: hello@nethunter-learn.vercel.app</li>
         </ul>
       </div>
     </div>
