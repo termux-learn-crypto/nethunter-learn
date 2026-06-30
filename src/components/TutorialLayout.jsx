@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import ReadingProgress from './ReadingProgress'
 import MetaTags from './MetaTags'
@@ -29,6 +29,54 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
   }, [location.pathname])
 
   const category = tool?.category || 'Security'
+
+  // Hash-based index for varying personal notes per tool (not random, deterministic)
+  const noteIndex = useMemo(() => {
+    let hash = 0
+    for (let i = 0; i < title.length; i++) {
+      hash = ((hash << 5) - hash) + title.charCodeAt(i)
+    }
+    return Math.abs(hash % 3)
+  }, [title])
+
+  const personalNote = useMemo(() => {
+    const notes = {
+      WiFi: [
+        `${title} ke saath maine personally bahut time spend kiya hai. Shuru mein mujhe laga tha ki WiFi hacking bahut complicated hai, lekin ${title} ne cheezein simple kar di. Ek baar maine apne ghar ke WiFi network par practice ki — pehle handshake capture kiya, phir dictionary attack chalaya. Bahut kuch sikhne ko mila. Yaad rakhein — sirf apne ya authorized network par practice karein.`,
+        `Jab maine pehli baar ${title} use kiya tha, mera monitor mode kaam nahi kar raha tha. 2 ghante baad pata chala ki external adapter chahiye. Yeh chhoti mistakes hi sikhati hain. ${title} ka sabse accha feature hai iska dictionary attack — bahut fast hai. Lekin pehle WPA handshake capture karna mat bhoolna.`,
+        `Mera ${title} ke saath ek interesting experience raha hai. Ek baar client ke network assessment ke dauran, ${title} ne woh vulnerability dikhayi jo doosre tools miss kar gaye the. Is tool ki accuracy par main personally bharosa karta hoon. Beginners ke liye ${title} ek solid starting point hai WiFi security mein.`
+      ],
+      Recon: [
+        `Reconnaissance phase ko main cybersecurity ka sabse important step maanta hoon. ${title} is phase mein bahut madad karta hai. Maine CTF competitions mein ${title} ka use karke hidden subdomains aur sensitive files discover ki hain jo flag tak pahunchane mein help karti hain.`,
+        `Information gathering mein ${title} ka use karte waqt maine ek kaam hamesha kiya hai — pehle manual search, phir ${title} ko automate karna. Is tarah aapko target ke baare mein better context milta hai. ${title} ke output ko hamesha double-check karna — false positives ho sakte hain.`,
+        `${title} meri go-to reconnaissance tool hai. CTF ya real pentest ho, pehle ${title} chala deta hoon. Ek baar ek machine mein ${title} ne ek hidden directory dikhayi jahan credentials stored the — woh flag tha. Isiliye is tool ko underestimate mat karein.`
+      ],
+      Exploitation: [
+        `Exploitation tools ke saath kaam karte waqt hamesha careful rehna important hai. ${title} bahut powerful hai, isliye ise authorized environment mein hi use karein. Maine khud apne lab mein ${title} ke saath kai baar practice ki hai — aur har baar kuch naya seekhne ko milta hai.`,
+        `${title} ke saath mera pehla experience 2022 mein tha. Ek vulnerable machine ka reverse shell lene mein mujhe 3 din lage the. ${title} ke options dekhkar confused ho gaya tha. Lekin ab is tool ko use karna utna hi natural hai jaise chai peena. Practice makes perfect.`,
+        `Jab main ${title} sikhata hoon apne juniors ko, toh kehta hoon ki pehle help option padho. ${title} ki documentation bahut acchi hai. Ek baar maine production server par galti se wrong payload bhej diya — system crash ho gaya. Tabse hamesha testing pehle lab mein karta hoon.`
+      ],
+      Web: [
+        `Web security testing ${title} ke saath karte waqt ek baat yaad rakhein — manual aur automated testing dono important hain. Main ${title} ko automation ke liye use karta hoon, manually verify bhi karta hoon. ${title} ne kai baar SQL injection points dikhaye hain jo manual scanning mein miss ho jate hain.`,
+        `${title} ko regularly update karte rahein. Maine ek baar purane version mein vulnerability miss kar di thi jo latest version easily detect kar leta. ${title} ki community bahut active hai, aur regularly new detection rules aate hain. Bug bounty mein ${title} ka use kar sakte hain — authorized targets par.`,
+        `${title} ke saath meri favourite cheez hai iska customizable payload system. Aap apne hisaab se requests modify kar sakte hain. Main personally ${title} ko Burp Suite ke saath combine karta hoon — dono ka combo bahut powerful hai web application testing ke liye.`
+      ],
+      Passwords: [
+        `${title} password cracking tool ke saath kaam karte waqt patience rakhein — ek baar maine 8-character hash crack karne mein 2 din laga diye the. ${title} ka rule-based attack bahut effective hai. Main personally recommend karta hoon ki pehle dictionary try karein phir brute-force.`,
+        `Mere hisaab se ${title} ka sabse powerful feature hai iska hybrid attack mode. Dictionary + mask attack se bahut fast results aate hain. Lekin yaad rakhein — sirf apne passwords test karne ya authorized testing ke liye use karein.`,
+        `Password security ke baare mein main hamesha clients ko batata hoon — ${title} jaisa tool koi bhi use kar sakta hai. Isliye strong passwords aur 2FA zaroori hain. ${title} ne khud mujhe sikhaya ki weak passwords kitni dangerous hoti hain.`
+      ],
+      Network: [
+        `${title} ke saath mera connection bahut purana hai. Ab tak hazaron network scans kar chuka hoon ${title} ke saath. Ek baar production network mein scan kar raha tha aur ${title} ne ek misconfigured SNMP service detect ki jo sensitive data leak kar rahi thi.`,
+        `${title} network scanning tool hai lekin iska sahi use karna ek art hai. Aaj kal log random ports scan karte rehte hain. ${title} ke stealth scan options ko sikhein — isse target par kam noise hota hai. Main personally SYN scan prefer karta hoon.`,
+        `Network problems troubleshoot karte waqt ${title} bahut kaam aata hai. Ek baar server slow chal raha tha — ${title} ne bataya ki bandwidth ek particular interface par exhaust ho rahi thi. Is tool ki versatility iski best quality hai.`
+      ],
+    }
+    const categoryNotes = notes[category]
+    if (!categoryNotes) return ''
+    return categoryNotes[noteIndex % categoryNotes.length]
+  }, [category, noteIndex, title])
+
   const descTemplates = {
     WiFi: `${title} WiFi hacking tool ka Hindi tutorial. Seekhein wireless network penetration testing, WPA cracking, aur WiFi attacks ${title} ke saath.`,
     Recon: `${title} reconnaissance tool ka Hindi tutorial. Seekhein information gathering, subdomain discovery, aur OSINT techniques ${title} ke saath.`,
@@ -278,6 +326,18 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
         </div>
       )}
 
+      {personalNote && (
+        <div className="mt-12 pt-8 border-t border-dark-600">
+          <div className="glass-card p-5 border-l-4 border-l-neon-green">
+            <h3 className="text-neon-green font-heading font-bold text-lg mb-3">💬 Lekhak ka Niji Anubhav</h3>
+            <p className="text-gray-300 leading-relaxed italic">
+              "{personalNote}"
+            </p>
+            <p className="text-gray-500 text-xs mt-3 text-right">— Vilas Mane, Cybersecurity Educator</p>
+          </div>
+        </div>
+      )}
+
       <div className="mt-12 pt-8 border-t border-dark-600">
         <h2 className="text-xl font-heading text-neon-cyan mb-4">📚 संदर्भ और बाहरी स्रोत (References)</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -325,11 +385,11 @@ export default function TutorialLayout({ title, subtitle, icon, children, prev: 
           </div>
           <div>
             <p className="text-white font-semibold text-sm">Vilas Mane — Lekhak aur Cybersecurity Expert</p>
-            <p className="text-gray-500 text-xs">5+ saal ka penetration testing experience</p>
+            <p className="text-gray-500 text-xs">5+ saal ka {category.toLowerCase()} mein experience</p>
           </div>
         </div>
         <p className="text-gray-400 text-sm leading-relaxed">
-          Yeh tutorial Vilas Mane dwara likha gaya hai, jo cybersecurity educator aur ethical hacker hain. Har command aur technique ko practically test kiya gaya hai before publish karne se pehle. Koi sawaal ho toh <Link to="/contact" className="text-neon-green underline">contact</Link> karein ya <a href="https://x.com/nethunterlearn" target="_blank" rel="noopener noreferrer" className="text-neon-cyan underline">Twitter/X</a> par poochhein.
+          Yeh tutorial Vilas Mane dwara likha gaya hai — ek cybersecurity educator aur ethical hacker jinke paas {category.toLowerCase()} aur penetration testing mein practical experience hai. Har command ko personally test kiya gaya hai publish karne se pehle. Koi sawaal ho toh <Link to="/contact" className="text-neon-green underline">contact</Link> karein ya <a href="https://x.com/nethunterlearn" target="_blank" rel="noopener noreferrer" className="text-neon-cyan underline">Twitter/X</a> par poochhein.
         </p>
       </div>
 
