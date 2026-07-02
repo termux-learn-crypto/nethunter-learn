@@ -5,7 +5,7 @@ import blogPosts from '../data/blogPosts'
 
 const pages = [
   { title: 'Home', path: '/', category: 'Page', desc: 'Nethunter Learn - Seekho Ethical Hacking' },
-  { title: 'Installation Guide', path: '/installation', category: 'Tutorial', desc: 'Kali Nethunter install kaise karein' },
+  { title: 'Installation Guide', path: '/installation', category: 'Tutorial', desc: 'Kali Nethunter Termux Android mein install kaise karein' },
   { title: 'WiFi Hacking', path: '/wifi', category: 'Tutorial', desc: 'WiFi security testing aur attacks' },
   { title: 'Bluetooth Hacking', path: '/bluetooth', category: 'Tutorial', desc: 'Bluetooth aur BLE security testing' },
   { title: 'Payloads', path: '/payloads', category: 'Tutorial', desc: 'Metasploit payloads aur social engineering' },
@@ -29,12 +29,13 @@ const toolItems = tools.map(t => ({
   desc: t.description || `${t.name} - ${t.category} tool in Kali Linux`,
 }))
 
-const blogItems = blogPosts.map(p => ({
-  title: p.title,
-  path: `/blog/${p.id}`,
-  category: p.category,
-  desc: p.excerpt,
-}))
+  const blogItems = blogPosts.map(p => ({
+    title: p.title,
+    path: `/blog/${p.id}`,
+    category: p.category,
+    desc: p.excerpt,
+    tags: p.tags || [],
+  }))
 
 const searchData = [...pages, ...toolItems, ...blogItems]
 
@@ -101,7 +102,8 @@ export default function SearchModal({ isOpen, onClose }) {
     const filtered = searchData.filter(item =>
       (item.title && item.title.toLowerCase().includes(q)) ||
       (item.desc && item.desc.toLowerCase().includes(q)) ||
-      (item.category && item.category.toLowerCase().includes(q))
+      (item.category && item.category.toLowerCase().includes(q)) ||
+      (item.tags && item.tags.some(t => t.toLowerCase().includes(q)))
     ).slice(0, 12)
     setResults(filtered)
     setActiveIdx(0)

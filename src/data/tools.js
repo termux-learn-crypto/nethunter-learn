@@ -1,7 +1,7 @@
 const tools = [
 
   { id: 'aircrack-ng', name: 'Aircrack ng', route: '/tool/aircrack-ng', icon: '📶', category: 'WiFi', file: 'AircrackNg',
-  description: 'WiFi deauthentication aur wireless network stress testing ke liye ek effective tool.'
+   description: 'WiFi deauthentication aur wireless testing. Termux Android par bhi available.'
   },
 
   { id: 'airgeddon', name: 'Airgeddon', route: '/tool/airgeddon', icon: '🎯', category: 'WiFi', file: 'Airgeddon',
@@ -25,7 +25,7 @@ const tools = [
   },
 
   { id: 'bettercap', name: 'Bettercap', route: '/tool/bettercap', icon: '🛡️', category: 'Network', file: 'Bettercap',
-  description: 'network protocol analysis aur traffic capture ke liye ek essential security utility.'
+   description: 'MiTM attacks aur network monitoring. Termux Android mein bhi chalayein.'
   },
 
   { id: 'binwalk', name: 'Binwalk', route: '/tool/binwalk', icon: '🔬', category: 'Forensics', file: 'Binwalk',
@@ -97,7 +97,7 @@ const tools = [
   },
 
   { id: 'ffuf', name: 'Ffuf', route: '/tool/ffuf', icon: '🚀', category: 'Web', file: 'Ffuf',
-  description: 'web content discovery aur file inclusion testing ke liye ek powerful scanner.'
+   description: 'Web fuzzing aur directory brute force. Termux Android par fast scanning.'
   },
 
   { id: 'frida', name: 'Frida', route: '/tool/frida', icon: '🪡', category: 'Mobile', file: 'Frida',
@@ -105,7 +105,7 @@ const tools = [
   },
 
   { id: 'gobuster', name: 'Gobuster', route: '/tool/gobuster', icon: '💥', category: 'Web', file: 'Gobuster',
-  description: 'web application misconfiguration detection aur security hardening ke liye ek essential toolkit.'
+   description: 'Directory aur DNS brute forcing. Termux Android mein use karein.'
   },
 
   { id: 'hashcat', name: 'Hashcat', route: '/tool/hashcat', icon: '💎', category: 'Passwords', file: 'Hashcat',
@@ -125,7 +125,7 @@ const tools = [
   },
 
   { id: 'hydra', name: 'Hydra', route: '/tool/hydra', icon: '🐍', category: 'Passwords', file: 'Hydra',
-  description: 'hash identification aur cryptographic analysis ke liye ek comprehensive utility.'
+   description: 'Fast network login cracker. Termux Android par password brute forcing.'
   },
 
   { id: 'impacket', name: 'Impacket', route: '/tool/impacket', icon: '📦', category: 'Exploitation', file: 'Impacket',
@@ -133,7 +133,7 @@ const tools = [
   },
 
   { id: 'john', name: 'John', route: '/tool/john', icon: '👤', category: 'Passwords', file: 'John',
-  description: 'GPU-accelerated hash cracking aur parallel processing optimization ke liye ek high-speed recovery tool.'
+   description: 'Password hash cracking tool. Termux Android aur Kali dono mein available.'
   },
 
   { id: 'katana', name: 'Katana', route: '/tool/katana', icon: '🗡️', category: 'Web', file: 'Katana',
@@ -157,7 +157,7 @@ const tools = [
   },
 
   { id: 'masscan', name: 'Masscan', route: '/tool/masscan', icon: '⚡', category: 'Recon', file: 'Masscan',
-  description: 'cloud asset discovery aur S3 bucket enumeration ke liye ek comprehensive scanning toolkit.'
+   description: 'Fast port scanner. Termux Android mein mass scanning ke liye best.'
   },
 
   { id: 'medusa', name: 'Medusa', route: '/tool/medusa', icon: '🐍', category: 'Passwords', file: 'Medusa',
@@ -165,7 +165,7 @@ const tools = [
   },
 
   { id: 'metasploit-framework', name: 'Metasploit framework', route: '/tool/metasploit-framework', icon: '💣', category: 'Exploitation', file: 'Metasploit',
-  description: 'XXE injection aur XML external entity attack automation ke liye ek specialized web exploitation utility.'
+   description: 'Penetration testing framework. Termux Android par exploit development aur payload generation.'
   },
 
   { id: 'mimikatz', name: 'Mimikatz', route: '/tool/mimikatz', icon: '🔑', category: 'Exploitation', file: 'Mimikatz',
@@ -185,7 +185,7 @@ const tools = [
   },
 
   { id: 'netcat', name: 'Netcat', route: '/tool/netcat', icon: '🔌', category: 'Network', file: 'Netcat',
-  description: 'network traffic analysis aur packet inspection ke liye ek powerful monitoring tool.'
+   description: 'Network Swiss army knife. Termux Android par networking aur debugging.'
   },
 
   { id: 'netdiscover', name: 'Netdiscover', route: '/tool/netdiscover', icon: '🔍', category: 'Recon', file: 'Netdiscover',
@@ -193,15 +193,16 @@ const tools = [
   },
 
   { id: 'nikto', name: 'Nikto', route: '/tool/nikto', icon: '🌐', category: 'Web', file: 'Nikto',
-  description: 'web application vulnerability scanning aur security assessment ke liye ek comprehensive tool.'
+   description: 'Web server scanner. Termux Android par vulnerability scanning.'
   },
 
   { id: 'nmap', name: 'Nmap', route: '/tool/nmap', icon: '🗺️', category: 'Recon', file: 'Nmap',
-  description: 'DNS enumeration aur target mapping ke liye ek efficient aur accurate tool.'
+   description: 'Network scanning aur port discovery ke liye ek powerful tool. Termux Android mein bhi use karein.'
   },
 
+
   { id: 'nuclei', name: 'Nuclei', route: '/tool/nuclei', icon: '☢️', category: 'Web', file: 'Nuclei',
-  description: 'web directory enumeration aur hidden resource discovery ke liye ek fast utility.'
+   description: 'Template-based vulnerability scanner. Termux Android par bhi chalayein.'
   },
 
   { id: 'objection', name: 'Objection', route: '/tool/objection', icon: '📱', category: 'Mobile', file: 'Objection',
@@ -225,7 +226,7 @@ const tools = [
   },
 
   { id: 'recon-ng', name: 'Recon ng', route: '/tool/recon-ng', icon: '🕵️', category: 'Recon', file: 'ReconNg',
-  description: 'Shodan API integration aur connected device discovery ke liye ek comprehensive scanning tool.'
+   description: 'Web reconnaissance framework. Termux Android mein OSINT ke liye use karein.'
   },
 
   { id: 'responder', name: 'Responder', route: '/tool/responder', icon: '🔄', category: 'Network', file: 'Responder',
@@ -233,7 +234,7 @@ const tools = [
   },
 
   { id: 'searchsploit', name: 'Searchsploit', route: '/tool/searchsploit', icon: '📚', category: 'Exploitation', file: 'Searchsploit',
-  description: 'ICS/SCADA protocol exploitation aur industrial control system attack ke liye ek specialized OT security tool.'
+   description: 'Exploit database search. Termux Android par exploit research tool.'
   },
 
   { id: 'setoolkit', name: 'Setoolkit', route: '/tool/setoolkit', icon: '🎭', category: 'Exploitation', file: 'Setoolkit',
@@ -249,7 +250,7 @@ const tools = [
   },
 
   { id: 'sqlmap', name: 'Sqlmap', route: '/tool/sqlmap', icon: '💾', category: 'Web', file: 'Sqlmap',
-  description: 'web object reference testing aur IDOR vulnerability discovery ke liye ek comprehensive access control scanner.'
+   description: 'SQL injection automation tool. Termux Android par bhi use karein.'
   },
 
   { id: 'sqlninja', name: 'Sqlninja', route: '/tool/sqlninja', icon: '🐱', category: 'Web', file: 'Sqlninja',
@@ -265,7 +266,7 @@ const tools = [
   },
 
   { id: 'tcpdump', name: 'Tcpdump', route: '/tool/tcpdump', icon: '📥', category: 'Network', file: 'Tcpdump',
-  description: 'network vulnerability scanning aur service detection ke liye ek comprehensive tool.'
+   description: 'Packet analysis aur network debugging. Termux Android mein bhi available.'
   },
 
   { id: 'theharvester', name: 'Theharvester', route: '/tool/theharvester', icon: '🌾', category: 'Recon', file: 'Theharvester',
@@ -293,15 +294,15 @@ const tools = [
   },
 
   { id: 'wifite', name: 'Wifite', route: '/tool/wifite', icon: '📶', category: 'WiFi', file: 'Wifite',
-  description: 'wireless client isolation testing aur station connection manipulation ke liye ek specialized framework.'
+   description: 'Automated WiFi attack tool. Termux Android par wireless testing.'
   },
 
   { id: 'wireshark', name: 'Wireshark', route: '/tool/wireshark', icon: '🦈', category: 'Network', file: 'Wireshark',
-  description: 'network flow analysis aur NetFlow/sFlow data processing ke liye ek comprehensive traffic monitoring utility.'
+   description: 'Network protocol analyzer. Termux Android par tshark ke saath use karein.'
   },
 
   { id: 'wpscan', name: 'Wpscan', route: '/tool/wpscan', icon: '🔐', category: 'Web', file: 'Wpscan',
-  description: 'web LFI/RFI exploitation aur remote file inclusion testing ke liye ek automated file inclusion tool.'
+   description: 'WordPress vulnerability scanner. Termux Android par WordPress security testing.'
   },
 
   { id: 'yersinia', name: 'Yersinia', route: '/tool/yersinia', icon: '🦎', category: 'Network', file: 'Yersinia',
