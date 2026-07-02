@@ -1,5 +1,15 @@
 {
   "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/feed.xml", "destination": "/feed.xml" },
+    { "source": "/rss.xml", "destination": "/rss.xml" },
+    { "source": "/manifest.json", "destination": "/manifest.json" },
+    { "source": "/icon.svg", "destination": "/icon.svg" },
+    { "source": "/og-image.svg", "destination": "/og-image.svg" },
+    { "source": "/og-blog.svg", "destination": "/og-blog.svg" },
+    { "source": "/og-tool.svg", "destination": "/og-tool.svg" },
+    { "source": "/google69b6e5c5126b3f26.html", "destination": "/google69b6e5c5126b3f26.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
