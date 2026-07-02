@@ -1,11 +1,20 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function AdUnit({ slot, format = 'auto', layout, className = '' }) {
+  const pushed = useRef(false)
+
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({})
-    } catch {}
-  }, [])
+    if (pushed.current) return
+    const timer = setTimeout(() => {
+      try {
+        if (window.adsbygoogle && document.querySelector(`.adsbygoogle[data-ad-slot="${slot}"]`)) {
+          (window.adsbygoogle = window.adsbygoogle || []).push({})
+          pushed.current = true
+        }
+      } catch {}
+    }, 200)
+    return () => clearTimeout(timer)
+  }, [slot])
 
   return (
     <div className={`my-8 ${className}`}>
