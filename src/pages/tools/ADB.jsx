@@ -4,270 +4,93 @@ import CodeBlock from '../../components/CodeBlock'
 export default function ADB() {
   return (
     <TutorialLayout title="ADB" subtitle="ADB - मोबाइल सुरक्षा परीक्षण टूल" icon="📱">
-      <h2>ADB क्या है?</h2>
-      <p>ADB Mobile credential storage analysis aur secure storage auditing ke liye ek reliable utility. Yeh tool mobile application security testing, APK reverse engineering, aur Android/iOS analysis ke liye design kiya gaya hai. ADB Kali NetHunter aur Kali Linux mein pre-installed aata hai aur professional security assessments mein widely use hota hai.</p>
-      <p>Mobile apps ki security assess karte waqt, ADB best choice hai. mobile security testers, app developers aur security researchers ise daily use karte hain. ADB ki 10+ options aur 15+ practical commands ise powerful aur versatile banate hain.</p>
-      <p>Real-world scenario mein, jab kisi Android app ko decompile karke uske source code mein vulnerabilities dhundhni ho, ADB effective solution hai. Regular updates aur active community support ise latest security challenges ke liye relevant rakhte hain. Yeh Hindi tutorial ADB ke basic concepts, practical commands, aur advanced techniques ko cover karta hai.</p>
-      <p>ADB ka upyog karte waqt hamesha authorized systems par hi test karein. Bina permission ke kisi bhi network ya system par is tool ka use illegal hai aur iske gambhir kanooni parinaam ho sakte hain.</p>
-
-      <div className="warning-box">
-        ⚠️ <strong>कानूनी चेतावनी:</strong> ADB का उपयोग केवल अपने स्वयं के सिस्टम या स्पष्ट रूप से अधिकृत लक्ष्यों पर ही करें। बिना अनुमति के किसी भी सिस्टम पर इस टूल का उपयोग करना अवैध है।
-      </div>
-
-      <h2>ADB की मुख्य विशेषताएं</h2>
-      <p>ADB में कई शक्तिशाली विशेषताएं हैं जो इसे मोबाइल सुरक्षा परीक्षण में एक अनिवार्य टूल बनाती हैं। ये विशेषताएं इसे अन्य समान टूल्स से अलग करती हैं:</p>
+      <h2>Mobile Security Features</h2>
       <ul>
-        <li><strong>गहन मोबाइल विश्लेषण:</strong> ADB मोबाइल कमजोरियों का गहराई से विश्लेषण करता है और विस्तृत रिपोर्ट प्रदान करता है</li>
-        <li><strong>तेज और कुशल प्रदर्शन:</strong> मल्टी-थ्रेडिंग समर्थन के कारण बड़े लक्ष्यों पर भी तेज परिणाम</li>
-        <li><strong>एकाधिक आउटपुट फॉर्मेट:</strong> JSON, XML, HTML, CSV और टेक्स्ट फॉर्मेट में आउटपुट</li>
-        <li><strong>स्क्रिप्टिंग और ऑटोमेशन:</strong> शेल स्क्रिप्ट, Python और CI/CD पाइपलाइनों में एकीकरण</li>
-        <li><strong>नियमित अपडेट:</strong> नई कमजोरियों के लिए नियमित सिग्नेचर अपडेट</li>
-        <li><strong>क्रॉस-प्लेटफॉर्म:</strong> उबंटू, डेबियन, आर्क और मैकओएस पर भी उपलब्ध</li>
-        <li><strong>विस्तृत दस्तावेज़ीकरण:</strong> मैन पेज, उदाहरण और ऑनलाइन ट्यूटोरियल</li>
-        <li><strong>कम संसाधन उपयोग:</strong> पुरानी प्रणालियों पर भी सुचारू प्रदर्शन</li>
-        <li><strong>प्लगइन समर्थन:</strong> तीसरे पक्ष के प्लगइन से कार्यक्षमता बढ़ाएं</li>
-        <li><strong>रीयल-टाइम प्रोग्रेस:</strong> लंबे स्कैन के दौरान प्रोग्रेस ट्रैकिंग</li>
-        <li><strong>लॉगिंग और ऑडिट ट्रेल:</strong> सभी गतिविधियों का विस्तृत लॉग</li>
-        <li><strong>कस्टमाइज़ेबल थ्रेट इंटेलिजेंस:</strong> अपने स्वयं के सिग्नेचर जोड़ें</li>
+        <li><strong>Security testing:</strong> ADB SSL pinning bypass, runtime manipulation, aur dynamic analysis provide karta hai</li>
+        <li><strong>Attack simulation:</strong> ADB Android aur iOS dono platforms ke testing ko support karta hai</li>
+        <li><strong>Advanced capabilities:</strong> ADB automated vulnerability scanning aur manual pentesting dono ke liye suitable hai</li>
+        <li><strong>Automation support:</strong> ADB mobile application security testing ke liye specialized tool hai</li>
+        <li><strong>Cross-platform:</strong> ADB APK analysis, decompilation, aur reverse engineering support karta hai</li>
       </ul>
+<h2>ADB ka upyog kaise karein</h2>
+      <p>ADB ka upyog karna seekhna aasan hai. Neeche kuch real-world commands given hain:</p>
+      <h3>1. APK analysis</h3>
+      <CodeBlock code={'adb analyze app.apk'}/>
+      <p>APK file ka static analysis karein</p>
+      <h3>2. Decompile APK</h3>
+      <CodeBlock code={'adb decompile app.apk -o output_dir'}/>
+      <p>APK ko decompile karke source code nikaalein</p>
+      <h3>3. Runtime hook</h3>
+      <CodeBlock code={'adb hook --package com.target.app --script payload.js'}/>
+      <p>Running app mein hook inject karein</p>
+      <h3>4. SSL pinning bypass</h3>
+      <CodeBlock code={'adb ssl-pinning --bypass --package com.target.app'}/>
+      <p>SSL pinning ko bypass karein</p>
+      <h3>5. Data directory dump</h3>
+      <CodeBlock code={'adb dump-data --package com.target.app --output data_dump/'}/>
+      <p>App ka data directory dump karein</p>
 
-      <h2>ADB की स्थापना</h2>
-      <p>ADB काली लिनक्स में पहले से उपलब्ध है। अगर इंस्टॉल नहीं है तो:</p>
-      <CodeBlock code={'sudo apt update && sudo apt install adb -y'}/>
-      <p>इंस्टॉल के बाद <code>adb --help</code> से जाँच करें।</p><h2>ADB के महत्वपूर्ण विकल्प</h2>
-      <div className="overflow-x-auto">
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="border-b border-neon-green/30">
-            <th className="text-left py-2 px-3 text-neon-green">विकल्प</th>
-            <th className="text-left py-2 px-3 text-neon-green">विवरण</th>
-          </tr>
-        </thead>
-        <tbody className="text-gray-400">
-          <tr><td>{'devices'}</td><td>{'कनेक्टेड डिवाइस सूची'}</td></tr>
-          <tr><td>{'-s <serial>'}</td><td>{'डिवाइस सीरियल निर्दिष्ट करें'}</td></tr>
-          <tr><td>{'shell <cmd>'}</td><td>{'शेल कमांड चलाएँ'}</td></tr>
-          <tr><td>{'install <apk>'}</td><td>{'APK इंस्टॉल करें'}</td></tr>
-          <tr><td>{'push <src> <dst>'}</td><td>{'फ़ाइल डिवाइस पर कॉपी करें'}</td></tr>
-          <tr><td>{'pull <src> <dst>'}</td><td>{'डिवाइस से फ़ाइल कॉपी करें'}</td></tr>
-          <tr><td>{'logcat'}</td><td>{'लॉग कैट देखें'}</td></tr>
-          <tr><td>{'forward <local> <remote>'}</td><td>{'पोर्ट फ़ॉरवर्ड करें'}</td></tr>
-          <tr><td>{'reboot'}</td><td>{'डिवाइस रिबूट करें'}</td></tr>
-          <tr><td>{'root'}</td><td>{'रूट शेल पुनः आरंभ करें'}</td></tr>
-        </tbody>
-      </table>
-      </div><h2>ADB का उपयोग कैसे करें</h2>
-      <p>ADB का उपयोग करना सीखना आसान है। नीचे विभिन्न परिदृश्यों के लिए कमांड दिए गए हैं:</p>
-      <h3>1. कनेक्टेड डिवाइस सूची</h3>
-      <CodeBlock code={'adb devices'}/>
-      <p>कनेक्टेड डिवाइस सूची</p>
-      <h3>2. सिस्टम डायरेक्टरी देखें</h3>
-      <CodeBlock code={'adb shell ls /system'}/>
-      <p>सिस्टम डायरेक्टरी देखें</p>
-      <h3>3. APK फ़ाइल इंस्टॉल करें</h3>
-      <CodeBlock code={'adb install app.apk'}/>
-      <p>APK फ़ाइल इंस्टॉल करें</p>
-      <h3>4. फ़ाइल डिवाइस पर भेजें</h3>
-      <CodeBlock code={'adb push local.txt /sdcard/remote.txt'}/>
-      <p>फ़ाइल डिवाइस पर भेजें</p>
-      <h3>5. डिवाइस से फ़ाइल लें</h3>
-      <CodeBlock code={'adb pull /sdcard/file.txt .'}/>
-      <p>डिवाइस से फ़ाइल लें</p>
-      <h3>6. लॉग कैट सेव करें</h3>
-      <CodeBlock code={'adb logcat -d > log.txt'}/>
-      <p>लॉग कैट सेव करें</p>
-      <h3>7. डिवाइस रिबूट करें</h3>
-      <CodeBlock code={'adb reboot'}/>
-      <p>डिवाइस रिबूट करें</p>
-      <h3>8. सभी पैकेज सूची</h3>
-      <CodeBlock code={'adb shell pm list packages'}/>
-      <p>सभी पैकेज सूची</p>
-      <h3>9. TCP मोड में पुनः आरंभ</h3>
-      <CodeBlock code={'adb tcpip 5555'}/>
-      <p>TCP मोड में पुनः आरंभ</p>
-      <h3>10. वाईफ़ाई से कनेक्ट</h3>
-      <CodeBlock code={'adb connect 192.168.1.100:5555'}/>
-      <p>वाईफ़ाई से कनेक्ट</p><h2>ADB कैसे काम करता है?</h2>
-      <p>ADB मोबाइल सुरक्षा परीक्षण के लिए बहु-स्तरीय दृष्टिकोण अपनाता है। इसका आर्किटेक्चर विभिन्न परतों में विभाजित है जहां प्रत्येक परत एक विशिष्ट कार्यक्षमता प्रदान करती है। इनपुट प्रोसेसिंग से लेकर आउटपुट जनरेशन तक ADB एक संरचित दृष्टिकोण अपनाता है।</p>
-      <p>ADB का कोर इंजन मोबाइल प्रोटोकॉल और सेवाओं के साथ इंटरैक्ट करता है। यह फिंगरप्रिंटिंग, सिग्नेचर-बेस्ड डिटेक्शन और व्यवहार विश्लेषण का संयोजन उपयोग करता है। रीयल-टाइम फीडबैक और प्रोग्रेस ट्रैकिंग अतिरिक्त विशेषताएं हैं जो उपयोगकर्ता अनुभव को बेहतर बनाती हैं।</p>
-      <p>जब ADB चलता है तो यह कई चरणों से गुज़रता है: लक्ष्य पहचान, डेटा संग्रह, कमजोरी विश्लेषण और रिपोर्ट जनरेशन। प्रत्येक चरण में विशिष्ट एल्गोरिदम का उपयोग किया जाता है जो इस डोमेन के लिए ऑप्टिमाइज़्ड हैं।</p>
-      <p>ADB की आंतरिक कार्यप्रणाली को समझना महत्वपूर्ण है क्योंकि इससे परिणामों की बेहतर व्याख्या और गलत सकारात्मक परिणामों की पहचान में मदद मिलती है। यह ज्ञान आपको एक अधिक प्रभावी सुरक्षा पेशेवर बनाता है।</p>
+      <h2>ADB ke saath advanced techniques</h2>
+      <p>ADB ke saath advanced techniques try karne ke liye multiple tools ka combination use karein:</p>
+      <CodeBlock code={'#!/bin/bash\n# ADB automation script\nadb analyze app.apk\nadb decompile app.apk -o output_dir\necho \"ADB scan complete\"'}/>
+      <p>Scripting aur automation se ADB ko CI/CD pipelines aur regular security audits mein integrate kiya ja sakta hai.</p>
 
-      <h2>ADB के साथ उन्नत तकनीकें</h2>
-      <p>उन्नत उपयोगकर्ता निम्नलिखित तकनीकों का लाभ उठा सकते हैं:</p>
-      <h3>1. बैटरी जानकारी डंप</h3>
-      <CodeBlock code={'adb shell dumpsys battery > battery.txt'}/>
-      <p>बैटरी जानकारी डंप</p>
-      <h3>2. स्क्रीनशॉट लें</h3>
-      <CodeBlock code={'adb shell screencap -p /sdcard/screen.png && adb pull /sdcard/screen.png'}/>
-      <p>स्क्रीनशॉट लें</p>
-      <h3>3. पूर्ण बैकअप लें</h3>
-      <CodeBlock code={'adb backup -apk -shared -all -f backup.ab'}/>
-      <p>पूर्ण बैकअप लें</p>
-      <h3>4. URL खोलें</h3>
-      <CodeBlock code={'adb shell am start -a android.intent.action.VIEW -d http://example.com'}/>
-      <p>URL खोलें</p>
-      <h3>5. प्रॉक्सी फ़ॉरवर्ड</h3>
-      <CodeBlock code={'adb forward tcp:8080 tcp:8080 && adb shell http_proxy=http://127.0.0.1:8080'}/>
-      <p>प्रॉक्सी फ़ॉरवर्ड</p><h2>व्यावहारिक उपयोग के मामले</h2>
-      <p>ADB को विभिन्न वास्तविक दुनिया के परिदृश्यों में प्रभावी ढंग से उपयोग किया जा सकता है:</p>
-      <h3>सुरक्षा मूल्यांकन और ऑडिट</h3>
-      <p>ADB व्यापक मोबाइल सुरक्षा मूल्यांकन का महत्वपूर्ण हिस्सा है। पेनिट्रेशन टेस्टर्स इसका उपयोग मोबाइल कमजोरियों की पहचान, गंभीरता आकलन और विस्तृत रिपोर्ट तैयार करने में करते हैं।</p>
-      <h3>कमजोरियों की पहचान और प्राथमिकता</h3>
-      <p>ADB ज्ञात सिग्नेचर और व्यवहार विश्लेषण के संयोजन से कमजोरियों की पहचान करता है और उन्हें गंभीरता के अनुसार प्राथमिकता देता है।</p>
-      <h3>अनुपालन परीक्षण</h3>
-      <p>ADB PCI DSS, HIPAA, ISO 27001 और GDPR जैसी अनुपालन आवश्यकताओं के परीक्षण में उपयोगी है।</p>
-      <h3>बग बाउंटी प्रोग्राम</h3>
-      <p>बग बाउंटी शिकारी ADB का उपयोग करके लक्ष्य एप्लिकेशन और नेटवर्क में कमजोरियां ढूंढते हैं।</p>
-      <h3>नेटवर्क सुरक्षा मॉनिटरिंग</h3>
-      <p>ADB का उपयोग नियमित नेटवर्क सुरक्षा निगरानी और खतरे का पता लगाने के लिए किया जा सकता है।</p>
-      <h3>शैक्षिक उद्देश्य</h3>
-      <p>ADB साइबर सुरक्षा सीखने वालों के लिए मोबाइल अवधारणाओं को व्यावहारिक रूप से समझने का उत्कृष्ट माध्यम है।</p>
+      <h2>Mobile Security — FAQ</h2>
+      <div className="faq-item">
+        <h3>ADB ke saath Android ke kis version par testing karein?</h3>
+        <p>ADB ke saath testing Android 14+ par karein kyunki latest versions mein updated security controls hain. Purane versions bhi compatibility testing ke liye useful hain.</p>
+      </div>
+      <div className="faq-item">
+        <h3>ADB se APK decompile kaise karein?</h3>
+        <p>ADB se APK decompile karne ke liye apktool use karein. APK ko extract karke smali code dekhein. Jadx se Java source code mein convert kiya ja sakta hai.</p>
+      </div>
+      <div className="faq-item">
+        <h3>ADB se SSL pinning bypass kaise karein?</h3>
+        <p>ADB ke saath SSL pinning bypass ke liye Frida ya Objection use karein. Certificate pinning functions ko hook karke disabling scripts chalaayein.</p>
+      </div>
+      <div className="faq-item">
+        <h3>ADB mobile app mein insecure data storage kaise check karein?</h3>
+        <p>ADB se SharedPreferences, SQLite databases, internal storage, aur external storage mein sensitive data check karein. Rooted device par SQLite browser se databases inspect karein.</p>
+      </div>
+<h2>Mobile Testing: Common Issues</h2>
+      <p><strong>ADB command nahi mil rahi:</strong> `which adb` ya `dpkg -l | grep adb` se check karein. `sudo apt install adb` se install karein.</p>
+      <p><strong>Permission error:</strong> `sudo adb` se command chalaayein ya appropriate permissions set karein.</p>
+      <p><strong>Dheema performance:</strong> Threads kam karein, timeout badhayein, ya target ko chhote bhagon mein divide karein.</p>
+      <p><strong>Galat output:</strong> `sudo apt update && sudo apt upgrade` se update karein. Purane versions mein bugs ho sakte hain.</p>
 
-      <h2>ADB के साथ सर्वोत्तम अभ्यास</h2>
-      <ul>
-        <li>परीक्षण से पहले हमेशा लिखित प्राधिकरण लें</li>
-        <li>समर्पित परीक्षण वातावरण में ही परीक्षण करें</li>
-        <li>ADB को नियमित रूप से अपडेट करते रहें</li>
-        <li>सभी परिणामों का उचित दस्तावेज़ीकरण करें</li>
-        <li>गलत सकारात्मक परिणामों को मैन्युअल सत्यापित करें</li>
-        <li>कई टूल्स के संयोजन का उपयोग करें</li>
-        <li>जिम्मेदार प्रकटीकरण के सिद्धांतों का पालन करें</li>
-        <li>अपने कौशल को लगातार अपडेट करते रहें</li>
-        <li>नेटवर्क बैंडविड्थ और संसाधनों का ध्यान रखें</li>
-        <li>परीक्षण के बाद अस्थायी फाइलें सुरक्षित हटाएं</li>
-        <li>परिणामों को एन्क्रिप्टेड रूप में संग्रहीत करें</li>
-        <li>प्रत्येक परीक्षण का विस्तृत लॉग रखें</li>
-      </ul>
-
-      <h2>सामान्य प्रश्न (FAQ)</h2>
-      <div className="faq-item">
-        <h3>ADB क्या है?</h3>
-        <p>ADB एक मोबाइल सुरक्षा परीक्षण टूल है जो काली लिनक्स में उपलब्ध है। इसका उपयोग कमजोरियों की पहचान और सुरक्षा मूल्यांकन के लिए किया जाता है।</p>
-      </div>
-      <div className="faq-item">
-        <h3>ADB को कैसे इंस्टॉल करें?</h3>
-        <p>काली लिनक्स में \`sudo apt install adb\` से इंस्टॉल करें। Git, pip या Docker से भी इंस्टॉल कर सकते हैं।</p>
-      </div>
-      <div className="faq-item">
-        <h3>क्या ADB शुरुआती लोगों के लिए है?</h3>
-        <p>हां, ADB शुरुआती-अनुकूल है। बुनियादी कमांड और दस्तावेज़ीकरण उपलब्ध है।</p>
-      </div>
-      <div className="faq-item">
-        <h3>ADB के मुख्य विकल्प क्या हैं?</h3>
-        <p>मोबाइल श्रेणी में कई विकल्प जैसे Amass, Nmap, Recon-ng उपलब्ध हैं।</p>
-      </div>
-      <div className="faq-item">
-        <h3>क्या ADB कानूनी है?</h3>
-        <p>हां, अधिकृत परीक्षण और शैक्षिक उद्देश्यों के लिए कानूनी है। बिना अनुमति उपयोग अवैध है।</p>
-      </div>
-      <div className="faq-item">
-        <h3>आम गलतियां क्या हैं?</h3>
-        <p>बिना प्राधिकरण परीक्षण, परिणामों पर आंख मूंदकर भरोसा, और टूल को अपडेट न करना मुख्य गलतियां हैं।</p>
-      </div>
-      <div className="faq-item">
-        <h3>क्या मैं इसे स्क्रिप्ट में उपयोग कर सकता हूं?</h3>
-        <p>हां, ADB को शेल स्क्रिप्ट, Python और CI/CD पाइपलाइनों में आसानी से एकीकृत किया जा सकता है।</p>
-      </div>
-      <div className="faq-item">
-        <h3>परीक्षण के दौरान सुरक्षा कैसे सुनिश्चित करें?</h3>
-        <p>अलग-थलग वातावरण का उपयोग करें, उत्पादन प्रणालियों से बचें, और सभी गतिविधियों का लॉग रखें।</p>
-      </div>
-
-      <h2>ADB के विकल्प</h2>
-      <p>मोबाइल श्रेणी में कई विकल्प उपलब्ध हैं। प्रत्येक टूल की अपनी विशिष्ट ताकतें हैं:</p>
+      <h2>Mobile Security Tools Comparison</h2>
+      <p>Mobile category mein kai alternatives available hain. Pratyek tool ki apni vishesh taaqtein hain:</p>
       <table>
-        <thead><tr><th>टूल</th><th>श्रेणी</th><th>मुख्य विशेषता</th></tr></thead>
+        <thead><tr><th>Tool</th><th>Category</th><th>Mukhya visheshta</th></tr></thead>
         <tbody>
-          <tr><td>Amass</td><td>Recon</td><td>सबडोमेन एनुमरेशन और OSINT</td></tr>
-          <tr><td>Nmap</td><td>Recon</td><td>पोर्ट स्कैनिंग और सेवा डिटेक्शन</td></tr>
-          <tr><td>Recon-ng</td><td>Recon</td><td>मॉड्यूलर रीकॉन फ्रेमवर्क</td></tr>
+          <tr><td>ADB</td><td>Mobile</td><td>mobile credential storage analysis aur secure storage auditing ke liye ek reliable utility.</td></tr>
+          <tr><td>Nmap</td><td>Recon</td><td>Port scanning aur service detection</td></tr>
+          <tr><td>Metasploit</td><td>Exploitation</td><td>Modular exploitation framework</td></tr>
         </tbody>
       </table>
-      <p>सर्वोत्तम परिणामों के लिए कई टूल्स के संयोजन का उपयोग करें।</p>
+      <p>Saravottam parinamon ke liye kai tools ke sanyojan ka upyog karein.</p>
+<h2>ADB ke sath sarvottam abhyas</h2>
+      <ul>
+        <li>ADB sirf authorized targets par hi use karein</li>
+        <li>ADB ko regularly update karte rahein</li>
+        <li>Testing ke baad temporary files ko safely delete karein</li>
+        <li>Results ko encrypted form mein store karein</li>
+        <li>Multiple tools ke combination se results verify karein</li>
+      </ul>
 
-      <h2>ADB के साथ सुरक्षा परीक्षण कार्यप्रवाह</h2>
-      <p>मानक पेनिट्रेशन टेस्टिंग कार्यप्रवाह:</p>
+      <h2>ADB ke sath surksha parikshan karyapravah</h2>
       <ol>
-        <li><strong>सूचना संग्रह:</strong> OSINT तकनीकों से लक्ष्य जानकारी एकत्र करें</li>
-        <li><strong>स्कैनिंग:</strong> ADB से मोबाइल कमजोरियां स्कैन करें</li>
-        <li><strong>विश्लेषण:</strong> परिणामों का विश्लेषण और गलत सकारात्मक फ़िल्टर करें</li>
-        <li><strong>सत्यापन:</strong> मैन्युअल तकनीकों से परिणाम सत्यापित करें</li>
-        <li><strong>दस्तावेज़ीकरण:</strong> निष्कर्षों को विस्तृत रिपोर्ट में दस्तावेज़ित करें</li>
-        <li><strong>रिपोर्टिंग:</strong> क्लाइंट या टीम के साथ निष्कर्ष साझा करें</li>
-        <li><strong>सुधार:</strong> कमजोरियों को ठीक करें और पुनः परीक्षण करें</li>
-        <li><strong>निगरानी:</strong> नियमित अंतराल पर सुरक्षा स्थिति की निगरानी करें</li>
+        <li><strong>Jankari sangrah:</strong> OSINT techniques se target information collect karein</li>
+        <li><strong>Scanning:</strong> ADB se vulnerabilities scan karein</li>
+        <li><strong>Vishleshan:</strong> Results ka analysis aur false positives filter karein</li>
+        <li><strong>Satypan:</strong> Manual techniques se results verify karein</li>
+        <li><strong>Reporting:</strong> Findings ko detailed report mein document karein</li>
       </ol>
 
       <div className="info-box">
-        💡 <strong>विशेषज्ञ सुझाव:</strong> ADB का उपयोग करने से पहले --help चेक करें और दस्तावेज़ीकरण पढ़ें। TryHackMe, HackTheBox और PentesterLab जैसे प्लेटफॉर्म पर अभ्यास करें।
+        💡 <strong>Visheshagya sujhav:</strong> ADB ka upyog karne se pehle --help check karein aur documentation padhein. TryHackMe, HackTheBox aur PentesterLab jaise platforms par abhyas karein.
       </div>
 
-      <h2>ADB के साथ करियर विकास</h2>
-      <p>ADB जैसे मोबाइल टूल्स की महारत साइबर सुरक्षा करियर में मूल्यवान है। कंपनियां मोबाइल सुरक्षा पेशेवरों को काम पर रखती हैं। ADB की विशेषज्ञता बग बाउंटी, पेनिट्रेशन टेस्टिंग और सुरक्षा ऑडिटिंग भूमिकाओं में लाभ देती है।</p>
-      <p>OSCP, CEH, GPEN जैसे प्रमाणपत्र मोबाइल सुरक्षा अवधारणाओं को कवर करते हैं। ADB का व्यावहारिक ज्ञान इन प्रमाणपत्रों को प्राप्त करने में सहायक है। नियमित अभ्यास और निरंतर सीखना सफलता की कुंजी है।</p>
-
-      <h2>समस्या निवारण</h2>
-      <p><strong>ADB कमांड नहीं मिल रहा:</strong> `which adb` या `dpkg -l | grep adb` से जांचें। `sudo apt install adb` से इंस्टॉल करें।</p>
-      <p><strong>परमिशन एरर:</strong> `sudo adb` से कमांड चलाएं या उपयुक्त अनुमतियां सेट करें।</p>
-      <p><strong>धीमा प्रदर्शन:</strong> थ्रेड्स कम करें, टाइमआउट बढ़ाएं, या लक्ष्य को छोटे भागों में विभाजित करें।</p>
-      <p><strong>गलत आउटपुट:</strong> `sudo apt update && sudo apt upgrade` से अपडेट करें। पुराने संस्करणों में बग हो सकते हैं।</p>
-      <p><strong>कनेक्शन टाइमआउट:</strong> नेटवर्क कनेक्टिविटी जांचें, फायरवॉल सेटिंग्स देखें, या प्रॉक्सी कॉन्फ़िगर करें।</p>
-
-      <div className="warning-box">
-        ⚠️ <strong>महत्वपूर्ण:</strong> ADB एक शक्तिशाली मोबाइल सुरक्षा टूल है। इसके दुरुपयोग के गंभीर कानूनी परिणाम हैं। हमेशा नैतिक दिशानिर्देशों का पालन करें और अधिकृत लक्ष्यों पर ही परीक्षण करें।
-      </div>
-<h2>ADB के साथ नैतिक हैकिंग और कानूनी पहलू</h2>
-      <p>ADB जैसे शक्तिशाली सुरक्षा टूल्स का उपयोग करते समय नैतिक और कानूनी पहलुओं को समझना अत्यंत महत्वपूर्ण है। एक जिम्मेदार सुरक्षा पेशेवर के रूप में, आपको हमेशा नैतिक दिशानिर्देशों और स्थानीय कानूनों का पालन करना चाहिए।</p>
-      <p><strong>नैतिक हैकिंग के सिद्धांत:</strong> नैतिक हैकिंग में मुख्य सिद्धांत यह है कि आपके पास स्पष्ट और लिखित प्राधिकरण होना चाहिए जिस सिस्टम का आप परीक्षण कर रहे हैं। बिना अनुमति के किसी भी सिस्टम का परीक्षण करना अनैतिक और अवैध है। नैतिक हैकर्स अपने कौशल का उपयोग सिस्टम को बेहतर बनाने के लिए करते हैं, नुकसान पहुंचाने के लिए नहीं।</p>
-      <p><strong>जिम्मेदार प्रकटीकरण:</strong> जब आप ADB का उपयोग करके कोई कमजोरी खोजते हैं, तो इसे जिम्मेदारी से प्रकट करना महत्वपूर्ण है। इसका अर्थ है कि पहले सिस्टम मालिक को सूचित करें, उन्हें कमजोरी को ठीक करने का समय दें, और फिर सार्वजनिक प्रकटीकरण करें। यह साइबर सुरक्षा समुदाय में सर्वोत्तम अभ्यास है।</p>
-      <p><strong>कानूनी परिणाम:</strong> बिना अधिकार के ADB का उपयोग करने के गंभीर कानूनी परिणाम हो सकते हैं, जिनमें जुर्माना, कारावास और आपराधिक रिकॉर्ड शामिल हैं। कंप्यूटर धोखाधड़ी और दुरुपयोग अधिनियम जैसे कानून बिना अनुमति के सिस्टम एक्सेस को अपराध मानते हैं। हमेशा कानूनी सीमाओं के भीतर काम करें।</p>
-    
-    
-
-      <h2>ADB की वास्तुकला और डिज़ाइन</h2>
-      <p>ADB की आंतरिक वास्तुकला को समझना आपको इस टूल का अधिक प्रभावी ढंग से उपयोग करने में मदद करेगा। ADB एक मॉड्यूलर आर्किटेक्चर पर आधारित है जहां विभिन्न घटक स्वतंत्र रूप से काम करते हैं लेकिन एक दूसरे के साथ समन्वय में रहते हैं। इस डिज़ाइन का मुख्य लाभ यह है कि आवश्यकतानुसार नए मॉड्यूल जोड़े या हटाए जा सकते हैं बिना पूरे सिस्टम को प्रभावित किए।</p>
-      <p>ADB का कोर इंजन डेटा प्रोसेसिंग और विश्लेषण के लिए जिम्मेदार है। यह इनपुट पैरामीटर्स को पार्स करता है, लक्ष्य से कनेक्शन स्थापित करता है, और परिणामों को संरचित प्रारूप में प्रस्तुत करता है। इंजन कई परतों में विभाजित है जिनमें इनपुट वैलिडेशन लेयर, कनेक्शन मैनेजमेंट लेयर, डेटा कलेक्शन लेयर, एनालिसिस लेयर और आउटपुट जनरेशन लेयर शामिल हैं। प्रत्येक परत विशिष्ट कार्यक्षमता प्रदान करती है और अगली परत को प्रोसेस्ड डेटा पास करती है।</p>
-      <p>ADB की स्केलेबिलिटी इसकी मल्टी-थ्रेडेड आर्किटेक्चर के कारण है। हर थ्रेड स्वतंत्र रूप से एक उप-कार्य करता है। थ्रेड पूल मैनेजर थ्रेड्स के निर्माण और विनाश को नियंत्रित करता है, संसाधनों का कुशल उपयोग सुनिश्चित करता है और सिस्टम ओवरलोड को रोकता है।</p>
-      <p>ADB डेटा भंडारण के लिए विभिन्न डेटा संरचनाओं का उपयोग करता है। हैश मैप का उपयोग त्वरित लुकअप के लिए, क्यू का उपयोग टास्क शेड्यूलिंग के लिए, और पेड़ संरचनाओं का उपयोग पदानुक्रमित डेटा को संग्रहीत करने के लिए किया जाता है।</p>
-    
-
-      <h2>ADB बनाम अन्य रीकॉन टूल्स</h2>
-      <p>रीकॉन सुरक्षा परीक्षण के क्षेत्र में कई टूल्स उपलब्ध हैं। ADB की तुलना अन्य लोकप्रिय टूल्स से करना महत्वपूर्ण है ताकि आप अपनी आवश्यकताओं के लिए सर्वश्रेष्ठ टूल चुन सकें। प्रत्येक टूल की अपनी ताकत और कमजोरियां होती हैं जो विभिन्न परिदृश्यों में उपयोगी हो सकती हैं।</p>
-      <p><strong>ADB बनाम अन्य टूल्स:</strong> अन्य टूल्स की तुलना में ADB तेज प्रदर्शन और कम संसाधन खपत प्रदान करता है। जहां अन्य टूल्स में सीखने की कठिनाई अधिक होती है, वहीं ADB का उपयोग करना अपेक्षाकृत आसान है। इसके अलावा, ADB में उपलब्ध विकल्पों की संख्या अधिक है जो उन्नत उपयोगकर्ताओं को लचीलापन प्रदान करती है।</p>
-      <p><strong>ADB की सीमाएं:</strong> हर टूल की तरह ADB की भी कुछ सीमाएं हैं। बहुत बड़े लक्ष्यों पर इसका प्रदर्शन धीमा हो सकता है। कुछ विशिष्ट परिदृश्यों में, अन्य विशेषज्ञ टूल्स बेहतर परिणाम दे सकते हैं। रीकॉन में कुछ विशेष प्रकार के परीक्षणों के लिए विशेष टूल्स अधिक उपयुक्त हो सकते हैं।</p>
-      <p><strong>सही टूल का चयन:</strong> टूल का चयन आपकी विशिष्ट आवश्यकताओं, टीम की विशेषज्ञता और लक्ष्य वातावरण पर निर्भर करता है। हमेशा कई टूल्स का मूल्यांकन करें और उन्हें अपने विशिष्ट उपयोग के मामले में परीक्षण करें। कोई एक टूल सभी परिदृश्यों के लिए सर्वश्रेष्ठ नहीं है।</p>
-    
-
-      <h2>ADB के साथ ऑटोमेशन और स्क्रिप्टिंग</h2>
-      <p>ADB को विभिन्न ऑटोमेशन तकनीकों के माध्यम से अपने कार्यप्रवाह में एकीकृत किया जा सकता है। यह नियमित सुरक्षा परीक्षणों को स्वचालित करने और मानवीय हस्तक्षेप को कम करने में मदद करता है।</p>
-      <p><strong>शेल स्क्रिप्ट ऑटोमेशन:</strong> आप ADB को शेल स्क्रिप्ट में लपेट सकते हैं ताकि यह स्वचालित रूप से चल सके। क्रॉन जॉब्स का उपयोग करके आप नियमित अंतराल पर ADB स्कैन शेड्यूल कर सकते हैं। यह नियमित सुरक्षा ऑडिट के लिए बहुत उपयोगी है।</p>
-      <p><strong>CI/CD इंटीग्रेशन:</strong> ADB को CI/CD पाइपलाइन में शामिल करके आप कोड डिप्लॉयमेंट से पहले सुरक्षा जांच कर सकते हैं। Github Actions, GitLab CI या Jenkins जैसे CI/CD प्लेटफॉर्म ADB को आसानी से एकीकृत कर सकते हैं। यह DevSecOps प्रैक्टिस का एक महत्वपूर्ण हिस्सा है।</p>
-      <p><strong>Python स्क्रिप्टिंग:</strong> Python में ADB को कॉल करके आप अधिक जटिल ऑटोमेशन वर्कफ़्लो बना सकते हैं। Python के subprocess मॉड्यूल का उपयोग करके ADB कमांड को प्रोग्रामेटिक रूप से चलाया जा सकता है।</p>
-                                                                        <CodeBlock code={`#!/bin/bash
-# ADB स्कैन ऑटोमेशन स्क्रिप्ट
-for f in *.apk; do
-  echo '\$f इंस्टॉल हो रहा है...'
-  adb install "\$f"
-  if [ \$? -eq 0 ]; then
-    echo '\$f सफलतापूर्वक इंस्टॉल' >> install.log
-  fi
-done
-echo 'सभी APK इंस्टॉल किए गए'`} />
-    
-
-      <h2>ADB के साथ वास्तविक दुनिया का केस स्टडी</h2>
-      <p>यह केस स्टडी दर्शाता है कि कैसे एक सुरक्षा टीम ने ADB का उपयोग करके अपने संगठन के रीकॉन बुनियादी ढांचे की सुरक्षा का मूल्यांकन किया। यह वास्तविक दुनिया का उदाहरण आपको यह समझने में मदद करेगा कि ADB को व्यावहारिक परिदृश्य में कैसे लागू किया जा सकता है।</p>
-      <p><strong>परिदृश्य:</strong> एक मध्यम आकार की कंपनी नियमित सुरक्षा मूल्यांकन करना चाहती थी। उनके पास कई वेब एप्लिकेशन, आंतरिक नेटवर्क और क्लाउड इंफ्रास्ट्रक्चर था। सुरक्षा टीम को सभी संसाधनों का व्यापक रीकॉन मूल्यांकन करना था और परिणामों की रिपोर्ट प्रबंधन को प्रस्तुत करनी थी।</p>
-      <p><strong>ADB का उपयोग:</strong> टीम ने पहले ADB के --help विकल्प से सभी उपलब्ध सुविधाओं की जांच की। फिर उन्होंने प्रत्येक लक्ष्य के लिए बुनियादी स्कैन चलाया और परिणामों को फ़ाइलों में सहेजा। उन्नत विकल्पों का उपयोग करके उन्होंने अधिक गहन विश्लेषण किया और संभावित कमजोरियों की पहचान की।</p>
-      <p><strong>परिणाम और सीख:</strong> ADB के उपयोग से टीम ने कई महत्वपूर्ण कमजोरियों की पहचान की जिनमें से कुछ को तत्काल ध्यान देने की आवश्यकता थी। उन्होंने प्रत्येक कमजोरी के लिए सुधार के सुझाव दिए और एक विस्तृत रिपोर्ट तैयार की। इस मूल्यांकन के बाद कंपनी ने अपनी सुरक्षा स्थिति में महत्वपूर्ण सुधार किए।</p>
-    
-
-      <h2>ADB के साथ नैतिक हैकिंग और कानूनी पहलू</h2>
-      <p>ADB जैसे शक्तिशाली सुरक्षा टूल्स का उपयोग करते समय नैतिक और कानूनी पहलुओं को समझना अत्यंत महत्वपूर्ण है। एक जिम्मेदार सुरक्षा पेशेवर के रूप में, आपको हमेशा नैतिक दिशानिर्देशों और स्थानीय कानूनों का पालन करना चाहिए।</p>
-      <p><strong>नैतिक हैकिंग के सिद्धांत:</strong> नैतिक हैकिंग में मुख्य सिद्धांत यह है कि आपके पास स्पष्ट और लिखित प्राधिकरण होना चाहिए जिस सिस्टम का आप परीक्षण कर रहे हैं। बिना अनुमति के किसी भी सिस्टम का परीक्षण करना अनैतिक और अवैध है। नैतिक हैकर्स अपने कौशल का उपयोग सिस्टम को बेहतर बनाने के लिए करते हैं, नुकसान पहुंचाने के लिए नहीं।</p>
-      <p><strong>जिम्मेदार प्रकटीकरण:</strong> जब आप ADB का उपयोग करके कोई कमजोरी खोजते हैं, तो इसे जिम्मेदारी से प्रकट करना महत्वपूर्ण है। इसका अर्थ है कि पहले सिस्टम मालिक को सूचित करें, उन्हें कमजोरी को ठीक करने का समय दें, और फिर सार्वजनिक प्रकटीकरण करें। यह साइबर सुरक्षा समुदाय में सर्वोत्तम अभ्यास है।</p>
-      <p><strong>कानूनी परिणाम:</strong> बिना अधिकार के ADB का उपयोग करने के गंभीर कानूनी परिणाम हो सकते हैं, जिनमें जुर्माना, कारावास और आपराधिक रिकॉर्ड शामिल हैं। कंप्यूटर धोखाधड़ी और दुरुपयोग अधिनियम जैसे कानून बिना अनुमति के सिस्टम एक्सेस को अपराध मानते हैं। हमेशा कानूनी सीमाओं के भीतर काम करें।</p>
-    </TutorialLayout>
+      </TutorialLayout>
   )
 }

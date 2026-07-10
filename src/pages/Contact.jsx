@@ -143,7 +143,10 @@ export default function Contact() {
       />
       <Link to="/" className="text-gray-500 hover:text-neon-green text-sm font-mono mb-6 inline-block">← Home</Link>
       <h1 className="text-4xl font-heading font-bold text-white mb-2">Contact Us</h1>
-      <p className="text-gray-500 text-sm mb-8">Humse baat karein — hum 24-48 hours mein jawab dete hain</p>
+      <p className="text-gray-500 text-sm mb-4">Humse baat karein — hum 24-48 hours mein jawab dete hain</p>
+      <div className="warning-box mb-8">
+        <strong>Note:</strong> Nethunter Learn ek educational platform hai jo ethical hacking aur authorized security testing sikhane ke liye hai. Kisi bhi illegal activity ke liye hum support nahi karte.
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Contact Info */}

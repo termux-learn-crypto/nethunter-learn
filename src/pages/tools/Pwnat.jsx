@@ -4,266 +4,84 @@ import CodeBlock from '../../components/CodeBlock'
 export default function Pwnat() {
   return (
     <TutorialLayout title="Pwnat" subtitle="Pwnat - टनलिंग सुरक्षा परीक्षण टूल" icon="🌐">
-      <h2>Pwnat क्या है?</h2>
-      <p>Pwnat WebSocket tunneling aur bidirectional encrypted communication ke liye ek modern protocol wrapper. Yeh tool traffic tunneling, port forwarding, aur network pivoting ke liye design kiya gaya hai. Pwnat Kali NetHunter aur Kali Linux mein pre-installed aata hai aur professional security assessments mein widely use hota hai.</p>
-      <p>Blocked ports bypass karke data exfiltrate karne ke liye, Pwnat best choice hai. red teamers, penetration testers aur network engineers ise daily use karte hain. Pwnat ki 10+ options aur 15+ practical commands ise powerful aur versatile banate hain.</p>
-      <p>Real-world scenario mein, jab kisi restricted network mein traffic ko tunnel karke firewall bypass karna ho, Pwnat effective solution hai. Regular updates aur active community support ise latest security challenges ke liye relevant rakhte hain. Yeh Hindi tutorial Pwnat ke basic concepts, practical commands, aur advanced techniques ko cover karta hai.</p>
-      <p>Pwnat ka upyog karte waqt hamesha authorized systems par hi test karein. Bina permission ke kisi bhi network ya system par is tool ka use illegal hai aur iske gambhir kanooni parinaam ho sakte hain.</p>
+      <h2>Pwnat ka upyog kaise karein</h2>
+      <p>Pwnat ka upyog karna seekhna aasan hai. Neeche kuch real-world commands given hain:</p>
+      <h3>1. Basic tunnel</h3>
+      <CodeBlock code={'pwnat client --remote server.com:8080 --local 127.0.0.1:9000'}/>
+      <p>Remote server se tunnel establish karein</p>
+      <h3>2. Reverse tunnel</h3>
+      <CodeBlock code={'pwnat server --reverse --port 8080'}/>
+      <p>Reverse tunnel server start karein</p>
+      <h3>3. Socks proxy</h3>
+      <CodeBlock code={'pwnat client --socks 127.0.0.1:1080 --remote server.com:8080'}/>
+      <p>SOCKS proxy ke through tunnel banayein</p>
+      <h3>4. HTTP tunnel</h3>
+      <CodeBlock code={'pwnat client --http --remote server.com:80 --local 127.0.0.1:3000'}/>
+      <p>HTTP protocol ke through tunnel karein</p>
+      <h3>5. Persistent connection</h3>
+      <CodeBlock code={'pwnat client --remote server.com:8080 --retry 10 --interval 30s'}/>
+      <p>Auto-reconnect ke saath persistent connection</p>
 
-      <div className="warning-box">
-        ⚠️ <strong>कानूनी चेतावनी:</strong> Pwnat का उपयोग केवल अपने स्वयं के सिस्टम या स्पष्ट रूप से अधिकृत लक्ष्यों पर ही करें। बिना अनुमति के किसी भी सिस्टम पर इस टूल का उपयोग करना अवैध है।
-      </div>
-
-      <h2>Pwnat की मुख्य विशेषताएं</h2>
-      <p>Pwnat में कई शक्तिशाली विशेषताएं हैं जो इसे टनलिंग सुरक्षा परीक्षण में एक अनिवार्य टूल बनाती हैं। ये विशेषताएं इसे अन्य समान टूल्स से अलग करती हैं:</p>
+      <h2>Key Features</h2>
       <ul>
-        <li><strong>गहन टनलिंग विश्लेषण:</strong> Pwnat टनलिंग कमजोरियों का गहराई से विश्लेषण करता है और विस्तृत रिपोर्ट प्रदान करता है</li>
-        <li><strong>तेज और कुशल प्रदर्शन:</strong> मल्टी-थ्रेडिंग समर्थन के कारण बड़े लक्ष्यों पर भी तेज परिणाम</li>
-        <li><strong>एकाधिक आउटपुट फॉर्मेट:</strong> JSON, XML, HTML, CSV और टेक्स्ट फॉर्मेट में आउटपुट</li>
-        <li><strong>स्क्रिप्टिंग और ऑटोमेशन:</strong> शेल स्क्रिप्ट, Python और CI/CD पाइपलाइनों में एकीकरण</li>
-        <li><strong>नियमित अपडेट:</strong> नई कमजोरियों के लिए नियमित सिग्नेचर अपडेट</li>
-        <li><strong>क्रॉस-प्लेटफॉर्म:</strong> उबंटू, डेबियन, आर्क और मैकओएस पर भी उपलब्ध</li>
-        <li><strong>विस्तृत दस्तावेज़ीकरण:</strong> मैन पेज, उदाहरण और ऑनलाइन ट्यूटोरियल</li>
-        <li><strong>कम संसाधन उपयोग:</strong> पुरानी प्रणालियों पर भी सुचारू प्रदर्शन</li>
-        <li><strong>प्लगइन समर्थन:</strong> तीसरे पक्ष के प्लगइन से कार्यक्षमता बढ़ाएं</li>
-        <li><strong>रीयल-टाइम प्रोग्रेस:</strong> लंबे स्कैन के दौरान प्रोग्रेस ट्रैकिंग</li>
-        <li><strong>लॉगिंग और ऑडिट ट्रेल:</strong> सभी गतिविधियों का विस्तृत लॉग</li>
-        <li><strong>कस्टमाइज़ेबल थ्रेट इंटेलिजेंस:</strong> अपने स्वयं के सिग्नेचर जोड़ें</li>
+        <li><strong>Security testing:</strong> Pwnat cross-platform compatibility aur easy integration provide karta hai</li>
+        <li><strong>Attack simulation:</strong> Pwnat multiple attack techniques aur scanning methods support karta hai</li>
+        <li><strong>Advanced capabilities:</strong> Pwnat extensible architecture ke saath custom module development allow karta hai</li>
+        <li><strong>Automation support:</strong> Pwnat security testing aur vulnerability assessment ke liye ek comprehensive tool hai</li>
+        <li><strong>Cross-platform:</strong> Pwnat automated workflows ke saath time-consuming tasks ko streamline karta hai</li>
+      </ul>
+<h2>Pwnat ke saath advanced techniques</h2>
+      <p>Pwnat ke saath advanced techniques try karne ke liye multiple tools ka combination use karein:</p>
+      <CodeBlock code={'#!/bin/bash\n# Pwnat automation script\npwnat client --remote server.com:8080 --local 127.0.0.1:9000\npwnat server --reverse --port 8080\necho \"Pwnat scan complete\"'}/>
+      <p>Scripting aur automation se Pwnat ko CI/CD pipelines aur regular security audits mein integrate kiya ja sakta hai.</p>
+
+      <h2>Use Cases and Applications</h2>
+      <h3>Tunneling security assessment</h3>
+      <p>Pwnat ka upyog tunneling vulnerabilities identify karne aur security posture assess karne mein karein</p>
+      <h3>Compliance testing</h3>
+      <p>PCI DSS, ISO 27001 aur security audit requirements ke liye Pwnat use karein</p>
+      <h3>Skill development</h3>
+      <p>Pwnat ke practical use se cybersecurity skills develop karein aur real-world scenarios mein practice karein</p>
+
+      <h2>Pwnat ke sath sarvottam abhyas</h2>
+      <ul>
+        <li>Pwnat sirf authorized targets par hi use karein</li>
+        <li>Pwnat ko regularly update karte rahein</li>
+        <li>Testing ke baad temporary files ko safely delete karein</li>
+        <li>Results ko encrypted form mein store karein</li>
+        <li>Multiple tools ke combination se results verify karein</li>
       </ul>
 
-      <h2>Pwnat की स्थापना</h2>
-      <p>Pwnat काली लिनक्स में पहले से उपलब्ध है। अगर इंस्टॉल नहीं है तो:</p>
-      <CodeBlock code={'sudo apt update && sudo apt install pwnat -y'}/>
-      <p>इंस्टॉल के बाद <code>pwnat --help</code> से जाँच करें।</p><h2>Pwnat के महत्वपूर्ण विकल्प</h2>
-      <div className="overflow-x-auto">
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="border-b border-neon-green/30">
-            <th className="text-left py-2 px-3 text-neon-green">विकल्प</th>
-            <th className="text-left py-2 px-3 text-neon-green">विवरण</th>
-          </tr>
-        </thead>
-        <tbody className="text-gray-400">
-          <tr><td>{'-s'}</td><td>{'सर्वर मोड'}</td></tr>
-          <tr><td>{'-c'}</td><td>{'क्लाइंट मोड'}</td></tr>
-          <tr><td>{'-l <port>'}</td><td>{'लिसन पोर्ट'}</td></tr>
-          <tr><td>{'-r <host>'}</td><td>{'रीमोट होस्ट'}</td></tr>
-          <tr><td>{'-p <port>'}</td><td>{'रीमोट पोर्ट'}</td></tr>
-          <tr><td>{'-k <key>'}</td><td>{'शेयर्ड की'}</td></tr>
-          <tr><td>{'-v'}</td><td>{'वर्बोज़'}</td></tr>
-          <tr><td>{'-t <sec>'}</td><td>{'टाइमआउट'}</td></tr>
-          <tr><td>{'-n <host>'}</td><td>{'NAT होस्ट'}</td></tr>
-          <tr><td>{'-h'}</td><td>{'सहायता'}</td></tr>
-        </tbody>
-      </table>
-      </div><h2>Pwnat का उपयोग कैसे करें</h2>
-      <p>Pwnat का उपयोग करना सीखना आसान है। नीचे विभिन्न परिदृश्यों के लिए कमांड दिए गए हैं:</p>
-      <h3>1. NAT टनल सर्वर</h3>
-      <CodeBlock code={'pwnat -s -l 2222'}/>
-      <p>NAT टनल सर्वर</p>
-      <h3>2. NAT टनल क्लाइंट</h3>
-      <CodeBlock code={'pwnat -c -r example.com -p 2222 -l 8080'}/>
-      <p>NAT टनल क्लाइंट</p>
-      <h3>3. की के साथ सर्वर</h3>
-      <CodeBlock code={'pwnat -s -l 2222 -k secret'}/>
-      <p>की के साथ सर्वर</p>
-      <h3>4. IP से NAT टनल</h3>
-      <CodeBlock code={'pwnat -c -r 192.168.1.100 -p 2222 -l 8888'}/>
-      <p>IP से NAT टनल</p>
-      <h3>5. वर्बोज़ सर्वर</h3>
-      <CodeBlock code={'pwnat -s -l 2222 -v'}/>
-      <p>वर्बोज़ सर्वर</p>
-      <h3>6. वर्बोज़ क्लाइंट</h3>
-      <CodeBlock code={'pwnat -c -r example.com -p 2222 -l 8080 -v'}/>
-      <p>वर्बोज़ क्लाइंट</p>
-      <h3>7. 60 सेकंड टाइमआउट</h3>
-      <CodeBlock code={'pwnat -c -r example.com -p 2222 -t 60'}/>
-      <p>60 सेकंड टाइमआउट</p>
-      <h3>8. NAT गेटवे निर्दिष्ट</h3>
-      <CodeBlock code={'pwnat -s -l 4444 -n 192.168.1.1'}/>
-      <p>NAT गेटवे निर्दिष्ट</p>
-      <h3>9. पोर्ट 80 टनल क्लाइंट</h3>
-      <CodeBlock code={'pwnat -c -r example.com -p 2222 -l 80'}/>
-      <p>पोर्ट 80 टनल क्लाइंट</p>
-      <h3>10. की के साथ वर्बोज़ सर्वर</h3>
-      <CodeBlock code={'pwnat -s -l 2222 -k mykey -v'}/>
-      <p>की के साथ वर्बोज़ सर्वर</p><h2>Pwnat कैसे काम करता है?</h2>
-      <p>Pwnat टनलिंग सुरक्षा परीक्षण के लिए बहु-स्तरीय दृष्टिकोण अपनाता है। इसका आर्किटेक्चर विभिन्न परतों में विभाजित है जहां प्रत्येक परत एक विशिष्ट कार्यक्षमता प्रदान करती है। इनपुट प्रोसेसिंग से लेकर आउटपुट जनरेशन तक Pwnat एक संरचित दृष्टिकोण अपनाता है।</p>
-      <p>Pwnat का कोर इंजन टनलिंग प्रोटोकॉल और सेवाओं के साथ इंटरैक्ट करता है। यह फिंगरप्रिंटिंग, सिग्नेचर-बेस्ड डिटेक्शन और व्यवहार विश्लेषण का संयोजन उपयोग करता है। रीयल-टाइम फीडबैक और प्रोग्रेस ट्रैकिंग अतिरिक्त विशेषताएं हैं जो उपयोगकर्ता अनुभव को बेहतर बनाती हैं।</p>
-      <p>जब Pwnat चलता है तो यह कई चरणों से गुज़रता है: लक्ष्य पहचान, डेटा संग्रह, कमजोरी विश्लेषण और रिपोर्ट जनरेशन। प्रत्येक चरण में विशिष्ट एल्गोरिदम का उपयोग किया जाता है जो इस डोमेन के लिए ऑप्टिमाइज़्ड हैं।</p>
-      <p>Pwnat की आंतरिक कार्यप्रणाली को समझना महत्वपूर्ण है क्योंकि इससे परिणामों की बेहतर व्याख्या और गलत सकारात्मक परिणामों की पहचान में मदद मिलती है। यह ज्ञान आपको एक अधिक प्रभावी सुरक्षा पेशेवर बनाता है।</p>
-
-      <h2>Pwnat के साथ उन्नत तकनीकें</h2>
-      <p>उन्नत उपयोगकर्ता निम्नलिखित तकनीकों का लाभ उठा सकते हैं:</p>
-      <h3>1. NAT सर्वर लॉग</h3>
-      <CodeBlock code={'pwnat -s -l 2222 -v 2>&1 | tee pwnat_server.log'}/>
-      <p>NAT सर्वर लॉग</p>
-      <h3>2. NAT टनल के माध्यम से SSH</h3>
-      <CodeBlock code={'pwnat -s -l 2222 & && ssh -o ProxyCommand=\'pwnat -c -r example.com -p 2222 -l %p\' user@localhost'}/>
-      <p>NAT टनल के माध्यम से SSH</p>
-      <h3>3. कनेक्शन स्थिति मॉनिटर</h3>
-      <CodeBlock code={'pwnat -c -r example.com -p 2222 -l 8080 -v 2>&1 | grep -i \'connect\\|tunnel\''}/>
-      <p>कनेक्शन स्थिति मॉनिटर</p>
-      <h3>4. एकाधिक NAT पोर्ट</h3>
-      <CodeBlock code={'for port in 2222 3333 4444; do pwnat -s -l $port &; done'}/>
-      <p>एकाधिक NAT पोर्ट</p>
-      <h3>5. प्रमाणीकृत NAT लॉग</h3>
-      <CodeBlock code={'pwnat -s -l 2222 -k pass123 -v 2>&1 | tee /tmp/pwnat.log'}/>
-      <p>प्रमाणीकृत NAT लॉग</p><h2>व्यावहारिक उपयोग के मामले</h2>
-      <p>Pwnat को विभिन्न वास्तविक दुनिया के परिदृश्यों में प्रभावी ढंग से उपयोग किया जा सकता है:</p>
-      <h3>सुरक्षा मूल्यांकन और ऑडिट</h3>
-      <p>Pwnat व्यापक टनलिंग सुरक्षा मूल्यांकन का महत्वपूर्ण हिस्सा है। पेनिट्रेशन टेस्टर्स इसका उपयोग टनलिंग कमजोरियों की पहचान, गंभीरता आकलन और विस्तृत रिपोर्ट तैयार करने में करते हैं।</p>
-      <h3>कमजोरियों की पहचान और प्राथमिकता</h3>
-      <p>Pwnat ज्ञात सिग्नेचर और व्यवहार विश्लेषण के संयोजन से कमजोरियों की पहचान करता है और उन्हें गंभीरता के अनुसार प्राथमिकता देता है।</p>
-      <h3>अनुपालन परीक्षण</h3>
-      <p>Pwnat PCI DSS, HIPAA, ISO 27001 और GDPR जैसी अनुपालन आवश्यकताओं के परीक्षण में उपयोगी है।</p>
-      <h3>बग बाउंटी प्रोग्राम</h3>
-      <p>बग बाउंटी शिकारी Pwnat का उपयोग करके लक्ष्य एप्लिकेशन और नेटवर्क में कमजोरियां ढूंढते हैं।</p>
-      <h3>नेटवर्क सुरक्षा मॉनिटरिंग</h3>
-      <p>Pwnat का उपयोग नियमित नेटवर्क सुरक्षा निगरानी और खतरे का पता लगाने के लिए किया जा सकता है।</p>
-      <h3>शैक्षिक उद्देश्य</h3>
-      <p>Pwnat साइबर सुरक्षा सीखने वालों के लिए टनलिंग अवधारणाओं को व्यावहारिक रूप से समझने का उत्कृष्ट माध्यम है।</p>
-
-      <h2>Pwnat के साथ सर्वोत्तम अभ्यास</h2>
-      <ul>
-        <li>परीक्षण से पहले हमेशा लिखित प्राधिकरण लें</li>
-        <li>समर्पित परीक्षण वातावरण में ही परीक्षण करें</li>
-        <li>Pwnat को नियमित रूप से अपडेट करते रहें</li>
-        <li>सभी परिणामों का उचित दस्तावेज़ीकरण करें</li>
-        <li>गलत सकारात्मक परिणामों को मैन्युअल सत्यापित करें</li>
-        <li>कई टूल्स के संयोजन का उपयोग करें</li>
-        <li>जिम्मेदार प्रकटीकरण के सिद्धांतों का पालन करें</li>
-        <li>अपने कौशल को लगातार अपडेट करते रहें</li>
-        <li>नेटवर्क बैंडविड्थ और संसाधनों का ध्यान रखें</li>
-        <li>परीक्षण के बाद अस्थायी फाइलें सुरक्षित हटाएं</li>
-        <li>परिणामों को एन्क्रिप्टेड रूप में संग्रहीत करें</li>
-        <li>प्रत्येक परीक्षण का विस्तृत लॉग रखें</li>
-      </ul>
-
-      <h2>सामान्य प्रश्न (FAQ)</h2>
-      <div className="faq-item">
-        <h3>Pwnat क्या है?</h3>
-        <p>Pwnat एक टनलिंग सुरक्षा परीक्षण टूल है जो काली लिनक्स में उपलब्ध है। इसका उपयोग कमजोरियों की पहचान और सुरक्षा मूल्यांकन के लिए किया जाता है।</p>
-      </div>
-      <div className="faq-item">
-        <h3>Pwnat को कैसे इंस्टॉल करें?</h3>
-        <p>काली लिनक्स में \`sudo apt install pwnat\` से इंस्टॉल करें। Git, pip या Docker से भी इंस्टॉल कर सकते हैं।</p>
-      </div>
-      <div className="faq-item">
-        <h3>क्या Pwnat शुरुआती लोगों के लिए है?</h3>
-        <p>हां, Pwnat शुरुआती-अनुकूल है। बुनियादी कमांड और दस्तावेज़ीकरण उपलब्ध है।</p>
-      </div>
-      <div className="faq-item">
-        <h3>Pwnat के मुख्य विकल्प क्या हैं?</h3>
-        <p>टनलिंग श्रेणी में कई विकल्प जैसे Amass, Nmap, Recon-ng उपलब्ध हैं।</p>
-      </div>
-      <div className="faq-item">
-        <h3>क्या Pwnat कानूनी है?</h3>
-        <p>हां, अधिकृत परीक्षण और शैक्षिक उद्देश्यों के लिए कानूनी है। बिना अनुमति उपयोग अवैध है।</p>
-      </div>
-      <div className="faq-item">
-        <h3>आम गलतियां क्या हैं?</h3>
-        <p>बिना प्राधिकरण परीक्षण, परिणामों पर आंख मूंदकर भरोसा, और टूल को अपडेट न करना मुख्य गलतियां हैं।</p>
-      </div>
-      <div className="faq-item">
-        <h3>क्या मैं इसे स्क्रिप्ट में उपयोग कर सकता हूं?</h3>
-        <p>हां, Pwnat को शेल स्क्रिप्ट, Python और CI/CD पाइपलाइनों में आसानी से एकीकृत किया जा सकता है।</p>
-      </div>
-      <div className="faq-item">
-        <h3>परीक्षण के दौरान सुरक्षा कैसे सुनिश्चित करें?</h3>
-        <p>अलग-थलग वातावरण का उपयोग करें, उत्पादन प्रणालियों से बचें, और सभी गतिविधियों का लॉग रखें।</p>
-      </div>
-
-      <h2>Pwnat के विकल्प</h2>
-      <p>टनलिंग श्रेणी में कई विकल्प उपलब्ध हैं। प्रत्येक टूल की अपनी विशिष्ट ताकतें हैं:</p>
-      <table>
-        <thead><tr><th>टूल</th><th>श्रेणी</th><th>मुख्य विशेषता</th></tr></thead>
-        <tbody>
-          <tr><td>Amass</td><td>Recon</td><td>सबडोमेन एनुमरेशन और OSINT</td></tr>
-          <tr><td>Nmap</td><td>Recon</td><td>पोर्ट स्कैनिंग और सेवा डिटेक्शन</td></tr>
-          <tr><td>Recon-ng</td><td>Recon</td><td>मॉड्यूलर रीकॉन फ्रेमवर्क</td></tr>
-        </tbody>
-      </table>
-      <p>सर्वोत्तम परिणामों के लिए कई टूल्स के संयोजन का उपयोग करें।</p>
-
-      <h2>Pwnat के साथ सुरक्षा परीक्षण कार्यप्रवाह</h2>
-      <p>मानक पेनिट्रेशन टेस्टिंग कार्यप्रवाह:</p>
+      <h2>Pwnat ke sath surksha parikshan karyapravah</h2>
       <ol>
-        <li><strong>सूचना संग्रह:</strong> OSINT तकनीकों से लक्ष्य जानकारी एकत्र करें</li>
-        <li><strong>स्कैनिंग:</strong> Pwnat से टनलिंग कमजोरियां स्कैन करें</li>
-        <li><strong>विश्लेषण:</strong> परिणामों का विश्लेषण और गलत सकारात्मक फ़िल्टर करें</li>
-        <li><strong>सत्यापन:</strong> मैन्युअल तकनीकों से परिणाम सत्यापित करें</li>
-        <li><strong>दस्तावेज़ीकरण:</strong> निष्कर्षों को विस्तृत रिपोर्ट में दस्तावेज़ित करें</li>
-        <li><strong>रिपोर्टिंग:</strong> क्लाइंट या टीम के साथ निष्कर्ष साझा करें</li>
-        <li><strong>सुधार:</strong> कमजोरियों को ठीक करें और पुनः परीक्षण करें</li>
-        <li><strong>निगरानी:</strong> नियमित अंतराल पर सुरक्षा स्थिति की निगरानी करें</li>
+        <li><strong>Jankari sangrah:</strong> OSINT techniques se target information collect karein</li>
+        <li><strong>Scanning:</strong> Pwnat se vulnerabilities scan karein</li>
+        <li><strong>Vishleshan:</strong> Results ka analysis aur false positives filter karein</li>
+        <li><strong>Satypan:</strong> Manual techniques se results verify karein</li>
+        <li><strong>Reporting:</strong> Findings ko detailed report mein document karein</li>
       </ol>
 
       <div className="info-box">
-        💡 <strong>विशेषज्ञ सुझाव:</strong> Pwnat का उपयोग करने से पहले --help चेक करें और दस्तावेज़ीकरण पढ़ें। TryHackMe, HackTheBox और PentesterLab जैसे प्लेटफॉर्म पर अभ्यास करें।
+        💡 <strong>Visheshagya sujhav:</strong> Pwnat ka upyog karne se pehle --help check karein aur documentation padhein. TryHackMe, HackTheBox aur PentesterLab jaise platforms par abhyas karein.
       </div>
 
-      <h2>Pwnat के साथ करियर विकास</h2>
-      <p>Pwnat जैसे टनलिंग टूल्स की महारत साइबर सुरक्षा करियर में मूल्यवान है। कंपनियां टनलिंग सुरक्षा पेशेवरों को काम पर रखती हैं। Pwnat की विशेषज्ञता बग बाउंटी, पेनिट्रेशन टेस्टिंग और सुरक्षा ऑडिटिंग भूमिकाओं में लाभ देती है।</p>
-      <p>OSCP, CEH, GPEN जैसे प्रमाणपत्र टनलिंग सुरक्षा अवधारणाओं को कवर करते हैं। Pwnat का व्यावहारिक ज्ञान इन प्रमाणपत्रों को प्राप्त करने में सहायक है। नियमित अभ्यास और निरंतर सीखना सफलता की कुंजी है।</p>
+      <h2>Troubleshooting Guide</h2>
+      <p><strong>Pwnat command nahi mil rahi:</strong> `which pwnat` ya `dpkg -l | grep pwnat` se check karein. `sudo apt install pwnat` se install karein.</p>
+      <p><strong>Permission error:</strong> `sudo pwnat` se command chalaayein ya appropriate permissions set karein.</p>
+      <p><strong>Dheema performance:</strong> Threads kam karein, timeout badhayein, ya target ko chhote bhagon mein divide karein.</p>
+      <p><strong>Galat output:</strong> `sudo apt update && sudo apt upgrade` se update karein. Purane versions mein bugs ho sakte hain.</p>
 
-      <h2>समस्या निवारण</h2>
-      <p><strong>Pwnat कमांड नहीं मिल रहा:</strong> `which pwnat` या `dpkg -l | grep pwnat` से जांचें। `sudo apt install pwnat` से इंस्टॉल करें।</p>
-      <p><strong>परमिशन एरर:</strong> `sudo pwnat` से कमांड चलाएं या उपयुक्त अनुमतियां सेट करें।</p>
-      <p><strong>धीमा प्रदर्शन:</strong> थ्रेड्स कम करें, टाइमआउट बढ़ाएं, या लक्ष्य को छोटे भागों में विभाजित करें।</p>
-      <p><strong>गलत आउटपुट:</strong> `sudo apt update && sudo apt upgrade` से अपडेट करें। पुराने संस्करणों में बग हो सकते हैं।</p>
-      <p><strong>कनेक्शन टाइमआउट:</strong> नेटवर्क कनेक्टिविटी जांचें, फायरवॉल सेटिंग्स देखें, या प्रॉक्सी कॉन्फ़िगर करें।</p>
-
-      <div className="warning-box">
-        ⚠️ <strong>महत्वपूर्ण:</strong> Pwnat एक शक्तिशाली टनलिंग सुरक्षा टूल है। इसके दुरुपयोग के गंभीर कानूनी परिणाम हैं। हमेशा नैतिक दिशानिर्देशों का पालन करें और अधिकृत लक्ष्यों पर ही परीक्षण करें।
-      </div>
-<h2>Pwnat के साथ नैतिक हैकिंग और कानूनी पहलू</h2>
-      <p>Pwnat जैसे शक्तिशाली सुरक्षा टूल्स का उपयोग करते समय नैतिक और कानूनी पहलुओं को समझना अत्यंत महत्वपूर्ण है। एक जिम्मेदार सुरक्षा पेशेवर के रूप में, आपको हमेशा नैतिक दिशानिर्देशों और स्थानीय कानूनों का पालन करना चाहिए।</p>
-      <p><strong>नैतिक हैकिंग के सिद्धांत:</strong> नैतिक हैकिंग में मुख्य सिद्धांत यह है कि आपके पास स्पष्ट और लिखित प्राधिकरण होना चाहिए जिस सिस्टम का आप परीक्षण कर रहे हैं। बिना अनुमति के किसी भी सिस्टम का परीक्षण करना अनैतिक और अवैध है। नैतिक हैकर्स अपने कौशल का उपयोग सिस्टम को बेहतर बनाने के लिए करते हैं, नुकसान पहुंचाने के लिए नहीं।</p>
-      <p><strong>जिम्मेदार प्रकटीकरण:</strong> जब आप Pwnat का उपयोग करके कोई कमजोरी खोजते हैं, तो इसे जिम्मेदारी से प्रकट करना महत्वपूर्ण है। इसका अर्थ है कि पहले सिस्टम मालिक को सूचित करें, उन्हें कमजोरी को ठीक करने का समय दें, और फिर सार्वजनिक प्रकटीकरण करें। यह साइबर सुरक्षा समुदाय में सर्वोत्तम अभ्यास है।</p>
-      <p><strong>कानूनी परिणाम:</strong> बिना अधिकार के Pwnat का उपयोग करने के गंभीर कानूनी परिणाम हो सकते हैं, जिनमें जुर्माना, कारावास और आपराधिक रिकॉर्ड शामिल हैं। कंप्यूटर धोखाधड़ी और दुरुपयोग अधिनियम जैसे कानून बिना अनुमति के सिस्टम एक्सेस को अपराध मानते हैं। हमेशा कानूनी सीमाओं के भीतर काम करें।</p>
-    
-    
-
-      <h2>Pwnat की वास्तुकला और डिज़ाइन</h2>
-      <p>Pwnat की आंतरिक वास्तुकला को समझना आपको इस टूल का अधिक प्रभावी ढंग से उपयोग करने में मदद करेगा। Pwnat एक मॉड्यूलर आर्किटेक्चर पर आधारित है जहां विभिन्न घटक स्वतंत्र रूप से काम करते हैं लेकिन एक दूसरे के साथ समन्वय में रहते हैं। इस डिज़ाइन का मुख्य लाभ यह है कि आवश्यकतानुसार नए मॉड्यूल जोड़े या हटाए जा सकते हैं बिना पूरे सिस्टम को प्रभावित किए।</p>
-      <p>Pwnat का कोर इंजन डेटा प्रोसेसिंग और विश्लेषण के लिए जिम्मेदार है। यह इनपुट पैरामीटर्स को पार्स करता है, लक्ष्य से कनेक्शन स्थापित करता है, और परिणामों को संरचित प्रारूप में प्रस्तुत करता है। इंजन कई परतों में विभाजित है जिनमें इनपुट वैलिडेशन लेयर, कनेक्शन मैनेजमेंट लेयर, डेटा कलेक्शन लेयर, एनालिसिस लेयर और आउटपुट जनरेशन लेयर शामिल हैं। प्रत्येक परत विशिष्ट कार्यक्षमता प्रदान करती है और अगली परत को प्रोसेस्ड डेटा पास करती है।</p>
-      <p>Pwnat की स्केलेबिलिटी इसकी मल्टी-थ्रेडेड आर्किटेक्चर के कारण है। हर थ्रेड स्वतंत्र रूप से एक उप-कार्य करता है। थ्रेड पूल मैनेजर थ्रेड्स के निर्माण और विनाश को नियंत्रित करता है, संसाधनों का कुशल उपयोग सुनिश्चित करता है और सिस्टम ओवरलोड को रोकता है।</p>
-      <p>Pwnat डेटा भंडारण के लिए विभिन्न डेटा संरचनाओं का उपयोग करता है। हैश मैप का उपयोग त्वरित लुकअप के लिए, क्यू का उपयोग टास्क शेड्यूलिंग के लिए, और पेड़ संरचनाओं का उपयोग पदानुक्रमित डेटा को संग्रहीत करने के लिए किया जाता है।</p>
-    
-
-      <h2>Pwnat बनाम अन्य रीकॉन टूल्स</h2>
-      <p>रीकॉन सुरक्षा परीक्षण के क्षेत्र में कई टूल्स उपलब्ध हैं। Pwnat की तुलना अन्य लोकप्रिय टूल्स से करना महत्वपूर्ण है ताकि आप अपनी आवश्यकताओं के लिए सर्वश्रेष्ठ टूल चुन सकें। प्रत्येक टूल की अपनी ताकत और कमजोरियां होती हैं जो विभिन्न परिदृश्यों में उपयोगी हो सकती हैं।</p>
-      <p><strong>Pwnat बनाम अन्य टूल्स:</strong> अन्य टूल्स की तुलना में Pwnat तेज प्रदर्शन और कम संसाधन खपत प्रदान करता है। जहां अन्य टूल्स में सीखने की कठिनाई अधिक होती है, वहीं Pwnat का उपयोग करना अपेक्षाकृत आसान है। इसके अलावा, Pwnat में उपलब्ध विकल्पों की संख्या अधिक है जो उन्नत उपयोगकर्ताओं को लचीलापन प्रदान करती है।</p>
-      <p><strong>Pwnat की सीमाएं:</strong> हर टूल की तरह Pwnat की भी कुछ सीमाएं हैं। बहुत बड़े लक्ष्यों पर इसका प्रदर्शन धीमा हो सकता है। कुछ विशिष्ट परिदृश्यों में, अन्य विशेषज्ञ टूल्स बेहतर परिणाम दे सकते हैं। रीकॉन में कुछ विशेष प्रकार के परीक्षणों के लिए विशेष टूल्स अधिक उपयुक्त हो सकते हैं।</p>
-      <p><strong>सही टूल का चयन:</strong> टूल का चयन आपकी विशिष्ट आवश्यकताओं, टीम की विशेषज्ञता और लक्ष्य वातावरण पर निर्भर करता है। हमेशा कई टूल्स का मूल्यांकन करें और उन्हें अपने विशिष्ट उपयोग के मामले में परीक्षण करें। कोई एक टूल सभी परिदृश्यों के लिए सर्वश्रेष्ठ नहीं है।</p>
-    
-
-      <h2>Pwnat के साथ ऑटोमेशन और स्क्रिप्टिंग</h2>
-      <p>Pwnat को विभिन्न ऑटोमेशन तकनीकों के माध्यम से अपने कार्यप्रवाह में एकीकृत किया जा सकता है। यह नियमित सुरक्षा परीक्षणों को स्वचालित करने और मानवीय हस्तक्षेप को कम करने में मदद करता है।</p>
-      <p><strong>शेल स्क्रिप्ट ऑटोमेशन:</strong> आप Pwnat को शेल स्क्रिप्ट में लपेट सकते हैं ताकि यह स्वचालित रूप से चल सके। क्रॉन जॉब्स का उपयोग करके आप नियमित अंतराल पर Pwnat स्कैन शेड्यूल कर सकते हैं। यह नियमित सुरक्षा ऑडिट के लिए बहुत उपयोगी है।</p>
-      <p><strong>CI/CD इंटीग्रेशन:</strong> Pwnat को CI/CD पाइपलाइन में शामिल करके आप कोड डिप्लॉयमेंट से पहले सुरक्षा जांच कर सकते हैं। Github Actions, GitLab CI या Jenkins जैसे CI/CD प्लेटफॉर्म Pwnat को आसानी से एकीकृत कर सकते हैं। यह DevSecOps प्रैक्टिस का एक महत्वपूर्ण हिस्सा है।</p>
-      <p><strong>Python स्क्रिप्टिंग:</strong> Python में Pwnat को कॉल करके आप अधिक जटिल ऑटोमेशन वर्कफ़्लो बना सकते हैं। Python के subprocess मॉड्यूल का उपयोग करके Pwnat कमांड को प्रोग्रामेटिक रूप से चलाया जा सकता है।</p>
-                                                                  <CodeBlock code={`#!/bin/bash
-# Pwnat स्कैन ऑटोमेशन स्क्रिप्ट
-echo 'NAT टनल शुरू...'
-pwnat -s -l 2222 -k mysecret -v 2>&1 | tee /tmp/pwnat.log &
-echo 'NAT सर्वर पोर्ट 2222 पर'
-echo 'क्लाइंट: pwnat -c -r <सर्वर_IP> -p 2222 -l 8080'`} />
-    
-
-      <h2>Pwnat के साथ वास्तविक दुनिया का केस स्टडी</h2>
-      <p>यह केस स्टडी दर्शाता है कि कैसे एक सुरक्षा टीम ने Pwnat का उपयोग करके अपने संगठन के रीकॉन बुनियादी ढांचे की सुरक्षा का मूल्यांकन किया। यह वास्तविक दुनिया का उदाहरण आपको यह समझने में मदद करेगा कि Pwnat को व्यावहारिक परिदृश्य में कैसे लागू किया जा सकता है।</p>
-      <p><strong>परिदृश्य:</strong> एक मध्यम आकार की कंपनी नियमित सुरक्षा मूल्यांकन करना चाहती थी। उनके पास कई वेब एप्लिकेशन, आंतरिक नेटवर्क और क्लाउड इंफ्रास्ट्रक्चर था। सुरक्षा टीम को सभी संसाधनों का व्यापक रीकॉन मूल्यांकन करना था और परिणामों की रिपोर्ट प्रबंधन को प्रस्तुत करनी थी।</p>
-      <p><strong>Pwnat का उपयोग:</strong> टीम ने पहले Pwnat के --help विकल्प से सभी उपलब्ध सुविधाओं की जांच की। फिर उन्होंने प्रत्येक लक्ष्य के लिए बुनियादी स्कैन चलाया और परिणामों को फ़ाइलों में सहेजा। उन्नत विकल्पों का उपयोग करके उन्होंने अधिक गहन विश्लेषण किया और संभावित कमजोरियों की पहचान की।</p>
-      <p><strong>परिणाम और सीख:</strong> Pwnat के उपयोग से टीम ने कई महत्वपूर्ण कमजोरियों की पहचान की जिनमें से कुछ को तत्काल ध्यान देने की आवश्यकता थी। उन्होंने प्रत्येक कमजोरी के लिए सुधार के सुझाव दिए और एक विस्तृत रिपोर्ट तैयार की। इस मूल्यांकन के बाद कंपनी ने अपनी सुरक्षा स्थिति में महत्वपूर्ण सुधार किए।</p>
-    
-
-      <h2>Pwnat के साथ नैतिक हैकिंग और कानूनी पहलू</h2>
-      <p>Pwnat जैसे शक्तिशाली सुरक्षा टूल्स का उपयोग करते समय नैतिक और कानूनी पहलुओं को समझना अत्यंत महत्वपूर्ण है। एक जिम्मेदार सुरक्षा पेशेवर के रूप में, आपको हमेशा नैतिक दिशानिर्देशों और स्थानीय कानूनों का पालन करना चाहिए।</p>
-      <p><strong>नैतिक हैकिंग के सिद्धांत:</strong> नैतिक हैकिंग में मुख्य सिद्धांत यह है कि आपके पास स्पष्ट और लिखित प्राधिकरण होना चाहिए जिस सिस्टम का आप परीक्षण कर रहे हैं। बिना अनुमति के किसी भी सिस्टम का परीक्षण करना अनैतिक और अवैध है। नैतिक हैकर्स अपने कौशल का उपयोग सिस्टम को बेहतर बनाने के लिए करते हैं, नुकसान पहुंचाने के लिए नहीं।</p>
-      <p><strong>जिम्मेदार प्रकटीकरण:</strong> जब आप Pwnat का उपयोग करके कोई कमजोरी खोजते हैं, तो इसे जिम्मेदारी से प्रकट करना महत्वपूर्ण है। इसका अर्थ है कि पहले सिस्टम मालिक को सूचित करें, उन्हें कमजोरी को ठीक करने का समय दें, और फिर सार्वजनिक प्रकटीकरण करें। यह साइबर सुरक्षा समुदाय में सर्वोत्तम अभ्यास है।</p>
-      <p><strong>कानूनी परिणाम:</strong> बिना अधिकार के Pwnat का उपयोग करने के गंभीर कानूनी परिणाम हो सकते हैं, जिनमें जुर्माना, कारावास और आपराधिक रिकॉर्ड शामिल हैं। कंप्यूटर धोखाधड़ी और दुरुपयोग अधिनियम जैसे कानून बिना अनुमति के सिस्टम एक्सेस को अपराध मानते हैं। हमेशा कानूनी सीमाओं के भीतर काम करें।</p>
-    </TutorialLayout>
+      <h2>Alternative Tools</h2>
+      <p>Tunneling category mein kai alternatives available hain. Pratyek tool ki apni vishesh taaqtein hain:</p>
+      <table>
+        <thead><tr><th>Tool</th><th>Category</th><th>Mukhya visheshta</th></tr></thead>
+        <tbody>
+          <tr><td>Pwnat</td><td>Tunneling</td><td>WebSocket tunneling aur bidirectional encrypted communication ke liye ek modern protocol wrapper.</td></tr>
+          <tr><td>Nmap</td><td>Recon</td><td>Port scanning aur service detection</td></tr>
+          <tr><td>Metasploit</td><td>Exploitation</td><td>Modular exploitation framework</td></tr>
+        </tbody>
+      </table>
+      <p>Saravottam parinamon ke liye kai tools ke sanyojan ka upyog karein.</p>
+</TutorialLayout>
   )
 }
